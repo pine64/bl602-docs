@@ -17,10 +17,10 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "BL602 IoT SDK"
-copyright = "2020, Bouffalo Lab, Volunteers"
-author = "Bouffalo Lab"
-version = "release_bl_iot_sdk_1.6.11-1-g66bb28da"
+project = "BL602 IoT SDK (Pine64 fork)"
+copyright = "2020, Bouffalo Lab, volunteers"
+author = "Bouffalo Lab, volunteers"
+version = "release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64"
 
 # -- General configuration ---------------------------------------------------
 
@@ -28,7 +28,13 @@ version = "release_bl_iot_sdk_1.6.11-1-g66bb28da"
 # extensions coming with Sphinx (named "sphinx.ext.*") or your custom
 # ones.
 extensions = [
+    "sphinx_sitemap"
 ]
+
+# Configuration for sphinx_sitemap
+html_baseurl = "https://pine64.github.io/bl602-docs/"
+sitemap_filename = "sitemap.xml"
+sitemap_locales = [None]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -38,6 +44,8 @@ templates_path = ["_templates"]
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+# Extra files to include in the output
+html_extra_path = ["robots.txt"]
 
 # -- Options for HTML output -------------------------------------------------
 
