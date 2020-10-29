@@ -1,20 +1,18 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BL602 SDK Starter Guide &mdash; BL602 IoT SDK release_bl_iot_sdk_1.6.11-1-g66bb28da 文档</title>
+  <title>BL602 SDK Starter Guide &mdash; BL602 IoT SDK  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
 
   
   
@@ -28,16 +26,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" /> 
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -69,7 +67,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -188,7 +186,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/Quickstart_Guide/Windows/Quickstart_Windows_msys.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../../_sources/Quickstart_Guide/Windows/Quickstart_Windows_msys.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -202,10 +200,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="bl602-sdk-starter-guide">
-<h1>BL602 SDK Starter Guide<a class="headerlink" href="#bl602-sdk-starter-guide" title="永久链接至标题">¶</a></h1>
+<h1>BL602 SDK Starter Guide<a class="headerlink" href="#bl602-sdk-starter-guide" title="Permalink to this headline">¶</a></h1>
 <p>本文档旨在指导用户搭建 BL602硬件开发的软件环境。</p>
 <div class="section" id="id1">
-<h2>编译环境的建立及代码的获取<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>编译环境的建立及代码的获取<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>安装串口工具，此处选用的 <a class="reference external" href="https://gigenet.dl.sourceforge.net/project/scriptcommunicator/Windows/ScriptCommunicatorSetup_05_10_windows.zip">ScriptCommunicator</a></p></li>
 <li><p><a class="reference external" href="https://sourceforge.net/projects/msys2/files/Base/x86_64/">获取MSYS2安装包</a></p></li>
@@ -213,25 +211,25 @@
 <li><p>打开MSYS2并安装make，输入命令：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">make</span></code>
 后回车，并根据提示直到安装完成</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image128.png" />
+<img alt="" src="../../_images/image126.png" />
 </div>
 <div class="figure align-default">
-<img alt="" src="../../_images/image223.png" />
+<img alt="" src="../../_images/image220.png" />
 </div>
 </li>
 <li><p>打开MSYS2的安装目录并将SDK源代码放入<code class="docutils literal notranslate"><span class="pre">home</span></code>目录中的用户名文件夹下，下图中为<code class="docutils literal notranslate"><span class="pre">igor</span></code>文件夹</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image319.png" />
+<img alt="" src="../../_images/image318.png" />
 </div>
 <p><strong>注意</strong>：实例中使用的账户是<code class="docutils literal notranslate"><span class="pre">igor</span></code>，实际操作时可以根据<code class="docutils literal notranslate"><span class="pre">home</span></code>目录下的文件名确定当前用户名</p>
 </li>
 <li><p>安装解压软件，命令：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">unzip</span></code>，还可选安装如下组件：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">git</span></code>、<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">tmux</span></code>
 等</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image49.png" />
+<img alt="" src="../../_images/image47.png" />
 </div>
 <div class="figure align-default">
-<img alt="" src="../../_images/image58.png" />
+<img alt="" src="../../_images/image56.png" />
 </div>
 </li>
 <li><p>对源文件压缩包进行解压，命令：<code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">bl_iot_sdk.zip</span></code></p>
@@ -243,46 +241,46 @@
 </ul>
 </div>
 <div class="section" id="id2">
-<h2>硬件连接<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>硬件连接<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>模块的相关引脚连接如下图所示，其中图一是模块的正面图，其标号1处用跳线帽短接，标号2处将左边两根排针短接，标号3处将上面的两根排针短接；图二是模块的背面图，将 <code class="docutils literal notranslate"><span class="pre">IO8</span></code> 和 <code class="docutils literal notranslate"><span class="pre">LOW</span></code> 两根排针短接。</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image133.png" />
+<img alt="" src="../../_images/image132.png" />
 </div>
 <div class="figure align-default">
-<img alt="" src="../../_images/image143.png" />
+<img alt="" src="../../_images/image142.png" />
 </div>
 </div>
 <div class="section" id="id3">
-<h2>代码的编译和烧录<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>代码的编译和烧录<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>进入需要编译的工程目录，命令：<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">customer_app/bl602_demo_event</span></code></p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image73.png" />
+<img alt="" src="../../_images/image72.png" />
 </div>
 </li>
 <li><p>进行编译，命令：<code class="docutils literal notranslate"><span class="pre">./genromap</span></code></p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image83.png" />
+<img alt="" src="../../_images/image82.png" />
 </div>
 </li>
 </ul>
 </div>
 <div class="section" id="bin">
-<h2>bin文件下载<a class="headerlink" href="#bin" title="永久链接至标题">¶</a></h2>
+<h2>bin文件下载<a class="headerlink" href="#bin" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>打开<code class="docutils literal notranslate"><span class="pre">bl_iot_sdk/tools/flash_tool</span></code>文件中的<code class="docutils literal notranslate"><span class="pre">simple_flasher.exe</span></code>程序</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">chip</span> <span class="pre">type</span></code>选择<code class="docutils literal notranslate"><span class="pre">BL602/604</span></code>，打开后界面参数参考下图配置：</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image93.png" />
+<img alt="" src="../../_images/image92.png" />
 </div>
 <p>点击<code class="docutils literal notranslate"><span class="pre">download</span></code>，出现如下图所示表明下载成功：</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image103.png" />
+<img alt="" src="../../_images/image102.png" />
 </div>
 </li>
 <li><p>打开串口终端，点击 <code class="docutils literal notranslate"><span class="pre">settings</span></code> 配置为如下图所示，其中 <code class="docutils literal notranslate"><span class="pre">DTR</span></code> 需要勾选上， <code class="docutils literal notranslate"><span class="pre">RTS</span></code> 不勾选。</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image129.png" />
+<img alt="" src="../../_images/image127.png" />
 </div>
 </li>
 </ul>
@@ -301,18 +299,18 @@
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2020, Bouffalo Lab
+        &copy; Copyright 2020, Bouffalo Lab
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 

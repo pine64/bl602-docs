@@ -1,20 +1,18 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>10. cli &mdash; BL602 IoT SDK release_bl_iot_sdk_1.6.11-1-g66bb28da 文档</title>
+  <title>10. cli &mdash; BL602 IoT SDK  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
 
   
   
@@ -28,16 +26,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="11. FDT" href="../demo_system_fdt/fdt.html" />
     <link rel="prev" title="9. Romfs" href="../demo_storage_romfs/romfs.html" /> 
 </head>
@@ -71,7 +69,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -189,13 +187,13 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">10. </span>cli</li>
+      <li>10. cli</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/Examples/demo_system_cli/cli.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../../_sources/Examples/demo_system_cli/cli.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -209,20 +207,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cli">
-<h1><span class="section-number">10. </span>cli<a class="headerlink" href="#cli" title="永久链接至标题">¶</a></h1>
+<h1>10. cli<a class="headerlink" href="#cli" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">10.1. </span>总览<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>10.1. 总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>本实例主要介绍如何增加一个cli（command-line interface）。</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">10.2. </span>使用步骤<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>10.2. 使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_cli</span></code> 工程并下载对应的bin文件。</p></li>
 <li><p>使用 <code class="docutils literal notranslate"><span class="pre">test</span></code> 命令即可在终端看到打印的 <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code>。</p></li>
 </ul>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">10.3. </span>应用实例<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>10.3. 应用实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">cmd_cli</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">,</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello world</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
@@ -262,10 +260,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../demo_system_fdt/fdt.html" class="btn btn-neutral float-right" title="11. FDT" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../demo_system_fdt/fdt.html" class="btn btn-neutral float-right" title="11. FDT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../demo_storage_romfs/romfs.html" class="btn btn-neutral float-left" title="9. Romfs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="../demo_storage_romfs/romfs.html" class="btn btn-neutral float-left" title="9. Romfs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -275,18 +273,18 @@
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2020, Bouffalo Lab
+        &copy; Copyright 2020, Bouffalo Lab
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 

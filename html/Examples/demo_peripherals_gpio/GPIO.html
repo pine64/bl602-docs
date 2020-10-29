@@ -1,20 +1,18 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. GPIO &mdash; BL602 IoT SDK release_bl_iot_sdk_1.6.11-1-g66bb28da 文档</title>
+  <title>3. GPIO &mdash; BL602 IoT SDK  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
 
   
   
@@ -28,16 +26,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="4. UART_echo" href="../demo_peripherals_uart_echo/uart_echo.html" />
     <link rel="prev" title="2. aws" href="../demo_aws/aws.html" /> 
 </head>
@@ -71,7 +69,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -189,13 +187,13 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">3. </span>GPIO</li>
+      <li>3. GPIO</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/Examples/demo_peripherals_gpio/GPIO.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../../_sources/Examples/demo_peripherals_gpio/GPIO.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -209,13 +207,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="gpio">
-<span id="gpio-index"></span><h1><span class="section-number">3. </span>GPIO<a class="headerlink" href="#gpio" title="永久链接至标题">¶</a></h1>
+<span id="gpio-index"></span><h1>3. GPIO<a class="headerlink" href="#gpio" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">3.1. </span>总览<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>3.1. 总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>本示例主要介绍如何配置GPIO。</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">3.2. </span>使用步骤<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>3.2. 使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_gpio</span></code> 工程并下载工程；</p></li>
 <li><p>使用 <code class="docutils literal notranslate"><span class="pre">gpio-func</span> <span class="pre">&lt;pinnum&gt;</span> <span class="pre">&lt;inputmode&gt;</span> <span class="pre">&lt;pullup&gt;</span> <span class="pre">&lt;pulldown&gt;</span></code> 命令配置指定gpio口的输入输出模式，上拉下拉情况，如输入 <code class="docutils literal notranslate"><span class="pre">gpio-func</span> <span class="pre">8</span> <span class="pre">0</span> <span class="pre">0</span> <span class="pre">0</span></code> 命令表示将gpio8设置为输出模式，无上下拉；</p></li>
@@ -237,7 +235,7 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">3.3. </span>应用实例<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>3.3. 应用实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>gpio-func命令的实现</p></li>
 </ul>
@@ -328,10 +326,10 @@ bl_gpio_output_set(ionum, val ? 1 : 0);
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../demo_peripherals_uart_echo/uart_echo.html" class="btn btn-neutral float-right" title="4. UART_echo" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../demo_peripherals_uart_echo/uart_echo.html" class="btn btn-neutral float-right" title="4. UART_echo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../demo_aws/aws.html" class="btn btn-neutral float-left" title="2. aws" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="../demo_aws/aws.html" class="btn btn-neutral float-left" title="2. aws" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -341,18 +339,18 @@ bl_gpio_output_set(ionum, val ? 1 : 0);
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2020, Bouffalo Lab
+        &copy; Copyright 2020, Bouffalo Lab
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 

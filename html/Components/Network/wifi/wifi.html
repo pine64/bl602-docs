@@ -1,20 +1,18 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>WiFi &mdash; BL602 IoT SDK release_bl_iot_sdk_1.6.11-1-g66bb28da 文档</title>
+  <title>WiFi &mdash; BL602 IoT SDK  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
 
   
   
@@ -28,16 +26,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="索引" href="../../../genindex.html" />
-    <link rel="search" title="搜索" href="../../../search.html" /> 
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -69,7 +67,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -188,7 +186,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../../_sources/Components/Network/wifi/wifi.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../../../_sources/Components/Network/wifi/wifi.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -202,9 +200,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="wifi">
-<span id="wifi-index"></span><h1>WiFi<a class="headerlink" href="#wifi" title="永久链接至标题">¶</a></h1>
+<span id="wifi-index"></span><h1>WiFi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>概述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>本文档介绍BL_IoT SDK的WiFi联网功能。主要包括</p>
 <ul class="simple">
 <li><p>基站模式（即 STA 模式或 Wi-Fi 客户端模式），此时 BL_IoT 连接到接入点 (AP)。</p></li>
@@ -216,10 +214,10 @@
 </ul>
 </div>
 <div class="section" id="id2">
-<h2>应用实例<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>应用实例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>BL_IoT的实例 <code class="docutils literal notranslate"><span class="pre">bl602_demo_wifi</span></code> 目录下包含了一个应用程序，该demo介绍了如何使用BL_IoT模组连接到AP等一系列wifi操作。该实例实现的主要思路如下：</p>
 <div class="figure align-default">
-<img alt="" src="../../../_images/image11.png" />
+<img alt="" src="Components/Network/wifi/imgs/image1.png" />
 </div>
 <ul class="simple">
 <li><p>在主函数 <code class="docutils literal notranslate"><span class="pre">bfl_main()</span></code> 中创建一个 <code class="docutils literal notranslate"><span class="pre">aos_loop_proc()</span></code> 线程，在此线程中调用 <code class="docutils literal notranslate"><span class="pre">aos_register_event_filter()</span></code> 接口注册一个 <code class="docutils literal notranslate"><span class="pre">EV_WIFI</span></code> 事件的监听函数 <code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event()</span></code> ；</p></li>
@@ -228,7 +226,7 @@
 </ul>
 </div>
 <div class="section" id="reason-codes">
-<h2>Reason Codes<a class="headerlink" href="#reason-codes" title="永久链接至标题">¶</a></h2>
+<h2>Reason Codes<a class="headerlink" href="#reason-codes" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">WLAN_FW_SUCCESSFUL</span></code></p>
 <p>WiFi连接成功</p>
 <p><code class="docutils literal notranslate"><span class="pre">WLAN_FW_TX_AUTH_FRAME_ALLOCATE_FAIILURE</span></code></p>
@@ -265,7 +263,7 @@
 <p>信标丢失</p>
 </div>
 <div class="section" id="api">
-<h2>API参考<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h2>
+<h2>API参考<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>头文件</p></li>
 </ul>
@@ -514,18 +512,18 @@
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2020, Bouffalo Lab
+        &copy; Copyright 2020, Bouffalo Lab
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 

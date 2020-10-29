@@ -1,20 +1,18 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>17. BLE &mdash; BL602 IoT SDK release_bl_iot_sdk_1.6.11-1-g66bb28da 文档</title>
+  <title>17. BLE &mdash; BL602 IoT SDK  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
 
   
   
@@ -28,16 +26,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="索引" href="../../../genindex.html" />
-    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="1. cronalarms" href="../../../API/sys/cronalarms.html" />
     <link rel="prev" title="16. Mesh" href="../mesh/mesh.html" /> 
 </head>
@@ -71,7 +69,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -189,13 +187,13 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">17. </span>BLE</li>
+      <li>17. BLE</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../../_sources/Components/BLE/ble_stack/ble_stack.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../../../_sources/Components/BLE/ble_stack/ble_stack.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -209,17 +207,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="ble">
-<span id="ble-index"></span><h1><span class="section-number">17. </span>BLE<a class="headerlink" href="#ble" title="永久链接至标题">¶</a></h1>
+<span id="ble-index"></span><h1>17. BLE<a class="headerlink" href="#ble" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">17.1. </span>概述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>17.1. 概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><dl>
-<dt>BLE支持的特性：</dt><dd><ul>
-<li><dl>
-<dt>蓝牙HOST特性</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>BLE支持的特性：</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>蓝牙HOST特性</dt><dd><ul>
 <li><p>GAP支持的角色：Peripheral与Central，Observer与Broadcaster</p></li>
-</ul>
-<ul class="simple">
 <li><p>GATT支持的角色：Server与Client</p></li>
 <li><p>支持配对包括蓝牙4.2中的安全连接特性</p></li>
 <li><p>支持永久存储蓝牙特定的设置和数据</p></li>
@@ -227,11 +223,9 @@
 </dd>
 </dl>
 </li>
-<li><dl>
-<dt>蓝牙mesh特性</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>蓝牙mesh特性</dt><dd><ul>
 <li><p>支持Relay, Friend Node, Low-Power Node (LPN) and GATT Proxy角色</p></li>
-</ul>
-<ul class="simple">
 <li><p>支持两种Provisioning bearers(PB-ADV &amp; PB-GATT)</p></li>
 </ul>
 </dd>
@@ -247,15 +241,11 @@
 <img alt="../../../_images/image1.png" src="../../../_images/image1.png" />
 </div>
 </div></blockquote>
-<ul>
-<li><dl>
-<dt>总共有3个主要层，共同构成了一个完整的蓝牙低能耗协议栈</dt><dd><ul class="simple">
+<ul class="simple">
+<li><dl class="simple">
+<dt>总共有3个主要层，共同构成了一个完整的蓝牙低能耗协议栈</dt><dd><ul>
 <li><p>Host：这一层位于应用程序之下,由多个(非实时)网络和传输协议组成，使应用程序能够以标准和互操作的方式与对等设备通信。</p></li>
-</ul>
-<ul class="simple">
 <li><p>Controller：控制器实现了链路层(LE LL)，这是一种低层次的实时协议，它与无线电硬件一起提供了空中通信的标准互操作。LL处理包的接收和传输，保证数据的传递，并处理所有LL控制程序。</p></li>
-</ul>
-<ul class="simple">
 <li><p>Radio Hardware：实现所需的模拟和数字基带功能块，允许链路层固件在频谱的2.4GHz波段发送和接收。</p></li>
 </ul>
 </dd>
@@ -326,7 +316,7 @@
 </ul>
 </div>
 <div class="section" id="api">
-<h2><span class="section-number">17.2. </span>API参考<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h2>
+<h2>17.2. API参考<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>API介绍</p></li>
 </ul>
@@ -635,7 +625,7 @@
 </div>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">17.3. </span>数据结构参考<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>17.3. 数据结构参考<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">bt_le_adv_param</span></code>数据结构：</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/** LE Advertising Parameters. */</span>
 <span class="k">struct</span> <span class="n">bt_le_adv_param</span> <span class="p">{</span>
@@ -805,10 +795,10 @@ window：扫描窗口。</p>
 latency：指定为连接事件数的连接允许的最大从延迟。
 timeout：连接超时时间。</p>
 <p>配置该数据结构，如下：</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>interval_min=BT_GAP_INIT_CONN_INT_MIN（0x0018）
-interval_max=BT_GAP_INIT_CONN_INT_MAX(0x0028)
-latency=0
-timeout=400
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">interval_min</span><span class="o">=</span><span class="n">BT_GAP_INIT_CONN_INT_MIN</span><span class="p">(</span><span class="mh">0x0018</span><span class="p">)</span>
+<span class="n">interval_max</span><span class="o">=</span><span class="n">BT_GAP_INIT_CONN_INT_MAX</span><span class="p">(</span><span class="mh">0x0028</span><span class="p">)</span>
+<span class="n">latency</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">timeout</span><span class="o">=</span><span class="mi">400</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">bt_conn</span></code>数据结构：</p>
@@ -889,10 +879,10 @@ timeout=400
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../../API/sys/cronalarms.html" class="btn btn-neutral float-right" title="1. cronalarms" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../../API/sys/cronalarms.html" class="btn btn-neutral float-right" title="1. cronalarms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../mesh/mesh.html" class="btn btn-neutral float-left" title="16. Mesh" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="../mesh/mesh.html" class="btn btn-neutral float-left" title="16. Mesh" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -902,18 +892,18 @@ timeout=400
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2020, Bouffalo Lab
+        &copy; Copyright 2020, Bouffalo Lab
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 

@@ -1,20 +1,18 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. PSM &mdash; BL602 IoT SDK release_bl_iot_sdk_1.6.11-1-g66bb28da 文档</title>
+  <title>8. PSM &mdash; BL602 IoT SDK  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
 
   
   
@@ -28,16 +26,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="9. Romfs" href="../demo_storage_romfs/romfs.html" />
     <link rel="prev" title="7. Httpc client" href="../demo_protocols_httpc/httpc.html" /> 
 </head>
@@ -71,7 +69,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -189,13 +187,13 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">8. </span>PSM</li>
+      <li>8. PSM</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/Examples/demo_storage_psm/psm.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../../_sources/Examples/demo_storage_psm/psm.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -209,13 +207,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="psm">
-<span id="psm-index"></span><h1><span class="section-number">8. </span>PSM<a class="headerlink" href="#psm" title="永久链接至标题">¶</a></h1>
+<span id="psm-index"></span><h1>8. PSM<a class="headerlink" href="#psm" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">8.1. </span>总览<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>8.1. 总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>本文档主要介绍PSM的使用，其主要是依赖Easyflash库来实现的，包括数据的存储、获取、dump和擦除功能。</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">8.2. </span>使用步骤<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>8.2. 使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_psm</span></code> 工程并下载bin文件。</p></li>
 <li><p>使用 <code class="docutils literal notranslate"><span class="pre">psm_set</span> <span class="pre">&lt;key&gt;</span> <span class="pre">&lt;value&gt;</span></code> 命令向指定ENV_name中写入数据，如输入 <code class="docutils literal notranslate"><span class="pre">psm_set</span> <span class="pre">data_test</span> <span class="pre">12345678</span></code> 命令表示将ENV_name为 <code class="docutils literal notranslate"><span class="pre">data_test</span></code> 的值设为 <code class="docutils literal notranslate"><span class="pre">12345678</span></code> ；</p>
@@ -235,18 +233,18 @@
 </li>
 <li><p>使用 <code class="docutils literal notranslate"><span class="pre">psm_dump</span></code> 命令可以将所有ENV_name存储的信息dunmp出来，如输入命令：psm_dump，可以看到mode。size等相关信息；</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image44.png" />
+<img alt="" src="../../_images/image43.png" />
 </div>
 </li>
 <li><p>使用 <code class="docutils literal notranslate"><span class="pre">psm_erase</span></code> 命令可以将所有ENV_name存储的信息清除。</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image53.png" />
+<img alt="" src="../../_images/image52.png" />
 </div>
 </li>
 </ul>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">8.3. </span>应用实例<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>8.3. 应用实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>初始化</p></li>
 </ul>
@@ -299,10 +297,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../demo_storage_romfs/romfs.html" class="btn btn-neutral float-right" title="9. Romfs" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../demo_storage_romfs/romfs.html" class="btn btn-neutral float-right" title="9. Romfs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../demo_protocols_httpc/httpc.html" class="btn btn-neutral float-left" title="7. Httpc client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="../demo_protocols_httpc/httpc.html" class="btn btn-neutral float-left" title="7. Httpc client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -312,18 +310,18 @@
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2020, Bouffalo Lab
+        &copy; Copyright 2020, Bouffalo Lab
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 

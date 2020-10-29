@@ -1,20 +1,18 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12. WiFi &mdash; BL602 IoT SDK release_bl_iot_sdk_1.6.11-1-g66bb28da 文档</title>
+  <title>12. WiFi &mdash; BL602 IoT SDK  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
 
   
   
@@ -28,16 +26,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="13. BLE" href="../demo_ble/ble.html" />
     <link rel="prev" title="11. FDT" href="../demo_system_fdt/fdt.html" /> 
 </head>
@@ -71,7 +69,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -189,13 +187,13 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">12. </span>WiFi</li>
+      <li>12. WiFi</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/Examples/demo_wifi/wifi.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../../_sources/Examples/demo_wifi/wifi.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -209,13 +207,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="wifi">
-<span id="wifi-index"></span><h1><span class="section-number">12. </span>WiFi<a class="headerlink" href="#wifi" title="永久链接至标题">¶</a></h1>
+<span id="wifi-index"></span><h1>12. WiFi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">12.1. </span>总览<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>12.1. 总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>本示例主要介绍与wifi相关命令的功能。</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">12.2. </span>使用步骤<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>12.2. 使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_wifi</span></code> 工程并下载对应的bin文件；</p></li>
 <li><p>成功启动IoT Board之后在终端输入命令 <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> 创建wifi任务。</p></li>
@@ -225,7 +223,7 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">12.3. </span>功能<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>12.3. 功能<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>连接wifi：</p></li>
 </ul>
@@ -245,14 +243,14 @@
 </ul>
 <p>命令： <code class="docutils literal notranslate"><span class="pre">wifi_scan</span></code> ，扫描成功后会打印scan list，用户可以看到成功搜索的wifi信息。</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image46.png" />
+<img alt="" src="../../_images/image45.png" />
 </div>
 <ul class="simple">
 <li><p>开启ap模式：</p></li>
 </ul>
 <p>命令： <code class="docutils literal notranslate"><span class="pre">wifi_ap_start</span></code> ，成功开启后打印ssid，pwd，channel等相关信息，并且可以在手机上搜索到相应名字的wifi。</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image55.png" />
+<img alt="" src="../../_images/image54.png" />
 </div>
 <ul class="simple">
 <li><p>关闭ap模式：</p></li>
@@ -272,10 +270,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../demo_ble/ble.html" class="btn btn-neutral float-right" title="13. BLE" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../demo_ble/ble.html" class="btn btn-neutral float-right" title="13. BLE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../demo_system_fdt/fdt.html" class="btn btn-neutral float-left" title="11. FDT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="../demo_system_fdt/fdt.html" class="btn btn-neutral float-left" title="11. FDT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -285,18 +283,18 @@
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2020, Bouffalo Lab
+        &copy; Copyright 2020, Bouffalo Lab
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 

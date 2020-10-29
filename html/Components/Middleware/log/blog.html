@@ -1,20 +1,18 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. blog &mdash; BL602 IoT SDK release_bl_iot_sdk_1.6.11-1-g66bb28da 文档</title>
+  <title>8. blog &mdash; BL602 IoT SDK  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
 
   
   
@@ -28,16 +26,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="索引" href="../../../genindex.html" />
-    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="9. Security" href="../security/security.html" />
     <link rel="prev" title="7. device tree" href="../dts/devicetree.html" /> 
 </head>
@@ -71,7 +69,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -191,13 +189,13 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">8. </span>blog</li>
+      <li>8. blog</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../../_sources/Components/Middleware/log/blog.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../../../_sources/Components/Middleware/log/blog.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -211,13 +209,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="blog">
-<h1><span class="section-number">8. </span>blog<a class="headerlink" href="#blog" title="永久链接至标题">¶</a></h1>
+<h1>8. blog<a class="headerlink" href="#blog" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">8.1. </span>概述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>8.1. 概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>blog 是一款超轻量级的日志组件，非常适合对资源敏感的软件项目.</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">8.2. </span>功能介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>8.2. 功能介绍<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>blog
 将log简化成3类，分别是组件、文件、私有log，且分别支持软件动态修改、宏彻底关闭方案（不占用rom）。下文统称动态修改为软开关，宏彻底关闭方案为静态开关。</p>
 <ul class="simple">
@@ -228,7 +226,7 @@
 </ul>
 </div>
 <div class="section" id="log">
-<h2><span class="section-number">8.3. </span>log等级说明<a class="headerlink" href="#log" title="永久链接至标题">¶</a></h2>
+<h2>8.3. log等级说明<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h2>
 <p>按照等级高低分别如下，其中all最低，即所有log均输出</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>all : 所有log均输出，其实等同于all
 debug : debug及以上
@@ -241,7 +239,7 @@ never: 所有log均不输出，其实等同于assert
 </div>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">8.4. </span>使用方法<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>8.4. 使用方法<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>包含必要的头文件
 <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;blog.h&gt;</span></code>然后分别设置组件log、文件log、私有log。</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;blog.h&gt;</span><span class="cp"></span>
@@ -287,7 +285,7 @@ component_name.file_name例如：
 </li>
 <li><p>私有log管理</p>
 <ul>
-<li><p>静态开关 使用就增加BLOG_DECLARE(...)，不用直接不增加此行即可。
+<li><p>静态开关 使用就增加BLOG_DECLARE(…)，不用直接不增加此行即可。
 <code class="docutils literal notranslate"><span class="pre">BLOG_DECLARE(blog_testc2);</span>&#160;&#160;&#160; <span class="pre">//</span> <span class="pre">打开，其中　&quot;blog_testc2&quot;为用户自定义</span></code></p></li>
 <li><p>软件开关 通过输入如下命令来使能log输出等级 形如，logset level
 component_name.file_name.pri_name例如：
@@ -297,7 +295,7 @@ component_name.file_name.pri_name例如：
 </ul>
 </div>
 <div class="section" id="id4">
-<h2><span class="section-number">8.5. </span>总结<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<h2>8.5. 总结<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -309,10 +307,10 @@ component_name.file_name.pri_name例如：
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../security/security.html" class="btn btn-neutral float-right" title="9. Security" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../security/security.html" class="btn btn-neutral float-right" title="9. Security" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../dts/devicetree.html" class="btn btn-neutral float-left" title="7. device tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上一页</a>
+        <a href="../dts/devicetree.html" class="btn btn-neutral float-left" title="7. device tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -322,18 +320,18 @@ component_name.file_name.pri_name例如：
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2020, Bouffalo Lab
+        &copy; Copyright 2020, Bouffalo Lab
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 

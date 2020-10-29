@@ -1,20 +1,18 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Dev Cube 简介 &mdash; BL602 IoT SDK release_bl_iot_sdk_1.6.11-1-g66bb28da 文档</title>
+  <title>1. Dev Cube 简介 &mdash; BL602 IoT SDK  documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
 
   
   
@@ -28,16 +26,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-    <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" /> 
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -69,7 +67,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -182,13 +180,13 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">1. </span>Dev Cube 简介</li>
+      <li>1. Dev Cube 简介</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/bl602doc_tool/content/Burning_process.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../../_sources/bl602doc_tool/content/Burning_process.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -202,7 +200,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="dev-cube">
-<h1><span class="section-number">1. </span>Dev Cube 简介<a class="headerlink" href="#dev-cube" title="永久链接至标题">¶</a></h1>
+<h1>1. Dev Cube 简介<a class="headerlink" href="#dev-cube" title="Permalink to this headline">¶</a></h1>
 <p>Dev Cube 是博流提供的芯片集成开发工具，包含IOT程序下载、MCU程序下载和RF性能测试三种功能。本文档主要介绍IOT和MCU程序下载相关配置，RF性能测试请参考《射频性能测试使用手册》。</p>
 <p>Dev Cube 提供用户下载程序的功能，并且支持时钟、flash等参数配置，用户可根据自身需求决定是否对程序进行加密、添加签名、更换程序启动时的信息文件、用户资源文件、分区表等功能配置。</p>
 <p>具体的功能如下：</p>
@@ -216,24 +214,24 @@
 双击解压后文件夹中的<code class="docutils literal notranslate"><span class="pre">BLDevCube.exe</span></code>，在<code class="docutils literal notranslate"><span class="pre">Chip</span> <span class="pre">Selection</span></code>对话框中选择对应的芯片型号，点击<code class="docutils literal notranslate"><span class="pre">Finish</span></code>进入Dev Cube主界面。</p>
 <div class="figure align-center" id="id9">
 <img alt="../../_images/chipselection.png" src="../../_images/chipselection.png" />
-<p class="caption"><span class="caption-text">芯片选择</span><a class="headerlink" href="#id9" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">芯片选择</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="id1">
-<h1><span class="section-number">2. </span>镜像组成<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1>2. 镜像组成<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>无论是IOT程序下载还是MCU程序下载，它们的镜像组成是相同的，都如下图所示：</p>
 <div class="figure align-center" id="id10">
 <img alt="../../_images/tool2.png" src="../../_images/tool2.png" />
-<p class="caption"><span class="caption-text">下载内容布局</span><a class="headerlink" href="#id10" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">下载内容布局</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <p>如果只下载应用程序无法使芯片正常工作，必须要将引导信息下载到指定位置。引导信息包含对PLL、Boot、Flash等的配置；固件是用户自己编写的应用程序。</p>
 <p>以单核下载为例：根据需求选择对应的参数,将对PLL、Flash等配置的信息烧录到Bootinfo Addr对应的地址中，将应用程序经过编译后的bin文件烧录到Image Addr对应的地址中。</p>
 </div>
 <div class="section" id="mcu">
-<h1><span class="section-number">3. </span>MCU程序下载<a class="headerlink" href="#mcu" title="永久链接至标题">¶</a></h1>
+<h1>3. MCU程序下载<a class="headerlink" href="#mcu" title="Permalink to this headline">¶</a></h1>
 <p>在<code class="docutils literal notranslate"><span class="pre">View</span></code>菜单中选择MCU选项，会进入MCU程序下载界面，主要分为程序下载方式的配置、镜像参数的配置和高级镜像参数的配置。</p>
 <div class="section" id="id2">
-<h2><span class="section-number">3.1. </span>配置程序下载方式<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>3.1. 配置程序下载方式<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>配置参数包括：</p>
 <blockquote>
@@ -249,11 +247,11 @@
 </ul>
 <div class="figure align-center" id="id11">
 <img alt="../../_images/tool5.png" src="../../_images/tool5.png" />
-<p class="caption"><span class="caption-text">MCU程序下载方式选择界面</span><a class="headerlink" href="#id11" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">MCU程序下载方式选择界面</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">3.2. </span>配置镜像参数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>3.2. 配置镜像参数<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>配置参数包括：</p>
 <blockquote>
@@ -269,11 +267,11 @@
 </ul>
 <div class="figure align-center" id="id12">
 <img alt="../../_images/tool9.png" src="../../_images/tool9.png" />
-<p class="caption"><span class="caption-text">镜像参数选择界面</span><a class="headerlink" href="#id12" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">镜像参数选择界面</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="id4">
-<h2><span class="section-number">3.3. </span>配置高级镜像参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<h2>3.3. 配置高级镜像参数<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>当点击<code class="docutils literal notranslate"><span class="pre">click</span> <span class="pre">here</span> <span class="pre">to</span> <span class="pre">show</span> <span class="pre">advanced</span> <span class="pre">options</span></code>时，会展开高级镜像配置，可配置的参数包括：</p>
 <blockquote>
@@ -291,20 +289,20 @@
 </ul>
 <div class="figure align-center" id="id13">
 <img alt="../../_images/tool10.png" src="../../_images/tool10.png" />
-<p class="caption"><span class="caption-text">高级镜像参数选择界面</span><a class="headerlink" href="#id13" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">高级镜像参数选择界面</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="id5">
-<h2><span class="section-number">3.4. </span>下载程序<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<h2>3.4. 下载程序<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>将板子的BOOT引脚保持高电平，并且使得芯片复位，使其处于UART引导下载的状态。点击<code class="docutils literal notranslate"><span class="pre">Creat&amp;Program</span></code>，会自动生成应用程序镜像和启动参数配置文件，出现下图log信息，程序下载成功</p></li>
 </ul>
 <div class="figure align-center" id="id14">
 <img alt="../../_images/tool6.png" src="../../_images/tool6.png" />
-<p class="caption"><span class="caption-text">下载程序</span><a class="headerlink" href="#id14" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">下载程序</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>若没有连接板子，只需生成应用程序镜像和启动参数配置文件，也是点击<code class="docutils literal notranslate"><span class="pre">Creat&amp;Program</span></code>按钮</p>
 </div>
 <ul class="simple">
@@ -312,15 +310,15 @@
 </ul>
 <div class="figure align-center" id="id15">
 <img alt="../../_images/tool7.png" src="../../_images/tool7.png" />
-<p class="caption"><span class="caption-text">log信息</span><a class="headerlink" href="#id15" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">log信息</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="iot">
-<h1><span class="section-number">4. </span>IOT程序下载<a class="headerlink" href="#iot" title="永久链接至标题">¶</a></h1>
+<h1>4. IOT程序下载<a class="headerlink" href="#iot" title="Permalink to this headline">¶</a></h1>
 <p>在<code class="docutils literal notranslate"><span class="pre">View</span></code>菜单中选择IOT选项，会进入IOT程序下载界面，主要分为程序下载方式的配置和下载参数的配置。</p>
 <div class="section" id="id6">
-<h2><span class="section-number">4.1. </span>配置程序下载方式<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<h2>4.1. 配置程序下载方式<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>配置参数包括：</p>
 <blockquote>
@@ -337,11 +335,11 @@
 </ul>
 <div class="figure align-center" id="id16">
 <img alt="../../_images/iot1.png" src="../../_images/iot1.png" />
-<p class="caption"><span class="caption-text">IOT程序下载方式选择界面</span><a class="headerlink" href="#id16" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">IOT程序下载方式选择界面</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="id7">
-<h2><span class="section-number">4.2. </span>配置下载参数<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<h2>4.2. 配置下载参数<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>配置参数包括：</p>
 <blockquote>
@@ -359,20 +357,20 @@
 </ul>
 <div class="figure align-center" id="id17">
 <img alt="../../_images/iot2.png" src="../../_images/iot2.png" />
-<p class="caption"><span class="caption-text">下载参数选择界面</span><a class="headerlink" href="#id17" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">下载参数选择界面</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="id8">
-<h2><span class="section-number">4.3. </span>下载程序<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<h2>4.3. 下载程序<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>将板子的BOOT引脚保持高电平，并且使得芯片复位，使其处于UART引导下载的状态。点击<code class="docutils literal notranslate"><span class="pre">Creat&amp;Download</span></code>，会自动生成应用程序镜像和启动参数配置文件，出现下图log信息，程序下载成功</p></li>
 </ul>
 <div class="figure align-center" id="id18">
 <img alt="../../_images/iot3.png" src="../../_images/iot3.png" />
-<p class="caption"><span class="caption-text">IOT下载程序</span><a class="headerlink" href="#id18" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">IOT下载程序</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">Note</p>
 <p>若没有连接板子，只需生成应用程序镜像和启动参数配置文件，也是点击<code class="docutils literal notranslate"><span class="pre">Creat&amp;Program</span></code>按钮</p>
 </div>
 <ul class="simple">
@@ -380,7 +378,7 @@
 </ul>
 <div class="figure align-center" id="id19">
 <img alt="../../_images/tool7.png" src="../../_images/tool7.png" />
-<p class="caption"><span class="caption-text">log信息</span><a class="headerlink" href="#id19" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">log信息</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -397,18 +395,18 @@
   <div role="contentinfo">
     <p>
         
-        &copy; 版权所有 2020, Bouffalo Lab
+        &copy; Copyright 2020, Bouffalo Lab
 
     </p>
   </div>
     
     
     
-    利用 <a href="http://sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">主题</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
