@@ -21,3 +21,4 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 # Move to GitHub Pages compatible directory
 	@mv "$(BUILDDIR)/html" "$(BUILDDIR)/docs"
+	@touch "$(BUILDDIR)/.nojekyll"
