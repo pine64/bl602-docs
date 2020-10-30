@@ -1,37 +1,21 @@
 BL602 SDK Starter Guide
 =======================
 
-本文档旨在指导用户搭建 BL602 硬件开发的软件环境。
+This document aims to guide users to set up a software environment for developing on the BL602 hardware.
 
-编译环境的建立及代码的获取
---------------------------
+Setting Up and Installing the SDK
+---------------------------------
 
--  打开终端，安装make，命令：\ ``sudo apt-get update``\ 、\ ``sudo apt-get install make``
+-  Make sure ``make`` and ``unzip`` are installed on your system.
 
-.. figure:: imgs/image1.png
-   :alt:
+-  Make sure you have installed software for connecting to a serial console, for example, ``Gtkterm``.
 
-.. figure:: imgs/image2.png
-   :alt:
+-  Decompress the SDK ``bl_iot_sdk.zip``.
 
--  安装串口工具此处选用的\ ``Gtkterm``
-   可以执行命令：\ ``sudo apt-get install gtkterm``
+Connecting to Hardware
+----------------------
 
--  安装解压软件，命令：\ ``sudo apt-get install unzip``
-
-.. figure:: imgs/image3.png
-   :alt:
-
--  进入SDK文件所在的目录后开始解压，命令：\ ``cd work``\ 、\ ``unzip bl_iot_sdk.zip``
-
-**注意**\ ：\ ``cd``\ 之后的文件名为SDK所在的目录名（如本例中，SDK源文件放在\ ``work``\ 文件夹下）根据实际情况修改；\ ``unzip``\ 之后文件名需要根据实际拿到的SDK文件名作出相应的修改
-
--  检查源代码解压之后的根目录状态，先用\ ``cd bl_iot_sdk``\ 命令进入源文件目录，再用\ ``ls``\ 命令检查目录状态
-
-硬件连接
----------
-
-模块的相关引脚连接如下图所示，其中图一是模块的正面图，其标号1处用跳线帽短接，标号2处将左边两根排针短接，标号3处将上面的两根排针短接；图二是模块的背面图，将 ``IO8`` 和 ``LOW`` 两根排针短接。
+The related pin connections of the module are shown in the following figure. Figure 1 is the front view of the module. The number 1 is shorted with a jumper cap, the two pin headers on the left are shorted at the 2 position, and the upper two pins are connected at the 3 The pin headers are short-circuited; Figure 2 is the back view of the module. Short-circuit the two header pins `ʻIO8`` and ``LOW``.
 
 .. figure:: imgs/image11.png
    :alt:
@@ -39,40 +23,40 @@ BL602 SDK Starter Guide
 .. figure:: imgs/image12.png
    :alt:
 
-代码的编译和烧录
-----------------
+Compiling and Flashing
+----------------------
 
--  进入需要编译的工程目录，命令：\ ``cd customer_app/bl602_demo_event``\ ，进行编译，命令\ ``./genromap``
+-  Enter your project directory, and compile using the command \ ``./genromap``
 
    .. figure:: imgs/image4.png
       :alt:
 
--  查看编译生成的build\_out文件夹，命令：\ ``ls build_out``
+-  Verify the created directory named build\_out: \ ``ls build_out``
 
    .. figure:: imgs/image5.png
       :alt:
 
-bin文件下载
------------
+Downloading Binaries
+--------------------
 
--  进入\ ``/bl_iot_sdk/tools/flash_tool``\ 目录下，双击名为 ``BLFlashEnv`` 的可执行文件 。
+-  Enter the directory \ ``/bl_iot_sdk/tools/flash_tool``\, and run the executable ``BLFlashEnv`` .
 
--  ``chip type``\ 选择BL602/604，打开后界面参数参考下图配置：
+-  Select BL602/604 as ``chip type``\ ，refer to the following picture for a sample configuration：
 
    .. figure:: imgs/image7.png
       :alt:
 
-   点击\ ``download``\ ，出现如下图所示表明下载成功：
+   Click\ ``download``\ . The following figure is displayed if flashing is successful:
 
    .. figure:: imgs/image8.png
       :alt:
 
-下载完成后，打开串口终端Gtkterm，配置如下：
+After flashing is done, open the serial terminal Gtkterm with the configuration as follows：
 
 .. figure:: imgs/image9.png
    :alt:
 
-保证终端右下角的\ ``DTR``\ 是黑色状态， ``RTS`` 为灰色状态， ``DTR`` 可以通过快捷键 ``F7`` 控制， ``RTS`` 可以通过快捷键 ``F8`` 控制，最终配置如下图所示。
+Make sure that \ ``DTR``\ in the lower right corner of the terminal is in black state, ``RTS`` is in gray state. ``DTR`` can be controlled by the shortcut key ``F7``, and ``RTS`` can be controlled by the shortcut key ``F8``. the final configuration is shown in the figure below.
 
 .. figure:: imgs/image10.png
    :alt:
