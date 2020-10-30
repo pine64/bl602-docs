@@ -82,6 +82,9 @@ unified table. I make no guarantees to the accuracy of this table.
 | `0x4000_F800` | `0x4000_FFFF` |  `aon` (analog domain control?)            |
 | `0x4001_0000` | `0x4001_0FFF` |  Deep sleep retention RAM                  |
 | `0x4202_0000` | `0x4203_BFFF` |  Wireless RAM (datasheet disagrees on base)|
+| `0x44c0_0000` | `0x44c?_????` |  `wifi phy` (identified from `phy_init`) (has many wifi related modules including `acg`)      |
+| `0x54c0_a000` | `0x54c0_????` |  `agc` ucode (identified from `phy_init`)  |
+
 
 (Peripherals in *`italics`* are present in the SVD but not the datasheet.)
 
