@@ -40,50 +40,52 @@ the core being SiFive IP.
 Memory Map
 ----------
 The [datasheet][1] contains a memory map, as does [soc602_reg.svd][2] and
-[bl602.h][3]. As mentioned above, [clic.h][4] also contains part of the map. I
-have attempted to synthesize information from all these sources into a single
-unified table. I make no guarantees to the accuracy of this table.
+[bl602.h][3]. As mentioned above, [clic.h][4] also contains part of the map. These sources have been synthesized into this unified table.
 
-| Base address  | Top address   |  Name                                      |
-|---------------|---------------|--------------------------------------------|
-| `0x0200_0000` | `0x027F_FFFF` |  RISC-V CLINT                              |
-| `0x0280_0000` | `0x02FF_FFFF` |  Hart 0 CLIC                               |
-| `0x2100_0000` | `0x2101_FFFF` |  Mask ROM (holds boot and RomDriver code)  |
-| `0x2200_8000` | `0x2201_3FFF` |  ITCM (Instruction Tightly Coupled Memory) |
-| `0x2201_4000` | `0x2201_BFFF` |  DTCM (Data Tightly Coupled Memory)        |
-| `0x2202_0000` | `0x2202_FFFF` |  Main RAM                                  |
-| `0x2300_0000` | `0x23FF_FFFF` |  XIP (eXecute In Place) flash mapping      |
-| `0x4000_0000` | `0x4000_0FFF` |  `glb` (global control registers)          |
-| `0x4000_1000` | `0x4000_1FFF` |  `rf` ("mixed signal"/radio)               |
-| `0x4000_2000` | `0x4000_2FFF` |  `gpip` (ADC+DAC+analog comparator config) |
-| `0x4000_3000` | `0x4000_3FFF` |  *`sec_dbg`* (secure debug?)               |
-| `0x4000_4000` | `0x4000_4FFF` |  `sec_eng` (security engine, e.g. SHA+AES) |
-| `0x4000_5000` | `0x4000_5FFF` |  `tzc_sec` ("trust isolation" #1)          |
-| `0x4000_6000` | `0x4000_6FFF` |  `tzc_nsec` ("trust isolation" #2)         |
-| `0x4000_7000` | `0x4000_707F` |  `ef_data_0` (eFuse data #1)               |
-| `0x4000_7080` | `0x4000_70FF` |  `ef_data_1` (eFuse data #2)               |
-| `0x4000_7800` | `0x4000_7FFF` |  `ef_ctrl` (eFuse control)                 |
-| `0x4000_8000` | `0x4000_8FFF` |  *`cci`* (???)                             |
-| `0x4000_9000` | `0x4000_9FFF` |  `l1c` (cache control)                     |
-| `0x4000_A000` | `0x4000_A0FF` |  `uart0` (UART #1)                         |
-| `0x4000_A100` | `0x4000_A1FF` |  `uart1` (UART #2)                         |
-| `0x4000_A200` | `0x4000_A2FF` |  `spi` (Serial Peripheral Interface)       |
-| `0x4000_A300` | `0x4000_A3FF` |  `i2c` (I2C)                               |
-| `0x4000_A400` | `0x4000_A4FF` |  `pwm` (Pulse Width Modulation #1-#6)      |
-| `0x4000_A500` | `0x4000_A5FF` |  `timer` (Timer #1 and #2)                 |
-| `0x4000_A600` | `0x4000_A6FF` |  `ir` (infrared remote accelerator)        |
-| `0x4000_A000` | `0x4000_AFFF` |  *`cks`* (???, conflicts with others)      |
-| `0x4000_B000` | `0x4000_B6FF` |  `sf_ctrl` (serial flash control)          |
-| `0x4000_B700` | `0x4000_BFFF` |  `sf_ctrl_buf` (serial flash data buffer)  |
-| `0x4000_C000` | `0x4000_CFFF` |  `dma` (Direct Memory Access engine)       |
-| `0x4000_D000` | `0x4000_DFFF` |  `sdu` (SDIO slave controller)             |
-| `0x4000_E000` | `0x4000_EFFF` |  `pds` (Power Down Sleep/sleep control)    |
-| `0x4000_F000` | `0x4000_F7FF` |  `hbn` (Hibernate/deep sleep control)      |
-| `0x4000_F800` | `0x4000_FFFF` |  `aon` (analog domain control?)            |
-| `0x4001_0000` | `0x4001_0FFF` |  Deep sleep retention RAM                  |
-| `0x4202_0000` | `0x4203_BFFF` |  Wireless RAM (datasheet disagrees on base)|
-| `0x44c0_0000` | `0x44c?_????` |  `wifi phy` (identified from `phy_init`) (has many wifi related modules including `acg`)      |
-| `0x54c0_a000` | `0x54c0_????` |  `agc` ucode (identified from `phy_init`)  |
+```
+None of the information in this table has been verified (yet)
+```
+
+| Base address  | Top address   |  Name                                                                                    | Register description                |
+|---------------|---------------|------------------------------------------------------------------------------------------|-------------------------------------|
+| `0x0200_0000` | `0x027F_FFFF` |  RISC-V CLINT                                                                            |                                     |
+| `0x0280_0000` | `0x02FF_FFFF` |  Hart 0 CLIC                                                                             |                                     |
+| `0x2100_0000` | `0x2101_FFFF` |  Mask ROM (holds boot and RomDriver code)                                                |                                     |
+| `0x2200_8000` | `0x2201_3FFF` |  ITCM (Instruction Tightly Coupled Memory)                                               |                                     |
+| `0x2201_4000` | `0x2201_BFFF` |  DTCM (Data Tightly Coupled Memory)                                                      |                                     |
+| `0x2202_0000` | `0x2202_FFFF` |  Main RAM                                                                                |                                     |
+| `0x2300_0000` | `0x23FF_FFFF` |  XIP (eXecute In Place) flash mapping                                                    |                                     |
+| `0x4000_0000` | `0x4000_0FFF` |  `glb` (global control registers)                                                        | [GLB](registers/glb.md)             |
+| `0x4000_1000` | `0x4000_1FFF` |  `rf` ("mixed signal"/radio)                                                             | [RF](registers/rf.md)               |
+| `0x4000_2000` | `0x4000_2FFF` |  `gpip` (ADC+DAC+analog comparator config)                                               | [GPIP](registers/gpip.md)           |
+| `0x4000_3000` | `0x4000_3FFF` |  *`sec_dbg`* (secure debug?)                                                             | [SEC_DBG](registers/sec_dbg.md)     |
+| `0x4000_4000` | `0x4000_4FFF` |  `sec_eng` (security engine, e.g. SHA+AES)                                               | [SEC_ENG](registers/sec_eng.md)     |
+| `0x4000_5000` | `0x4000_5FFF` |  `tzc_sec` ("trust isolation" #1)                                                        | [TZC_SEC](registers/tzc_sec.md)     |
+| `0x4000_6000` | `0x4000_6FFF` |  `tzc_nsec` ("trust isolation" #2)                                                       | [TZC_NSEC](registers/tzc_nsec.md)   |
+| `0x4000_7000` | `0x4000_707F` |  `ef_data_0` (eFuse data #1)                                                             | [EF_DATA_0](registers/ef_data_0.md) |
+| `0x4000_7080` | `0x4000_70FF` |  `ef_data_1` (eFuse data #2)                                                             | [EF_DATA_1](registers/ef_data_1.md) |
+| `0x4000_7800` | `0x4000_7FFF` |  `ef_ctrl` (eFuse control)                                                               | [EF_CTRL](registers/ef_ctrl.md)     |
+| `0x4000_8000` | `0x4000_8FFF` |  *`cci`* (???)                                                                           | [CCI](registers/cci.md)             |
+| `0x4000_9000` | `0x4000_9FFF` |  `l1c` (cache control)                                                                   | [L1C](registers/l1c.md)             |
+| `0x4000_A000` | `0x4000_A0FF` |  `uart0` (UART #1)                                                                       | [UART](registers/uart.md)           |
+| `0x4000_A100` | `0x4000_A1FF` |  `uart1` (UART #2)                                                                       | [UART](registers/uart.md)           |
+| `0x4000_A200` | `0x4000_A2FF` |  `spi` (Serial Peripheral Interface)                                                     | [SPI](registers/spi.md)             |
+| `0x4000_A300` | `0x4000_A3FF` |  `i2c` (I2C)                                                                             | [I2C](registers/i2c.md)             |
+| `0x4000_A400` | `0x4000_A4FF` |  `pwm` (Pulse Width Modulation #1-#6)                                                    | [PWM](registers/pwm.md)             |
+| `0x4000_A500` | `0x4000_A5FF` |  `timer` (Timer #1 and #2)                                                               | [TIMER](registers/timer.md)         |
+| `0x4000_A600` | `0x4000_A6FF` |  `ir` (infrared remote accelerator)                                                      | [IR](registers/ir.md)               |
+| `0x4000_A000` | `0x4000_AFFF` |  *`cks`* (???, conflicts with others)                                                    | [CKS](registers/cks.md)             |
+| `0x4000_B000` | `0x4000_B6FF` |  `sf_ctrl` (serial flash control)                                                        | [SF_CTRL](registers/sf_ctrl.md)     |
+| `0x4000_B700` | `0x4000_BFFF` |  `sf_ctrl_buf` (serial flash data buffer)                                                |                                     |
+| `0x4000_C000` | `0x4000_CFFF` |  `dma` (Direct Memory Access engine)                                                     | [DMA](registers/dma.md)             |
+| `0x4000_D000` | `0x4000_DFFF` |  `sdu` (SDIO slave controller)                                                           |                                     |
+| `0x4000_E000` | `0x4000_EFFF` |  `pds` (Power Down Sleep/sleep control)                                                  | [PDS](registers/pds.md)             |
+| `0x4000_F000` | `0x4000_F7FF` |  `hbn` (Hibernate/deep sleep control)                                                    | [HBN](registers/hbn.md)             |
+| `0x4000_F800` | `0x4000_FFFF` |  `aon` (analog domain control?)                                                          | [AON](registers/aon.md)             |
+| `0x4001_0000` | `0x4001_0FFF` |  Deep sleep retention RAM                                                                |                                     |
+| `0x4202_0000` | `0x4203_BFFF` |  Wireless RAM (datasheet disagrees on base)                                              |                                     |
+| `0x44c0_0000` | `0x44c?_????` |  `wifi phy` (identified from `phy_init`) (has many wifi related modules including `acg`) |                                     |
+| `0x54c0_a000` | `0x54c0_????` |  `agc` ucode (identified from `phy_init`)                                                |                                     |
 
 
 (Peripherals in *`italics`* are present in the SVD but not the datasheet.)
