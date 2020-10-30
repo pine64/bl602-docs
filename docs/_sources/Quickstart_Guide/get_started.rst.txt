@@ -1,12 +1,13 @@
-快速入门
-========
+Quickstart Guide
+================
 
-准备工作
---------
+Prerequisites
+-------------
 
--  硬件：
+-  Hardware
 
-   一款 BL602 开发板 PC（Windows、Linux 或 Mac OS）
+   -  A BL602 development board
+   -  PC (Windows, Linux or Mac OS)
 
 Starter Guide
 -------------
