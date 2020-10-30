@@ -10,7 +10,7 @@ Hardware
   that full register documentation will be available sometime in November 2020.
 - [soc602_reg.svd][1]: Contains a seemingly-complete register listing, with
   names but no descriptions, for the BL602.
-- [Hardware Notes](reverse_engineered/hardware_notes.md): Additional information
+- [Hardware Notes](hardware_notes): Additional information
   gathered from the SDK repository and elsewhere on the internet.
 
 [1]: https://github.com/pine64/bl_iot_sdk/tree/master/components/bl602/bl602_std/bl602_std/Device/Bouffalo/BL602/Peripherals/soc602_reg.svd
