@@ -1,4 +1,4 @@
-BLE602 Documentation
+BL602 Documentation
 ====================
 
 Hardware
