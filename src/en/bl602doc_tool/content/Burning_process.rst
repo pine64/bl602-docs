@@ -1,174 +1,175 @@
 ===============
-Dev Cube 简介
+Dev Cube introduction
 ===============
 
-Dev Cube 是博流提供的芯片集成开发工具，包含IOT程序下载、MCU程序下载和RF性能测试三种功能。本文档主要介绍IOT和MCU程序下载相关配置，RF性能测试请参考《射频性能测试使用手册》。
+Dev Cube is a chip integration development tool provided by Broadstream/BOLU (?), including IOT program download, MCU program download and RF performance test. This document mainly introduces the configuration of IOT and MCU program download, and RF performance test, please refer to RF performance test manual.
 
-Dev Cube 提供用户下载程序的功能，并且支持时钟、flash等参数配置，用户可根据自身需求决定是否对程序进行加密、添加签名、更换程序启动时的信息文件、用户资源文件、分区表等功能配置。
+Dev Cube provides users with the ability to download programs, and supports parameters such as clock, flash, etc. Users can decide whether to encrypt the program, add signatures, replace the program start information file, user resource files, partition tables and other functional configurations according to their own needs.
 
-具体的功能如下：
+The concrete functions are as follows：
 
-1. 支持IOT应用程序和MCU应用程序的下载
+1. support the download of IOT applications and MCU applications
 
-2. 支持多种型号Flash 的擦、写、读；
+2. support erase, write, read for different models of Flash.
 
-3. 可将各类文件下载到Flash并验证、回读；
+3. The ability to download various types of files to Flash and verify and read them back.
 
-4. 下载通讯接口支持 UART 和 JLink 两种方式。
+4. The download communication interface supports both UART and JLink.
 
-用户可以通过 \ `Bouffalo Lab Dev Cube <https://dev.bouffalolab.com/download>`__，获取最新版本的Dev Cube。
-双击解压后文件夹中的\ ``BLDevCube.exe``\，在\ ``Chip Selection``\对话框中选择对应的芯片型号，点击\ ``Finish``\进入Dev Cube主界面。
+Users can get the latest version of the Dev Cube from `Bouffalo Lab Dev Cube <https://dev.bouffalolab.com/download>`__.
+Double click on ``BLDevCube.exe`` in the unzipped folder, select the corresponding chip model in the ``Chip Selection'' dialog box, and click ``Finish`` to enter the Dev Cube main interface.
 
 .. figure:: /bl602doc_tool/content/picture/chipselection.png
    :align: center
 
-   芯片选择
+   Chip selection
 
 ==========
-镜像组成
+Image Composition
 ==========
-无论是IOT程序下载还是MCU程序下载，它们的镜像组成是相同的，都如下图所示：
+Whether it is an IOT program download or an MCU program download, their image composition is the same, as shown in the following figure.
 
 .. figure:: /bl602doc_tool/content/picture/tool2.png
    :align: center
 
-   下载内容布局
+   The Downloaded Content Layout
 
-如果只下载应用程序无法使芯片正常工作，必须要将引导信息下载到指定位置。引导信息包含对PLL、Boot、Flash等的配置；固件是用户自己编写的应用程序。
+After downloading, the application does not yet work properly with the chip. The boot info must be downloaded to the specified location. The boot info contains the configuration of the PLL, Boot, Flash, etc.; the firmware is an application written by the user.
 
-以单核下载为例：根据需求选择对应的参数,将对PLL、Flash等配置的信息烧录到Bootinfo Addr对应的地址中，将应用程序经过编译后的bin文件烧录到Image Addr对应的地址中。
+For example, to download a single-core file, select the corresponding parameters according to your needs, and burn the configuration information of PLL and Flash into the address corresponding to ``Bootinfo Addr``, and burn the compiled bin file of the application into the address corresponding to ``Image Addr``.
+
 
 =====================
-MCU程序下载
+MCU Program Download
 =====================
-在\ ``View``\菜单中选择MCU选项，会进入MCU程序下载界面，主要分为程序下载方式的配置、镜像参数的配置和高级镜像参数的配置。
+Under the ``View`` menu, select the MCU option to open the MCU program download interface, which is mainly divided into the configuration of program download method, configuration of image parameters and configuration of advanced image parameters.
 
-配置程序下载方式
+Configuring the program download method
 ====================
 
-- 配置参数包括：
+- Configuration parameters include:
 
-   * Interface：用于选择烧录的通信接口，这里选择 Uart 进行下载
-   * COM Port：当选择 UART 进行下载的时候这里选择与芯片连接的 COM 口号，可以点击 Refresh 按钮进行 COM 号的刷新
-   * Uart Speed：当选择 UART 进行下载的时候，填写波特率，推荐下载频率2MHz,不宜过高
-   * Chip Erase：默认设置为False，即下载时不擦除Flash
-   * Xtal：用于选择板子所使用的晶振类型。
+   * Interface: the communication interface to select the program, here select Uart for downloading.
+   * COM Port: When you select UART to download, select the COM port connected to the chip and click Refresh button to refresh the COM port.
+   * Uart Speed: fill in the baud rate when you select UART for downloading, the recommended download frequency is 2MHz, not too high.
+   * Chip Erase: the default setting is False, i.e. no Flash erase when downloading.
+   * Xtal: used to select the type of crystal used for the board.
 
 .. figure:: /bl602doc_tool/content/picture/tool5.png
    :align: center
 
-   MCU程序下载方式选择界面
+   MCU program download method selection interface
 
-配置镜像参数
+Configuring image parameters
 ==================
 
-- 配置参数包括：
+- Configuration parameters include.
 
-   * Boot Source：默认为Flash
-   * BootInfo Addr：Flash程序启动参数的存放地址，填写0x0
-   * Image Type：默认为SingleCPU
-   * Image Addr：应用程序的存放地址，建议填写0x2000或者0x2000以后的地址
-   * Image File：将编译生成的bin文件路径添加到Image File 中
+   * Boot Source: default is Flash
+   * BootInfo Addr: address of Flash program start parameters, fill in 0x0
+   * Image Type: default is SingleCPU
+   * Image Addr: the address of the application, please fill in 0x2000 or later.
+   * Image File: add the path of the compiled bin file to the Image File.
 
 .. figure:: /bl602doc_tool/content/picture/tool9.png
    :align: center
    
-   镜像参数选择界面
+   Mirroring parameter selection interface
 
-配置高级镜像参数
+Configuring advanced image parameters
 ======================
 
-- 当点击\ ``click here to show advanced options``\时，会展开高级镜像配置，可配置的参数包括：
+- When ``click here to show advanced options``, advanced image configuration is expanded, with configurable parameters including:
 
-   * Flash Clock：默认为XTAL
-   * PLL : PLL时钟配置，默认为160M
-   * CacheWayDis : 缓冲通道失能，默认为none
-   * Sign : 选择是否需要ECC校验，默认为none
-   * CrcIgnore : 是否需要CRC校验。当参数选择False时需要做CRC校验；参数选择True时不需要做CRC校验
-   * HashIgnore : 是否需要做Hash校验。当参数选择False时需要做Hash校验；参数选择True时不需要做Hash校验
-   * Encrypt : 选择加密方式，并根据AES加密方式在AES Key 和AES IV中输入对应的值。
+   * Flash Clock: default is XTAL
+   * PLL : PLL clock configuration, default 160M
+   * CacheWayDis : buffer channel disable, default is none
+   * Sign : Select if ECC is needed or not, default is none.
+   * CrcIgnore : If or not CRC check is needed. If the parameter is False, the CRC check is required; if the parameter is True, the CRC check is not required.
+   * HashIgnore : If or not need to do a hash check. If the parameter is False, you need to do a hash check; if the parameter is True, you don't need to do a hash check.
+   * Encrypt : Select the encryption method and enter the corresponding value in AES Key and AES IV according to the AES encryption method.
 
 .. figure:: /bl602doc_tool/content/picture/tool10.png
    :align: center
 
-   高级镜像参数选择界面
+   Advanced image parameter selection interface
 
-下载程序
+Download program
 ===========
 
-- 将板子的BOOT引脚保持高电平，并且使得芯片复位，使其处于UART引导下载的状态。点击\ ``Creat&Program``\，会自动生成应用程序镜像和启动参数配置文件，出现下图log信息，程序下载成功
+- Keep the board's BOOT pin high, and make the chip reset so that it is in the UART boot download state. Click on ``Creat&Program``, it will automatically generate the application image and startup parameter configuration file, the following log message appears, the program download is successful
 
 .. figure:: /bl602doc_tool/content/picture/tool6.png
    :align: center
 
-   下载程序
+   Program Download
 
 .. note::
-    若没有连接板子，只需生成应用程序镜像和启动参数配置文件，也是点击\ ``Creat&Program``\按钮
+    If the board is not connected, simply generate the application image and startup parameter profile,  by clicking the ``Creat&Program`` button.
 
-- 下载成功后，将板子的BOOT引脚保持低电平，并且使得芯片复位，使其从Flash启动。此例子以2M波特率向PC端发送字符串报文
+- After a successful download, the board's BOOT pin is kept low and the chip is made to reset to boot from Flash. This example sends a string message to the PC at 2M baud rate.
 
 .. figure:: /bl602doc_tool/content/picture/tool7.png
    :align: center
 
-   log信息
+   log information
 
 =============
-IOT程序下载
+IOT program download
 =============
-在\ ``View``\菜单中选择IOT选项，会进入IOT程序下载界面，主要分为程序下载方式的配置和下载参数的配置。
+In the ``View`` menu, select the IOT option to enter the IOT program download interface, which is mainly divided into the configuration of program download method and download parameters.
 
-配置程序下载方式
+Configuration program download method
 ====================
 
-- 配置参数包括：
+- Configuration parameters include:
 
-   * Interface：用于选择烧录的通信接口，这里选择 Uart 进行下载
-   * COM Port: 当选择 UART 进行下载的时候这里选择与芯片连接的 COM 口号，可以点击 Refresh 按钮进行 COM 号的刷新
-   * Uart Rate：当选择 UART 进行下载的时候，填写波特率，推荐下载频率2MHz,不宜过高
-   * Board：选择所使用的板子型号，这里选择 IoTKitA，当板子选定后，Xtal 会自动更新成与板子匹配的默认值，当然用户也是可以再次更改的
-   * Xtal:选择下载时的晶振频率，如果电路板没有焊接晶振，此处应当选内部RC32M时钟源
-   * Chip Erase 默认设置为False，即下载时不擦除Flash
+   * Interface: the communication interface to select the program, here select Uart for downloading.
+   * COM Port: When you select UART to download, select the COM port which is connected to the chip and click Refresh button to refresh the COM port.
+   * Uart Rate: fill in the baud rate when you select UART for downloading, the recommended download frequency is 2MHz, not too high.
+   * Board: select the board type to be used, in this case IoTKitA, once the board is selected, Xtal will automatically update it to the default values that match the board.
+   * Xtal: select the frequency of the crystal during download, if the board does not have a soldered crystal, here should be elected internal RC32M clock source
+   * Chip Erase is set to False by default, which means that Flash is not erased on download.
 
 .. figure:: /bl602doc_tool/content/picture/iot1.png
    :align: center
    
-   IOT程序下载方式选择界面
+   IOT program download method selection interface
 
-配置下载参数
+Configuration download parameters
 ==================
 
-- 配置参数包括：
+- Configuration parameters include:
 
-   * Partition Table：使用Dev Cube目录下对应芯片型号 partition 文件夹中的分区表，默认选择2M的文件
-   * Boot2 Bin:它是系统启动后运行的第一个Flash程序，负责建立BLSP安全环境，并引导主程序运行，使用Dev Cube目录下对应芯片型号 builtin_imgs 文件夹中的 Boot2 文件
-   * Firmware Bin：用户编译生成的bin文件路径
-   * Media/Romfs：Media和Romfs二选一，如果勾选 Media，选择的是文件，如果勾选 Romfs，则选择的是文件夹
-   * MFG Bin：选择MFG文件
-   * AES-Encrypt：如果使用加密功能，需要将AES-Encrypt选项选中，并在旁边的文本框中输入加密所使用的Key和IV。输入的是十六进制对应的“0”~“F”，一个Byte由两个字符构成，所以Key和IV分别要求输入32个字符。需要注意的是IV的最后8个字符（即4Bytes）必须全为0
-   * Single Download Config：勾选Enable后可下载单个文件，在左侧文本框填写下载的起始地址，以0x打头
+   * Partition Table: Use the partition table in the partition folder of the corresponding chip model in the Dev Cube directory, default is 2M.
+   * Boot2 Bin: It is the first Flash program that runs after system boot up, and is responsible for setting up the BLSP security environment and guiding the main program to run, using the Boot2 file in the builtin_imgs folder of the corresponding chip model in the Dev Cube directory.
+   * Firmware Bin: the path to the bin file generated by the user's compilation.
+   * Media/Romfs: choose one of Media and Romfs, if Media is checked, the file is selected, if Romfs is checked, the folder is selected
+   * MFG Bin: selection of MFG files
+   * AES-Encrypt: To use the encryption function, select the AES-Encrypt option, and enter the Key and IV for encryption in the text box next to it. ", a Byte consists of two characters, so Key and IV each require 32 characters to be entered. Note that the last 8 characters of the IV (i.e. 4 Bytes) must be all 0!
+   * Single Download Config: If Enable is checked, a single file can be downloaded, fill in the starting address of the download in the left text box, and start with 0x.
 
 .. figure:: /bl602doc_tool/content/picture/iot2.png
    :align: center
 
-   下载参数选择界面
+   Download parameter selection interface
 
-下载程序
+Download program
 ===========
 
-- 将板子的BOOT引脚保持高电平，并且使得芯片复位，使其处于UART引导下载的状态。点击\ ``Creat&Download``\，会自动生成应用程序镜像和启动参数配置文件，出现下图log信息，程序下载成功
+- Keep the board's BOOT pin high, and make the chip reset so that it is in the UART boot download state. Click ``Creat&Download``, the application image and startup parameter configuration file will be generated automatically, the following log message appears, the program download is successful
 
 .. figure:: /bl602doc_tool/content/picture/iot3.png
    :align: center
 
-   IOT下载程序
+   IOT Downloader
 
 .. note::
-    若没有连接板子，只需生成应用程序镜像和启动参数配置文件，也是点击\ ``Creat&Program``\按钮
+    If the board is not connected, simply generate the application image and startup parameter profile,  by clicking the ``Creat&Program`` button.
 
-- 下载成功后，将板子的BOOT引脚保持低电平，并且使得芯片复位，使其从Flash启动。此例子以2M波特率向PC端发送字符串报文
+- After a successful download, the board's BOOT pin is kept low and the chip is made to reset to boot from Flash. This example sends a string message to the PC at 2M baud rate.
 
 .. figure:: /bl602doc_tool/content/picture/tool7.png
    :align: center
 
-   log信息
+   log message

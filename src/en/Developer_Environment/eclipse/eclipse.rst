@@ -1,12 +1,12 @@
 Eclipse
 =======
 
-本文档介绍Eclipse的使用。
+This document describes the use of Eclipse.
 
-导入工程
+import project
 --------
 
--  首先启动 ``eclipse`` ，打开工具栏上的\ ``File > import``\ ，选择\ ``General``\ 菜单下的\ ``Existing Projects into Workspace``\ 选项导入工程。
+- First of all, start ``eclipse``, open ``File > import`` on the toolbar and select the ``Existing Projects into Workspace`` option under the ``General`` menu to import the projects.
 
 .. figure:: imgs/image01.png
    :alt: 
@@ -17,7 +17,7 @@ Eclipse
 Debug
 -----
 
--  首先让板子跑起来，确认eclipse左上方的工具栏配置如下图1所示，然后点击第一个红色框框起来的图标\ ``debug``\ 按钮，eclipse会先编译工程，完成后eclipse下方的 ``Console`` 窗口可以看到如下图2所示log。
+- First of all, let the board run, make sure the toolbar at the top left of the eclipse is configured as shown in Figure 1 below, then click the icon ``debug`` button in the first red box, the eclipse will compile the project first, after that, you can see the log in the ``Console`` window below the eclipse as shown in Figure 2 below.
 
 .. figure:: imgs/image03.png
    :alt:
@@ -25,13 +25,13 @@ Debug
 .. figure:: imgs/image04.png
    :alt:
 
--  使用快捷键 ``F8`` resume一下，可以看到程序停在 ``void bfl_main()`` 主函数处，此时可以点击下图中的3个按钮。其含义分别为
+- Use the shortcut key ``F8`` to resume, you can see the program stops at the ``void bfl_main()`` main function, you can click the three buttons in the figure below. Their meanings are
 
-   -  第一个Step Into（F5） 单步执行，遇到子函数就进入并且继续单步执行；
+   - First Step Into (F5) Single-step execution, entering and continuing single-step execution when sub-functions are encountered.
 
-   -  第二个Step Over （F6）在单步执行时，在函数内遇到子函数时不会进入子函数内单步执行，而是将子函数整个执行完在停止，也就是把子函数整个作为一步；
+   - The second Step Over (F6) does not go into subfunctions when encountered within a function during single-step execution, but instead stops the entire execution of the subfunctions as a single step.
 
-   -  第三个Step Return（F7）在单步执行到子函数内时，用Step Return就可以执行完子函数余下部分，并返回上一层函数。
+   - The third Step Return (F7) is used to finish the remainder of the sub-function and return the previous level function when a single step is executed into the sub-function.
 
 .. figure:: imgs/image05.png
    :alt:
@@ -39,12 +39,12 @@ Debug
 .. figure:: imgs/image06.png
    :alt:
 
--  可以在 ``c代码`` 窗口最左边橙色条处双击增加、删除断点。
+- You can add and remove breakpoints by double-clicking on the leftmost orange bar of the ``code`` window.
 
 .. figure:: imgs/image08.png
    :alt:
 
--  还可以通过查看右边的 ``Disassembly`` 窗口查看对应的汇编（该窗口没有的话可以通过最上方工具栏 ``Window > show view > Disassembly`` 添加）。
+- You can also view the corresponding assembly by looking at the ``Disassembly`` window on the right (if that window isn't available, you can add it by going to ``Window > show view > Disassembly`` in the top toolbar).
 
 .. figure:: imgs/image07.png
    :alt:
