@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://pine64.github.io/bl602-docs/sitemap.xml
