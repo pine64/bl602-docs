@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 .. toctree::
-   :caption: Developer_Environment
+   :caption: Developer Environment
    :numbered:
    
    Developer_Environment/Developer_Environment
@@ -12,6 +12,11 @@
    Developer_Environment/freedom_studio/freedom_studio
    Developer_Environment/eclipse/eclipse
 
+.. toctree::
+   :caption: Quickstart Guide
+   :numbered:
+
+   Quickstart_Guide/get_started
 
 .. toctree::
    :caption: Examples
