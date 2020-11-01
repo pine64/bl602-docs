@@ -9,6 +9,7 @@ To build the documentation your self:
 ```bash
 $ cd src
 $ python -m pip install --requirement=requirements.txt
+$ cd en   # cd zh to build documentation in chinese
 $ make html
 ```
 After successfully building the documentation navigate to `docs`.
