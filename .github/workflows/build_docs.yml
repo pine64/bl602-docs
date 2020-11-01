@@ -14,12 +14,12 @@ jobs:
         
       - name: install requirements
         run: |
-          cd $GITHUB_WORKSPACE/bl602-docs/src
+          cd $GITHUB_WORKSPACE/src
           pip install --requirement=requirements.txt
     
       - name: make html documentation
         run: |
-          cd $GITHUB_WORKSPACE/bl602-docs/src/en,
+          cd $GITHUB_WORKSPACE/src/en,
           make html
           
       - name: deploy to github pages
