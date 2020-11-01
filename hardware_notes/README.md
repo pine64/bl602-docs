@@ -55,7 +55,7 @@ None of the information in this table has been verified (yet)
 | `0x2201_4000` | `0x2201_BFFF` |  DTCM (Data Tightly Coupled Memory)                                                      |                                     |
 | `0x2202_0000` | `0x2202_FFFF` |  Main RAM                                                                                |                                     |
 | `0x2300_0000` | `0x23FF_FFFF` |  XIP (eXecute In Place) flash mapping                                                    |                                     |
-| `0x4000_0000` | `0x4000_0FFF` |  `glb` (global control registers)                                                        | [GLB](registers/glb.md)             |
+| `0x4000_0000` | `0x4000_0FFF` |  `glb` (global control registers)                                                        | [GLB](registers/glb)                |
 | `0x4000_1000` | `0x4000_1FFF` |  `rf` ("mixed signal"/radio)                                                             | [RF](registers/rf.md)               |
 | `0x4000_2000` | `0x4000_2FFF` |  `gpip` (ADC+DAC+analog comparator config)                                               | [GPIP](registers/gpip.md)           |
 | `0x4000_3000` | `0x4000_3FFF` |  *`sec_dbg`* (secure debug?)                                                             | [SEC_DBG](registers/sec_dbg.md)     |
