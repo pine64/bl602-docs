@@ -19,7 +19,7 @@ jobs:
     
       - name: make html documentation
         run: |
-          cd $GITHUB_WORKSPACE/src/en,
+          cd $GITHUB_WORKSPACE/src/en
           make html
           
       - name: deploy to github pages
