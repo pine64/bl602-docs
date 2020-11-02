@@ -3,43 +3,44 @@
 GPIO
 ==================
 
-总览
+Overview
 ------
 
-本示例主要介绍如何配置GPIO。
+This example explains how to configure GPIO.
 
-使用步骤
+Usage Steps
 -----------
 
-- 编译 ``customer_app/sdk_app_gpio`` 工程并下载工程；
-- 使用 ``gpio-func <pinnum> <inputmode> <pullup> <pulldown>`` 命令配置指定gpio口的输入输出模式，上拉下拉情况，如输入 ``gpio-func 8 0 0 0`` 命令表示将gpio8设置为输出模式，无上下拉；
+- Compile and flash ``customer_app/sdk_app_gpio``.
+- In the serial console, use ``gpio-func <pinnum> <inputmode> <pullup> <pulldown>`` to configure a GPIO pin. ``input_mode`` configures whether the pin is an input (and otherwise, an output), and ``pullup`` and ``pulldown`` respectively configures the pull-up and pull-down states. For instance, ``gpio-func 8 0 0 0`` configures gpio pin 8 as output without pull-up / pull-down.
 
 .. figure:: imgs/image1.png
-   :alt: 
+   :alt:
 
-- 使用 ``gpio-set <pinnum> <val>`` 命令可以设置指定gpio口的电平（该gpio设置为输出模式）；
+- Use ``gpio-set <pinnum> <val>`` to configure the voltage level of a pin (an output pin).
 
 .. figure:: imgs/image2.png
-   :alt: 
+   :alt:
 
-- 使用 ``gpio-get <pinnum>`` 命令可以获取指定gpio口电平。
+- Use ``gpio-get <pinnum>`` to look up the voltage level of a pin.
 
 .. figure:: imgs/image3.png
-   :alt: 
+   :alt:
 
-应用实例
----------
 
-- gpio-func命令的实现
+Code Examples
+-------------
+
+- Implementation of ``gpio-func``
 
 ::
 
     if (5 != argc) {
         printf("Usage: %s 24 1 1 0\r\n  set GPIO24 to input with pullup\r\n",
                 argv[0]
-        );  
+        );
         return;
-    }   
+    }
     ionum = atoi(argv[1]);
     inputmode = atoi(argv[2]);
     pullup = atoi(argv[3]);
@@ -47,22 +48,22 @@ GPIO
     if (ionum < 0 || inputmode < 0 || pullup < 0 || pulldown < 0) {
         puts("Illegal arg\r\n");
         return;
-    }   
+    }
     printf("GPIO%d is set %s with %s pullup %s pulldown\r\n",
             ionum,
             inputmode ? "input" : "output",
             pullup ? "Active" : "null",
             pulldown ? "Active" : "null"
-    );  
+    );
     if (inputmode) {
-        bl_gpio_enable_input(ionum, pullup ? 1 : 0, pulldown ? 1 : 0); 
+        bl_gpio_enable_input(ionum, pullup ? 1 : 0, pulldown ? 1 : 0);
     } else {
-        bl_gpio_enable_output(ionum, pullup ? 1 : 0, pulldown ? 1 : 0); 
-    }  
+        bl_gpio_enable_output(ionum, pullup ? 1 : 0, pulldown ? 1 : 0);
+    }
 
-获取命令行传入的信息，并作为参数传给 ``bl_gpio_enable_input(uint8, uint8, uint8)`` 或 ``bl_gpio_enable_output(uint8, uint8, uint8)`` 函数，从而配置对应gpio口。
+It receives inputs from the serial console, and pass them as parameters to ``bl_gpio_enable_input(uint8, uint8, uint8)`` or ``bl_gpio_enable_output(uint8, uint8, uint8)`` to configure the corresponding GPIO pin.
 
-- gpio-set命令的实现
+- Implementation of ``gpio-set``
 ::
 
     if (3 != argc) {
@@ -83,12 +84,12 @@ GPIO
     );
     bl_gpio_output_set(ionum, val ? 1 : 0);
 
-获取命令行传入的信息，并作为参数传给 ``bl_gpio_output_set(uint8, uint8)`` 函数，设置对应gpio口的电平。
+It receives inputs from the CLI and pass them to ``bl_gpio_output_set(uint8, uint8)``.
 
-- gpio-get命令的实现
+- Implementation of ``gpio-get``
 ::
 
-   if (2 != argc) { 
+   if (2 != argc) {
         printf("Usage: %s 24\r\n  get GPIO24 value\r\n",
                 argv[0]
         );
@@ -105,6 +106,6 @@ GPIO
         0 == ret ? (val ? "high" : "low") : "Err"
     );
 
-获取命令行传入的信息，并作为参数传给 ``bl_gpio_input_get(uint8, uint8*)`` 函数，获取对应gpio口的电平。
+It receives inputs from the CLI and pass them to ``bl_gpio_input_get(uint8, uint8*)``
 
-- 在 ``customer_app/sdk_app_gpio/sdk_app_gpio/main.c`` 中的 ``static void _cli_init()`` 函数里调用 ``gpio_cli_init()`` 初始化gpio相关的操作命令。
+- In ``customer_app/sdk_app_gpio/sdk_app_gpio/main.c``, the function ``static void _cli_init()`` invokes ``gpio_cli_init()`` to initialize GPIO-related commands.

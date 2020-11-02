@@ -1,7 +1,7 @@
-BL602 SDK Starter Guide
-=======================
+Linux Starter Guide
+===================
 
-This document aims to guide users to set up a software environment for developing on the BL602 hardware.
+This document explains how to set up a software environment for developing on the BL602 hardware under Linux.
 
 Setting Up and Installing the SDK
 ---------------------------------
@@ -15,50 +15,53 @@ Setting Up and Installing the SDK
 Connecting to Hardware
 ----------------------
 
-The related pin connections of the module are shown in the following figure. Figure 1 is the front view of the module. The number 1 is shorted with a jumper cap, the two pin headers on the left are shorted at the 2 position, and the upper two pins are connected at the 3 The pin headers are short-circuited; Figure 2 is the back view of the module. Short-circuit the two header pins `ʻIO8`` and ``LOW``.
+This picture shows the front of the module. Connect the pins in position 1, 2 and 3 with jumper caps.
 
-.. figure:: imgs/image11.png
+
+.. figure:: imgs/image1110.png
    :alt:
+   
+This picture shows the back of the module. Connect the header pin `ʻIO8`` to ``LOW``.
 
-.. figure:: imgs/image12.png
+.. figure:: imgs/image127.png
    :alt:
 
 Compiling and Flashing
 ----------------------
 
--  Enter your project directory, and compile using the command \ ``./genromap``
+-  Enter your project directory, and compile using the binary \ ``./genromap``
 
-   .. figure:: imgs/image4.png
+   .. figure:: imgs/image48.png
       :alt:
 
 -  Verify the created directory named build\_out: \ ``ls build_out``
 
-   .. figure:: imgs/image5.png
+   .. figure:: imgs/image57.png
       :alt:
 
 Downloading Binaries
 --------------------
 
--  Enter the directory \ ``/bl_iot_sdk/tools/flash_tool``\, and run the executable ``BLFlashEnv`` .
+-  Run the executable ``BLFlashEnv`` \ under the folder ``/bl_iot_sdk/tools/flash_tool``\.
 
--  Select BL602/604 as ``chip type``\ ，refer to the following picture for a sample configuration：
+-  Select BL602/604 as ``chip type``\ ，and configure the rest as follows：
 
-   .. figure:: imgs/image7.png
+   .. figure:: imgs/image72.png
       :alt:
 
-   Click\ ``download``\ . The following figure is displayed if flashing is successful:
+   Click\ ``download``\ . You should see the following if flashing is successful:
 
-   .. figure:: imgs/image8.png
+   .. figure:: imgs/image82.png
       :alt:
 
-After flashing is done, open the serial terminal Gtkterm with the configuration as follows：
+After flashing is done, use a serial terminal (e.g. Gtkterm) and connect to the module:
 
-.. figure:: imgs/image9.png
+.. figure:: imgs/image92.png
    :alt:
 
-Make sure that \ ``DTR``\ in the lower right corner of the terminal is in black state, ``RTS`` is in gray state. ``DTR`` can be controlled by the shortcut key ``F7``, and ``RTS`` can be controlled by the shortcut key ``F8``. the final configuration is shown in the figure below.
+Make sure to enable ``DTR`` and disable ``RTS`` . In Gtkterm, you can toggle ``DTR`` with the shortcut key ``F7``, and ``RTS`` with the shortcut key ``F8``. See following for an example:
 
-.. figure:: imgs/image10.png
+.. figure:: imgs/image102.png
    :alt:
 
 
