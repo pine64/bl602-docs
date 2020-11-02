@@ -1,18 +1,18 @@
 cli
 ===
 
-总览
+Overview
 ------
 
-本实例主要介绍如何增加一个cli（command-line interface）。
+This example mainly introduces how to add a cli (command-line interface).
 
-使用步骤
+Steps for usage
 ----------
 
 - 编译 ``customer_app/sdk_app_cli`` 工程并下载对应的bin文件。
 - 使用 ``test`` 命令即可在终端看到打印的 ``hello world``。
 
-应用实例
+Applications
 --------
 
 .. code:: c
