@@ -220,7 +220,7 @@ Available commands
 -----------
  - Purpose: Set local device name
  - Params: local device name
- - 示例：``ble_set_device_name bl602``
+ - Example：``ble_set_device_name bl602``
  
     .. figure:: imgs/image13.png
        :alt:
