@@ -324,7 +324,7 @@ Available commands
 -----------
  - Purpose: Input authentication passkey.
  - Params: the value of the passkey. The range is 0-999999.
- - Example: When pairing with the ble_security 3 command and the SMP pairing method is PASSKEY_INPUT (Implementation: when registering the SMP interface function with ble_auth, populate the data structure bt_conn_auth_cb with the function passkey_entry filled, passkey_display and passkey_confirm unfilled, and the default values for all other fields), the serial port will prompt "Enter passkey for XX:XX:XX:XX:XX:XX (public)", then enter the command ``ble_auth_passkey 111111'' to complete the pairing.
+ - Example: When pairing with the ble_security 3 command and the SMP pairing method is PASSKEY_INPUT (Implementation: when registering the SMP interface function with ble_auth, populate the data structure bt_conn_auth_cb with the function passkey_entry filled, passkey_display and passkey_confirm unfilled, and the default values for all other fields), the serial port will prompt "Enter passkey for XX:XX:XX:XX:XX:XX (public)", then enter the command ``ble_auth_passkey 111111`` to complete the pairing.
     
     .. figure:: imgs/image24.png
        :alt:
