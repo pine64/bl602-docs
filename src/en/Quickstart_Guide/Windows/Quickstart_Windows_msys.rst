@@ -1,7 +1,8 @@
-BL602 SDK Starter Guide
+Windows Starter Guide
 =======================
 
-本文档旨在指导用户搭建 BL602硬件开发的软件环境。
+This document explains how to set up a software environment for developing on the BL602 hardware under Linux.
+
 
 编译环境的建立及代码的获取
 --------------------------

@@ -1,58 +1,58 @@
 .. _wifi-index:
 
-WiFi
+Wi-Fi
 ==================
 
-总览
-------
+Overview
+--------
 
-本示例主要介绍与wifi相关命令的功能。
+This demo explains Wi-Fi-relate functionalities.
 
-使用步骤
-----------------
+Usage Steps
+-----------
 
-- 编译 ``customer_app/bl602_demo_wifi`` 工程并下载对应的bin文件；
-- 成功启动IoT Board之后在终端输入命令 ``stack_wifi`` 创建wifi任务。
+- Compile and flash ``customer_app/bl602_demo_wifi``.
+- In the serial console, enter ``stack_wifi`` to initialize the Wi-Fi stack.
 
 .. figure:: imgs/image1.png
-   :alt: 
+   :alt:
 
-功能
-----------
+Functionalities
+---------------
 
-- 连接wifi：
+- Connect to an available Wi-Fi network:
 
-命令： ``wifi_sta_connect <ssid> <pwd>`` ，如在终端输入 ``wifi_sta_connect bl_test_005 12345678`` ，成功连接wifi会打印wifi和memory相关信息，如下图中可以看到wifi的IP，MASK等信息，memory剩余大小信息 。
+Enter the command ``wifi_sta_connect <ssid> <pwd>``, for example ``wifi_sta_connect bl_test_005 12345678``. If the connection is successful, the console will display network and available RAM information. In the picture below you can see the network's IP and mask, and the available RAM.
 
 .. figure:: imgs/image2.png
-   :alt: 
+   :alt:
 
-- 断开wifi：
+- Disconnect from Wi-Fi:
 
-命令： ``wifi_sta_disconnect`` ，成功断开连接后会打印断开连接的log。
+Use the command ``wifi_sta_disconnect``.
 
 .. figure:: imgs/image3.png
-   :alt: 
+   :alt:
 
-- 扫描wifi：
+- Scan for networks:
 
-命令： ``wifi_scan`` ，扫描成功后会打印scan list，用户可以看到成功搜索的wifi信息。
+Command ``wifi_scan``. Displays a list of networks if successful.
 
 .. figure:: imgs/image4.png
-   :alt: 
+   :alt:
 
-- 开启ap模式：
+- Enable AP mode:
 
-命令： ``wifi_ap_start`` ，成功开启后打印ssid，pwd，channel等相关信息，并且可以在手机上搜索到相应名字的wifi。
+Command: ``wifi_ap_start``. Prints out the SSID, password and channel.
 
 .. figure:: imgs/image5.png
-   :alt: 
+   :alt:
 
-- 关闭ap模式：
+- Disable AP mode:
 
-命令： ``wifi_ap_stop`` 。成功关闭ap模式后手机无法搜索到对应wifi。
+Command: ``wifi_ap_stop`` .
 
 .. figure:: imgs/image6.png
-   :alt: 
+   :alt:
 
 
