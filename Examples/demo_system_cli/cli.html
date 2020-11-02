@@ -111,9 +111,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_storage_psm/psm.html">8. PSM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">9. Romfs</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">10. cli</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">10.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">10.2. 使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">10.3. 应用实例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">10.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#steps-for-usage">10.2. Steps for usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#applications">10.3. Applications</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">11. FDT</a></li>
@@ -214,19 +214,19 @@
             
   <div class="section" id="cli">
 <h1><span class="section-number">10. </span>cli<a class="headerlink" href="#cli" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">10.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本实例主要介绍如何增加一个cli（command-line interface）。</p>
+<div class="section" id="overview">
+<h2><span class="section-number">10.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example mainly introduces how to add a cli (command-line interface).</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">10.2. </span>使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="steps-for-usage">
+<h2><span class="section-number">10.2. </span>Steps for usage<a class="headerlink" href="#steps-for-usage" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_cli</span></code> 工程并下载对应的bin文件。</p></li>
 <li><p>使用 <code class="docutils literal notranslate"><span class="pre">test</span></code> 命令即可在终端看到打印的 <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code>。</p></li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h2><span class="section-number">10.3. </span>应用实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="applications">
+<h2><span class="section-number">10.3. </span>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">cmd_cli</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">,</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello world</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
