@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. aws &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>2. AWS &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3. GPIO" href="../demo_peripherals_gpio/GPIO.html" />
-    <link rel="prev" title="1. Helloword" href="../helloworld/helloworld.html" /> 
+    <link rel="prev" title="1. Hello World" href="../helloworld/helloworld.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,13 +96,15 @@
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/get_started.html">1. Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Windows/Quickstart_Windows_msys.html">3. Windows Starter Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">1. Helloword</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. aws</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">2.2. 使用步骤</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">1. Hello World</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. AWS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">2.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-steps">2.2. Usage Steps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
@@ -114,7 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">9. Romfs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">10. cli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">12. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">12. Wi-Fi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_ble/ble.html">13. BLE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_mesh/mesh.html">14. Mesh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
@@ -190,7 +192,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">2. </span>aws</li>
+      <li><span class="section-number">2. </span>AWS</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -210,23 +212,23 @@
            <div itemprop="articleBody">
             
   <div class="section" id="aws">
-<span id="aws-index"></span><h1><span class="section-number">2. </span>aws<a class="headerlink" href="#aws" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">2.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本示例主要介绍如何使用aws。</p>
+<span id="aws-index"></span><h1><span class="section-number">2. </span>AWS<a class="headerlink" href="#aws" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">2.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example explains how to interact with Amazon Web Services.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">2.2. </span>使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="usage-steps">
+<h2><span class="section-number">2.2. </span>Usage Steps<a class="headerlink" href="#usage-steps" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>在 <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_ble_pds/bl602_demo_ble_pds/aws_iot_main.c</span></code> 文件的头部有相关证书及配置，此处的配置只限于本示例演示使用（同时只能一处使用），用户需要根据实际情况修改文件开头的宏定义，下图是配置的一部分</p>
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_ble_pds/bl602_demo_ble_pds/aws_iot_main.c</span></code> with your own AWS certificate and configs. This picture shows an example configuration (for demostration only):</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image11.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_event</span></code> 工程并下载工程；</p></li>
-<li><p>在终端输入开启wifi的命令： <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> ，输入连接wifi的命令： <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">&lt;name&gt;</span> <span class="pre">&lt;key&gt;</span></code> ，并确认wifi连接成功（如输入：wifi_sta_connect bl_test_005 12345678）；</p>
+<li><p>Compile and flash the <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_event</span></code> project.</p></li>
+<li><p>In the serial console, enter <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> to start up Wi-FI，and <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">&lt;name&gt;</span> <span class="pre">&lt;key&gt;</span></code> to connect to an available Wi-Fi network. Confirm that the connection is successful. (e.g.: use the command <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">bl_test_005</span> <span class="pre">123456789</span></code>.)</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image21.png" />
@@ -236,7 +238,7 @@
 </div>
 </div></blockquote>
 </li>
-<li><p>在终端输入 <code class="docutils literal notranslate"><span class="pre">aws</span></code> 不断打印如下图所示log即表明连接成功。</p>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">aws</span></code> in the serial console. If you see the following log printout, the connection is successful.</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image4.png" />
@@ -258,7 +260,7 @@
         <a href="../demo_peripherals_gpio/GPIO.html" class="btn btn-neutral float-right" title="3. GPIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../helloworld/helloworld.html" class="btn btn-neutral float-left" title="1. Helloword" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../helloworld/helloworld.html" class="btn btn-neutral float-left" title="1. Hello World" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

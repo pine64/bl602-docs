@@ -3,454 +3,462 @@
 BLE
 ==================
 
-总览
+Overview
 ------
 
-本示例主要介绍如何使用ble。
+This example explains how to use Bluetooth Low-Energy.
 
-使用步骤
+Usage Steps
 -----------
 
-- 编译 ``customer_app/bl602_demo_event`` 或 ``customer_app/bl702_demo_event`` 工程并下载工程；
-- 使用 ``stack_ble`` 命令初始化ble，打印的部分log如下。
+- Compile and flash ``customer_app/bl602_demo_event`` or ``customer_app/bl702_demo_event`` .
+- Use ``stack_ble`` command to inialize the BLE stack. Example logs:
 
     .. figure:: imgs/image1.png
-       :alt: 
+       :alt:
 
-- 依次使用 ``ble_init`` 、 ``ble_auth`` 进行相关的初始化；
+- Use ``ble_init`` and ``ble_auth`` respectively to initialize BLE and configure authentication.
 
     .. figure:: imgs/image2.png
-       :alt: 
+       :alt:
 
     .. figure:: imgs/image3.png
-       :alt: 
+       :alt:
 
-- 使用 ``ble_start_adv 0 0 0x80 0x80`` 命令开启ble。
+- Use ``ble_start_adv 0 0 0x80 0x80`` to enable BLE.
 
 
     .. figure:: imgs/image4.png
-       :alt: 
+       :alt:
 
-- 用户可以通过手机app ``Ble connect`` scan附近的蓝牙，找到我们的设备并连接。
+- The BLE station should now be visible on nearby devices.
 
     .. figure:: imgs/image5.png
-       :alt: 
+       :alt:
 
     .. figure:: imgs/image6.png
        :alt:
 	   
-- 使用 ``ble_conn_update 0x6 0x6 0x0 0x1f4`` 更新连接参数。	
+- Use ``ble_conn_update 0x6 0x6 0x0 0x1f4`` to update connection params.
 	
 	.. figure:: imgs/image7.png
-	   :alt: 
+	   :alt:
 
-- SMP配对过程，由于security level不同，调用的命令也不相同，下面介绍level为2或者3的情况	   
+- SMP pairing. Commands vary depending on the BLE security level 2 vs 3.
  
- - 连接成功后使用 ``ble_security 2`` 进行SMP过程。
+ - ``ble_security 2``
 
 	.. figure:: imgs/image8.png
 	   :alt:
 	   
-   - 在串口打印出 ``Confirm passkey for xx:xx:xx:xx:xx:xx (public)`` ,输入 ``ble_auth_pairing_confirm`` 命令进行配对回复，打印的部分log如下。
+   - Displays ``Confirm passkey for xx:xx:xx:xx:xx:xx (public)`` . Use the command ``ble_auth_pairing_confirm`` to confirm pairing.
 	
 	 .. figure:: imgs/image23.png
 	    :alt:
 	   
-   - 在串口打印出 ``Bonded with xx:xx:xx:xx:xx:xx (public)`` ,表明SMP配对成功。
+   - If pairing is sucessful, the console displays ``Bonded with xx:xx:xx:xx:xx:xx (public)``.
 	
 	 .. figure:: imgs/image10.png
 	    :alt:
 	   
- - 连接成功后使用 ``ble_security 3`` 进行SMP过程。
+ - ``ble_security 3``
 
     .. figure:: imgs/image36.png
        :alt:
 	   
-   - 在串口打印出 ``Confirm passkey for xx:xx:xx:xx:xx:xx (public)：xxxxxx`` ,输入 ``ble_auth_passkey_confirm`` 命令进行配对回复，打印的部分log如下。
+   - Displays ``Confirm passkey for xx:xx:xx:xx:xx:xx (public)：xxxxxx``. Use ``ble_auth_passkey_confirm`` to confirm pairing.
 	
 	.. figure:: imgs/image37.png
 	   :alt:
 	   
-   - 在串口打印出 ``Bonded with xx:xx:xx:xx:xx:xx (public)`` ,表明SMP配对成功。
+   - If pairing is successful, the console displays ``Bonded with xx:xx:xx:xx:xx:xx (public)``
 	
 	.. figure:: imgs/image38.png
-	   :alt:	   
+	   :alt:
 	   
-Cli命令介绍
------------	 
+Available commands
+------------------
 
------------		
-``ble_init`` 
------------	
- - 命令功能：ble通用初始化，在所有ble cli操作前，需要先输入该命令
- - 参数：无
- - 示例：输入命令 ``ble_init``
+-----------
+``ble_init``
+-----------
+ - Purpose: Common BLE initialization. Required before all other BLE CLI commands.
+ - Params: N/A
+ - Example: ``ble_init``
  
     .. figure:: imgs/image2.png
        :alt:
 
------------		
-``ble_auth`` 
------------	
- - 命令功能：注册SMP接口函数
- - 参数：无
- - 示例：输入命令 ``ble_auth``
+-----------
+``ble_auth``
+-----------
+ - Purpose：Register SMP interface.
+ - Params: N/A
+ - Example：``ble_auth``
  
     .. figure:: imgs/image3.png
-       :alt:	   
------------		
-``ble_unpair`` 
+       :alt:
+       
 -----------
- - 命令功能：清除配对key
- - 第一个参数表示设备地址类型
-  - 0：设备表示public地址类型
-  - 1：表示设备地址为random类型
-  - 2：表示设备地址为可解析的地址或者Public地址
-  - 3：表示设备地址为可解析的地址或者random地址
- - 第二个参数代表设备地址，高字节在前低字节在后，如果为0，代表清除所有设备的key
- - 示例：输入命令 ``ble_unpair 0 0``
+``ble_unpair``
+-----------
+ - Purpose：Clear pairing keys.
+ - Params: 1st param indicates device address type:
+  - 0: Device is a public address.
+  - 1: Device is a random address.
+  - 2: Device is a resolvable or public address.
+  - 3: Device is a resolvable or random address.
+ - 2nd param indicates the device address in big endian. ``0`` clears all device keys.
+ - Example：``ble_unpair 0 0``
  
     .. figure:: imgs/image21.png
        :alt:
 	   
------------	
+-----------
  ``ble_start_adv``
------------	
- - 命令功能表示：开启广播
- - 第一个参数表示广播类型
-  - 0：adv_ind 可连接可被扫描;
-  - 1：adv_scan_ind 不可被连接可被扫描;
-  - 2：adv_nonconn_ind 不可被连接不可被扫描;
-  - 3：adv_direct_ind 可被指定的设备连接不可被扫描
+-----------
+ - Purpose: Enable ADV broadcast.
+ - 1st param indicates broadcast type.
+  - 0：adv_ind - connectable, scannable.
+  - 1：adv_scan_ind not connectable, scannable.
+  - 2：adv_nonconn_ind not connectable or scannable.
+  - 3：adv_direct_ind connectable by limited devices, not scannable.
 	
- - 第二个参数表示广播模式
-  - 0：General discoverable;
-  - 1：non discoverable;
-  - 2：limit discoverable;
+ - 2nd param indicates broadcast mode.
+  - 0：General discoverable.
+  - 1：non-discoverable.
+  - 2：limit discoverable.
   
- - 第三个参数表示广播间隙最小值,其计算方式为 0.625ms * N,范围应在20 ms to 10.24 s之间
- - 第四个参数表示广播间隙最大值,其计算方式为 0.625ms * N,范围应在20 ms to 10.24 s之间
- - 示例：输入命令 ``ble_start_adv 0 0 0x80 0x80``
+ - 3rd param is the minimum broadcast gap, calculated as 0.625ms * N with a range of 20 ms to 10.24 s.
+ - The fourth parameter is the maximum broadcast gap.
+ - Example：``ble_start_adv 0 0 0x80 0x80``
  
     .. figure:: imgs/image4.png
        :alt:
------------		
-``ble_stop_adv`` 
------------ 
- - 命令功能：停止ADV广播
- - 参数：无
- - 示例：输入命令 ``ble_stop_adv``
+       
+-----------
+``ble_stop_adv``
+-----------
+ - Purpose: stop ADV broadcast.
+ - Params: N/A
+ - Example: ``ble_stop_adv``
  
     .. figure:: imgs/image17.png
        :alt:
 	   
------------		
- ``ble_start_scan`` 
------------	
- - 命令功能：表示扫描广播设备
- - 第一个参数表示扫描类型 
-  - 0：表示scan passive type只监听广播数据
-  - 1：表示scan active,不仅监听当满足条件还会发scan_req包
+-----------
+ ``ble_start_scan``
+-----------
+ - Purpose: Start scanning for broadcasting devices.
+ - 1st param is broadcast type:
+  - 0: passive scan, only monitoring for broadcasts.
+  - 1: active scan, monitoring for broadcasts and sending scan_req packets.
   
- - 第二个参数表示过滤设备广播包
-  - 0：表示不启用重复过滤
-  - 1：表示启用重复过滤
-  - 2：仅仅接收白名单列表发起的广播和scan response包，除了指定连接地址不是自己的adv_direct_ind广播包
-  - 4：使用扩展过滤策略，过滤设备
+ - 2nd param configures broadcast package filtering:
+  - 0: don't filter duplicates.
+  - 1: filter duplicates.
+  - 2：only accept broadcasts and scan response packets from allowlisted devices
+  - 4: use advanced filtering strategy
   
- - 第三个参数表示扫描间隙,其计算方式为 0.625ms * N,范围在2.5 ms to 10.24 s之间,其应该大于等于扫描窗口
- - 第四个参数表示扫描窗口,其计算方式为 0.625ms * N,范围在2.5 ms to 10.24 s之间,其应该小于等于扫描间隙
- - 示例：输入命令 ``ble_start_scan 0 0 0x80 0x40``
+ - 3rd param is scanning gap, calculated as 0.625ms * N with a range of 20 ms to 10.24 s.
+ - 4th param is scanning window, calculated as 0.625ms * N with a range of 20 ms to 10.24 s.
+ - Example: ``ble_start_scan 0 0 0x80 0x40``
  
     .. figure:: imgs/image11.png
        :alt:
  
------------		
-``ble_stop_scan`` 
------------ 
- - 命令功能：停止扫描
- - 参数：无
- - 示例：系统进入SCAN后，输入命令 ``ble_stop_scan``
+-----------
+``ble_stop_scan``
+-----------
+ - Purpose: Stop scanning.
+ - Params: N/A
+ - Example: ``ble_stop_scan``
  
     .. figure:: imgs/image14.png
        :alt:
 	   
------------		
+-----------
 ``ble_conn_update``
------------	
- - 命令功能：表示更新连接参数	
- - 第一个参数表示连接间隙的最小值,其计算方式为 N * 1.25 ms,其范围在7.5 ms to 4 s
- - 第二个参数表示连接间隙的最大值,其计算方式为 N * 1.25 ms,其范围在7.5 ms to 4 s
- - 第三个参数表示从设备时延多少个连接事件范围是0~499,比如：该值设置为1，表明延时一个事件的时间进行数据交互，作用是降低交互频率更省电
- - 第四个参数表示连接超时时间，计算方式 N * 10 ms,范围是100 ms to 32 s
- - 示例：连接成功后，输入命令 ``ble_conn_update 0x28 0x28 0x0 0xf4``
+-----------
+ - Purpose: update connection params
+ - 1st param is minimum connection gap, calculated as N * 1.25 ms with a range of 7.5 ms to 4 s.
+ - 2nd param is maximum connection gap.
+ - 3rd parameter indicates how many connection events are delayed from the device. The range is 0~499. For example, if the value is set to 1, it indicates that the data interaction is delayed for an event. It reduces the interaction frequency and save power.
+ - 4th param is connection timeout, calculated as N * 10 ms, with a range of 100 ms to 32 s.
+ - Example: ``ble_conn_update 0x28 0x28 0x0 0xf4``
  
     .. figure:: imgs/image7.png
        :alt:
  
------------		
-``ble_security`` 
------------	
- - 命令功能：设置SMP的加密等级	
- - 第一个参数表示加密等级，总共有5个等级
-  - 0：仅用于BR/EDR，比如SDP服务;
-  - 1：表示不需要加密不需要认证的过程; 
-  - 2：表示需要加密不需要认证的过程 
-  - 3：表示需要加密和认证，比如双方需要输入PIN码 
-  - 4：表示需要加密和认证，通过128bit的key
-  - 示例：连接成功后，输入命令 ``ble_security 2``
+-----------
+``ble_security``
+-----------
+ - Purpose: Set SMP encryption level.
+ - Param: encryption level, of which are 5:
+  - 0: Only used for BR/EDR, such as SDP service.
+  - 1: No encryption is required and no authentication is required.
+  - 2: Require encryption without authentication.
+  - 3: Both encryption and authentication are required, for example, both parties need to enter a PIN code
+  - 4: Both encryption and authentication are required, and the 128bit key is passed
+ - Example：``ble_security 2``
  
     .. figure:: imgs/image8.png
        :alt:
 
------------		
-``ble_get_device_name`` 
------------	
- - 命令功能：获取本地设备名称
- - 参数：无
- - 示例：输入命令 ``ble_get_device_name``
+-----------
+``ble_get_device_name``
+-----------
+ - Purpose: Get local device name
+ - Params: N/A
+ - Example: ``ble_get_device_name``
  
     .. figure:: imgs/image12.png
        :alt:
------------		
-``ble_set_device_name`` 
------------	 
- - 命令功能：设置本地设备名称
- - 参数：需要设置的设备名字
- - 参数：无
- - 示例：输入命令 ``ble_set_device_name bl602``
+       
+-----------
+``ble_set_device_name``
+-----------
+ - Purpose: Set local device name
+ - Params: local device name
+ - 示例：``ble_set_device_name bl602``
  
     .. figure:: imgs/image13.png
        :alt:
 
------------		
-``ble_read_local_address`` 
------------ 
- - 命令功能：读取本地设备地址
- - 参数：无
- - 示例：输入命令 ``ble_read_local_address``
+-----------
+``ble_read_local_address``
+-----------
+ - Purpose: Read local device address
+ - Params: N/A
+ - Example: ``ble_read_local_address``
  
     .. figure:: imgs/image15.png
        :alt:
 	   
------------		
-``ble_set_adv_channel`` 
------------ 
- - 命令功能：设置ADV通道
- - 参数：需要设定的ADV通道数，其值范围为1-7，参数大小为1byte，bit0代表通道37，bit1代表通道38，bit2代表通道39
- - 示例：输入命令 ``ble_set_adv_channel 4``
+-----------
+``ble_set_adv_channel``
+-----------
+ - Purpores: Set ADV channel
+ - Params: ADV channel number. Range is 1-7. The size of the parameter is 1 byte. bit0 represents channel 37, bit1 represents channel 38, bit2 represents channel 39
+ - Example: ``ble_set_adv_channel 4``
  
     .. figure:: imgs/image16.png
        :alt:
 
------------		
-``ble_connect`` 
------------ 
- - 命令功能：连接指定地址的设备
- - 第一个参数表示设备地址类型
-  - 0：设备表示public地址类型
-  - 1：表示设备地址为random类型
-  - 2：表示设备地址为可解析的地址或者Public地址
-  - 3：表示设备地址为可解析的地址或者random地址
- - 第二个参数代表设备地址，高字节在前低字节在后
- - 示例：输入命令 ``ble_connect 0 18B905DE96E0``
+-----------
+``ble_connect``
+-----------
+ - Purpose: Connect to the device at the specified address
+ - Params: 1st param is the address type:
+  - 0: public device address
+  - 1: random device address
+  - 2: resolvable or public address
+  - 3: resolvable or random address
+ - 2nd param is the device address, in big endian.
+ - Example: ``ble_connect 0 18B905DE96E0``
  
     .. figure:: imgs/image18.png
        :alt:
------------		
-``ble_disconnect`` 
+       
 -----------
- - 命令功能：断开指定地址的设备的连接
- - 第一个参数表示设备地址类型
-  - 0：设备表示public地址类型
-  - 1：表示设备地址为random类型
-  - 2：表示设备地址为可解析的地址或者Public地址
-  - 3：表示设备地址为可解析的地址或者random地址
- - 第二个参数代表设备地址，高字节在前低字节在后
- - 示例：连接成功后，输入命令 ``ble_disconnect 0 18B905DE96E0``
+``ble_disconnect``
+-----------
+ - Purpose: Disconnect from device from specified address
+ - Params: 1st param is the address type:
+  - 0: public device address
+  - 1: random device address
+  - 2: resolvable or public address
+  - 3: resolvable or random address
+ - 2nd param is the device address, in big endian.
+ - Example: ``ble_disconnect 0 18B905DE96E0``
  
     .. figure:: imgs/image19.png
        :alt:
------------		
-``ble_select_conn`` 
+       
 -----------
- - 命令功能：多个连接中，将某一个连接对象设置为当前连接对象
- - 第一个参数表示设备地址类型
-  - 0：设备表示public地址类型
-  - 1：表示设备地址为random类型
-  - 2：表示设备地址为可解析的地址或者Public地址
-  - 3：表示设备地址为可解析的地址或者random地址
- - 第二个参数代表设备地址，高字节在前低字节在后	
- - 示例：多个设备连接成功后，输入命令 ``ble_select_conn 1 5F10546C8D83``，将选定的连接对象设置为当前连接对象，后续的ble_read等操作将会作用在该连接上
+``ble_select_conn``
+-----------
+ - Purpose: Select a connection as the current connection from multiple connections.
+  - 0: public device address
+  - 1: random device address
+  - 2: resolvable or public address
+  - 3: resolvable or random address
+ - 2nd param is the device address, in big endian.
+ - Example: ``ble_select_conn 1 5F10546C8D83`` selects it as the current connection, and subsequent operations will act on that connection.
  
     .. figure:: imgs/image20.png
        :alt:
 
------------		
-``ble_auth_cancel`` 
 -----------
- - 命令功能：取消加密认证过程
- - 参数：无
- - 示例：当在SMP过程中，输入命令 ``ble_auth_cancel``
+``ble_auth_cancel``
+-----------
+ - Purpose: cancel in-progress authentication
+ - Params: N/A
+ - Example: ``ble_auth_cancel`` during SMP
  
     .. figure:: imgs/image22.png
        :alt:
------------ 
+       
+-----------
 ``ble_auth_passkey_confirm``
------------	 
- - 命令功能：接收到passkey后回复远端，并且对端设备在配对过程中也有显示该passkey； 例如：配对过程本地打印 Confirm passkey for 48:95:E6:73:1C:1A (random): 745491
-   ；可发送该函数进行回复
-   
- - 参数：无
- - 示例：当在SMP过程中，对应security level为3，需要输入命令 ``ble_auth_passkey_confirm``
+-----------
+ - Purpose: Confirm receiving passkey from a remote device and proceed with pairing.
+ - Params: N/A
+ - Example: ``ble_auth_passkey_confirm`` to confirm pairing during SMP with a security level of 3.
  
     .. figure:: imgs/image9.png
        :alt:
------------ 
+       
+-----------
 ``ble_auth_pairing_confirm``
------------	 
- - 命令功能：接收到远端配对请求，用此函数回复远端配对请求，例如：配对过程本地打印 Confirm pairing for 00:1B:DC:F2:20:E9 (public)
-   ；可发送该函数进行回复
- - 参数：无
- - 示例：当在SMP过程中，对应的security level为2，输入命令 ``ble_auth_pairing_confirm``，
+-----------
+ - Purpose: Confirm receiving a pairing request from a remote device and proceed with pairing.
+ - Params: N/A
+ - Example: ``ble_auth_pairing_confirm`` to confirm pairing during SMP with a security level of 2.
  
     .. figure:: imgs/image23.png
        :alt:
------------ 
+       
+-----------
 ``ble_auth_passkey``
------------	 
- - 命令功能：请求输入passkey
- - 参数：passkey值，其范围为0-999999
- - 示例：当用ble_security 3命令进行配对，且SMP配对方法为PASSKEY_INPUT（代码中实现方法：用ble_auth注册smp接口函数时，在数据结构bt_conn_auth_cb中将函数passkey_entry填充，passkey_display与passkey_confirm不填充，其它接口函数默认即可），串口将打印出Enter passkey for XX:XX:XX:XX:XX:XX (public)，此时输入命令 ``ble_auth_passkey 111111`` 完成配对
+-----------
+ - Purpose: Input authentication passkey.
+ - Params: the value of the passkey. The range is 0-999999.
+ - Example: When pairing with the ble_security 3 command and the SMP pairing method is PASSKEY_INPUT (Implementation: when registering the SMP interface function with ble_auth, populate the data structure bt_conn_auth_cb with the function passkey_entry filled, passkey_display and passkey_confirm unfilled, and the default values for all other fields), the serial port will prompt "Enter passkey for XX:XX:XX:XX:XX:XX (public)", then enter the command ``ble_auth_passkey 111111`` to complete the pairing.
     
     .. figure:: imgs/image24.png
        :alt:
 	   
------------ 
+-----------
 ``ble_exchange_mtu``
------------	
- - 命令功能：交换mtu大小
- - 参数： 无
- - 示例：连接成功后，输入命令 ``ble_exchange_mtu``
+-----------
+ - Purpose: exchange MTU size
+ - Params: N/A
+ - Example：``ble_exchange_mtu``
  
     .. figure:: imgs/image25.png
        :alt:
------------ 
+       
+-----------
 ``ble_discover``
------------ 
- - 命令功能：查询指定的服务或特性
- - 第一个参数表示需要查询的类型
+-----------
+ - Purpose: look up specified service or feature.
+ - 1st param is the look-up type.
   - 0：primary
   - 1：secondary
   - 2：include
   - 3：Characteristic
   - 4：Descriptor
- - 第二个参数表示2BYTES的uuid
- - 第三个参数表示起始句柄，占2BYTES
- - 第四个参数表示结束句柄，占2BYTES
- - 示例：连接成功后，输入命令 ``ble_discover 0 0x1800 0x1 0xffff``
+ - 2nd param is UUID of 2 bytes.
+ - 3rd param is the start handle of 2 bytes.
+ - 4th param is the end handle of 2 bytes.
+ - Example: ``ble_discover 0 0x1800 0x1 0xffff`` after a successful connection.
  
     .. figure:: imgs/image26.png
        :alt:
------------ 
+       
+-----------
 ``ble_read``
------------  
- - 命令功能：读取指定句柄的数据
- - 第一个参数表示句柄
- - 第二个参数表示偏移量
- - 示例：连接成功后，输入命令 ``ble_read 0x5 0``
+-----------
+ - Purpose: Read data with specified handle.
+ - 1st param is the handle of 2 bytes.
+ - 2nd param is the read offset of 2 bytes.
+ - Example: ``ble_read 0x5 0`` after a sucessful connection.
  
     .. figure:: imgs/image27.png
        :alt:
------------ 
+       
+-----------
 ``ble_write``
------------ 
- - 命令功能：指定句柄写入相应的数据
- - 第一个参数表示句柄，占2bytes
- - 第二个参数表示偏移量，占2bytes
- - 第三个参数表示数据长度，占2bytes,最大不超过512
- - 第四个参数表示需要写入的数据
- 
- - 示例：连接成功后，写入2个字节的数据，命令为 ``ble_write 0xf 0 2 0102``,其中01为一个byte，02为一个byte
+-----------
+ - Purpose: write data with specified handle.
+ - 1st param is the handle of 2 bytes.
+ - 2nd param is the write offset of 2 bytes.
+ - 3rd param is data length of 2 bytes, with a max value of 512.
+ - 4th param is the data to write.
+ - Example: ``ble_write 0xf 0 2 0102`` write 2 bytes of data after a successful connection.  ``01`` is the first byte, ``02`` is the second byte.
  
     .. figure:: imgs/image28.png
        :alt:
------------ 
+       
+-----------
 ``ble_write_without_rsp``
------------ 
- - 命令功能：指定句柄写入相应的数据并且不需要回复
- - 第一参数表示是否启动sign write命令
-  - 0：不使能sign write命令
-  - 1：使能sign write命令
- - 第二个参数表示句柄，占2bytes，
- - 第三个参数表示数据的长度，占2bytes，最大不超过512
- - 第四个参数表示写入的数据
+-----------
+ - Purpose: write data without requiring a reply.
+ - 1st param enables the sign write command:
+  - 0: disable sign write.
+  - 1: enable sign write.
+ - 2nd param is the handle of 2 bytes.
+ - 3rd param is data length of 2 bytes, with a max value of 512.
+ - 4th param is the data to write.
  
- - 示例：连接成功后，写入2个字节的数据，命令为 ``ble_write_without_rsp 0 0xf 2 0102``，其中01为一个byte，02为一个byte
+ - Example: ``ble_write_without_rsp 0 0xf 2 0102``
  
     .. figure:: imgs/image29.png
        :alt:
------------ 
+       
+-----------
 ``ble_subscribe``
 -----------
- - 命令功能：订阅CCC
- - 第一个参数表示CCC句柄
- - 第二个参数表示订阅值的句柄
- - 第三个参数表示订阅类型
-  - 1：表示notification
-  - 2：表示indication
+ - Purpose: Subscribe CCC.
+ - 1st param is the CCC handle.
+ - 2nd param is the handle of the subscription value.
+ - 3rd param is the subscription type:
+  - 1: notification
+  - 2: indication
 
- - 示例：连接成功后，输入命令 ``ble_subscribe 0xf 0xd 0x1``，表示使能CCC的notification
+ - Example: ``ble_subscribe 0xf 0xd 0x1`` after a successful connection to enable CCC notification.
  
     .. figure:: imgs/image30.png
        :alt:
  
------------ 
+-----------
 ``ble_unsubscribe``
 -----------
- - 命令功能：取消订阅CCC
- - 参数：无
- - 示例：输入命令 ``ble_unsubscribe``
+ - Purpose: Cancel CCC subscription.
+ - Params: N/A
+ - Example: ``ble_unsubscribe``
  
     .. figure:: imgs/image31.png
-       :alt:	   
------------ 
+       :alt:
+       
+-----------
 ``ble_set_data_len``
 -----------
- - 命令功能：设置pdu数据长度
- - 第一个参数表示有效荷载传输的最大值,范围为0x001B - 0x00FB
- - 第二个参数表示有效荷载传输的最大时间,范围值为0x0148 - 0x4290
- 
- - 示例：当连接成功后，发送命令 ``ble_set_data_len 0xfb 0x0848``
+ - Purpose: Set PDU data length.
+ - 1st param is the maximum length of the effective transmission payload, and the range is 0x001B-0x00FB.
+ - 2nd param is the maximum time for the transmission. The range is 0x0148-0x4290.
+ - Example: ``ble_set_data_len 0xfb 0x0848`` after a successful connection.
  
     .. figure:: imgs/image32.png
        :alt:
 	   
------------  
+-----------
 ``ble_conn_info``
------------ 
- - 命令功能：获取所有的连接信息
- - 参数：无
- - 示例：当连接成功后，发送命令 ``ble_conn_info`` ，获取已连接的设备
+-----------
+ - Purpose: Print out all connection information.
+ - Param: N/A
+ - Example: ``ble_conn_info`` after a successful connection.
  
     .. figure:: imgs/image33.png
        :alt:
 
------------  
+-----------
 ``ble_disable``
------------ 
- - 命令功能：注销BLE
- - 参数：无
- - 示例：当无scan/adv/connect事件，发送命令 ``ble_disable``
+-----------
+ - Purpose: disable BLE
+ - Param: N/A
+ - Example: ``ble_disable``
  
     .. figure:: imgs/image34.png
        :alt:
------------  
+       
+-----------
 ``ble_set_tx_pwr``
------------ 
- - 命令功能：设置发送功率
- - 第一个参数表示设置功率值
- - 示例：发送命令 ``ble_set_tx_pwr 0xa``
+-----------
+ - Purpose：Set TX power
+ - Param: TX power level
+ - Example：``ble_set_tx_pwr 0xa``
  
     .. figure:: imgs/image35.png
        :alt:

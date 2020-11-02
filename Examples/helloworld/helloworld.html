@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Helloword &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>1. Hello World &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. aws" href="../demo_aws/aws.html" />
-    <link rel="prev" title="1. Quickstart Guide" href="../../Quickstart_Guide/get_started.html" /> 
+    <link rel="next" title="2. AWS" href="../demo_aws/aws.html" />
+    <link rel="prev" title="3. Windows Starter Guide" href="../../Quickstart_Guide/Windows/Quickstart_Windows_msys.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,15 +96,17 @@
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/get_started.html">1. Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Windows/Quickstart_Windows_msys.html">3. Windows Starter Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Helloword</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">1.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">1.2. 应用实例</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Hello World</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">1.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-examples">1.2. Code Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">2. aws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">2. AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
@@ -114,7 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">9. Romfs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">10. cli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">12. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">12. Wi-Fi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_ble/ble.html">13. BLE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_mesh/mesh.html">14. Mesh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
@@ -190,7 +192,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">1. </span>Helloword</li>
+      <li><span class="section-number">1. </span>Hello World</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -209,19 +211,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="helloword">
-<span id="helloworld-index"></span><h1><span class="section-number">1. </span>Helloword<a class="headerlink" href="#helloword" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">1.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>该工程介绍将iot板子启动起来并打印相关log</p>
+  <div class="section" id="hello-world">
+<span id="helloworld-index"></span><h1><span class="section-number">1. </span>Hello World<a class="headerlink" href="#hello-world" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This project explains how to start up the board and print simple logging messages to the console.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">1.2. </span>应用实例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="code-examples">
+<h2><span class="section-number">1.2. </span>Code Examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bl_uart_init</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
 <span class="n">helloworld</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>设置串口波特率，此处设置为2000000bps。在串口终端可以看到打印的 <code class="docutils literal notranslate"><span class="pre">start</span></code> ， <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> ， <code class="docutils literal notranslate"><span class="pre">end</span></code> 。</p>
+<p>Here we configure the baud rate to 2000000bps. Run the example, and you should see <code class="docutils literal notranslate"><span class="pre">start</span></code> ， <code class="docutils literal notranslate"><span class="pre">helloworld</span></code> ， <code class="docutils literal notranslate"><span class="pre">end</span></code> printed to the serial console.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image124.png" />
 </div>
@@ -236,10 +238,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../demo_aws/aws.html" class="btn btn-neutral float-right" title="2. aws" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../demo_aws/aws.html" class="btn btn-neutral float-right" title="2. AWS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../../Quickstart_Guide/get_started.html" class="btn btn-neutral float-left" title="1. Quickstart Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../../Quickstart_Guide/Windows/Quickstart_Windows_msys.html" class="btn btn-neutral float-left" title="3. Windows Starter Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

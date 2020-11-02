@@ -17,7 +17,9 @@
    :numbered:
 
    Quickstart_Guide/get_started
-
+   Quickstart_Guide/Linux/Quickstart_Linux_ubuntu
+   Quickstart_Guide/Windows/Quickstart_Windows_msys
+   
 .. toctree::
    :caption: Examples
    :numbered:

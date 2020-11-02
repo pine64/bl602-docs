@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BL602 SDK Starter Guide &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>2. Linux Starter Guide &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Windows Starter Guide" href="../Windows/Quickstart_Windows_msys.html" />
+    <link rel="prev" title="1. Quickstart Guide" href="../get_started.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,13 +94,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">1. Quickstart Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Linux Starter Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-and-installing-the-sdk">2.1. Setting Up and Installing the SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-hardware">2.2. Connecting to Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-and-flashing">2.3. Compiling and Flashing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-binaries">2.4. Downloading Binaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Windows/Quickstart_Windows_msys.html">3. Windows Starter Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/helloworld/helloworld.html">1. Helloword</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_aws/aws.html">2. aws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/helloworld/helloworld.html">1. Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_aws/aws.html">2. AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
@@ -108,7 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_storage_romfs/romfs.html">9. Romfs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_system_cli/cli.html">10. cli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_wifi/wifi.html">12. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_wifi/wifi.html">12. Wi-Fi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_ble/ble.html">13. BLE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_mesh/mesh.html">14. Mesh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
@@ -184,7 +194,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>BL602 SDK Starter Guide</li>
+      <li><span class="section-number">2. </span>Linux Starter Guide</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -203,11 +213,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="bl602-sdk-starter-guide">
-<h1>BL602 SDK Starter Guide<a class="headerlink" href="#bl602-sdk-starter-guide" title="Permalink to this headline">¶</a></h1>
-<p>This document aims to guide users to set up a software environment for developing on the BL602 hardware.</p>
+  <div class="section" id="linux-starter-guide">
+<h1><span class="section-number">2. </span>Linux Starter Guide<a class="headerlink" href="#linux-starter-guide" title="Permalink to this headline">¶</a></h1>
+<p>This document explains how to set up a software environment for developing on the BL602 hardware under Linux.</p>
 <div class="section" id="setting-up-and-installing-the-sdk">
-<h2>Setting Up and Installing the SDK<a class="headerlink" href="#setting-up-and-installing-the-sdk" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Setting Up and Installing the SDK<a class="headerlink" href="#setting-up-and-installing-the-sdk" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Make sure <code class="docutils literal notranslate"><span class="pre">make</span></code> and <code class="docutils literal notranslate"><span class="pre">unzip</span></code> are installed on your system.</p></li>
 <li><p>Make sure you have installed software for connecting to a serial console, for example, <code class="docutils literal notranslate"><span class="pre">Gtkterm</span></code>.</p></li>
@@ -215,51 +225,52 @@
 </ul>
 </div>
 <div class="section" id="connecting-to-hardware">
-<h2>Connecting to Hardware<a class="headerlink" href="#connecting-to-hardware" title="Permalink to this headline">¶</a></h2>
-<p>The related pin connections of the module are shown in the following figure. Figure 1 is the front view of the module. The number 1 is shorted with a jumper cap, the two pin headers on the left are shorted at the 2 position, and the upper two pins are connected at the 3 The pin headers are short-circuited; Figure 2 is the back view of the module. Short-circuit the two header pins <cite>ʻIO8`</cite> and <code class="docutils literal notranslate"><span class="pre">LOW</span></code>.</p>
+<h2><span class="section-number">2.2. </span>Connecting to Hardware<a class="headerlink" href="#connecting-to-hardware" title="Permalink to this headline">¶</a></h2>
+<p>This picture shows the front of the module. Connect the pins in position 1, 2 and 3 with jumper caps.</p>
 <div class="figure align-default">
-<img alt="" src="Quickstart_Guide/Linux/imgs/image11.png" />
+<img alt="" src="../../_images/image1110.png" />
 </div>
+<p>This picture shows the back of the module. Connect the header pin <cite>ʻIO8`</cite> to <code class="docutils literal notranslate"><span class="pre">LOW</span></code>.</p>
 <div class="figure align-default">
-<img alt="" src="Quickstart_Guide/Linux/imgs/image12.png" />
+<img alt="" src="../../_images/image127.png" />
 </div>
 </div>
 <div class="section" id="compiling-and-flashing">
-<h2>Compiling and Flashing<a class="headerlink" href="#compiling-and-flashing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Compiling and Flashing<a class="headerlink" href="#compiling-and-flashing" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>Enter your project directory, and compile using the command <code class="docutils literal notranslate"><span class="pre">./genromap</span></code></p>
+<li><p>Enter your project directory, and compile using the binary <code class="docutils literal notranslate"><span class="pre">./genromap</span></code></p>
 <div class="figure align-default">
-<img alt="" src="Quickstart_Guide/Linux/imgs/image4.png" />
+<img alt="" src="../../_images/image48.png" />
 </div>
 </li>
 <li><p>Verify the created directory named build_out: <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">build_out</span></code></p>
 <div class="figure align-default">
-<img alt="" src="Quickstart_Guide/Linux/imgs/image5.png" />
+<img alt="" src="../../_images/image57.png" />
 </div>
 </li>
 </ul>
 </div>
 <div class="section" id="downloading-binaries">
-<h2>Downloading Binaries<a class="headerlink" href="#downloading-binaries" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Downloading Binaries<a class="headerlink" href="#downloading-binaries" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>Enter the directory <code class="docutils literal notranslate"><span class="pre">/bl_iot_sdk/tools/flash_tool</span></code>, and run the executable <code class="docutils literal notranslate"><span class="pre">BLFlashEnv</span></code> .</p></li>
-<li><p>Select BL602/604 as <code class="docutils literal notranslate"><span class="pre">chip</span> <span class="pre">type</span></code>，refer to the following picture for a sample configuration：</p>
+<li><p>Run the executable <code class="docutils literal notranslate"><span class="pre">BLFlashEnv</span></code> under the folder <code class="docutils literal notranslate"><span class="pre">/bl_iot_sdk/tools/flash_tool</span></code>.</p></li>
+<li><p>Select BL602/604 as <code class="docutils literal notranslate"><span class="pre">chip</span> <span class="pre">type</span></code>，and configure the rest as follows：</p>
 <div class="figure align-default">
-<img alt="" src="Quickstart_Guide/Linux/imgs/image7.png" />
+<img alt="" src="../../_images/image72.png" />
 </div>
-<p>Click<code class="docutils literal notranslate"><span class="pre">download</span></code>. The following figure is displayed if flashing is successful:</p>
+<p>Click<code class="docutils literal notranslate"><span class="pre">download</span></code>. You should see the following if flashing is successful:</p>
 <div class="figure align-default">
-<img alt="" src="Quickstart_Guide/Linux/imgs/image8.png" />
+<img alt="" src="../../_images/image82.png" />
 </div>
 </li>
 </ul>
-<p>After flashing is done, open the serial terminal Gtkterm with the configuration as follows：</p>
+<p>After flashing is done, use a serial terminal (e.g. Gtkterm) and connect to the module:</p>
 <div class="figure align-default">
-<img alt="" src="Quickstart_Guide/Linux/imgs/image9.png" />
+<img alt="" src="../../_images/image92.png" />
 </div>
-<p>Make sure that <code class="docutils literal notranslate"><span class="pre">DTR</span></code>in the lower right corner of the terminal is in black state, <code class="docutils literal notranslate"><span class="pre">RTS</span></code> is in gray state. <code class="docutils literal notranslate"><span class="pre">DTR</span></code> can be controlled by the shortcut key <code class="docutils literal notranslate"><span class="pre">F7</span></code>, and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> can be controlled by the shortcut key <code class="docutils literal notranslate"><span class="pre">F8</span></code>. the final configuration is shown in the figure below.</p>
+<p>Make sure to enable <code class="docutils literal notranslate"><span class="pre">DTR</span></code> and disable <code class="docutils literal notranslate"><span class="pre">RTS</span></code> . In Gtkterm, you can toggle <code class="docutils literal notranslate"><span class="pre">DTR</span></code> with the shortcut key <code class="docutils literal notranslate"><span class="pre">F7</span></code>, and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> with the shortcut key <code class="docutils literal notranslate"><span class="pre">F8</span></code>. See following for an example:</p>
 <div class="figure align-default">
-<img alt="" src="Quickstart_Guide/Linux/imgs/image10.png" />
+<img alt="" src="../../_images/image102.png" />
 </div>
 </div>
 </div>
@@ -269,6 +280,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Windows/Quickstart_Windows_msys.html" class="btn btn-neutral float-right" title="3. Windows Starter Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../get_started.html" class="btn btn-neutral float-left" title="1. Quickstart Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

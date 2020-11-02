@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>12. WiFi &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>12. Wi-Fi &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -96,11 +96,13 @@
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/get_started.html">1. Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Windows/Quickstart_Windows_msys.html">3. Windows Starter Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">1. Helloword</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">2. aws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">1. Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">2. AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
@@ -110,10 +112,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">9. Romfs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">10. cli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">12. WiFi</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">12.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">12.2. 使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">12.3. 功能</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Wi-Fi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">12.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-steps">12.2. Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functionalities">12.3. Functionalities</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_ble/ble.html">13. BLE</a></li>
@@ -191,7 +193,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">12. </span>WiFi</li>
+      <li><span class="section-number">12. </span>Wi-Fi</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -210,56 +212,56 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="wifi">
-<span id="wifi-index"></span><h1><span class="section-number">12. </span>WiFi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">12.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本示例主要介绍与wifi相关命令的功能。</p>
+  <div class="section" id="wi-fi">
+<span id="wifi-index"></span><h1><span class="section-number">12. </span>Wi-Fi<a class="headerlink" href="#wi-fi" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">12.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This demo explains Wi-Fi-relate functionalities.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">12.2. </span>使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="usage-steps">
+<h2><span class="section-number">12.2. </span>Usage Steps<a class="headerlink" href="#usage-steps" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_wifi</span></code> 工程并下载对应的bin文件；</p></li>
-<li><p>成功启动IoT Board之后在终端输入命令 <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> 创建wifi任务。</p></li>
+<li><p>Compile and flash <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_wifi</span></code>.</p></li>
+<li><p>In the serial console, enter <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> to initialize the Wi-Fi stack.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="" src="../../_images/image123.png" />
 </div>
 </div>
-<div class="section" id="id3">
-<h2><span class="section-number">12.3. </span>功能<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="functionalities">
+<h2><span class="section-number">12.3. </span>Functionalities<a class="headerlink" href="#functionalities" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>连接wifi：</p></li>
+<li><p>Connect to an available Wi-Fi network:</p></li>
 </ul>
-<p>命令： <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">&lt;ssid&gt;</span> <span class="pre">&lt;pwd&gt;</span></code> ，如在终端输入 <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">bl_test_005</span> <span class="pre">12345678</span></code> ，成功连接wifi会打印wifi和memory相关信息，如下图中可以看到wifi的IP，MASK等信息，memory剩余大小信息 。</p>
+<p>Enter the command <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">&lt;ssid&gt;</span> <span class="pre">&lt;pwd&gt;</span></code>, for example <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">bl_test_005</span> <span class="pre">12345678</span></code>. If the connection is successful, the console will display network and available RAM information. In the picture below you can see the network’s IP and mask, and the available RAM.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image218.png" />
 </div>
 <ul class="simple">
-<li><p>断开wifi：</p></li>
+<li><p>Disconnect from Wi-Fi:</p></li>
 </ul>
-<p>命令： <code class="docutils literal notranslate"><span class="pre">wifi_sta_disconnect</span></code> ，成功断开连接后会打印断开连接的log。</p>
+<p>Use the command <code class="docutils literal notranslate"><span class="pre">wifi_sta_disconnect</span></code>.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image316.png" />
 </div>
 <ul class="simple">
-<li><p>扫描wifi：</p></li>
+<li><p>Scan for networks:</p></li>
 </ul>
-<p>命令： <code class="docutils literal notranslate"><span class="pre">wifi_scan</span></code> ，扫描成功后会打印scan list，用户可以看到成功搜索的wifi信息。</p>
+<p>Command <code class="docutils literal notranslate"><span class="pre">wifi_scan</span></code>. Displays a list of networks if successful.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image45.png" />
 </div>
 <ul class="simple">
-<li><p>开启ap模式：</p></li>
+<li><p>Enable AP mode:</p></li>
 </ul>
-<p>命令： <code class="docutils literal notranslate"><span class="pre">wifi_ap_start</span></code> ，成功开启后打印ssid，pwd，channel等相关信息，并且可以在手机上搜索到相应名字的wifi。</p>
+<p>Command: <code class="docutils literal notranslate"><span class="pre">wifi_ap_start</span></code>. Prints out the SSID, password and channel.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image54.png" />
 </div>
 <ul class="simple">
-<li><p>关闭ap模式：</p></li>
+<li><p>Disable AP mode:</p></li>
 </ul>
-<p>命令： <code class="docutils literal notranslate"><span class="pre">wifi_ap_stop</span></code> 。成功关闭ap模式后手机无法搜索到对应wifi。</p>
+<p>Command: <code class="docutils literal notranslate"><span class="pre">wifi_ap_stop</span></code> .</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image62.png" />
 </div>

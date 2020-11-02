@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BL602 SDK Starter Guide &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>3. Windows Starter Guide &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1. Hello World" href="../../Examples/helloworld/helloworld.html" />
+    <link rel="prev" title="2. Linux Starter Guide" href="../Linux/Quickstart_Linux_ubuntu.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,13 +94,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">1. Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Windows Starter Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.1. 编译环境的建立及代码的获取</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.2. 硬件连接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.3. 代码的编译和烧录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bin">3.4. bin文件下载</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/helloworld/helloworld.html">1. Helloword</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_aws/aws.html">2. aws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/helloworld/helloworld.html">1. Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_aws/aws.html">2. AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
@@ -108,7 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_storage_romfs/romfs.html">9. Romfs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_system_cli/cli.html">10. cli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_wifi/wifi.html">12. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_wifi/wifi.html">12. Wi-Fi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_ble/ble.html">13. BLE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_mesh/mesh.html">14. Mesh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
@@ -184,7 +194,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>BL602 SDK Starter Guide</li>
+      <li><span class="section-number">3. </span>Windows Starter Guide</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -203,11 +213,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="bl602-sdk-starter-guide">
-<h1>BL602 SDK Starter Guide<a class="headerlink" href="#bl602-sdk-starter-guide" title="Permalink to this headline">¶</a></h1>
-<p>本文档旨在指导用户搭建 BL602硬件开发的软件环境。</p>
+  <div class="section" id="windows-starter-guide">
+<h1><span class="section-number">3. </span>Windows Starter Guide<a class="headerlink" href="#windows-starter-guide" title="Permalink to this headline">¶</a></h1>
+<p>This document explains how to set up a software environment for developing on the BL602 hardware under Linux.</p>
 <div class="section" id="id1">
-<h2>编译环境的建立及代码的获取<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>编译环境的建立及代码的获取<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>安装串口工具，此处选用的 <a class="reference external" href="https://gigenet.dl.sourceforge.net/project/scriptcommunicator/Windows/ScriptCommunicatorSetup_05_10_windows.zip">ScriptCommunicator</a></p></li>
 <li><p><a class="reference external" href="https://sourceforge.net/projects/msys2/files/Base/x86_64/">获取MSYS2安装包</a></p></li>
@@ -245,7 +255,7 @@
 </ul>
 </div>
 <div class="section" id="id2">
-<h2>硬件连接<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>硬件连接<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>模块的相关引脚连接如下图所示，其中图一是模块的正面图，其标号1处用跳线帽短接，标号2处将左边两根排针短接，标号3处将上面的两根排针短接；图二是模块的背面图，将 <code class="docutils literal notranslate"><span class="pre">IO8</span></code> 和 <code class="docutils literal notranslate"><span class="pre">LOW</span></code> 两根排针短接。</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image132.png" />
@@ -255,36 +265,36 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2>代码的编译和烧录<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>代码的编译和烧录<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>进入需要编译的工程目录，命令：<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">customer_app/bl602_demo_event</span></code></p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image72.png" />
+<img alt="" src="../../_images/image73.png" />
 </div>
 </li>
 <li><p>进行编译，命令：<code class="docutils literal notranslate"><span class="pre">./genromap</span></code></p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image82.png" />
+<img alt="" src="../../_images/image83.png" />
 </div>
 </li>
 </ul>
 </div>
 <div class="section" id="bin">
-<h2>bin文件下载<a class="headerlink" href="#bin" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>bin文件下载<a class="headerlink" href="#bin" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>打开<code class="docutils literal notranslate"><span class="pre">bl_iot_sdk/tools/flash_tool</span></code>文件中的<code class="docutils literal notranslate"><span class="pre">simple_flasher.exe</span></code>程序</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">chip</span> <span class="pre">type</span></code>选择<code class="docutils literal notranslate"><span class="pre">BL602/604</span></code>，打开后界面参数参考下图配置：</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image92.png" />
+<img alt="" src="../../_images/image93.png" />
 </div>
 <p>点击<code class="docutils literal notranslate"><span class="pre">download</span></code>，出现如下图所示表明下载成功：</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image102.png" />
+<img alt="" src="../../_images/image103.png" />
 </div>
 </li>
 <li><p>打开串口终端，点击 <code class="docutils literal notranslate"><span class="pre">settings</span></code> 配置为如下图所示，其中 <code class="docutils literal notranslate"><span class="pre">DTR</span></code> 需要勾选上， <code class="docutils literal notranslate"><span class="pre">RTS</span></code> 不勾选。</p>
 <div class="figure align-default">
-<img alt="" src="../../_images/image127.png" />
+<img alt="" src="../../_images/image128.png" />
 </div>
 </li>
 </ul>
@@ -296,6 +306,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Examples/helloworld/helloworld.html" class="btn btn-neutral float-right" title="1. Hello World" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Linux/Quickstart_Linux_ubuntu.html" class="btn btn-neutral float-left" title="2. Linux Starter Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

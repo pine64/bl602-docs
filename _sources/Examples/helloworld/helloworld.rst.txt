@@ -1,21 +1,21 @@
 .. _helloworld-index:
 
-Helloword
-==================
+Hello World
+===========
 
-总览
+Overview
 ------
 
-该工程介绍将iot板子启动起来并打印相关log
+This project explains how to start up the board and print simple logging messages to the console.
 
-应用实例
-----------------
+Code Examples
+-------------
 ::
 
     bl_uart_init(0, 16, 7, 255, 255, 2 * 1000 * 1000);
     helloworld();
 
-设置串口波特率，此处设置为2000000bps。在串口终端可以看到打印的 ``start`` ， ``helloworld`` ， ``end`` 。
+Here we configure the baud rate to 2000000bps. Run the example, and you should see ``start`` ， ``helloworld`` ， ``end`` printed to the serial console.
 
 .. figure:: imgs/image1.png
-   :alt: 
+   :alt:
