@@ -8,10 +8,10 @@ Compiler
 
 The compiler is available in Linux or Windows. See `Compiling under Linux <../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html>`__ and `Compiling under Windows <../Quickstart_Guide/Windows/Quickstart_Windows_msys.html>`__.
 
-Downloader
-----------
+Flasher
+-------
 
-Use BL's proprietary tool ``BLFlashEnv`` to download. For specific usage, refer to `BLFlashEnv <BLFlashEnv/BLFlashEnv.html>`__.
+Use BL's proprietary tool ``BLFlashEnv`` to flash the module. For specific usage, refer to `BLFlashEnv <BLFlashEnv/BLFlashEnv.html>`__.
 
 Debugger
 --------
