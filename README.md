@@ -18,11 +18,11 @@ There ought to be an `index.html` file. Open it with firefox/your browser of cho
 
 Hardware
 --------
-- [BL602/604 Datasheet](mirrored/BL602_BL604_DS_Datasheet.pdf)
+- [BL602/604 Datasheet](mirrored/Bouffalo%20Lab%20BL602_BL604_DS_en_Combo_1.2.pdf)
   (34 pages): Includes pinout, memory map, and general peripheral descriptions
-  but no detailed functional specification or register listings. Sipeed, a board
-  vendor that plans to use the BL602, [claims](https://twitter.com/SipeedIO/status/1321658609990725633)
-  that full register documentation will be available sometime in November 2020.
+  but no detailed functional specification or register listings.
+- [BL602/604 Reference Manual](mirrored/Bouffalo%20Lab%20BL602_Reference_Manual_en_1.1.pdf)
+  (209 pages): Includes register map, clock tree and other information about implementing BL602/BL604
 - [soc602_reg.svd][2]: Contains a seemingly-complete register listing, with
   names but no descriptions, for the BL602.
 - [Hardware Notes](hardware_notes): Additional information
