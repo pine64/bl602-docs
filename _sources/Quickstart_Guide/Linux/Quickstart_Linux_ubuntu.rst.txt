@@ -20,8 +20,8 @@ This picture shows the front of the module. Connect the pins in position 1, 2 an
 
 .. figure:: imgs/image1110.png
    :alt:
-   
-This picture shows the back of the module. Connect the header pin `ʻIO8`` to ``LOW``.
+
+This picture shows the back of the module. Connect the header pin ``IO8`` to ``LOW``.
 
 .. figure:: imgs/image127.png
    :alt:
