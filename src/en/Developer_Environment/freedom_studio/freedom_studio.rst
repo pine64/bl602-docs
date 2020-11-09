@@ -1,19 +1,19 @@
 Freedom Studio
-================
+==============
 
 This document describes the use of Freedom Studio.
 
 Importing a project
---------
+-------------------
 
 - First of all, start ``Freedom Studio``, open ``File > import`` on the toolbar and select ``Existing Projects into Workspace`` option under ``General`` menu to import projects.
 
 
 .. figure:: imgs/image01.png
-   :alt: 
+   :alt:
 
 .. figure:: imgs/image02.png
-   :alt: 
+   :alt:
 
 Debug
 -----
@@ -35,7 +35,7 @@ Debug
    :alt:
 
 -   You can add and delete breakpoints by double-clicking on the leftmost orange bar of the ``code`` window.
- 
+
 .. figure:: imgs/image08.png
    :alt:
 
