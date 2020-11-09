@@ -1,20 +1,19 @@
 BL602 Documentation
 ===================
 
-The documentation can be found [online][1] at [pine64.github.io/bl602-docs][1]
+This documentation can be found [online][1] at [pine64.github.io/bl602-docs][1].
 
 Building The Documentation
 --------------------------
-To build the documentation your self:
+To build the documentation yourself:
 ```bash
 $ cd src
-$ python -m pip install --requirement=requirements.txt
+$ python -m pip install -r requirements.txt
 $ cd en   # cd zh to build documentation in chinese
-$ make html
+$ make html  # on Windows, set SPHINXBUILD="python -m sphinx" for this command
 ```
-After successfully building the documentation navigate to `docs`.
-There ought to be an `index.html` file. Open it with firefox/your browser of choice.
-
+The documentation will be built inside the `docs` folder. To view it, open `docs/index.html`
+in your browser of choice.
 
 Hardware
 --------
