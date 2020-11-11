@@ -17,6 +17,7 @@ in your browser of choice.
 
 Hardware
 --------
+- [Official Documents](https://github.com/bouffalolab/bl_docs): Includes detailed core and peripheral documentation
 - [BL602/604 Datasheet](mirrored/Bouffalo%20Lab%20BL602_BL604_DS_en_Combo_1.2.pdf)
   (34 pages): Includes pinout, memory map, and general peripheral descriptions
   but no detailed functional specification or register listings.
