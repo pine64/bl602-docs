@@ -105,9 +105,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">2. AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. UART_echo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">4.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">4.2. 准备及使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">4.3. 应用实例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">4.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-steps">4.2. Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-examples">4.3. Code Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
@@ -214,14 +214,14 @@
             
   <div class="section" id="uart-echo">
 <span id="uart-echo-index"></span><h1><span class="section-number">4. </span>UART_echo<a class="headerlink" href="#uart-echo" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">4.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本示例主要介绍通过UART1将收到的数据回传给发送方的过程。</p>
+<div class="section" id="overview">
+<h2><span class="section-number">4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example explains the process of sending received data back to the sender via UART1.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">4.2. </span>准备及使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="usage-steps">
+<h2><span class="section-number">4.2. </span>Usage Steps<a class="headerlink" href="#usage-steps" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>使用之前需要准备一个 <code class="docutils literal notranslate"><span class="pre">USB转TTL</span></code> 串口线，并配置SDK目录下 <code class="docutils literal notranslate"><span class="pre">bl_iot_sdk/tools/flash_tool/bl602/device_tree/bl_factory_params_evb_40M.dts</span></code> 文件中的 <code class="docutils literal notranslate"><span class="pre">uart</span></code> ，具体配置可以参考本例。</p></li>
+<li><p>Prepare a <code class="docutils literal notranslate"><span class="pre">USB</span> <span class="pre">to</span> <span class="pre">TTL</span></code> cable, and configure the <code class="docutils literal notranslate"><span class="pre">uart</span></code> in the SDK directory at <code class="docutils literal notranslate"><span class="pre">bl_iot_sdk/tools/flash_tool/bl602/device_tree/bl_factory_params_evb_40M.dts</span></code>. For this, refer to the following example configuration.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uart</span> <span class="p">{</span>
     <span class="c1">#address-cells = &lt;1&gt;;</span>
@@ -264,13 +264,13 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>使用步骤：</p></li>
+<li><p>Steps to use：</p></li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li><p>将板子的 <code class="docutils literal notranslate"><span class="pre">gpio3</span></code> 和 <code class="docutils literal notranslate"><span class="pre">gpio4</span></code> 和 <code class="docutils literal notranslate"><span class="pre">GND</span></code> 分别与 <code class="docutils literal notranslate"><span class="pre">USB转TTL</span></code> 串口线的 <code class="docutils literal notranslate"><span class="pre">TXD</span></code> 、 <code class="docutils literal notranslate"><span class="pre">RXD</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GND</span></code> 分别连接起来；</p></li>
-<li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_uart_echo</span></code> 工程并下载工程；</p></li>
-<li><p>打开一个串口终端窗口A（波特率为115200，用于接收和发送uart消息），打开另一个串口终端窗口B（波特率为2000000，用于打印log）。板子上电可以看到窗口A接收到 <code class="docutils literal notranslate"><span class="pre">1234567890abcdefg</span></code> ，窗口B打印的log 停止在 <code class="docutils literal notranslate"><span class="pre">send</span> <span class="pre">case</span></code> 处，在A窗口中输入 <code class="docutils literal notranslate"><span class="pre">1234567890abcdefg</span></code> （没有回显）可以在B串口看到 <code class="docutils literal notranslate"><span class="pre">recv</span> <span class="pre">case</span></code> 和 <code class="docutils literal notranslate"><span class="pre">end</span></code> 的消息，此时说明演示成功。</p></li>
+<li><p>Connect the board’s <code class="docutils literal notranslate"><span class="pre">gpio3</span></code> and <code class="docutils literal notranslate"><span class="pre">gpio4</span></code> and <code class="docutils literal notranslate"><span class="pre">GND</span></code> to the <code class="docutils literal notranslate"><span class="pre">TXD</span></code>, <code class="docutils literal notranslate"><span class="pre">RXD</span></code>, and <code class="docutils literal notranslate"><span class="pre">GND</span></code> of the <code class="docutils literal notranslate"><span class="pre">USB</span> <span class="pre">to</span> <span class="pre">TTL</span></code> serial cable, respectively.</p></li>
+<li><p>Compile <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_uart_echo</span></code> and flash the image.</p></li>
+<li><p>Open two serial terminal windows (A and B, respectively), with the Baud rate for A set to 115200, and the Baud rate for B set to2000000. After powering on the board, you can see that window A has received <code class="docutils literal notranslate"><span class="pre">1234567890abcdefg</span></code>, while window B is stuck at <code class="docutils literal notranslate"><span class="pre">send</span> <span class="pre">case</span></code>. You can continue the program by typing <code class="docutils literal notranslate"><span class="pre">1234567890abcdefg</span></code> in window A (note that there is no echo), after which B should continue to <code class="docutils literal notranslate"><span class="pre">recv</span> <span class="pre">case</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code>.</p></li>
 </ul>
 </div></blockquote>
 <div class="figure align-default">
@@ -280,10 +280,10 @@
 <img alt="" src="../../_images/image213.png" />
 </div>
 </div>
-<div class="section" id="id3">
-<h2><span class="section-number">4.3. </span>应用实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="code-examples">
+<h2><span class="section-number">4.3. </span>Code Examples<a class="headerlink" href="#code-examples" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>调用 <code class="docutils literal notranslate"><span class="pre">aos_write()</span></code> 接口通过UART1给终端发送数据，并等待终端返回接收到的数据，如接收与发送的数据一致，则log口将打印UART1中收发的消息内容。</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">aos_write()</span></code> to send data to the terminal using UART1, and then wait terminal to return the received data. Upon receiving the same data as the one sent, the log port will print the contents of the message.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aos_write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">send_recv_log</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">send_recv_log</span><span class="p">));</span>
 <span class="n">log_step</span><span class="p">(</span><span class="n">ci_table_step_send</span><span class="p">);</span>
@@ -304,7 +304,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>在 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_uart_echo/sdk_app_uart_echo/main.c</span></code> 中 <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">aos_loop_proc(void</span> <span class="pre">*pvParameters)</span></code> 函数里调用ci_loop_proc()函数创建 <code class="docutils literal notranslate"><span class="pre">uart_echo</span></code> 的任务。</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">aos_loop_proc(void</span> <span class="pre">*pvParameters)</span></code> at <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_uart_echo/sdk_app_uart_echo/main.c</span></code>, ci_loop_proc is called to create the <code class="docutils literal notranslate"><span class="pre">uart_echo</span></code> task.</p></li>
 </ul>
 </div>
 </div>
