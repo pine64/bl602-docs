@@ -3,15 +3,15 @@
 UART_echo
 ==================
 
-总览
+Overview
 ----------------
 
-本示例主要介绍通过UART1将收到的数据回传给发送方的过程。
+This example explains the process of sending received data back to the sender via UART1.
 
-准备及使用步骤
+Usage Steps
 ----------------
 
-- 使用之前需要准备一个 ``USB转TTL`` 串口线，并配置SDK目录下 ``bl_iot_sdk/tools/flash_tool/bl602/device_tree/bl_factory_params_evb_40M.dts`` 文件中的 ``uart`` ，具体配置可以参考本例。
+- Prepare a ``USB to TTL`` cable, and configure the ``uart`` in the SDK directory at ``bl_iot_sdk/tools/flash_tool/bl602/device_tree/bl_factory_params_evb_40M.dts``. For this, refer to the following example configuration.
 
 ::
     
@@ -54,10 +54,10 @@ UART_echo
         };
     };
 
-- 使用步骤：
- - 将板子的 ``gpio3`` 和 ``gpio4`` 和 ``GND`` 分别与 ``USB转TTL`` 串口线的 ``TXD`` 、 ``RXD`` 、 ``GND`` 分别连接起来；
- - 编译 ``customer_app/sdk_app_uart_echo`` 工程并下载工程；
- - 打开一个串口终端窗口A（波特率为115200，用于接收和发送uart消息），打开另一个串口终端窗口B（波特率为2000000，用于打印log）。板子上电可以看到窗口A接收到 ``1234567890abcdefg`` ，窗口B打印的log 停止在 ``send case`` 处，在A窗口中输入 ``1234567890abcdefg`` （没有回显）可以在B串口看到 ``recv case`` 和 ``end`` 的消息，此时说明演示成功。
+- Steps to use：
+ - Connect the board's ``gpio3`` and ``gpio4`` and ``GND`` to the ``TXD``, ``RXD``, and ``GND`` of the ``USB to TTL`` serial cable, respectively.
+ - Compile ``customer_app/sdk_app_uart_echo`` and flash the image.
+ - Open two serial terminal windows (A and B, respectively), with the Baud rate for A set to 115200, and the Baud rate for B set to2000000. After powering on the board, you can see that window A has received ``1234567890abcdefg``, while window B is stuck at ``send case``. You can continue the program by typing ``1234567890abcdefg`` in window A (note that there is no echo), after which B should continue to ``recv case`` and ``end``. 
 
 .. figure:: imgs/image1.png
    :alt: 
@@ -65,10 +65,10 @@ UART_echo
 .. figure:: imgs/image2.png
    :alt: 
    
-应用实例
+Code Examples
 ----------------
 
-- 调用 ``aos_write()`` 接口通过UART1给终端发送数据，并等待终端返回接收到的数据，如接收与发送的数据一致，则log口将打印UART1中收发的消息内容。
+- Use ``aos_write()`` to send data to the terminal using UART1, and then wait terminal to return the received data. Upon receiving the same data as the one sent, the log port will print the contents of the message.
 
 ::
 
@@ -89,4 +89,4 @@ UART_echo
     }
     log_step(ci_table_step_end);
 
-- 在 ``customer_app/sdk_app_uart_echo/sdk_app_uart_echo/main.c`` 中 ``static void aos_loop_proc(void *pvParameters)`` 函数里调用ci_loop_proc()函数创建 ``uart_echo`` 的任务。
+- In ``static void aos_loop_proc(void *pvParameters)`` at ``customer_app/sdk_app_uart_echo/sdk_app_uart_echo/main.c``, ci_loop_proc is called to create the ``uart_echo`` task.
