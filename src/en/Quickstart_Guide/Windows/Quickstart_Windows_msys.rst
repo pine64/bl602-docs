@@ -26,7 +26,7 @@ Setting up the build environment and getting the code
    .. figure:: imgs/image3.png
       :alt:
 
-   **Note**\ ：In the example the name \ ``igor``\ is used, but yours is probably different, you can find it by seeing what is before the @ symbol in the prompt.
+   **Note**\ ：In the example the name ``igor`` is used, but yours is probably different, you can find it by seeing what is before the @ symbol in the prompt.
 
 -  Install unzip in order to decompress the SDK, by using the command：\ ``pacman -S unzip``\ ，You may also want git and tmux, you can install them by using these commands：\ ``pacman -S git``\ 、\ ``pacman -S tmux``
 
@@ -36,7 +36,7 @@ Setting up the build environment and getting the code
    .. figure:: imgs/image5.png
       :alt:
 
--  Decompress the zip file containing the SDK, by running the command：\ ``unzip bl_iot_sdk.zip``
+-  Decompress the zip file containing the SDK, by running the command: ``unzip bl_iot_sdk.zip``
 
    .. figure:: imgs/image6.png
       :alt:
@@ -72,7 +72,7 @@ Compiling and Flashing
 Downloading Binaries
 -----------
 
--  Open \ ``bl_iot_sdk/tools/flash_tool``\ and run the \ ``simple_flasher.exe``\ program
+-  Open ``bl_iot_sdk/tools/flash_tool`` and run the ``simple_flasher.exe`` program
 
 -  For ``chip type``\ select\ ``BL602/604``\：
 
@@ -84,7 +84,7 @@ Downloading Binaries
    .. figure:: imgs/image10.png
       :alt:
 
--  If you are using ScriptCommunicator, Open it and click ``settings'' to configure as shown in the figure below, where ``DTR'' needs to be checked, and ``RTS`` is not checked.
+-  If you are using ScriptCommunicator, Open it and click ``settings`` to configure as shown in the figure below, where ``DTR`` needs to be checked, and ``RTS`` is not checked.
 
    .. figure:: imgs/image12.png
       :alt:
