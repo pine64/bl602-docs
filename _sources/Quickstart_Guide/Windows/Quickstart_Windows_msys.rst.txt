@@ -1,20 +1,19 @@
 Windows Starter Guide
 =======================
 
-This document explains how to set up a software environment for developing on the BL602 hardware under Linux.
+This document explains how to set up a software environment for developing on the BL602 hardware under Windows.
 
 
-编译环境的建立及代码的获取
+Setting up the build environment and getting the code
 --------------------------
 
--   安装串口工具，此处选用的 `ScriptCommunicator <https://gigenet.dl.sourceforge.net/project/scriptcommunicator/Windows/ScriptCommunicatorSetup_05_10_windows.zip>`__
+-   Install a serial port tool such as `ScriptCommunicator <https://gigenet.dl.sourceforge.net/project/scriptcommunicator/Windows/ScriptCommunicatorSetup_05_10_windows.zip>`__
 
--  `获取MSYS2安装包 <https://sourceforge.net/projects/msys2/files/Base/x86_64/>`__
+-  `Obtain the MSYS2 installer <https://sourceforge.net/projects/msys2/files/Base/x86_64/>`__
 
--  `安装步骤 <https://www.msys2.org/>`__
+-  `Installation instructions <https://www.msys2.org/>`__
 
--  打开MSYS2并安装make，输入命令：\ ``pacman -S make``
-   后回车，并根据提示直到安装完成
+-  Open MSYS2 and install make，by using the command：\ ``pacman -S make``
 
    .. figure:: imgs/image1.png
       :alt:
@@ -22,15 +21,14 @@ This document explains how to set up a software environment for developing on th
    .. figure:: imgs/image2.png
       :alt:
 
--  打开MSYS2的安装目录并将SDK源代码放入\ ``home``\ 目录中的用户名文件夹下，下图中为\ ``igor``\ 文件夹
+-  Open the installation directory of MSYS2 and put the SDK source code under the user name folder in the \ ``home''\ directory. The following figure shows the \ ``igor``\ folder
 
    .. figure:: imgs/image3.png
       :alt:
 
-   **注意**\ ：实例中使用的账户是\ ``igor``\ ，实际操作时可以根据\ ``home``\ 目录下的文件名确定当前用户名
+   **Note**\ ：In the example the name ``igor`` is used, but yours is probably different, you can find it by seeing what is before the @ symbol in the prompt.
 
--  安装解压软件，命令：\ ``pacman -S unzip``\ ，还可选安装如下组件：\ ``pacman -S git``\ 、\ ``pacman -S tmux``
-   等
+-  Install unzip in order to decompress the SDK, by using the command：\ ``pacman -S unzip``\ ，You may also want git and tmux, you can install them by using these commands：\ ``pacman -S git``\ 、\ ``pacman -S tmux``
 
    .. figure:: imgs/image4.png
       :alt:
@@ -38,57 +36,59 @@ This document explains how to set up a software environment for developing on th
    .. figure:: imgs/image5.png
       :alt:
 
--  对源文件压缩包进行解压，命令：\ ``unzip bl_iot_sdk.zip``
+-  Decompress the zip file containing the SDK, by running the command: ``unzip bl_iot_sdk.zip``
 
    .. figure:: imgs/image6.png
       :alt:
 
-   **注意**\ ：\ ``unzip``\ 之后文件名需要根据实际拿到的SDK文件名作出相应的修改
 
-硬件连接
+Connecting to Hardware
 ---------
 
-模块的相关引脚连接如下图所示，其中图一是模块的正面图，其标号1处用跳线帽短接，标号2处将左边两根排针短接，标号3处将上面的两根排针短接；图二是模块的背面图，将 ``IO8`` 和 ``LOW`` 两根排针短接。
+This picture shows the front of the module. Connect the pins in position 1, 2 and 3 with jumper caps.
 
 .. figure:: imgs/image13.png
    :alt:
 
+This picture shows the back of the module. Connect the header pin IO8 to LOW.
+
+
 .. figure:: imgs/image14.png
    :alt:
 
-代码的编译和烧录
+Compiling and Flashing
 ----------------
 
--  进入需要编译的工程目录，命令：\ ``cd customer_app/bl602_demo_event``
+-  Enter the directory of the project you want to compile, such as：\ ``cd customer_app/bl602_demo_event``
 
    .. figure:: imgs/image7.png
       :alt:
 
--  进行编译，命令：\ ``./genromap``
+-  To compile run the command：\ ``./genromap``
 
    .. figure:: imgs/image8.png
       :alt:
 
-bin文件下载
+Downloading Binaries
 -----------
 
--  打开\ ``bl_iot_sdk/tools/flash_tool``\ 文件中的\ ``simple_flasher.exe``\ 程序
+-  Open ``bl_iot_sdk/tools/flash_tool`` and run the ``simple_flasher.exe`` program
 
--  ``chip type``\ 选择\ ``BL602/604``\ ，打开后界面参数参考下图配置：
+-  For ``chip type``\ select\ ``BL602/604``\：
 
    .. figure:: imgs/image9.png
       :alt:
 
-   点击\ ``download``\ ，出现如下图所示表明下载成功：
+   Click ``download``. You should see the following if flashing is successful:
 
    .. figure:: imgs/image10.png
       :alt:
 
--  打开串口终端，点击 ``settings`` 配置为如下图所示，其中 ``DTR`` 需要勾选上， ``RTS`` 不勾选。
+-  If you are using ScriptCommunicator, Open it and click ``settings`` to configure as shown in the figure below, where ``DTR`` needs to be checked, and ``RTS`` is not checked.
 
    .. figure:: imgs/image12.png
       :alt:
 
-
+(You can also do this using Windows Subsystem for Linux)
 
 

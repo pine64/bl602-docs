@@ -98,10 +98,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">1. Quickstart Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Windows Starter Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">3.1. 编译环境的建立及代码的获取</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">3.2. 硬件连接</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">3.3. 代码的编译和烧录</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bin">3.4. bin文件下载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-build-environment-and-getting-the-code">3.1. Setting up the build environment and getting the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-hardware">3.2. Connecting to Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-and-flashing">3.3. Compiling and Flashing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-binaries">3.4. Downloading Binaries</a></li>
 </ul>
 </li>
 </ul>
@@ -215,15 +215,14 @@
             
   <div class="section" id="windows-starter-guide">
 <h1><span class="section-number">3. </span>Windows Starter Guide<a class="headerlink" href="#windows-starter-guide" title="Permalink to this headline">¶</a></h1>
-<p>This document explains how to set up a software environment for developing on the BL602 hardware under Linux.</p>
-<div class="section" id="id1">
-<h2><span class="section-number">3.1. </span>编译环境的建立及代码的获取<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>This document explains how to set up a software environment for developing on the BL602 hardware under Windows.</p>
+<div class="section" id="setting-up-the-build-environment-and-getting-the-code">
+<h2><span class="section-number">3.1. </span>Setting up the build environment and getting the code<a class="headerlink" href="#setting-up-the-build-environment-and-getting-the-code" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>安装串口工具，此处选用的 <a class="reference external" href="https://gigenet.dl.sourceforge.net/project/scriptcommunicator/Windows/ScriptCommunicatorSetup_05_10_windows.zip">ScriptCommunicator</a></p></li>
-<li><p><a class="reference external" href="https://sourceforge.net/projects/msys2/files/Base/x86_64/">获取MSYS2安装包</a></p></li>
-<li><p><a class="reference external" href="https://www.msys2.org/">安装步骤</a></p></li>
-<li><p>打开MSYS2并安装make，输入命令：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">make</span></code>
-后回车，并根据提示直到安装完成</p>
+<li><p>Install a serial port tool such as <a class="reference external" href="https://gigenet.dl.sourceforge.net/project/scriptcommunicator/Windows/ScriptCommunicatorSetup_05_10_windows.zip">ScriptCommunicator</a></p></li>
+<li><p><a class="reference external" href="https://sourceforge.net/projects/msys2/files/Base/x86_64/">Obtain the MSYS2 installer</a></p></li>
+<li><p><a class="reference external" href="https://www.msys2.org/">Installation instructions</a></p></li>
+<li><p>Open MSYS2 and install make，by using the command：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">make</span></code></p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image126.png" />
 </div>
@@ -231,14 +230,13 @@
 <img alt="" src="../../_images/image220.png" />
 </div>
 </li>
-<li><p>打开MSYS2的安装目录并将SDK源代码放入<code class="docutils literal notranslate"><span class="pre">home</span></code>目录中的用户名文件夹下，下图中为<code class="docutils literal notranslate"><span class="pre">igor</span></code>文件夹</p>
+<li><p>Open the installation directory of MSYS2 and put the SDK source code under the user name folder in the <code class="docutils literal notranslate"><span class="pre">home''\</span> <span class="pre">directory.</span> <span class="pre">The</span> <span class="pre">following</span> <span class="pre">figure</span> <span class="pre">shows</span> <span class="pre">the</span> <span class="pre">\</span> <span class="pre">``igor</span></code>folder</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image318.png" />
 </div>
-<p><strong>注意</strong>：实例中使用的账户是<code class="docutils literal notranslate"><span class="pre">igor</span></code>，实际操作时可以根据<code class="docutils literal notranslate"><span class="pre">home</span></code>目录下的文件名确定当前用户名</p>
+<p><strong>Note</strong>：In the example the name <code class="docutils literal notranslate"><span class="pre">igor</span></code> is used, but yours is probably different, you can find it by seeing what is before the &#64; symbol in the prompt.</p>
 </li>
-<li><p>安装解压软件，命令：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">unzip</span></code>，还可选安装如下组件：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">git</span></code>、<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">tmux</span></code>
-等</p>
+<li><p>Install unzip in order to decompress the SDK, by using the command：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">unzip</span></code>，You may also want git and tmux, you can install them by using these commands：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">git</span></code>、<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">tmux</span></code></p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image47.png" />
 </div>
@@ -246,58 +244,59 @@
 <img alt="" src="../../_images/image56.png" />
 </div>
 </li>
-<li><p>对源文件压缩包进行解压，命令：<code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">bl_iot_sdk.zip</span></code></p>
+<li><p>Decompress the zip file containing the SDK, by running the command: <code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">bl_iot_sdk.zip</span></code></p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image63.png" />
 </div>
-<p><strong>注意</strong>：<code class="docutils literal notranslate"><span class="pre">unzip</span></code>之后文件名需要根据实际拿到的SDK文件名作出相应的修改</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">3.2. </span>硬件连接<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>模块的相关引脚连接如下图所示，其中图一是模块的正面图，其标号1处用跳线帽短接，标号2处将左边两根排针短接，标号3处将上面的两根排针短接；图二是模块的背面图，将 <code class="docutils literal notranslate"><span class="pre">IO8</span></code> 和 <code class="docutils literal notranslate"><span class="pre">LOW</span></code> 两根排针短接。</p>
+<div class="section" id="connecting-to-hardware">
+<h2><span class="section-number">3.2. </span>Connecting to Hardware<a class="headerlink" href="#connecting-to-hardware" title="Permalink to this headline">¶</a></h2>
+<p>This picture shows the front of the module. Connect the pins in position 1, 2 and 3 with jumper caps.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image132.png" />
 </div>
+<p>This picture shows the back of the module. Connect the header pin IO8 to LOW.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image142.png" />
 </div>
 </div>
-<div class="section" id="id3">
-<h2><span class="section-number">3.3. </span>代码的编译和烧录<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="compiling-and-flashing">
+<h2><span class="section-number">3.3. </span>Compiling and Flashing<a class="headerlink" href="#compiling-and-flashing" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>进入需要编译的工程目录，命令：<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">customer_app/bl602_demo_event</span></code></p>
+<li><p>Enter the directory of the project you want to compile, such as：<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">customer_app/bl602_demo_event</span></code></p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image73.png" />
 </div>
 </li>
-<li><p>进行编译，命令：<code class="docutils literal notranslate"><span class="pre">./genromap</span></code></p>
+<li><p>To compile run the command：<code class="docutils literal notranslate"><span class="pre">./genromap</span></code></p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image83.png" />
 </div>
 </li>
 </ul>
 </div>
-<div class="section" id="bin">
-<h2><span class="section-number">3.4. </span>bin文件下载<a class="headerlink" href="#bin" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="downloading-binaries">
+<h2><span class="section-number">3.4. </span>Downloading Binaries<a class="headerlink" href="#downloading-binaries" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>打开<code class="docutils literal notranslate"><span class="pre">bl_iot_sdk/tools/flash_tool</span></code>文件中的<code class="docutils literal notranslate"><span class="pre">simple_flasher.exe</span></code>程序</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">chip</span> <span class="pre">type</span></code>选择<code class="docutils literal notranslate"><span class="pre">BL602/604</span></code>，打开后界面参数参考下图配置：</p>
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">bl_iot_sdk/tools/flash_tool</span></code> and run the <code class="docutils literal notranslate"><span class="pre">simple_flasher.exe</span></code> program</p></li>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">chip</span> <span class="pre">type</span></code>select<code class="docutils literal notranslate"><span class="pre">BL602/604</span></code>：</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image93.png" />
 </div>
-<p>点击<code class="docutils literal notranslate"><span class="pre">download</span></code>，出现如下图所示表明下载成功：</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">download</span></code>. You should see the following if flashing is successful:</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image103.png" />
 </div>
 </li>
-<li><p>打开串口终端，点击 <code class="docutils literal notranslate"><span class="pre">settings</span></code> 配置为如下图所示，其中 <code class="docutils literal notranslate"><span class="pre">DTR</span></code> 需要勾选上， <code class="docutils literal notranslate"><span class="pre">RTS</span></code> 不勾选。</p>
+<li><p>If you are using ScriptCommunicator, Open it and click <code class="docutils literal notranslate"><span class="pre">settings</span></code> to configure as shown in the figure below, where <code class="docutils literal notranslate"><span class="pre">DTR</span></code> needs to be checked, and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> is not checked.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image128.png" />
 </div>
 </li>
 </ul>
+<p>(You can also do this using Windows Subsystem for Linux)</p>
 </div>
 </div>
 
