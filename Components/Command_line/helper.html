@@ -122,8 +122,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../arch.html">1. arch</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. helper</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cli">2.1. cli 命令表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">2.2. 常用命令</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cli-list">2.1. cli list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-commands">2.2. Common commands</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="aos_cli.html">3. cli</a></li>
@@ -213,11 +213,11 @@
             
   <div class="section" id="helper">
 <h1><span class="section-number">2. </span>helper<a class="headerlink" href="#helper" title="Permalink to this headline">¶</a></h1>
-<p>这里主要介绍现阶段支持到部分命令，包括系统命令和用户命令，当然有的命令板子不一定支持，可以通过<code class="docutils literal notranslate"><span class="pre">help</span></code>查看其支持到命令，更多的命令请参考源码或者自行添加</p>
-<div class="section" id="cli">
-<h2><span class="section-number">2.1. </span>cli 命令表<a class="headerlink" href="#cli" title="Permalink to this headline">¶</a></h2>
+<p>Here are lists of currently available commands, including system commands and user commands. Some of the command might not be well supported at moment, run <code class="docutils literal notranslate"><span class="pre">help</span></code> to see what commands are supported at moment, for extra commands please either refer to the source code or add by yourself.</p>
+<div class="section" id="cli-list">
+<h2><span class="section-number">2.1. </span>cli list<a class="headerlink" href="#cli-list" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>系统命令</strong></p></li>
+<li><p><strong>System commands</strong></p></li>
 </ul>
 <table class="docutils align-default">
 <colgroup>
@@ -269,7 +269,7 @@
 </tbody>
 </table>
 <ul class="simple">
-<li><p><strong>用户命令</strong></p></li>
+<li><p><strong>User command</strong></p></li>
 </ul>
 <table class="docutils align-default">
 <colgroup>
@@ -396,107 +396,118 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id1">
-<h2><span class="section-number">2.2. </span>常用命令<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="common-commands">
+<h2><span class="section-number">2.2. </span>Common commands<a class="headerlink" href="#common-commands" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p><strong>查看支持的所有命令</strong></p>
-<p>可以通过按键<code class="docutils literal notranslate"><span class="pre">TAB</span></code>查看，或者命令输入<code class="docutils literal notranslate"><span class="pre">help</span></code>如下：</p>
+<li><p><strong>View all commands</strong></p>
+<p>Press <code class="docutils literal notranslate"><span class="pre">TAB</span></code> or type <code class="docutils literal notranslate"><span class="pre">help</span></code> to view:</p>
 <p><strong>#</strong> <code class="docutils literal notranslate"><span class="pre">help</span></code></p>
 </li>
-<li><p><strong>配置wifi的临时ssid和passwd（重启恢复使用默认值）</strong></p>
-<p>例如配置wifi:<code class="docutils literal notranslate"><span class="pre">bl_wifi_005</span></code>和密码:<code class="docutils literal notranslate"><span class="pre">123456789</span></code>
-命令行输入如下命令：</p>
+<li><p><strong>Config wifi with specified ssid and passwd(default value will be used after reboot)</strong></p>
+<p>Example: use SSID: <code class="docutils literal notranslate"><span class="pre">bl_wifi_005</span></code> and password: <code class="docutils literal notranslate"><span class="pre">123456789</span></code></p>
 <p><strong>#</strong> <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">bl_wifi_005</span> <span class="pre">123456789</span></code></p>
 </li>
-<li><p><strong>配置wifi的默认ssid和passwd</strong></p>
-<p>例如配置wifi:<code class="docutils literal notranslate"><span class="pre">bl_wifi_005</span></code>和密码:<code class="docutils literal notranslate"><span class="pre">123456789</span></code>
-命令行输入如下命令：</p>
+<li><p><strong>Set default ssid and passwd for wifi</strong></p>
+<p>Example: use SSID: <code class="docutils literal notranslate"><span class="pre">bl_wifi_005</span></code> and password: <code class="docutils literal notranslate"><span class="pre">123456789</span></code></p>
 <p><strong>#</strong> <code class="docutils literal notranslate"><span class="pre">psm_set</span> <span class="pre">conf_ap_ssid</span> <span class="pre">bl_wifi_005</span></code></p>
 <p><strong>#</strong> <code class="docutils literal notranslate"><span class="pre">psm_set</span> <span class="pre">conf_ap_psk</span> <span class="pre">123456789</span></code></p>
 </li>
-<li><p><strong>启动AP</strong></p>
-<p>使用<code class="docutils literal notranslate"><span class="pre">wifi_ap_start</span></code>命令可以启动AP，但使用前需要使用<code class="docutils literal notranslate"><span class="pre">psm_erase</span></code>擦除STA相关配置信息并重启。启动的AP
-SSID为<code class="docutils literal notranslate"><span class="pre">BL60X_uAP_</span></code>加上MAC地址的后3三个字节的HEX串，密码为<code class="docutils literal notranslate"><span class="pre">bouffalolab</span></code></p>
+<li><p><strong>Start AP</strong></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">wifi_ap_start</span></code> to start AP，you have to run <code class="docutils literal notranslate"><span class="pre">psm_erase</span></code> to erase STA related config
+information and reboot. The default AP SSID is <code class="docutils literal notranslate"><span class="pre">BL60X_uAP_</span></code> suffixed with HEX code of the
+last 3 bytes of MAC address, the password will be <code class="docutils literal notranslate"><span class="pre">bouffalolab</span></code></p>
 </li>
-<li><p><strong>系统重启</strong></p>
+<li><p><strong>Reboot system</strong></p>
 <p><strong>#</strong> <code class="docutils literal notranslate"><span class="pre">reboot</span></code></p>
 </li>
-<li><p><strong>播音与录音</strong></p>
-<p>该模块需要硬件有SD卡支持，暂时仅支持 pcm 格式文件，其他格式待更新</p>
+<li><p><strong>Audio recoding and playing</strong></p>
+<p>This module requires SD support, and it only supports pcm format at moment</p>
 <ul>
-<li><p>配置音频的采样频率</p>
+<li><p>config sample rate</p>
 <p><strong>#</strong> audio_config 11p025</p>
-<p>如果没有参数，默认使用16Khz，支持
-8k、16k、24k、32k、48k、11p025、22p05、44p1
-采样频率(11.025khz用11p025表示，其他类似)，例如这里配置采样频率为
-11.025Khz</p>
+<dl class="simple">
+<dt>If no parameter is provided, a default of 16Khz will be used, the supported</dt><dd><p>sample rates are:</p>
+</dd>
+</dl>
+<p>8k、16k、24k、32k、48k、11p025、22p05、44p1
+Sample rate with decimal is represented with <code class="docutils literal notranslate"><span class="pre">p</span></code> as decimal point.</p>
+<blockquote>
+<div><p>ex, 11.025khz is represented as 11p025</p>
+</div></blockquote>
 </li>
-<li><p>录音</p>
+<li><p>recoding</p>
 <p><strong>#</strong> audio_record test.pcm</p>
-<p>如果没有参数，默认录音放在sd卡根目录中，录音文件名record.pcm，这里配置文件名test.pcm，即存放在在根目录test.pcm文件中，同时默认录音10S左右</p>
+<dl class="simple">
+<dt>If no parameter is provided, a default <code class="docutils literal notranslate"><span class="pre">record.pcm</span></code> will be saved under the root of SD card.</dt><dd><p>The default recording time will be 10s</p>
+</dd>
+</dl>
 </li>
-<li><p>放音</p>
+<li><p>playing</p>
 <p><strong>#</strong> audio_play test.pcm</p>
-<p>如果没有参数，默认使用sd卡根目录中，录音文件名record.pcm，这里配置文件名test.pcm，即播放SD卡中的test.pcm音频</p>
+<p>If no parameter is provided, it will try to plya <code class="docutils literal notranslate"><span class="pre">record.pcm</span></code> under the root of SD card.</p>
 </li>
 </ul>
 </li>
-<li><p><strong>图传</strong></p>
-<p>使用<code class="docutils literal notranslate"><span class="pre">mjpeg_start</span></code>命令可以启动图传的相关任务</p>
+<li><p><strong>Image transfer</strong></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">mjpeg_start</span></code> command to start image transfer related tasks.</p>
 </li>
-<li><p><strong>保存图片至SD卡</strong></p>
-<p>该模块需要硬件有SD卡支持，暂时仅支持 jpeg 格式文件，其他格式待更新</p>
+<li><p><strong>Save image to SD card</strong></p>
+<p>This module requires SD support, and it only supports jpeg format at moment</p>
 <ul>
-<li><p>配置mjpeg图片的quality</p>
+<li><p>config quality of mjpeg images</p>
 <p><strong>#</strong> mjpegsd_config 50</p>
-<p>暂时支持6种 quality 5、10、25、50、75、100</p>
+<p>currently support 6 quality settings: 5、10、25、50、75、100</p>
 </li>
-<li><p>启动保存图片</p>
+<li><p>Start to save images</p>
 <p><strong>#</strong> mjpegsd_start</p>
-<p>启动保存图片，默认保存50帧数据</p>
+<p>default to save stream at 50FPS</p>
 </li>
-<li><p><strong>注意</strong></p>
+<li><p><strong>NOTE</strong></p>
 <ul class="simple">
-<li><p>如上，示例命令，会在SD卡根目录保存50张
-0.jpeg、1.jpeg…49.jpeg图片</p></li>
+<li><p>the command above will save 50 images files under SD root as:
+0.jpeg、1.jpeg…49.jpeg</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><strong>保存AVI至SD卡</strong></p>
-<p>该模块需要硬件有SD卡支持，暂时仅支持 AIV 格式文件，其他格式待更新</p>
+<li><p><strong>Save AVI to SD card</strong></p>
+<p>This module requires SD support, and it only supports AVI format at moment</p>
 <ul>
-<li><p>配置mjpeg图片的quality</p>
+<li><p>config quality of mjpeg images</p>
 <p><strong>#</strong> avisd_config 50 bl_avi_q50.avi</p>
-<p>暂时支持6种 quality 5、10、25、50、75、100</p>
+<p>currently support 6 quality settings: 5、10、25、50、75、100</p>
 </li>
-<li><p>启动保存avi</p>
+<li><p>Start saving avi</p>
 <p><strong>#</strong> avisd_start</p>
-<p>启动保存avi，默认保存750帧图片</p>
+<p>Default to save at 750FPS</p>
 </li>
-<li><p><strong>注意</strong></p>
+<li><p><strong>NOTE</strong></p>
 <ul class="simple">
-<li><p>如上，示例命令，会在SD卡根目录保存一个”bl_avi_q50.avi”文件</p></li>
-<li><p>内存卡建议格式化为分配单元64KB，文件系统FAT32</p></li>
-<li><p>avisd_start之后，如果想修改quality，需重启一下开发板</p></li>
-<li><p>该模块需要有psram、camera支持，需要开启使能PSRAM、camera相关开关</p></li>
+<li><p>the command above will create a file called “bl_avi_q50.avi” under SD root</p></li>
+<li><p>it is recommanded to set the allocation unit size to be “64KB”, and filesystem to be FAT32 while formatting</p></li>
+<li><p>a reboot is needed if quality has to be modified after <code class="docutils literal notranslate"><span class="pre">avisd\_start</span></code></p></li>
+<li><p>psram、camera are needed for this module.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><strong>二维码配网</strong></p>
-<p>该模块是通过手机分享热点的二维码连接WiFi</p>
+<li><p><strong>Share WIFI through QR code</strong></p>
+<p>This module enables a connection to WIFI throuhg QR code</p>
 <ul>
-<li><p>启动命令</p>
+<li><p>start</p>
 <p><code class="docutils literal notranslate"><span class="pre">qrcode_connect_wifi</span></code></p>
-<p>输入命令后摄像头会初始化然后开始循环识别二维码</p>
+<p>the camera will initilize and scan for QR code</p>
 </li>
-<li><p><strong>注意</strong></p>
+<li><p><strong>NOTE</strong></p>
 <ul class="simple">
-<li><p>成功识别的到二维码后，会先打印二维码信息，如果不是分享热点的二维码会继续扫描</p></li>
-<li><p>支持SSID为中文，但是要求unicode编码规则为UTF-8</p></li>
-<li><p>支持开放热点</p></li>
-<li><p>该模块需要psram、camera支持，需要开启使能PSRAM、camera相关开关</p></li>
+<li><dl class="simple">
+<dt>QR code information will be printed out once it has been recoginized, if it is not a valid WIFI hotspot, the</dt><dd><p>module will carry on with QR scanning</p>
+</dd>
+</dl>
+</li>
+<li><p>Support UTF-8 encoded Chinese SSID</p></li>
+<li><p>Support open WIFI</p></li>
+<li><p>psram、camera are needed for this module.</p></li>
 </ul>
 </li>
 </ul>

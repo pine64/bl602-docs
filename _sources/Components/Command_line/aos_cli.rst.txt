@@ -1,17 +1,16 @@
 cli
 ===
 
-概述
+Overview
 ----
 
-linux下有强大的shell工具，可以让用户和片上系统进行交互，而在传统的单片机系统中，用户往往需要自行实现一套类似的交互工具。AliOS-Things原生带有一套名为cli（command-line
-interface）的命令行交互工具，在提供基本的系统交互命令的基础上，也支持用户自定义命令。我们已经将其移植到我们到系统中，
-同时对其做出了很多完善， 下面将介绍如何使用cli命令并执行
+There are powerful shell tools under Linux that allow users to interact with the system. However, in traditional Embedded systems, users have to implement a set of similar interactive tools themselves. AliOS-Things comes with a set of native command line interactive tool called cli (command-line interface). In addition to providing basic system interactive, it also supports user-defined commands. We have ported it to our system, and a lot of improvements have been made to it as well. We will introduce how to use the cli tool in following section.
 
-示例代码
+
+Example
 --------
 
-用户在只需在程序中调用\ ``test_cli_init()``\ 接口之后，就可以在shell中\ ``test``,就可以打印\ ``hello world.``\ 如下图所示
+First call ``test_cli_init()`` from within the shell, then a ``test`` command could print ``hello world.`` as following.
 
 ::
 
@@ -22,7 +21,7 @@ interface）的命令行交互工具，在提供基本的系统交互命令的�
     #
     #
 
-还有很多常用命令，请参考\ `常用命令<../helper/helper.html>`_
+All the useful commands are documented at `Command list<../helper/helper.html>`_
 
 .. code:: c
 
