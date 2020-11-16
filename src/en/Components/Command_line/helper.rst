@@ -1,12 +1,12 @@
 helper
 ======
 
-这里主要介绍现阶段支持到部分命令，包括系统命令和用户命令，当然有的命令板子不一定支持，可以通过\ ``help``\ 查看其支持到命令，更多的命令请参考源码或者自行添加
+Here are lists of currently available commands, including system commands and user commands. Some of the command might not be well supported at moment, run ``help`` to see what commands are supported at moment, for extra commands please either refer to the source code or add by yourself.
 
-cli 命令表
+cli list
 ----------
 
--  **系统命令**
+-  **System commands**
 
 +-----------+---------------------+
 | name      | help                |
@@ -36,7 +36,7 @@ cli 命令表
 | s         | thread dump         |
 +-----------+---------------------+
 
--  **用户命令**
+-  **User command**
 
 +-------------------------+-----------------------------------------------------+
 | name                    | help                                                |
@@ -116,134 +116,136 @@ cli 命令表
 | audio\_play             | audio play                                          |
 +-------------------------+-----------------------------------------------------+
 
-常用命令
+Common commands
 --------
 
--  **查看支持的所有命令**
+-  **View all commands**
 
-   可以通过按键\ ``TAB``\ 查看，或者命令输入\ ``help``\ 如下：
+   Press ``TAB`` or type ``help`` to view:
 
    **#** ``help``
 
--  **配置wifi的临时ssid和passwd（重启恢复使用默认值）**
+-  **Config wifi with specified ssid and passwd(default value will be used after reboot)**
 
-   例如配置wifi:\ ``bl_wifi_005``\ 和密码:\ ``123456789``
-   命令行输入如下命令：
+   Example: use SSID: ``bl_wifi_005`` and password: ``123456789``
 
    **#** ``wifi_sta_connect bl_wifi_005 123456789``
 
--  **配置wifi的默认ssid和passwd**
+-  **Set default ssid and passwd for wifi**
 
-   例如配置wifi:\ ``bl_wifi_005``\ 和密码:\ ``123456789``
-   命令行输入如下命令：
+   Example: use SSID: ``bl_wifi_005`` and password: ``123456789``
 
    **#** ``psm_set conf_ap_ssid bl_wifi_005``
 
    **#** ``psm_set conf_ap_psk 123456789``
 
--  **启动AP**
+-  **Start AP**
 
-   使用\ ``wifi_ap_start``\ 命令可以启动AP，但使用前需要使用\ ``psm_erase``\ 擦除STA相关配置信息并重启。启动的AP
-   SSID为\ ``BL60X_uAP_``\ 加上MAC地址的后3三个字节的HEX串，密码为\ ``bouffalolab``
+   Use ``wifi_ap_start`` to start AP，you have to run ``psm_erase`` to erase STA related config
+   information and reboot. The default AP SSID is ``BL60X_uAP_`` suffixed with HEX code of the
+   last 3 bytes of MAC address, the password will be ``bouffalolab``
 
--  **系统重启**
+-  **Reboot system**
 
    **#** ``reboot``
 
--  **播音与录音**
+-  **Audio recoding and playing**
 
-   该模块需要硬件有SD卡支持，暂时仅支持 pcm 格式文件，其他格式待更新
+   This module requires SD support, and it only supports pcm format at moment
 
-   -  配置音频的采样频率
+   -  config sample rate
 
       **#** audio\_config 11p025
 
-      如果没有参数，默认使用16Khz，支持
+      If no parameter is provided, a default of 16Khz will be used, the supported
+	  sample rates are:
       8k、16k、24k、32k、48k、11p025、22p05、44p1
-      采样频率(11.025khz用11p025表示，其他类似)，例如这里配置采样频率为
-      11.025Khz
+      Sample rate with decimal is represented with ``p`` as decimal point.
+	  ex, 11.025khz is represented as 11p025
 
-   -  录音
+   -  recoding
 
       **#** audio\_record test.pcm
 
-      如果没有参数，默认录音放在sd卡根目录中，录音文件名record.pcm，这里配置文件名test.pcm，即存放在在根目录test.pcm文件中，同时默认录音10S左右
+      If no parameter is provided, a default ``record.pcm`` will be saved under the root of SD card.
+	  The default recording time will be 10s
 
-   -  放音
+   -  playing
 
       **#** audio\_play test.pcm
 
-      如果没有参数，默认使用sd卡根目录中，录音文件名record.pcm，这里配置文件名test.pcm，即播放SD卡中的test.pcm音频
+      If no parameter is provided, it will try to plya ``record.pcm`` under the root of SD card.
 
--  **图传**
+-  **Image transfer**
 
-   使用\ ``mjpeg_start``\ 命令可以启动图传的相关任务
+   Use ``mjpeg_start`` command to start image transfer related tasks.
 
--  **保存图片至SD卡**
+-  **Save image to SD card**
 
-   该模块需要硬件有SD卡支持，暂时仅支持 jpeg 格式文件，其他格式待更新
+   This module requires SD support, and it only supports jpeg format at moment
 
-   -  配置mjpeg图片的quality
+   -  config quality of mjpeg images
 
       **#** mjpegsd\_config 50
 
-      暂时支持6种 quality 5、10、25、50、75、100
+      currently support 6 quality settings: 5、10、25、50、75、100
 
-   -  启动保存图片
+   -  Start to save images
 
       **#** mjpegsd\_start
 
-      启动保存图片，默认保存50帧数据
+      default to save stream at 50FPS
 
-   -  **注意**
+   -  **NOTE**
 
-      -  如上，示例命令，会在SD卡根目录保存50张
-         0.jpeg、1.jpeg...49.jpeg图片
+      -  the command above will save 50 images files under SD root as:
+         0.jpeg、1.jpeg...49.jpeg
 
--  **保存AVI至SD卡**
+-  **Save AVI to SD card**
 
-   该模块需要硬件有SD卡支持，暂时仅支持 AIV 格式文件，其他格式待更新
+   This module requires SD support, and it only supports AVI format at moment
 
-   -  配置mjpeg图片的quality
+   -  config quality of mjpeg images
 
       **#** avisd\_config 50 bl\_avi\_q50.avi
 
-      暂时支持6种 quality 5、10、25、50、75、100
+      currently support 6 quality settings: 5、10、25、50、75、100
 
-   -  启动保存avi
+   -  Start saving avi
 
       **#** avisd\_start
 
-      启动保存avi，默认保存750帧图片
+      Default to save at 750FPS
 
-   -  **注意**
+   -  **NOTE**
 
-      -  如上，示例命令，会在SD卡根目录保存一个"bl\_avi\_q50.avi"文件
+      -  the command above will create a file called "bl\_avi\_q50.avi" under SD root
 
-      -  内存卡建议格式化为分配单元64KB，文件系统FAT32
+      -  it is recommanded to set the allocation unit size to be "64KB", and filesystem to be FAT32 while formatting
 
-      -  avisd\_start之后，如果想修改quality，需重启一下开发板
+      -  a reboot is needed if quality has to be modified after ``avisd\_start``
 
-      -  该模块需要有psram、camera支持，需要开启使能PSRAM、camera相关开关
+      -  psram、camera are needed for this module.
 
--  **二维码配网**
+-  **Share WIFI through QR code**
 
-   该模块是通过手机分享热点的二维码连接WiFi
+   This module enables a connection to WIFI throuhg QR code
 
-   -  启动命令
+   -  start
 
       ``qrcode_connect_wifi``
 
-      输入命令后摄像头会初始化然后开始循环识别二维码
+      the camera will initilize and scan for QR code
 
-   -  **注意**
+   -  **NOTE**
 
-      -  成功识别的到二维码后，会先打印二维码信息，如果不是分享热点的二维码会继续扫描
+      -  QR code information will be printed out once it has been recoginized, if it is not a valid WIFI hotspot, the
+	     module will carry on with QR scanning
 
-      -  支持SSID为中文，但是要求unicode编码规则为UTF-8
+      -  Support UTF-8 encoded Chinese SSID
 
-      -  支持开放热点
+      -  Support open WIFI
 
-      -  该模块需要psram、camera支持，需要开启使能PSRAM、camera相关开关
+      -  psram、camera are needed for this module.
 
 
