@@ -108,9 +108,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_protocols_http/http.html">6. Http client</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Httpc client</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">7.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">7.2. 准备和使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">7.3. 应用实例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">7.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-steps">7.2. Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#applications">7.3. Applications</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_storage_psm/psm.html">8. PSM</a></li>
@@ -214,17 +214,17 @@
             
   <div class="section" id="httpc-client">
 <span id="httpc-index"></span><h1><span class="section-number">7. </span>Httpc client<a class="headerlink" href="#httpc-client" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">7.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本示例主要介绍如何通过tcp的方式访问Http服务器获取数据的过程。</p>
+<div class="section" id="overview">
+<h2><span class="section-number">7.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example explains the process of how to access the Http server to obtain data through tcp.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">7.2. </span>准备和使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="usage-steps">
+<h2><span class="section-number">7.2. </span>Usage Steps<a class="headerlink" href="#usage-steps" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>使用之前需要准备可用的URL以及网络。</p></li>
-<li><p>使用步骤：</p>
+<li><p>Prepare a usable URL and network.</p></li>
+<li><p>Steps to use:</p>
 <ul>
-<li><p>在终端输入开启wifi的命令： <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> ，会打印下图一log（部分），然后输入连接wifi的命令： <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">&lt;name&gt;</span> <span class="pre">&lt;key&gt;</span></code> ，并确认wifi连接成功（如输入：wifi_sta_connect bl_test_005 12345678）；</p>
+<li><p>Enter the command <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> to turn on wifi in the terminal, then enter the command <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">&lt;name&gt;</span> <span class="pre">&lt;key&gt;</span></code> to connect to wifi. Confirm that the wifi connection is successful (e.g.: use the command <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">bl_test_005</span> <span class="pre">12345678</span></code>).</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image117.png" />
 </div>
@@ -232,7 +232,7 @@
 <img alt="" src="../../_images/image215.png" />
 </div>
 </li>
-<li><p>使用 <code class="docutils literal notranslate"><span class="pre">httpc</span></code> 命令进行下载。</p>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">httpc</span></code> command to download.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image314.png" />
 </div>
@@ -241,10 +241,10 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h2><span class="section-number">7.3. </span>应用实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="applications">
+<h2><span class="section-number">7.3. </span>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>主要实现过程</p></li>
+<li><p>Main process</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">settings</span><span class="o">.</span><span class="n">use_proxy</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
  <span class="n">settings</span><span class="o">.</span><span class="n">result_fn</span> <span class="o">=</span> <span class="n">cb_httpc_result</span><span class="p">;</span>
@@ -260,7 +260,7 @@
 <span class="p">);</span>
 </pre></div>
 </div>
-<p>cb_httpc_result()次回调函数会在http传输完成后调用，打印获取的消息内容长度；cb_httpc_headers_done_fn()回调函数会在接收到http headers时调用，打印headers的大小；用户可以在cb_altcp_recv_fn()回调函数中处理接收到的消息。</p>
+<p><code class="docutils literal notranslate"><span class="pre">cb_httpc_result()</span></code> will be called after the http transmission is finished to print the length of the message content. <code class="docutils literal notranslate"><span class="pre">cb_httpc_headers_done_fn()</span></code> will be called when the http headers are received, and the size of the headers will be printed. The user can process the received message in <code class="docutils literal notranslate"><span class="pre">cb_altcp_recv_fn()</span></code>.</p>
 </div>
 </div>
 
