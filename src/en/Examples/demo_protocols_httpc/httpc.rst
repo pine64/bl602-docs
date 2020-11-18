@@ -3,19 +3,19 @@
 Httpc client
 ==================
 
-总览
+Overview
 ------
 
-本示例主要介绍如何通过tcp的方式访问Http服务器获取数据的过程。
+This example explains the process of how to access the Http server to obtain data through tcp.
 
-准备和使用步骤
+Usage Steps
 ----------------
 
-- 使用之前需要准备可用的URL以及网络。
+- Prepare a usable URL and network.
 
-- 使用步骤：
+- Steps to use:
     
-  - 在终端输入开启wifi的命令： ``stack_wifi`` ，会打印下图一log（部分），然后输入连接wifi的命令： ``wifi_sta_connect <name> <key>`` ，并确认wifi连接成功（如输入：wifi_sta_connect bl_test_005 12345678）；
+  - Enter the command ``stack_wifi`` to turn on wifi in the terminal, then enter the command ``wifi_sta_connect <name> <key>`` to connect to wifi. Confirm that the wifi connection is successful (e.g.: use the command ``wifi_sta_connect bl_test_005 12345678``).
 
     .. figure:: imgs/image1.png
        :alt: 
@@ -23,15 +23,15 @@ Httpc client
     .. figure:: imgs/image2.png
        :alt: 
 
-  - 使用 ``httpc`` 命令进行下载。
+  - Use the ``httpc`` command to download.
     
     .. figure:: imgs/image3.png
        :alt: 
 
-应用实例
+Applications
 ---------
 
-- 主要实现过程
+- Main process
 
 ::    
     
@@ -48,4 +48,4 @@ Httpc client
             &req
    );
 
-cb_httpc_result()次回调函数会在http传输完成后调用，打印获取的消息内容长度；cb_httpc_headers_done_fn()回调函数会在接收到http headers时调用，打印headers的大小；用户可以在cb_altcp_recv_fn()回调函数中处理接收到的消息。
+``cb_httpc_result()`` will be called after the http transmission is finished to print the length of the message content. ``cb_httpc_headers_done_fn()`` will be called when the http headers are received, and the size of the headers will be printed. The user can process the received message in ``cb_altcp_recv_fn()``.
