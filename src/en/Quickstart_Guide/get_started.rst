@@ -14,4 +14,5 @@ Starter Guide
 
 -  `Linux <Linux/Quickstart_Linux_ubuntu.html>`__
 -  `Windows <Windows/Quickstart_Windows_msys.html>`__
+-  `Windows WSL <Windows/Quickstart_Windows_wsl.html>`__
 
