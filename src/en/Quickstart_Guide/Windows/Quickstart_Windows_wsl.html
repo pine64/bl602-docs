@@ -1,0 +1,26 @@
+Windows (WSL) Starter Guide
+=======================
+
+This document explains how to set up a software environment for developing on the BL602 hardware under Windows using WSL. The WSL (Windows Subsystem for Linux) lets developers run a GNU/Linux environment directly on Windows. 
+
+Install WSL 
+--------------------------
+
+-  `Installation Instructions <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`__
+
+On step 6 install your favorite Linux distribution but we recommend Ubuntu on this guide.
+
+Setting up the build environment and getting the code
+--------------------------
+
+-  Open Ubuntu and install make and unzip by using the command \ ``sudo apt install make unzip``
+
+-  Decompress the zip file containing the SDK, by running the command: ``unzip bl_iot_sdk.zip``
+
+Compiling an example project
+----------------
+
+-  Enter the directory of the project you want to compile, such as \ ``cd customer_app/bl602_demo_event``
+
+-  To compile the project run the command \ ``./genromap``
+
