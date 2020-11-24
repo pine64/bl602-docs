@@ -29,7 +29,7 @@ This picture shows the back of the module. Connect the header pin ``IO8`` to ``L
 Compiling and Flashing
 ----------------------
 
--  Enter your project directory, and compile using the binary \ ``./genromap``
+-  Enter your project directory, and compile using the executable \ ``./genromap``
 
    .. figure:: imgs/image48.png
       :alt:
