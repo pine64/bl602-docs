@@ -1,122 +1,115 @@
 yloop
 =====
 
---------------
 
--  `Yloop概要`_
+- `Yloop Overview`
 
--  `Yloop上下文`_
+- `Yloop context`
 
--  `Yloop调度`_
+- `Yloop scheduling`
 
--  `Yloop实现原理`_
+- `Yloop implementation principle`
 
--  `主要api介绍`_
+- `Main API Introduction`
 
--  `示例代码`_
+- `Sample Code`
 
--  `注意事项`_
-
-Yloop概要
----------
-
-Yloop 是AliOS
-Things的异步事件框架。Yloop借鉴了，libuv及嵌入式业界常见的event
-loop，综合考虑使用复杂性，性能，及footprint，实现了一个适合于MCU的事件调度机制。我们移植了相关的插件。其主要优势是所有的处理都是在主任务中执行的，不需要额外的创建任务，从而节省内存使用。同时，由于所有处理都是在主任务进行，不需要复杂的互斥操作。
-
-Yloop上下文
------------
-
-每个Yloop实例（aos\_loop\_t）与特定的任务上下文绑定，AliOS
-Things的程序入口application\_start
-所在的上下文与系统的主Yloop实例绑定，该上下文也称为主任务。主任务以外的任务也可以创建自己的Yloop实例。
-
-Yloop调度
----------
-
-Yloop实现了对IO，timer，callback，event的统一调度管理：
-
--  ``IO``\ ：最常见的是Socket，也可以是AliOS Things的vfs管理的设备
--  ``timer``\ ：即常见的定时器
--  ``callback``\ ：特定的执行函数
--  ``event``\ ：包括系统事件，用户自定义事件
-   当调用aos\_loop\_run后，当前任务将会等待上述的各类事件发生。
-
-Yloop实现原理
+Yloop Overview
 -------------
 
-Yloop利用协议栈的select接口实现了对IO及timer的调度。AliOS
-Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此接口把VFS的设备文件，和eventfd关联起来，实现了对整个系统的事件的统一调度。
+Yloop is AliOS Things's asynchronous event framework. Yloop borrows from libuv and common events in the embedded industry loop, considering the use of complexity, performance, and footprint, an event scheduling mechanism suitable for MCU is implemented. We ported related plugins. Its main advantage is that all processing is performed in the main task, without the need for additional creation tasks, thereby saving memory usage. At the same time, since all processing is performed in the main task, no complicated mutually exclusive operations are required.
 
-主要api介绍
------------
+Yloop context
+--------------
 
--  注册事件监听函数
+Each Yloop instance (aos\_loop\_t) is bound to a specific task context, AliOS Things's program entry application\_start.
+The context is bound to the main Yloop instance of the system, and this context is also called the main task. Tasks other than the main task can also create their own Yloop instances.
+
+Yloop scheduling
+----------------
+
+Yloop implements unified scheduling management for IO, timer, callback, and event:
+
+- ``IO``\: The most common is Socket, and it can also be a device managed by AliOS Things vfs
+- ``timer``\: a common timer
+- ``callback``\: specific execution function
+- ``event``\: Including system events, user-defined events
+After calling aos\_loop\_run, the current task will wait for the above-mentioned events to occur.
+
+Yloop implementation principle
+------------------------------
+
+Yloop uses the select interface of the protocol stack to implement the scheduling of IO and timer. AliOS
+Things's own protocol stack exposes a special eventfd interface. Yloop uses this interface to associate VFS device files with eventfd to realize the unified scheduling of events in the entire system.
+
+Main API introduction
+---------------------
+
+- Register event listener function
 
 .. code:: c
 
     /**
      * Register system event filter callback.
+     * @param[in] type event type interested.
+     * @param[in] cb system event callback.
+     * @param[in] priv private data past to cb.
      *
-     @param[in]  type  event type interested.
-     * @param[in]  cb    system event callback.
-     * @param[in]  priv  private data past to cb.
-     *
-     * @return  the operation status, 0 is OK, others is error.
+     * @return the operation status, 0 is OK, others is error.
      */
     int aos_register_event_filter(uint16_t type, aos_event_cb cb, void *priv);
 
     /**
      * Unregister native event callback.
      *
-     * @param[in]  type  event type interested.
-     * @param[in]  cb    system event callback.
-     * @param[in]  priv  private data past to cb.
+     * @param[in] type event type interested.
+     * @param[in] cb system event callback.
+     * @param[in] priv private data past to cb.
      *
-     * @return  the operation status, 0 is OK, others is error.
+     * @return the operation status, 0 is OK, others is error.
      */
     int aos_unregister_event_filter(uint16_t type, aos_event_cb cb, void *priv);
 
--  发布一个 event
+-Post an event
 
 .. code:: c
 
     /**
      * Post local event.
      *
-     * @param[in]  type   event type.
-     * @param[in]  code   event code.
-     * @param[in]  value  event value.
+     * @param[in] type event type.
+     * @param[in] code event code.
+     * @param[in] value event value.
      *
-     * @return  the operation status, 0 is OK,others is error.
+     * @return the operation status, 0 is OK, others is error.
      */
-    int aos_post_event(uint16_t type, uint16_t code, unsigned long  value);
+    int aos_post_event(uint16_t type, uint16_t code, unsigned long value);
 
--  注册和取消一个 poll event
+-Register and cancel a poll event
 
 .. code:: c
 
     /**
      * Register a poll event in main loop.
      *
-     * @param[in]  fd      poll fd.
-     * @param[in]  action  action to be executed.
-     * @param[in]  param   private data past to action.
+     * @param[in] fd poll fd.
+     * @param[in] action action to be executed.
+     * @param[in] param private data past to action.
      *
-     * @return  the operation status, 0 is OK,others is error.
+     * @return the operation status, 0 is OK, others is error.
      */
     int aos_poll_read_fd(int fd, aos_poll_call_t action, void *param);
 
     /**
      * Cancel a poll event to be executed in main loop.
      *
-     * @param[in]  fd      poll fd.
-     * @param[in]  action  action to be executed.
-     * @param[in]  param   private data past to action.
+     * @param[in] fd poll fd.
+     * @param[in] action action to be executed.
+     * @param[in] param private data past to action.
      */
     void aos_cancel_poll_read_fd(int fd, aos_poll_call_t action, void *param);
 
--  发布和取消一个延迟执行的 action
+-Post and cancel a delayed action
 
 .. code:: c
 
@@ -126,24 +119,24 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
     }
      * Post a delayed action to be executed in main loop.
      *
-     * @param[in]  ms      milliseconds to wait.
-     * @param[in]  action  action to be executed.
-     * @param[in]  arg     private data past to action.
+     * @param[in] ms milliseconds to wait.
+     * @param[in] action action to be executed.
+     * @param[in] arg private data past to action.
      *
-     * @return  the operation status, 0 is OK,others is error.
+     * @return the operation status, 0 is OK, others is error.
      */
     int aos_post_delayed_action(int ms, aos_call_t action, void *arg);
 
     /**
      * Cancel a delayed action to be executed in main loop.
      *
-     * @param[in]  ms      milliseconds to wait, -1 means don't care.
-     * @param[in]  action  action to be executed.
-     * @param[in]  arg     private data past to action.
+     * @param[in] ms milliseconds to wait, -1 means don't care.
+     * @param[in] action action to be executed.
+     * @param[in] arg private data past to action.
      */
     void aos_cancel_delayed_action(int ms, aos_call_t action, void *arg);
 
--  安排一次回调
+- Schedule a callback
 
 .. code:: c
 
@@ -159,25 +152,30 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
      */
     int aos_schedule_call(aos_call_t action, void *arg);
 
-示例代码
---------
+Sample code
+------------
 
-这里会介绍\ `事件注册、通知、回调、取消流程 <#事件注册、通知、回调、取消流程>`__\ 、\ `poll事件的注册取消 <#poll事件的注册取消>`__\ 、\ `延迟执行一个actio <#延迟执行一个action>`__)以及\ `安排一次回调 <#安排一次回调>`__\ 的使用方法
+Here we will introduce:
 
-事件注册、通知、回调、取消流程
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- `Event registration, notification, callback, cancellation process`
+- `Registration of poll event cancelled`
+- `Delayed execution of an action`
+- `Schedule a callback`
+
+Event registration, notification, callback, cancellation process
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: c
 
     aos_register_event_filter(EV_WIFI, event_cb_wifi_event, NULL);
 
-用户首先调用\ ``aos_register_event_filter``\ 注册事件监听函数，例如首先显注册一个\ ``EV_WIFI``\ 事件的监听函数\ ``event_cb_wifi_event``
+The user first calls \ ``aos_register_event_filter``\ register event monitoring function, for example, first explicitly register a \ ``EV_WIFI``\ event monitoring function\ ``event_cb_wifi_event``
 
 .. code:: c
 
     aos_post_event(EV_WIFI, CODE_WIFI_ON_INIT_DONE, 0);
 
-当有任务调用\ ``aos_post_event``\ 接口，发布\ ``CODE_WIFI_ON_INIT_DONE``\ 事件之后
+When there is a task calling \ ``aos_post_event``\ interface, post \ ``CODE_WIFI_ON_INIT_DONE``\ after the event
 
 .. code:: c
 
@@ -206,44 +204,44 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
         }
     }
 
-``event_cb_wifi_event``\ 会被调用，并进入case\ ``CODE_WIFI_ON_INIT_DONE``\ 分支
+``event_cb_wifi_event``\ will be called and enter the case\ ``CODE_WIFI_ON_INIT_DONE``\ branch
 
 .. code:: c
 
     aos_unregister_event_filter(EV_WIFI, event_cb_wifi_event, NULL);
 
-如果用户不需要事件的监听，用户可以主动调用\ ``aos_unregister_event_filter``\ 取消监听
+If the user does not need event monitoring, the user can actively call \ ``aos_unregister_event_filter``\ cancel the monitoring
 
-poll事件的注册取消
-~~~~~~~~~~~~~~~~~~
+Registration of poll event canceled
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: c
 
     /*uart*/
-    fd_console = aos_open("/dev/ttyS0", 0); 
+    fd_console = aos_open("/dev/ttyS0", 0);
     if (fd_console >= 0) {
         printf("Init CLI with event Driven\r\n");
         aos_cli_init(0);
         aos_poll_read_fd(fd_console, aos_cli_event_cb_read_get(), (void*)0x12345678);
         _cli_init();
-    }   
+    }
 
-这里以 ``uart0`` 为例，用户首先注册一个\ ``aos_poll_read_fd``\ poll事件
+Take ``uart0`` as an example, the user first registers a \ ``aos_poll_read_fd``\ poll event
 
 .. code:: c
 
     aos_cancel_poll_read_fd(fd_console, action, (void*)0x12345678);
 
-如果用户不需要事件的poll，用户可以调用\ ``aos_cancel_poll_read_fd`` \ 取消poll
+If the user does not need the poll of the event, the user can call \ ``aos_cancel_poll_read_fd`` \ cancel poll
 
-延迟执行一个action
-~~~~~~~~~~~~~~~~~~
+Delay execution of an action
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: c
 
     aos_post_delayed_action(1000, app_delayed_action_print, NULL);
 
-用户可以调用\ ``aos_post_delayed_action``\ 做一个延迟\ ``1s``\ 执行的事件
+The user can call \ ``aos_post_delayed_action``\ make a delayed\ ``1s``\ execute event
 
 .. code:: c
 
@@ -252,23 +250,23 @@ poll事件的注册取消
         printf("test.\r\n");
     }
 
-那过\ ``1s``\ 之后会主动调用\ ``app_delayed_action_print``\ 函数
+After \ ``1s``\, it will actively call \ ``app_delayed_action_print``\ function
 
 .. code:: c
 
     aos_cancel_delayed_action(1000, app_delayed_action_print, NULL);
 
-当用户想直接取消一个延迟动作可以调用\ ``aos_cancel_delayed_action``\ ，其第一个\ ``ms``\ 参数,
-当\ ``ms == -1``\ 时，表示无需关心时间是否一致
+When the user wants to cancel a delayed action directly, you can call \ ``aos_cancel_delayed_action``\, the first \ ``ms``\ parameter,
+When \ ``ms == -1``\, it means that there is no need to care whether the time is consistent
 
-安排一次回调
-~~~~~~~~~~~~
+Schedule a callback
+~~~~~~~~~~~~~~~~~~~
 
 .. code:: c
 
     aos_schedule_call(app_action_print, NULL);
 
-用户主动调用\ ``aos_schedule_call``\ 函数
+The user actively calls \ ``aos_schedule_call``\ function
 
 .. code:: c
 
@@ -277,16 +275,15 @@ poll事件的注册取消
         printf("test\r\n");
     }
 
-那么会在下一次循环中主动调用\ ``app_action_print``\ 函数
+Then the \``app_action_print``\ function will be actively called in the next loop
 
-注意事项
---------
+Precautions
+-----------
 
-Yloop的API(include/aos/yloop.h)除了下述API，都必须在Yloop实例所绑定的任务的上下文执行：
+The Yloop API (include/aos/yloop.h) must be executed in the context of the task bound to the Yloop instance except for the following APIs:
 
--  aos\_schedule\_call
--  aos\_loop\_schedule\_call
--  aos\_loop\_schedule\_work
--  aos\_cancel\_work
--  aos\_post\_event
-
+- aos\_schedule\_call
+- aos\_loop\_schedule\_call
+- aos\_loop\_schedule\_work
+- aos\_cancel\_work
+- aos\_post\_event
