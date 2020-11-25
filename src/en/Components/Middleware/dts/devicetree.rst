@@ -1,39 +1,39 @@
 device tree
 ===========
 
-一、 介绍
----------
+1. Introduction
+---------------
 
--  调试平台
+- Debugging platform
 
    ``ubuntu18.04``
 
-二、 dts 和 dtb 相互转换
-------------------------
+2. Convert between dts and dtb
+------------------------------
 
--  device tree 调试工具
+- device tree debugging tool
 
    ``sudo sudo apt-get install device-tree-compiler``
 
--  dts 转 dtb
+- dts to dtb
 
    ``dtc -I dts -O dtb -o *.dtb *.dts``
 
--  dtb 转 dts
+- dtb to dts
 
    ``dtc -I dtb -O dts *.dtb -o *.dts``
 
--  dtb 转数组到数组 \*.c
+- dtb to array to array \*.c
 
    ``xxd -i *.dtb ./*.c``
 
-三、 device tree 语法格式
--------------------------
+Three, device tree syntax format
+--------------------------------
 
--  \*.dts 文件开头必须采用如下所示开头
-   ``/dts-v1/;     // version: 17     // last_comp_version: 16     // boot_cpuid_phys: 0x0``
+- The beginning of the \*.dts file must start with the following
+   ``/dts-v1/; // version: 17 // last_comp_version: 16 // boot_cpuid_phys: 0x0``
 
--  16进制数组表示方法如下(注：字节间必须有一个空格，且暂时不支持换行)
+- The hexadecimal array representation method is as follows (Note: There must be a space between bytes, and line breaks are not supported temporarily)
 
    ::
 
@@ -42,45 +42,45 @@ device tree
                ap_mac_addr = [C8 43 57 82 73 02];
            };
 
--  字符串或者字符串数据表示方法如下
+- String or string data representation method is as follows
 
    ::
 
        model = "bl bl602 AVB board";
        compatible = "bl,bl602-sample", "bl,bl602-common";
 
--  32bit数据表示方法(可以使用16进制ox方式，也可使用10进制方式，字节间必须有一个空格，且暂时不支持换行)
+- 32bit data representation method (can use hexadecimal ox method or decimal method, there must be a space between bytes, and line breaks are not supported temporarily)
 
    ::
 
        pwr_table = <0x4 0x64>
        pwr_table = <4 100>
 
-四、 device tree 模块配置
--------------------------
+Four, device tree module configuration
+--------------------------------------
 
-串口配置
-~~~~~~~~
+Serial port configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-    串口暂时仅支持配置以下功能
+    The serial port only supports the following functions for the time being
 
--  使能串口
+- Enable serial port
 
    ``status = "okay";``
 
--  关闭串口
+- Close the serial port
 
-   关闭串口时，余下其他引脚、波特率等配置均无效，不会初始化相关硬件
+   When the serial port is closed, the remaining pins, baud rate and other configurations are invalid, and the related hardware will not be initialized
 
    ::
 
        status = "disable";
 
--  配置引脚
+- Configuration pin
 
-   暂时不支持配置cts和rts相关功能，故暂时\ ``feature``\ 中rts和cts均为\ ``disable``\ 。如果使用了串的tx和rx，\ ``feature``\ 中到tx和rx需要配置为\ ``okay``\ ，\ ``pin``\ 中的tx和rx需要选择相关引脚。
+   The configuration of cts and rts related functions is temporarily not supported, so for the time being, rts and cts in \``feature``\ are both \``disable``\. If string tx and rx are used, tx and rx in \ ``feature``\ need to be configured as \ ``okay``\, tx and rx in \ ``pin``\ need to select the relevant pins.
 
    ::
 
@@ -95,25 +95,25 @@ device tree
            tx = "okay";
        };
 
--  配置波特率
+- Configure baud rate
 
-   配置波特率参考如下，最大支持 ``2000000 bps``\ 这里以\ ``9600``\ 为例
+   The configuration baud rate reference is as follows, the maximum support is ``2000000 bps``\ Here, ``9600``\ is taken as an example
 
    ::
 
        baudrate = <9600>;
 
--  配置id号
+- Configure id number
 
-   配置id参考如下，这里以\ ``<0>``\ 为例
+   The configuration id reference is as follows, here is \ ``<0>``\ as an example
 
    ::
 
        id = <0>;
 
--  配置设备名
+- Configure device name
 
-   目前串口设备名为/dev/ttyS\ *,至于*\ 为当前串口id号，目前调试口使用
+The current serial device name is /dev/ttyS\ *, as for *\ is the current serial port id number, currently the debugging port is used
    /dev/ttyS0
 
    ::
