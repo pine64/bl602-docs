@@ -115,8 +115,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">12. Wi-Fi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_ble/ble.html">13. BLE</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">14. Mesh</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">14.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">14.2. 使用步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">14.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-steps">14.2. Usage steps</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
@@ -213,16 +213,16 @@
             
   <div class="section" id="mesh">
 <span id="ble-index"></span><h1><span class="section-number">14. </span>Mesh<a class="headerlink" href="#mesh" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">14.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本示例主要介绍如何使用ble mesh。</p>
+<div class="section" id="overview">
+<h2><span class="section-number">14.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example shows how to use ble mesh.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">14.2. </span>使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="usage-steps">
+<h2><span class="section-number">14.2. </span>Usage steps<a class="headerlink" href="#usage-steps" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>准备 手机安装APP <code class="docutils literal notranslate"><span class="pre">bl_mesh_app.apk</span></code></p></li>
-<li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_event</span></code> 工程并下载工程；</p></li>
-<li><p>在串口中运行Mesh相关命令:</p>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">bl_mesh_app.apk</span></code> on your phone</p></li>
+<li><p>Download and compile the <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_event</span></code> project</p></li>
+<li><p>Run following Mesh commands in the serial monitor:</p>
 <blockquote>
 <div><p>#stack_ble</p>
 <p>#blemesh_init</p>
@@ -234,103 +234,103 @@
 <img alt="../../_images/image222.png" src="../../_images/image222.png" />
 </div>
 <ul class="simple">
-<li><p>打开App,Network栏中选择点击添加</p></li>
+<li><p>Open the app and select ADD NODE in the Network column</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image231.png" src="../../_images/image231.png" />
 </div>
 <ul class="simple">
-<li><p>在扫描界面中,选择要添加的设备</p></li>
+<li><p>Select your device</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image241.png" src="../../_images/image241.png" />
 </div>
 <ul class="simple">
-<li><p>在界面中点击IDENTIFY选项</p></li>
+<li><p>Click the IDENTIFY button</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image251.png" src="../../_images/image251.png" />
 </div>
 <ul class="simple">
-<li><p>在界面中点击PROVISION选项</p></li>
+<li><p>Click the PROVISION button</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image261.png" src="../../_images/image261.png" />
 </div>
 <ul class="simple">
-<li><p>在弹出的界面中选择No OOB,点击ok</p></li>
+<li><p>Select No OOB in the pop-up window and click ok</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image271.png" src="../../_images/image271.png" />
 </div>
 <ul class="simple">
-<li><p>在弹出的界面中,点击ok</p></li>
+<li><p>Click ok</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image281.png" src="../../_images/image281.png" />
 </div>
 <ul class="simple">
-<li><p>界面自动调到Network栏中,点击已经连成功的设备</p></li>
+<li><p>Your node is automatically added to the Network column, click on your connected device</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image291.png" src="../../_images/image291.png" />
 </div>
 <ul class="simple">
-<li><p>在界面中选择Elements选项,点击其下拉按钮</p></li>
+<li><p>Locate Elements option and click it’s drop-down button</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image301.png" src="../../_images/image301.png" />
 </div>
 <ul class="simple">
-<li><p>在界面中选择Generic on off Server选项</p></li>
+<li><p>Select the Generic On Off Server option</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image312.png" src="../../_images/image312.png" />
 </div>
 <ul class="simple">
-<li><p>在界面中选择BIND KEY选项</p></li>
+<li><p>Click the BIND KEY button</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image321.png" src="../../_images/image321.png" />
 </div>
 <ul class="simple">
-<li><p>界面中点击Application key 1</p></li>
+<li><p>Click Application key 1</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image331.png" src="../../_images/image331.png" />
 </div>
 <ul class="simple">
-<li><p>在界面中点击ONOFF选项，控制LED的开关</p></li>
+<li><p>Click on the ON and OFF buttons to control the LED switch</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image361.png" src="../../_images/image361.png" />
 </div>
 <ul class="simple">
-<li><p>在串口中看到有如下信息表明控制LED成功</p></li>
+<li><p>The following information can be seen in the serial monitor, indicating that the LED is successfully controlled</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image411.png" src="../../_images/image411.png" />
 </div>
 <ul class="simple">
-<li><p>在界面中点击SUBSCRIBE选项，</p></li>
+<li><p>Click the SUBSCRIBE button</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image341.png" src="../../_images/image341.png" />
 </div>
 <ul class="simple">
-<li><p>在界面中选择Create a new group to subscribe选项，</p></li>
+<li><p>Select “Create a new group to subscribe” option</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image351.png" src="../../_images/image351.png" />
 </div>
 <ul class="simple">
-<li><p>按照同样的方法添加另外一个设备的节点，添加成功后,在Groups选项中，点击已经成功创建的group</p></li>
+<li><p>Follow the same steps to add another node. Then click on your group</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image371.png" src="../../_images/image371.png" />
 </div>
 <ul class="simple">
-<li><p>在group中,选择ON/OFF，并且串口中打印log提示LED开关信息，说明mesh组网成功</p></li>
+<li><p>In the group, clicking on ON and OFF buttons prints the LED information in the serial monitor, indicating that the mesh is working</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../../_images/image381.png" src="../../_images/image381.png" />
