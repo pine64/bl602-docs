@@ -3,20 +3,20 @@
 Http client
 ==================
 
-总览
+Overview
 ------
 
-本示例主要介绍如何创建一个socket并连接到指定的Http服务器获取数据的过程。
+This example explains the process of how to create a socket and connect to access the specified Http server to obtain data.
 
-准备和使用步骤
+Preparation and Usage Steps
 ----------------
 
-- 使用之前需要准备可用的URL以及网络。
+- Prepare a usable URL and network.
 
-- 使用步骤：
+- Steps to use:
    
-  - 编译 ``customer_app/sdk_app_http_client_socket`` 工程并下载工程；
-  - 在终端输入开启wifi的命令： ``stack_wifi`` ，输入连接wifi的命令： ``wifi_sta_connect <name> <key>`` ，并确认wifi连接成功（如输入：wifi_sta_connect bl_test_005 12345678）；
+  - Compile and flash ``customer_app/sdk_app_http_client_socket``.
+  - Enter the command ``stack_wifi`` to turn on wifi in the terminal, then enter the command ``wifi_sta_connect <name> <key>`` to connect to wifi. Confirm that the wifi connection is successful (e.g. use the command ``wifi_sta_connect bl_test_005 12345678``).
 
     .. figure:: imgs/image1.png
        :alt: 
@@ -25,16 +25,16 @@ Http client
        :alt: 
 
 
-  - 使用 ``http`` 命令通过socket的方式进行下载。
+  - Use ``http`` command to download through socket.
 
     .. figure:: imgs/image3.png
        :alt: 
 
 
-应用实例
+Applications
 ---------
 
-- 通过 ``hostname`` 获取 ``hostinfo``
+- Obtain ``hostinfo`` by ``hostname``.
 
 ::
 
@@ -44,7 +44,7 @@ Http client
         return -1;
     }
   
-- 创建一个 ``socket`` 连接并发送http请求。
+- Create a ``socket`` connection and send the http request.
 
 ::
 
@@ -75,7 +75,7 @@ Http client
         = "GET /ddm/ContentResource/music/204.mp3 HTTP/1.1\r\nHost: nf.cr.dandanman.com\r\nUser-Agent: wmsdk\r\nAccept: */*\r\n\r\n";
     write(sockfd, wbuf, sizeof(wbuf) - 1);
 
-- 获取http响应的数据，完成时打印获取数据花费的时间和传输的速度。
+- Recieve http response data. Print the time of cost to recieve data and the speed of transfer when complete.
 
 ::
 
@@ -105,10 +105,10 @@ Http client
             }
         }
 
-- 关闭 ``socket`` 。
+- Close ``socket``.
 
 :: 
 
     close(sockfd);
 
-- 在 ``customer_app/sdk_app_http_client_socket/sdk_app_http_client_socket/demo.c`` 中 ``static void _cli_init()`` 的函数里调用 ``http_client_cli_init()`` 初始化http命令
+- In ``customer_app/sdk_app_http_client_socket/sdk_app_http_client_socket/demo.c``, the function ``static void _cli_init()`` would call ``http_client_cli_init()`` to initialize http.
