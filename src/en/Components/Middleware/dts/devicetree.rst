@@ -1,14 +1,14 @@
 device tree
 ===========
 
-一,  介绍
+一、 介绍
 ---------
 
 -  调试平台
 
    ``ubuntu18.04``
 
-二,  dts 和 dtb 相互转换
+二、 dts 和 dtb 相互转换
 ------------------------
 
 -  device tree 调试工具
@@ -27,7 +27,7 @@ device tree
 
    ``xxd -i *.dtb ./*.c``
 
-三,  device tree 语法格式
+三、 device tree 语法格式
 -------------------------
 
 -  \*.dts 文件开头必须采用如下所示开头
@@ -56,7 +56,7 @@ device tree
        pwr_table = <0x4 0x64>
        pwr_table = <4 100>
 
-四,  device tree 模块配置
+四、 device tree 模块配置
 -------------------------
 
 串口配置
@@ -72,7 +72,7 @@ device tree
 
 -  关闭串口
 
-   关闭串口时，余下其他引脚, 波特率等配置均无效，不会初始化相关硬件
+   关闭串口时，余下其他引脚、波特率等配置均无效，不会初始化相关硬件
 
    ::
 
@@ -129,4 +129,3 @@ device tree
            tx = "okay";
        };
        path = "/dev/ttyS0";
-
