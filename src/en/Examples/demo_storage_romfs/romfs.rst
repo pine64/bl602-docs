@@ -3,22 +3,22 @@
 Romfs
 ==================
 
-概述
+Overview
 -------
 
-本示例主要介绍如何使用Romfs分区。
+This example explains how to use Romfs partition.
 
-准备和使用步骤
+Preparation and usage
 ----------------
 
-- 使用之前新建目录 ``test/child`` 准备名为 ``aa.bin`` 的文件，将其放入新建的目录下。
+- Create a file named ``aa.bin`` inside new directory ``test/child``
 
 .. figure:: imgs/image1.png
    :alt: 
 
-- 使用步骤：
+- Usage steps：
 
-  - 下载时将烧写工具上的 ``Romfs`` 选项勾选起来，路径选择如下图一所示，烧写完后可以使用 ``ls`` 命令查看romfs分区中的内容；
+  - When downloading, check the ``Romfs`` checkbox and specify ``test`` directory like shown in Figure 1 below. After flashing, you can use ``ls`` command to view the contents of the romfs partition;
 
 .. figure:: imgs/image2.png
    :alt: 
@@ -26,7 +26,7 @@ Romfs
 .. figure:: imgs/image3.png
    :alt: 
 
-- 使用 ``romfs`` 命令可以对Romfs进行读写等操作，对比可以看到读到的数据与下载的文件数据一致。
+- Use the ``romfs`` command to perform read and write operations on Romfs. You can see that the data read is consistent with the downloaded file data.
 
 .. figure:: imgs/image4.png
    :alt: 
@@ -34,21 +34,21 @@ Romfs
 .. figure:: imgs/image5.png
    :alt: 
 
-应用实例
+Operations
 ----------
 
-- 打开文件操作：
+- Opening a file:
 
 ::
     
-    fd = aos_open("/romfs/demo.bin", 0);                                                        
+    fd = aos_open("/romfs/demo.bin", 0);
     log_info("fd = %d\r\n", fd);
     if (fd < 0) {
         log_error("open error.\r\n");
         return;
     }
  
-- 读文件操作：
+- Reading file contents:
 
 ::
 
@@ -56,7 +56,7 @@ Romfs
     log_info("len = %d\r\n", len);
     log_buf(buf, 1);
 
-- lseek操作：
+- Seeking：
 
 ::
     
@@ -66,7 +66,7 @@ Romfs
     log_info("len = %d\r\n", len);
     log_buf(buf, 1);
 
-- 获取文件首地址和文件大小操作：
+- Getting the file address and file size:
 
 ::
 
