@@ -8,22 +8,22 @@ Home
 
 
 .. toctree::
-   :caption: Developer Environment
-   :numbered:
-
-   Developer_Environment/Developer_Environment
-   Developer_Environment/BLFlashEnv/BLFlashEnv
-   Developer_Environment/freedom_studio/freedom_studio
-   Developer_Environment/eclipse/eclipse
-   Developer_Environment/openocd/openocd
-
-.. toctree::
-   :caption: Quickstart Guide
+   :caption: Quick Start Guide
    :numbered:
 
    Quickstart_Guide/get_started
    Quickstart_Guide/Linux/Quickstart_Linux_ubuntu
    Quickstart_Guide/Windows/Quickstart_Windows_msys
+
+.. toctree::
+   :caption: Developer Environment
+   :numbered:
+
+   Developer_Environment/Setting_Up
+   Developer_Environment/BLFlashEnv/BLFlashEnv
+   Developer_Environment/freedom_studio/freedom_studio
+   Developer_Environment/eclipse/eclipse
+   Developer_Environment/openocd/openocd
 
 .. toctree::
    :caption: Examples
