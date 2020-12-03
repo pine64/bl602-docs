@@ -1,15 +1,15 @@
 .. _romfs-index:
 
 Romfs
-==================
+=============================
 
 Overview
--------
+-----------------------------
 
 This example explains how to use Romfs partition.
 
 Preparation and usage
-----------------
+-----------------------------
 
 - Create a file named ``aa.bin`` inside new directory ``test/child``
 
@@ -35,7 +35,7 @@ Preparation and usage
    :alt: 
 
 Operations
-----------
+-----------------------------
 
 - Opening a file:
 

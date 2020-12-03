@@ -10,7 +10,6 @@ Dev Cube 用户手册
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    content/Burning_process
 

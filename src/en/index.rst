@@ -95,5 +95,4 @@ Home
    :caption: Orphaned Pages
    :numbered:
 
-   QA/QA
    bl602doc_tool/index
