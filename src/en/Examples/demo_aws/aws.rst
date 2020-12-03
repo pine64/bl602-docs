@@ -4,7 +4,7 @@ AWS
 ===
 
 Overview
-------
+---------
 
 This example explains how to interact with Amazon Web Services.
 
@@ -24,9 +24,8 @@ Usage Steps
 
     .. figure:: imgs/image3.png
        :alt:
-       
+
 - Enter ``aws`` in the serial console. If you see the following log printout, the connection is successful.
 
     .. figure:: imgs/image4.png
        :alt:
-

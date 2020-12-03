@@ -1,3 +1,6 @@
+Documentation
+==================
+
 How to add .h files
 -------------------
 
@@ -21,4 +24,3 @@ Building Documentation
 -  ``make`` will probably prompt you to run a python pip install step to
    get some other Python-related prerequisites. Run the command as
    shown, then re-run ``make html`` to build the docs.
-

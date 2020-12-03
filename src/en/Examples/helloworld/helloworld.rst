@@ -4,7 +4,7 @@ Hello World
 ===========
 
 Overview
-------
+--------
 
 This project explains how to start up the board and print simple logging messages to the console.
 

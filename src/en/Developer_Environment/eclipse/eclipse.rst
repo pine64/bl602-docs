@@ -4,15 +4,15 @@ Eclipse
 This document describes the use of Eclipse.
 
 import project
---------
+--------------
 
 - First of all, start ``eclipse``, open ``File > import`` on the toolbar and select the ``Existing Projects into Workspace`` option under the ``General`` menu to import the projects.
 
 .. figure:: imgs/image01.png
-   :alt: 
+   :alt:
 
 .. figure:: imgs/image02.png
-   :alt: 
+   :alt:
 
 Debug
 -----

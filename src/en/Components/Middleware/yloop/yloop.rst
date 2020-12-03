@@ -1,6 +1,7 @@
 yloop
 =====
 
+Something
 --------------
 
 -  `Yloop概要`_
@@ -220,13 +221,13 @@ poll事件的注册取消
 .. code:: c
 
     /*uart*/
-    fd_console = aos_open("/dev/ttyS0", 0); 
+    fd_console = aos_open("/dev/ttyS0", 0);
     if (fd_console >= 0) {
         printf("Init CLI with event Driven\r\n");
         aos_cli_init(0);
         aos_poll_read_fd(fd_console, aos_cli_event_cb_read_get(), (void*)0x12345678);
         _cli_init();
-    }   
+    }
 
 这里以 ``uart0`` 为例，用户首先注册一个\ ``aos_poll_read_fd``\ poll事件
 
@@ -289,4 +290,3 @@ Yloop的API(include/aos/yloop.h)除了下述API，都必须在Yloop实例所绑�
 -  aos\_loop\_schedule\_work
 -  aos\_cancel\_work
 -  aos\_post\_event
-

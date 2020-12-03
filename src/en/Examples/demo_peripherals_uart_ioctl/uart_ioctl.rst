@@ -18,8 +18,8 @@ UART_ioctl
  - 打开一个串口终端窗口A（波特率为115200，用于接收和发送uart消息），打开另一个串口终端窗口B（波特率为2000000，用于打印log）。例如使用应用实现中case1中的配置，在窗口A中输入 ``123456789abcdef`` ，在窗口A中可以看到接收到的数据，同时窗口B中打印出接收数据的个数。
 
 .. figure:: imgs/image1.png
-   :alt: 
-   
+   :alt:
+
 应用实例
 ----------------
 
@@ -80,6 +80,3 @@ aos_ioctl选项为 ``IOCTL_UART_IOC_READ_BLOCK`` 及 ``IOCTL_UART_IOC_READ_NOBLO
     }
 
 ``aos_ioctl(fd, IOCTL_UART_IOC_READ_BLOCK, 0)`` 表示读取到sizeof(buf_recv)长度的数据立即返回，否则一致等待。 ``aos_ioctl(fd, IOCTL_UART_IOC_READ_NOBLOCK, 0)`` 表示当串口中的数据都读完或者读取到sizeof(buf_recv)长度的数据时立即返回。
-
-
-

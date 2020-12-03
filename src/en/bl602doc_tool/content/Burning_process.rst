@@ -1,6 +1,6 @@
-===============
+======================
 Dev Cube introduction
-===============
+======================
 
 Dev Cube is a chip integration development tool provided by Broadstream/BOLU (?), including IOT program download, MCU program download and RF performance test. This document mainly introduces the configuration of IOT and MCU program download, and RF performance test, please refer to RF performance test manual.
 
@@ -24,9 +24,9 @@ Double click on ``BLDevCube.exe`` in the unzipped folder, select the correspondi
 
    Chip selection
 
-==========
+=================
 Image Composition
-==========
+=================
 Whether it is an IOT program download or an MCU program download, their image composition is the same, as shown in the following figure.
 
 .. figure:: /bl602doc_tool/content/picture/tool2.png
@@ -45,7 +45,7 @@ MCU Program Download
 Under the ``View`` menu, select the MCU option to open the MCU program download interface, which is mainly divided into the configuration of program download method, configuration of image parameters and configuration of advanced image parameters.
 
 Configuring the program download method
-====================
+========================================
 
 - Configuration parameters include:
 
@@ -61,7 +61,7 @@ Configuring the program download method
    MCU program download method selection interface
 
 Configuring image parameters
-==================
+============================
 
 - Configuration parameters include.
 
@@ -73,11 +73,11 @@ Configuring image parameters
 
 .. figure:: /bl602doc_tool/content/picture/tool9.png
    :align: center
-   
+
    Mirroring parameter selection interface
 
 Configuring advanced image parameters
-======================
+======================================
 
 - When ``click here to show advanced options``, advanced image configuration is expanded, with configurable parameters including:
 
@@ -95,7 +95,7 @@ Configuring advanced image parameters
    Advanced image parameter selection interface
 
 Download program
-===========
+================
 
 - Keep the board's BOOT pin high, and make the chip reset so that it is in the UART boot download state. Click on ``Creat&Program``, it will automatically generate the application image and startup parameter configuration file, the following log message appears, the program download is successful
 
@@ -114,13 +114,13 @@ Download program
 
    log information
 
-=============
+====================
 IOT program download
-=============
+====================
 In the ``View`` menu, select the IOT option to enter the IOT program download interface, which is mainly divided into the configuration of program download method and download parameters.
 
 Configuration program download method
-====================
+=====================================
 
 - Configuration parameters include:
 
@@ -133,11 +133,11 @@ Configuration program download method
 
 .. figure:: /bl602doc_tool/content/picture/iot1.png
    :align: center
-   
+
    IOT program download method selection interface
 
 Configuration download parameters
-==================
+=================================
 
 - Configuration parameters include:
 
@@ -155,7 +155,7 @@ Configuration download parameters
    Download parameter selection interface
 
 Download program
-===========
+================
 
 - Keep the board's BOOT pin high, and make the chip reset so that it is in the UART boot download state. Click ``Creat&Download``, the application image and startup parameter configuration file will be generated automatically, the following log message appears, the program download is successful
 

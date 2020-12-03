@@ -5,7 +5,7 @@ This document explains how to set up a software environment for developing on th
 
 
 Setting up the build environment and getting the code
---------------------------
+-----------------------------------------------------
 
 -   Install a serial port tool such as `ScriptCommunicator <https://gigenet.dl.sourceforge.net/project/scriptcommunicator/Windows/ScriptCommunicatorSetup_05_10_windows.zip>`__
 
@@ -28,7 +28,7 @@ Setting up the build environment and getting the code
 
    **Note**\ ：In the example the name ``igor`` is used, but yours is probably different, you can find it by seeing what is before the @ symbol in the prompt.
 
--  Install unzip in order to decompress the SDK, by using the command：\ ``pacman -S unzip``\ ，You may also want git and tmux, you can install them by using these commands：\ ``pacman -S git``\ 、\ ``pacman -S tmux``
+-  Install unzip in order to decompress the SDK, by using the command：\ ``pacman -S unzip``\ ，You may also want git and tmux, you can install them by using these commands：\ ``pacman -S git``\ , \ ``pacman -S tmux``
 
    .. figure:: imgs/image4.png
       :alt:
@@ -43,7 +43,7 @@ Setting up the build environment and getting the code
 
 
 Connecting to Hardware
----------
+----------------------
 
 This picture shows the front of the module. Connect the pins in position 1, 2 and 3 with jumper caps.
 
@@ -57,7 +57,7 @@ This picture shows the back of the module. Connect the header pin IO8 to LOW.
    :alt:
 
 Compiling and Flashing
-----------------
+----------------------
 
 -  Enter the directory of the project you want to compile, such as：\ ``cd customer_app/bl602_demo_event``
 
@@ -70,7 +70,7 @@ Compiling and Flashing
       :alt:
 
 Downloading Binaries
------------
+--------------------
 
 -  Open ``bl_iot_sdk/tools/flash_tool`` and run the ``simple_flasher.exe`` program
 
@@ -90,5 +90,3 @@ Downloading Binaries
       :alt:
 
 (You can also do this using Windows Subsystem for Linux)
-
-
