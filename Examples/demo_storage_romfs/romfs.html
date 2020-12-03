@@ -110,9 +110,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_protocols_httpc/httpc.html">7. Httpc client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_storage_psm/psm.html">8. PSM</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">9. Romfs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">9.1. 概述</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">9.2. 准备和使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">9.3. 应用实例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">9.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparation-and-usage">9.2. Preparation and usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operations">9.3. Operations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">10. cli</a></li>
@@ -214,22 +214,22 @@
             
   <div class="section" id="romfs">
 <span id="romfs-index"></span><h1><span class="section-number">9. </span>Romfs<a class="headerlink" href="#romfs" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">9.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本示例主要介绍如何使用Romfs分区。</p>
+<div class="section" id="overview">
+<h2><span class="section-number">9.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example explains how to use Romfs partition.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">9.2. </span>准备和使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="preparation-and-usage">
+<h2><span class="section-number">9.2. </span>Preparation and usage<a class="headerlink" href="#preparation-and-usage" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>使用之前新建目录 <code class="docutils literal notranslate"><span class="pre">test/child</span></code> 准备名为 <code class="docutils literal notranslate"><span class="pre">aa.bin</span></code> 的文件，将其放入新建的目录下。</p></li>
+<li><p>Create a file named <code class="docutils literal notranslate"><span class="pre">aa.bin</span></code> inside new directory <code class="docutils literal notranslate"><span class="pre">test/child</span></code></p></li>
 </ul>
 <div class="figure align-default">
 <img alt="" src="../../_images/image119.png" />
 </div>
 <ul class="simple">
-<li><p>使用步骤：</p>
+<li><p>Usage steps：</p>
 <ul>
-<li><p>下载时将烧写工具上的 <code class="docutils literal notranslate"><span class="pre">Romfs</span></code> 选项勾选起来，路径选择如下图一所示，烧写完后可以使用 <code class="docutils literal notranslate"><span class="pre">ls</span></code> 命令查看romfs分区中的内容；</p></li>
+<li><p>When downloading, check the <code class="docutils literal notranslate"><span class="pre">Romfs</span></code> checkbox and specify <code class="docutils literal notranslate"><span class="pre">test</span></code> directory like shown in Figure 1 below. After flashing, you can use <code class="docutils literal notranslate"><span class="pre">ls</span></code> command to view the contents of the romfs partition;</p></li>
 </ul>
 </li>
 </ul>
@@ -240,7 +240,7 @@
 <img alt="" src="Examples/demo_storage_romfs/imgs/image3.png" />
 </div>
 <ul class="simple">
-<li><p>使用 <code class="docutils literal notranslate"><span class="pre">romfs</span></code> 命令可以对Romfs进行读写等操作，对比可以看到读到的数据与下载的文件数据一致。</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">romfs</span></code> command to perform read and write operations on Romfs. You can see that the data read is consistent with the downloaded file data.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="" src="../../_images/image44.png" />
@@ -249,10 +249,10 @@
 <img alt="" src="../../_images/image53.png" />
 </div>
 </div>
-<div class="section" id="id3">
-<h2><span class="section-number">9.3. </span>应用实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="operations">
+<h2><span class="section-number">9.3. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>打开文件操作：</p></li>
+<li><p>Opening a file:</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fd</span> <span class="o">=</span> <span class="n">aos_open</span><span class="p">(</span><span class="s2">&quot;/romfs/demo.bin&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="n">log_info</span><span class="p">(</span><span class="s2">&quot;fd = </span><span class="si">%d</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fd</span><span class="p">);</span>
@@ -263,7 +263,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>读文件操作：</p></li>
+<li><p>Reading file contents:</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span> <span class="o">=</span> <span class="n">aos_read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 <span class="n">log_info</span><span class="p">(</span><span class="s2">&quot;len = </span><span class="si">%d</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">);</span>
@@ -271,7 +271,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>lseek操作：</p></li>
+<li><p>Seeking：</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aos_lseek</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">SEEK_CUR</span><span class="p">);</span>
 <span class="n">memset</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">buf</span><span class="p">));</span>
@@ -281,7 +281,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>获取文件首地址和文件大小操作：</p></li>
+<li><p>Getting the file address and file size:</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aos_ioctl</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">IOCTL_ROMFS_GET_FILEBUF</span><span class="p">,</span> <span class="p">(</span><span class="n">long</span> <span class="n">unsigned</span> <span class="nb">int</span><span class="p">)</span><span class="o">&amp;</span><span class="n">filebuf</span><span class="p">);</span>
 <span class="n">log_info</span><span class="p">(</span><span class="s2">&quot;filebuf.buf = %p</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">filebuf</span><span class="o">.</span><span class="n">buf</span><span class="p">);</span>

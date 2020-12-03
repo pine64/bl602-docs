@@ -1,4 +1,4 @@
 Examples
 ===========
 
-该目录包含一系列示例项目的介绍与使用,这些旨在演示bl_iot模块功能的一部分。
+This directory contains projects that demonstrate some of the functions of the bl_iot module.
