@@ -26,7 +26,7 @@ Romfs
 .. figure:: imgs/image3.png
    :alt: 
 
-  - 使用 ``romfs`` 命令可以对Romfs进行读写等操作，对比可以看到读到的数据与下载的文件数据一致。
+- 使用 ``romfs`` 命令可以对Romfs进行读写等操作，对比可以看到读到的数据与下载的文件数据一致。
 
 .. figure:: imgs/image4.png
    :alt: 
