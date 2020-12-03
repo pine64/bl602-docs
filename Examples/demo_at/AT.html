@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>简介 &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>4. 简介 &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="9. AUDIO UDP" href="../demo_audio_udp/audio_udp.html" />
+    <link rel="prev" title="3. AWS" href="../demo_aws/aws.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,6 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
 <ul>
@@ -98,23 +101,77 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Windows/Quickstart_Windows_msys.html">3. Windows Starter Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">1. Hello World</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">2. AWS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_http/http.html">6. Http client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_httpc/httpc.html">7. Httpc client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_storage_psm/psm.html">8. PSM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">9. Romfs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">10. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">12. Wi-Fi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_ble/ble.html">13. BLE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_mesh/mesh.html">14. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sdk_app_easyflash_boottimes/easyflash_boottimes.html">16. Easyflash4 boot times</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">1. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">2. Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">3. AWS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#at">5. 基础AT指令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">5.1. 基础AT指令总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">5.2. 基础AT指令描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#at-uart">5.2.1. AT+UART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-gmr">5.2.2. AT+GMR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-rst">5.2.3. AT+RST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-restore">5.2.4. AT+RESTORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-s-help">5.2.5. AT+S.HELP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-gslp">5.2.6. AT+GSLP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#wi-fi-at">6. Wi-Fi 功能 AT 指令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id4">6.1. 基础AT指令描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#at-cwmode">6.1.1. AT+CWMODE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-cwlap">6.1.2. AT+CWLAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-cwautoconn">6.1.3. AT+CWAUTOCONN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-cwjap">6.1.4. AT+CWJAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-cwqap">6.1.5. AT+CWQAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-softap">6.1.6. AT+SOFTAP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#tcp-ip-at">7. TCP/IP 相关 AT 指令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id5">7.1. 基础AT指令描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#at-cipstart">7.1.1. AT+CIPSTART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-cipclose">7.1.2. AT+CIPCLOSE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-cipserver">7.1.3. AT+CIPSERVER</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-cipsend">7.1.4. AT+CIPSEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ipd">7.1.5. +IPD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#ble-at">8. BLE 相关 AT 指令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id6">8.1. 基础AT指令描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#at-bledatalen">8.1.1. AT+BLEDATALEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-blename">8.1.2. AT+BLENAME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#at-bleaddr">8.1.3. AT+BLEADDR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_audio_udp/audio_udp.html">9. AUDIO UDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_ble/ble.html">10. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_blsync_ble/blsync_ble.html">11. BLSYNC-BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_cronalarm/cronalarm.html">12. cronalarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_dac/DAC.html">13. DAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_hbnram/hbnram.html">14. HBNRAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_mesh/mesh.html">15. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">16. GPIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">17. UART_echo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">18. UART_ioctl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_http/http.html">19. Http client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_httpc/httpc.html">20. Httpc client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_storage_psm/psm.html">21. PSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">22. Romfs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">23. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">24. FDT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">25. Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_zb/zigbee.html">26. Zigbee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_app_easyflash_boottimes/easyflash_boottimes.html">27. Easyflash4 boot times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_app_pwm/pwm.html">28. Pwm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
@@ -132,14 +189,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/httpc/httpc.html">12. HTTPC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/https/https.html">13. HTTPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/provision_WiFi/provision_WiFi.html">15. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/mesh/mesh.html">16. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/ble_stack/ble_stack.html">17. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/Network/wifi/wifi.html">15. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/mesh/mesh.html">17. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/ble_stack/ble_stack.html">18. BLE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Orphaned Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../QA/QA.html">1. QA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bl602doc_tool/index.html">2. Dev Cube 用户手册</a></li>
 </ul>
 
             
@@ -186,7 +253,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>简介</li>
+      <li><span class="section-number">4. </span>简介</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -206,7 +273,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>简介<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4. </span>简介<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>本文主要介绍博流 AT指令集以及使用方法。指令集包含：基础 AT 指令、Wi-Fi 功能 AT 指令、TCP/IP ⼯具箱 AT 指令、BLE 相关 AT 指令。</p>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">指令类型</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
@@ -236,9 +303,9 @@
 </table>
 </div>
 <div class="section" id="at">
-<h1>基础AT指令<a class="headerlink" href="#at" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>基础AT指令<a class="headerlink" href="#at" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
-<h2>基础AT指令总览<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>基础AT指令总览<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">指令列表</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -271,9 +338,9 @@
 </table>
 </div>
 <div class="section" id="id3">
-<h2>基础AT指令描述<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>基础AT指令描述<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="at-uart">
-<h3>AT+UART<a class="headerlink" href="#at-uart" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.1. </span>AT+UART<a class="headerlink" href="#at-uart" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -356,12 +423,43 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-gmr">
-<h3>AT+GMR<a class="headerlink" href="#at-gmr" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.2. </span>AT+GMR<a class="headerlink" href="#at-gmr" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div></div></blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>执行指令</p></td>
+<td><p>AT+GMR</p></td>
+</tr>
+<tr class="row-even"><td rowspan="4"><p>响应</p></td>
+<td rowspan="4"><p>&lt;AT version info&gt;</p>
+<p>&lt;SDK version info&gt;</p>
+<p>&lt;compile time&gt;</p>
+<p>OK</p>
+</td>
+</tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"><td rowspan="3"><p>参数说明</p></td>
+<td rowspan="3"><ul class="simple">
+<li><p>&lt;AT version info&gt;: AT 版本信息</p></li>
+<li><p>&lt;SDK version info&gt;: SDK 版本信息</p></li>
+<li><p>&lt;compile time&gt;: 编译生成时间</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"></tr>
+</tbody>
+</table>
+</div></blockquote>
 </div>
 <div class="section" id="at-rst">
-<h3>AT+RST<a class="headerlink" href="#at-rst" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.3. </span>AT+RST<a class="headerlink" href="#at-rst" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -380,7 +478,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-restore">
-<h3>AT+RESTORE<a class="headerlink" href="#at-restore" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.4. </span>AT+RESTORE<a class="headerlink" href="#at-restore" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -399,7 +497,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-s-help">
-<h3>AT+S.HELP<a class="headerlink" href="#at-s-help" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.5. </span>AT+S.HELP<a class="headerlink" href="#at-s-help" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -418,7 +516,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-gslp">
-<h3>AT+GSLP<a class="headerlink" href="#at-gslp" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.6. </span>AT+GSLP<a class="headerlink" href="#at-gslp" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -451,7 +549,7 @@
 </div>
 </div>
 <div class="section" id="wi-fi-at">
-<h1>Wi-Fi 功能 AT 指令<a class="headerlink" href="#wi-fi-at" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>Wi-Fi 功能 AT 指令<a class="headerlink" href="#wi-fi-at" title="Permalink to this headline">¶</a></h1>
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-text">指令列表</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -483,9 +581,9 @@
 </tbody>
 </table>
 <div class="section" id="id4">
-<h2>基础AT指令描述<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>基础AT指令描述<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="at-cwmode">
-<h3>AT+CWMODE<a class="headerlink" href="#at-cwmode" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.1. </span>AT+CWMODE<a class="headerlink" href="#at-cwmode" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -534,7 +632,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-cwlap">
-<h3>AT+CWLAP<a class="headerlink" href="#at-cwlap" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.2. </span>AT+CWLAP<a class="headerlink" href="#at-cwlap" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -569,7 +667,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-cwautoconn">
-<h3>AT+CWAUTOCONN<a class="headerlink" href="#at-cwautoconn" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.3. </span>AT+CWAUTOCONN<a class="headerlink" href="#at-cwautoconn" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -614,7 +712,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-cwjap">
-<h3>AT+CWJAP<a class="headerlink" href="#at-cwjap" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.4. </span>AT+CWJAP<a class="headerlink" href="#at-cwjap" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -667,7 +765,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-cwqap">
-<h3>AT+CWQAP<a class="headerlink" href="#at-cwqap" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.5. </span>AT+CWQAP<a class="headerlink" href="#at-cwqap" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -689,7 +787,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-softap">
-<h3>AT+SOFTAP<a class="headerlink" href="#at-softap" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.6. </span>AT+SOFTAP<a class="headerlink" href="#at-softap" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -742,7 +840,7 @@
 </div>
 </div>
 <div class="section" id="tcp-ip-at">
-<h1>TCP/IP 相关 AT 指令<a class="headerlink" href="#tcp-ip-at" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>TCP/IP 相关 AT 指令<a class="headerlink" href="#tcp-ip-at" title="Permalink to this headline">¶</a></h1>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text">指令列表</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -771,9 +869,9 @@
 </tbody>
 </table>
 <div class="section" id="id5">
-<h2>基础AT指令描述<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>基础AT指令描述<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="at-cipstart">
-<h3>AT+CIPSTART<a class="headerlink" href="#at-cipstart" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.1. </span>AT+CIPSTART<a class="headerlink" href="#at-cipstart" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default" id="id11">
 <caption><span class="caption-text">建立 TCP/UDP 连接</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -812,7 +910,7 @@
 </table>
 </div>
 <div class="section" id="at-cipclose">
-<h3>AT+CIPCLOSE<a class="headerlink" href="#at-cipclose" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.2. </span>AT+CIPCLOSE<a class="headerlink" href="#at-cipclose" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -840,7 +938,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-cipserver">
-<h3>AT+CIPSERVER<a class="headerlink" href="#at-cipserver" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.3. </span>AT+CIPSERVER<a class="headerlink" href="#at-cipserver" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -889,7 +987,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-cipsend">
-<h3>AT+CIPSEND<a class="headerlink" href="#at-cipsend" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.4. </span>AT+CIPSEND<a class="headerlink" href="#at-cipsend" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -929,7 +1027,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ipd">
-<h3>+IPD<a class="headerlink" href="#ipd" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.5. </span>+IPD<a class="headerlink" href="#ipd" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -962,7 +1060,7 @@
 </div>
 </div>
 <div class="section" id="ble-at">
-<h1>BLE 相关 AT 指令<a class="headerlink" href="#ble-at" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span>BLE 相关 AT 指令<a class="headerlink" href="#ble-at" title="Permalink to this headline">¶</a></h1>
 <table class="docutils align-default" id="id12">
 <caption><span class="caption-text">指令列表</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -985,9 +1083,9 @@
 </tbody>
 </table>
 <div class="section" id="id6">
-<h2>基础AT指令描述<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>基础AT指令描述<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="at-bledatalen">
-<h3>AT+BLEDATALEN<a class="headerlink" href="#at-bledatalen" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.1. </span>AT+BLEDATALEN<a class="headerlink" href="#at-bledatalen" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -1037,7 +1135,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-blename">
-<h3>AT+BLENAME<a class="headerlink" href="#at-blename" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.2. </span>AT+BLENAME<a class="headerlink" href="#at-blename" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -1076,7 +1174,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="at-bleaddr">
-<h3>AT+BLEADDR<a class="headerlink" href="#at-bleaddr" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.3. </span>AT+BLEADDR<a class="headerlink" href="#at-bleaddr" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
 <colgroup>
@@ -1131,6 +1229,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../demo_audio_udp/audio_udp.html" class="btn btn-neutral float-right" title="9. AUDIO UDP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../demo_aws/aws.html" class="btn btn-neutral float-left" title="3. AWS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>AES-GCM &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>29. AES-GCM &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1. arch" href="../../Components/arch.html" />
+    <link rel="prev" title="28. Pwm" href="../sdk_app_pwm/pwm.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,6 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
 <ul>
@@ -98,23 +101,44 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Windows/Quickstart_Windows_msys.html">3. Windows Starter Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">1. Hello World</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">2. AWS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_http/http.html">6. Http client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_httpc/httpc.html">7. Httpc client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_storage_psm/psm.html">8. PSM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">9. Romfs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">10. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">12. Wi-Fi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_ble/ble.html">13. BLE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_mesh/mesh.html">14. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sdk_app_easyflash_boottimes/easyflash_boottimes.html">16. Easyflash4 boot times</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">1. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">2. Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">3. AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html">4. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html#at">5. 基础AT指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html#wi-fi-at">6. Wi-Fi 功能 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html#tcp-ip-at">7. TCP/IP 相关 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html#ble-at">8. BLE 相关 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_audio_udp/audio_udp.html">9. AUDIO UDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_ble/ble.html">10. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_blsync_ble/blsync_ble.html">11. BLSYNC-BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_cronalarm/cronalarm.html">12. cronalarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_dac/DAC.html">13. DAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_hbnram/hbnram.html">14. HBNRAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_mesh/mesh.html">15. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">16. GPIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">17. UART_echo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">18. UART_ioctl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_http/http.html">19. Http client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_httpc/httpc.html">20. Httpc client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_storage_psm/psm.html">21. PSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">22. Romfs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">23. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">24. FDT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">25. Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_zb/zigbee.html">26. Zigbee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_app_easyflash_boottimes/easyflash_boottimes.html">27. Easyflash4 boot times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_app_pwm/pwm.html">28. Pwm</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">29. AES-GCM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">29.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ctr-counter">29.2. CTR（CounTeR）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mac-message-authentication-code">29.3. MAC（Message Authentication Code）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gmac-galois-message-authentication-code-mode">29.4. GMAC（Galois message authentication code mode）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gcm-galois-counter-mode">29.5. GCM（ Galois/Counter Mode )</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">29.6. 具体实现</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
@@ -132,14 +156,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/httpc/httpc.html">12. HTTPC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/https/https.html">13. HTTPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/provision_WiFi/provision_WiFi.html">15. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/mesh/mesh.html">16. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/ble_stack/ble_stack.html">17. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/Network/wifi/wifi.html">15. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/mesh/mesh.html">17. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/ble_stack/ble_stack.html">18. BLE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Orphaned Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../QA/QA.html">1. QA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bl602doc_tool/index.html">2. Dev Cube 用户手册</a></li>
 </ul>
 
             
@@ -186,7 +220,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>AES-GCM</li>
+      <li><span class="section-number">29. </span>AES-GCM</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -206,15 +240,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="aes-gcm">
-<span id="aes-gcm-index"></span><h1>AES-GCM<a class="headerlink" href="#aes-gcm" title="Permalink to this headline">¶</a></h1>
+<span id="aes-gcm-index"></span><h1><span class="section-number">29. </span>AES-GCM<a class="headerlink" href="#aes-gcm" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">29.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>AES是一种对称加密算法，它的相关概念在此不赘述，本文档主要介绍AES-GCM的原理和实现。</p>
 <p>GCM ( Galois/Counter Mode) 指的是该对称加密采用Counter模式，并带有GMAC消息认证码。
 在详细介绍AES-GCM之前，我们先了解一些相关概念。</p>
 </div>
 <div class="section" id="ctr-counter">
-<h2>CTR（CounTeR）<a class="headerlink" href="#ctr-counter" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">29.2. </span>CTR（CounTeR）<a class="headerlink" href="#ctr-counter" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>在CTR模式下，我们对一个逐次累加的计数器进行加密，用加密后的比特序列与明文分组进行异或得到密文。过程如下图：</p>
 <blockquote>
@@ -231,7 +265,7 @@
 但是它不能提供密文消息完整性校验的功能。</p>
 </div>
 <div class="section" id="mac-message-authentication-code">
-<h2>MAC（Message Authentication Code）<a class="headerlink" href="#mac-message-authentication-code" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">29.3. </span>MAC（Message Authentication Code）<a class="headerlink" href="#mac-message-authentication-code" title="Permalink to this headline">¶</a></h2>
 <p>想要校验消息的完整性，必须引入另一个概念：消息验证码。消息验证码是一种与秘钥相关的单项散列函数，过程如下图所示：</p>
 <blockquote>
 <div><div class="figure align-default">
@@ -242,7 +276,7 @@
 这样就可以对收到的密文做完整性校验。当篡改者篡改密文后，没有共享秘钥，就无法计算出篡改后的密文的MAC值。</p>
 </div>
 <div class="section" id="gmac-galois-message-authentication-code-mode">
-<h2>GMAC（Galois message authentication code mode）<a class="headerlink" href="#gmac-galois-message-authentication-code-mode" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">29.4. </span>GMAC（Galois message authentication code mode）<a class="headerlink" href="#gmac-galois-message-authentication-code-mode" title="Permalink to this headline">¶</a></h2>
 <p>对应到上图中的消息认证码，GMAC就是利用伽罗华域(Galois Field，GF，有限域)乘法运算来计算消息的MAC值。
 假设秘钥长度为128bits, 当密文大于128bits时，需要将密文按128bits进行分组。应用流程如下图：</p>
 <blockquote>
@@ -254,7 +288,7 @@
 <p>在BL602中，我们可以直接使用硬件完成GMAC验证。</p>
 </div>
 <div class="section" id="gcm-galois-counter-mode">
-<h2>GCM（ Galois/Counter Mode )<a class="headerlink" href="#gcm-galois-counter-mode" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">29.5. </span>GCM（ Galois/Counter Mode )<a class="headerlink" href="#gcm-galois-counter-mode" title="Permalink to this headline">¶</a></h2>
 <p>GCM中的G就是指GMAC，C就是指CTR。于是将CTR算法加上GMAC验证就是AES-GCM模式了。过程如下图所示：</p>
 <blockquote>
 <div><div class="figure align-default">
@@ -263,7 +297,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="id2">
-<h2>具体实现<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">29.6. </span>具体实现<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>具体代码实现大体如下图所示：</p>
 <blockquote>
 <div><div class="figure align-default">
@@ -278,6 +312,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Components/arch.html" class="btn btn-neutral float-right" title="1. arch" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../sdk_app_pwm/pwm.html" class="btn btn-neutral float-left" title="28. Pwm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

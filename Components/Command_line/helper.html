@@ -92,6 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
 <ul>
@@ -101,22 +102,35 @@
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/helloworld/helloworld.html">1. Hello World</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_aws/aws.html">2. AWS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_protocols_http/http.html">6. Http client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_protocols_httpc/httpc.html">7. Httpc client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_storage_psm/psm.html">8. PSM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_storage_romfs/romfs.html">9. Romfs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_system_cli/cli.html">10. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_wifi/wifi.html">12. Wi-Fi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_ble/ble.html">13. BLE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_mesh/mesh.html">14. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html">16. Easyflash4 boot times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/README.html">1. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/helloworld/helloworld.html">2. Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_aws/aws.html">3. AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_at/AT.html">4. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_at/AT.html#at">5. 基础AT指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_at/AT.html#wi-fi-at">6. Wi-Fi 功能 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_at/AT.html#tcp-ip-at">7. TCP/IP 相关 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_at/AT.html#ble-at">8. BLE 相关 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_audio_udp/audio_udp.html">9. AUDIO UDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_ble/ble.html">10. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_blsync_ble/blsync_ble.html">11. BLSYNC-BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_cronalarm/cronalarm.html">12. cronalarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_dac/DAC.html">13. DAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_hbnram/hbnram.html">14. HBNRAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_mesh/mesh.html">15. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_gpio/GPIO.html">16. GPIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_uart_echo/uart_echo.html">17. UART_echo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_peripherals_uart_ioctl/uart_ioctl.html">18. UART_ioctl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_protocols_http/http.html">19. Http client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_protocols_httpc/httpc.html">20. Httpc client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_storage_psm/psm.html">21. PSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_storage_romfs/romfs.html">22. Romfs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_system_cli/cli.html">23. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_system_fdt/fdt.html">24. FDT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_wifi/wifi.html">25. Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/demo_zb/zigbee.html">26. Zigbee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html">27. Easyflash4 boot times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/sdk_app_pwm/pwm.html">28. Pwm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Examples/benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul class="current">
@@ -138,14 +152,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../Network/httpc/httpc.html">12. HTTPC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Network/https/https.html">13. HTTPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../BLE/provision_WiFi/provision_WiFi.html">15. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../BLE/mesh/mesh.html">16. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../BLE/ble_stack/ble_stack.html">17. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Network/wifi/wifi.html">15. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BLE/mesh/mesh.html">17. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BLE/ble_stack/ble_stack.html">18. BLE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Orphaned Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../QA/QA.html">1. QA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bl602doc_tool/index.html">2. Dev Cube 用户手册</a></li>
 </ul>
 
             
@@ -429,7 +453,7 @@ last 3 bytes of MAC address, the password will be <code class="docutils literal 
 <dt>If no parameter is provided, a default of 16Khz will be used, the supported</dt><dd><p>sample rates are:</p>
 </dd>
 </dl>
-<p>8k、16k、24k、32k、48k、11p025、22p05、44p1
+<p>8k, 16k, 24k, 32k, 48k, 11p025, 22p05, 44p1
 Sample rate with decimal is represented with <code class="docutils literal notranslate"><span class="pre">p</span></code> as decimal point.</p>
 <blockquote>
 <div><p>ex, 11.025khz is represented as 11p025</p>
@@ -456,7 +480,7 @@ Sample rate with decimal is represented with <code class="docutils literal notra
 <ul>
 <li><p>config quality of mjpeg images</p>
 <p><strong>#</strong> mjpegsd_config 50</p>
-<p>currently support 6 quality settings: 5、10、25、50、75、100</p>
+<p>currently support 6 quality settings: 5, 10, 25, 50, 75, 100</p>
 </li>
 <li><p>Start to save images</p>
 <p><strong>#</strong> mjpegsd_start</p>
@@ -465,7 +489,7 @@ Sample rate with decimal is represented with <code class="docutils literal notra
 <li><p><strong>NOTE</strong></p>
 <ul class="simple">
 <li><p>the command above will save 50 images files under SD root as:
-0.jpeg、1.jpeg…49.jpeg</p></li>
+0.jpeg, 1.jpeg, …, 49.jpeg</p></li>
 </ul>
 </li>
 </ul>
@@ -475,7 +499,7 @@ Sample rate with decimal is represented with <code class="docutils literal notra
 <ul>
 <li><p>config quality of mjpeg images</p>
 <p><strong>#</strong> avisd_config 50 bl_avi_q50.avi</p>
-<p>currently support 6 quality settings: 5、10、25、50、75、100</p>
+<p>currently support 6 quality settings: 5, 10, 25, 50, 75, 100</p>
 </li>
 <li><p>Start saving avi</p>
 <p><strong>#</strong> avisd_start</p>
@@ -486,7 +510,7 @@ Sample rate with decimal is represented with <code class="docutils literal notra
 <li><p>the command above will create a file called “bl_avi_q50.avi” under SD root</p></li>
 <li><p>it is recommanded to set the allocation unit size to be “64KB”, and filesystem to be FAT32 while formatting</p></li>
 <li><p>a reboot is needed if quality has to be modified after <code class="docutils literal notranslate"><span class="pre">avisd\_start</span></code></p></li>
-<li><p>psram、camera are needed for this module.</p></li>
+<li><p>psram, camera are needed for this module.</p></li>
 </ul>
 </li>
 </ul>
@@ -507,7 +531,7 @@ Sample rate with decimal is represented with <code class="docutils literal notra
 </li>
 <li><p>Support UTF-8 encoded Chinese SSID</p></li>
 <li><p>Support open WIFI</p></li>
-<li><p>psram、camera are needed for this module.</p></li>
+<li><p>psram, camera are needed for this module.</p></li>
 </ul>
 </li>
 </ul>

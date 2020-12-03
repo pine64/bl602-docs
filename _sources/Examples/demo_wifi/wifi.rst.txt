@@ -1,4 +1,4 @@
-.. _wifi-index:
+.. _demo-wifi-index:
 
 Wi-Fi
 ==================
@@ -54,5 +54,3 @@ Command: ``wifi_ap_stop`` .
 
 .. figure:: imgs/image6.png
    :alt:
-
-

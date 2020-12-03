@@ -2,18 +2,18 @@ cli
 ===
 
 Overview
-------
+--------
 
 This example mainly introduces how to add a cli (command-line interface).
 
 Steps for usage
-----------
+---------------
 
 - 编译 ``customer_app/sdk_app_cli`` 工程并下载对应的bin文件。
 - 使用 ``test`` 命令即可在终端看到打印的 ``hello world``。
 
 Applications
---------
+------------
 
 .. code:: c
 
@@ -23,7 +23,7 @@ Applications
     }
 
     const static struct cli_command cmds_user[] STATIC_CLI_CMD_ATTRIBUTE = {
-        {"test", "cli test", cmd_cli}, 
+        {"test", "cli test", cmd_cli},
     };
 
     int test_cli_init(void)
@@ -33,7 +33,7 @@ Applications
         // XXX NOTE: Calling this *empty* function is necessary to make cmds_user in this file to be kept in the final link.
         //return aos_cli_register_commands(cmds_user, sizeof(cmds_user)/sizeof(cmds_user[0]));
         return 0;
-    }     
+    }
 
 用户在只需在程序中调用\ ``test_cli_init()``\ 接口之后，就可以在shell中\ ``test``,就可以打印\ ``hello world.``\ 如下所示：
 
@@ -45,5 +45,3 @@ Applications
     hello world.
     #
     #
-
-

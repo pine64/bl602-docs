@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>Home &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -91,6 +91,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
 <ul>
@@ -100,22 +101,35 @@
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Examples/helloworld/helloworld.html">1. Hello World</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_aws/aws.html">2. AWS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_protocols_http/http.html">6. Http client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html">7. Httpc client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_storage_psm/psm.html">8. PSM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html">9. Romfs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_system_cli/cli.html">10. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_wifi/wifi.html">12. Wi-Fi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_ble/ble.html">13. BLE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_mesh/mesh.html">14. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html">16. Easyflash4 boot times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/README.html">1. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/helloworld/helloworld.html">2. Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_aws/aws.html">3. AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html">4. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html#at">5. 基础AT指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html#wi-fi-at">6. Wi-Fi 功能 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html#tcp-ip-at">7. TCP/IP 相关 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html#ble-at">8. BLE 相关 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_audio_udp/audio_udp.html">9. AUDIO UDP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_ble/ble.html">10. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html">11. BLSYNC-BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_cronalarm/cronalarm.html">12. cronalarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_dac/DAC.html">13. DAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_hbnram/hbnram.html">14. HBNRAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_mesh/mesh.html">15. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html">16. GPIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html">17. UART_echo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html">18. UART_ioctl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_protocols_http/http.html">19. Http client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html">20. Httpc client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_storage_psm/psm.html">21. PSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html">22. Romfs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_system_cli/cli.html">23. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html">24. FDT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_wifi/wifi.html">25. Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_zb/zigbee.html">26. Zigbee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html">27. Easyflash4 boot times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/sdk_app_pwm/pwm.html">28. Pwm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
@@ -133,14 +147,24 @@
 <li class="toctree-l1"><a class="reference internal" href="Components/Network/httpc/httpc.html">12. HTTPC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Components/Network/https/https.html">13. HTTPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Components/Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/provision_WiFi/provision_WiFi.html">15. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/mesh/mesh.html">16. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html">17. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Network/wifi/wifi.html">15. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/BLE/mesh/mesh.html">17. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html">18. BLE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README/README.html">1. Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Orphaned Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QA/QA.html">1. QA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bl602doc_tool/index.html">2. Dev Cube 用户手册</a></li>
 </ul>
 
             
@@ -187,7 +211,7 @@
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>Home</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -206,7 +230,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="toctree-wrapper compound">
+  <div class="section" id="home">
+<h1>Home<a class="headerlink" href="#home" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Developer Environment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Developer_Environment/Developer_Environment.html">1. Developer Environment</a><ul>
@@ -243,6 +269,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Developer_Environment/eclipse/eclipse.html#debug">4.2. Debug</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -272,140 +299,228 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Examples/helloworld/helloworld.html">1. Hello World</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/helloworld/helloworld.html#overview">1.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/helloworld/helloworld.html#code-examples">1.2. Code Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/README.html">1. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/helloworld/helloworld.html">2. Hello World</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/helloworld/helloworld.html#overview">2.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/helloworld/helloworld.html#code-examples">2.2. Code Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_aws/aws.html">2. AWS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_aws/aws.html#overview">2.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_aws/aws.html#usage-steps">2.2. Usage Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_aws/aws.html">3. AWS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_aws/aws.html#overview">3.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_aws/aws.html#usage-steps">3.2. Usage Steps</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html">3. GPIO</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html#overview">3.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html#usage-steps">3.2. Usage Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html#code-examples">3.3. Code Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html#overview">4.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html#usage-steps">4.2. Usage Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html#code-examples">4.3. Code Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html#id1">5.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html#id2">5.2. 相关配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html#id3">5.3. 应用实例</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_protocols_http/http.html">6. Http client</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_http/http.html#id1">6.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_http/http.html#id2">6.2. 准备和使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_http/http.html#id3">6.3. 应用实例</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html">7. Httpc client</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html#overview">7.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html#usage-steps">7.2. Usage Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html#applications">7.3. Applications</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_storage_psm/psm.html">8. PSM</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_psm/psm.html#id1">8.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_psm/psm.html#id2">8.2. 使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_psm/psm.html#id3">8.3. 应用实例</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html">9. Romfs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html#overview">9.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html#preparation-and-usage">9.2. Preparation and usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html#operations">9.3. Operations</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_system_cli/cli.html">10. cli</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_cli/cli.html#overview">10.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_cli/cli.html#steps-for-usage">10.2. Steps for usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_cli/cli.html#applications">10.3. Applications</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html">11. FDT</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html#id1">11.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html#id2">11.2. 使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html#id3">11.3. 应用实例</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_wifi/wifi.html">12. Wi-Fi</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_wifi/wifi.html#overview">12.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_wifi/wifi.html#usage-steps">12.2. Usage Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_wifi/wifi.html#functionalities">12.3. Functionalities</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_ble/ble.html">13. BLE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_ble/ble.html#overview">13.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_ble/ble.html#usage-steps">13.2. Usage Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_ble/ble.html#available-commands">13.3. Available commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-init">13.3.1. <code class="docutils literal notranslate"><span class="pre">ble_init</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth">13.3.2. <code class="docutils literal notranslate"><span class="pre">ble_auth</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-unpair">13.3.3. <code class="docutils literal notranslate"><span class="pre">ble_unpair</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-start-adv">13.3.4. <code class="docutils literal notranslate"><span class="pre">ble_start_adv</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-stop-adv">13.3.5. <code class="docutils literal notranslate"><span class="pre">ble_stop_adv</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-start-scan">13.3.6. <code class="docutils literal notranslate"><span class="pre">ble_start_scan</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-stop-scan">13.3.7. <code class="docutils literal notranslate"><span class="pre">ble_stop_scan</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-conn-update">13.3.8. <code class="docutils literal notranslate"><span class="pre">ble_conn_update</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-security">13.3.9. <code class="docutils literal notranslate"><span class="pre">ble_security</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-get-device-name">13.3.10. <code class="docutils literal notranslate"><span class="pre">ble_get_device_name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-set-device-name">13.3.11. <code class="docutils literal notranslate"><span class="pre">ble_set_device_name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-read-local-address">13.3.12. <code class="docutils literal notranslate"><span class="pre">ble_read_local_address</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-set-adv-channel">13.3.13. <code class="docutils literal notranslate"><span class="pre">ble_set_adv_channel</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-connect">13.3.14. <code class="docutils literal notranslate"><span class="pre">ble_connect</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-disconnect">13.3.15. <code class="docutils literal notranslate"><span class="pre">ble_disconnect</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-select-conn">13.3.16. <code class="docutils literal notranslate"><span class="pre">ble_select_conn</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth-cancel">13.3.17. <code class="docutils literal notranslate"><span class="pre">ble_auth_cancel</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth-passkey-confirm">13.3.18. <code class="docutils literal notranslate"><span class="pre">ble_auth_passkey_confirm</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth-pairing-confirm">13.3.19. <code class="docutils literal notranslate"><span class="pre">ble_auth_pairing_confirm</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth-passkey">13.3.20. <code class="docutils literal notranslate"><span class="pre">ble_auth_passkey</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-exchange-mtu">13.3.21. <code class="docutils literal notranslate"><span class="pre">ble_exchange_mtu</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-discover">13.3.22. <code class="docutils literal notranslate"><span class="pre">ble_discover</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-read">13.3.23. <code class="docutils literal notranslate"><span class="pre">ble_read</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-write">13.3.24. <code class="docutils literal notranslate"><span class="pre">ble_write</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-write-without-rsp">13.3.25. <code class="docutils literal notranslate"><span class="pre">ble_write_without_rsp</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-subscribe">13.3.26. <code class="docutils literal notranslate"><span class="pre">ble_subscribe</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-unsubscribe">13.3.27. <code class="docutils literal notranslate"><span class="pre">ble_unsubscribe</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-set-data-len">13.3.28. <code class="docutils literal notranslate"><span class="pre">ble_set_data_len</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-conn-info">13.3.29. <code class="docutils literal notranslate"><span class="pre">ble_conn_info</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-disable">13.3.30. <code class="docutils literal notranslate"><span class="pre">ble_disable</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-set-tx-pwr">13.3.31. <code class="docutils literal notranslate"><span class="pre">ble_set_tx_pwr</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html">4. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html#at">5. 基础AT指令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_at/AT.html#id2">5.1. 基础AT指令总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_at/AT.html#id3">5.2. 基础AT指令描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-uart">5.2.1. AT+UART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-gmr">5.2.2. AT+GMR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-rst">5.2.3. AT+RST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-restore">5.2.4. AT+RESTORE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-s-help">5.2.5. AT+S.HELP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-gslp">5.2.6. AT+GSLP</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_mesh/mesh.html">14. Mesh</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_mesh/mesh.html#overview">14.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_mesh/mesh.html#usage-steps">14.2. Usage steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html#wi-fi-at">6. Wi-Fi 功能 AT 指令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_at/AT.html#id4">6.1. 基础AT指令描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-cwmode">6.1.1. AT+CWMODE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-cwlap">6.1.2. AT+CWLAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-cwautoconn">6.1.3. AT+CWAUTOCONN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-cwjap">6.1.4. AT+CWJAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-cwqap">6.1.5. AT+CWQAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-softap">6.1.6. AT+SOFTAP</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html#id1">15.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html#app">15.2. APP使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html#id2">15.3. 微信小程序使用步骤</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html">16. Easyflash4 boot times</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id1">16.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id2">16.2. 算法实现</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id3">16.2.1. 1.首次使用</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#kv1kv2kv3">16.2.2. 2.添加 KV1、KV2、KV3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#kv2-kv3-kv1-kv4">16.2.3. 3.修改 KV2 KV3，删除 KV1，添加 KV4</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#kv5-kv6-gc-garbage-clear">16.2.4. 4.添加 KV5 KV6，触发 GC （Garbage Clear）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html#tcp-ip-at">7. TCP/IP 相关 AT 指令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_at/AT.html#id5">7.1. 基础AT指令描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-cipstart">7.1.1. AT+CIPSTART</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-cipclose">7.1.2. AT+CIPCLOSE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-cipserver">7.1.3. AT+CIPSERVER</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-cipsend">7.1.4. AT+CIPSEND</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#ipd">7.1.5. +IPD</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#boot-times">16.3. boot times测试</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id6">16.3.1. 1. 测试流程以及效果</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id7">16.3.2. 2. 测试分析</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_at/AT.html#ble-at">8. BLE 相关 AT 指令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_at/AT.html#id6">8.1. 基础AT指令描述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-bledatalen">8.1.1. AT+BLEDATALEN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-blename">8.1.2. AT+BLENAME</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_at/AT.html#at-bleaddr">8.1.3. AT+BLEADDR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_audio_udp/audio_udp.html">9. AUDIO UDP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_audio_udp/audio_udp.html#id1">9.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_audio_udp/audio_udp.html#id2">9.2. 使用步骤</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_ble/ble.html">10. BLE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_ble/ble.html#overview">10.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_ble/ble.html#usage-steps">10.2. Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_ble/ble.html#available-commands">10.3. Available commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-init">10.3.1. <code class="docutils literal notranslate"><span class="pre">ble_init</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth">10.3.2. <code class="docutils literal notranslate"><span class="pre">ble_auth</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-unpair">10.3.3. <code class="docutils literal notranslate"><span class="pre">ble_unpair</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-start-adv">10.3.4. <code class="docutils literal notranslate"><span class="pre">ble_start_adv</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-stop-adv">10.3.5. <code class="docutils literal notranslate"><span class="pre">ble_stop_adv</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-start-scan">10.3.6. <code class="docutils literal notranslate"><span class="pre">ble_start_scan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-stop-scan">10.3.7. <code class="docutils literal notranslate"><span class="pre">ble_stop_scan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-conn-update">10.3.8. <code class="docutils literal notranslate"><span class="pre">ble_conn_update</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-security">10.3.9. <code class="docutils literal notranslate"><span class="pre">ble_security</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-get-device-name">10.3.10. <code class="docutils literal notranslate"><span class="pre">ble_get_device_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-set-device-name">10.3.11. <code class="docutils literal notranslate"><span class="pre">ble_set_device_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-read-local-address">10.3.12. <code class="docutils literal notranslate"><span class="pre">ble_read_local_address</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-set-adv-channel">10.3.13. <code class="docutils literal notranslate"><span class="pre">ble_set_adv_channel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-connect">10.3.14. <code class="docutils literal notranslate"><span class="pre">ble_connect</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-disconnect">10.3.15. <code class="docutils literal notranslate"><span class="pre">ble_disconnect</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-select-conn">10.3.16. <code class="docutils literal notranslate"><span class="pre">ble_select_conn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth-cancel">10.3.17. <code class="docutils literal notranslate"><span class="pre">ble_auth_cancel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth-passkey-confirm">10.3.18. <code class="docutils literal notranslate"><span class="pre">ble_auth_passkey_confirm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth-pairing-confirm">10.3.19. <code class="docutils literal notranslate"><span class="pre">ble_auth_pairing_confirm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-auth-passkey">10.3.20. <code class="docutils literal notranslate"><span class="pre">ble_auth_passkey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-exchange-mtu">10.3.21. <code class="docutils literal notranslate"><span class="pre">ble_exchange_mtu</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-discover">10.3.22. <code class="docutils literal notranslate"><span class="pre">ble_discover</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-read">10.3.23. <code class="docutils literal notranslate"><span class="pre">ble_read</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-write">10.3.24. <code class="docutils literal notranslate"><span class="pre">ble_write</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-write-without-rsp">10.3.25. <code class="docutils literal notranslate"><span class="pre">ble_write_without_rsp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-subscribe">10.3.26. <code class="docutils literal notranslate"><span class="pre">ble_subscribe</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-unsubscribe">10.3.27. <code class="docutils literal notranslate"><span class="pre">ble_unsubscribe</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-set-data-len">10.3.28. <code class="docutils literal notranslate"><span class="pre">ble_set_data_len</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-conn-info">10.3.29. <code class="docutils literal notranslate"><span class="pre">ble_conn_info</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-disable">10.3.30. <code class="docutils literal notranslate"><span class="pre">ble_disable</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/demo_ble/ble.html#ble-set-tx-pwr">10.3.31. <code class="docutils literal notranslate"><span class="pre">ble_set_tx_pwr</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html">11. BLSYNC-BLE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html#id1">11.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html#app">11.2. APP使用步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_blsync_ble/blsync_ble.html#id2">11.3. 微信小程序使用步骤</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_cronalarm/cronalarm.html">12. cronalarm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_cronalarm/cronalarm.html#id1">12.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_cronalarm/cronalarm.html#id2">12.2. 使用步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_cronalarm/cronalarm.html#id3">12.3. 应用实例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_dac/DAC.html">13. DAC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_dac/DAC.html#id1">13.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_dac/DAC.html#id2">13.2. 使用步骤</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_hbnram/hbnram.html">14. HBNRAM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_hbnram/hbnram.html#id1">14.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_hbnram/hbnram.html#id2">14.2. 使用步骤</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_mesh/mesh.html">15. Mesh</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_mesh/mesh.html#overview">15.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_mesh/mesh.html#usage-steps">15.2. Usage steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html">16. GPIO</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html#overview">16.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html#usage-steps">16.2. Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_gpio/GPIO.html#code-examples">16.3. Code Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html">17. UART_echo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html#overview">17.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html#usage-steps">17.2. Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_echo/uart_echo.html#code-examples">17.3. Code Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html">18. UART_ioctl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html#id1">18.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html#id2">18.2. 相关配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_peripherals_uart_ioctl/uart_ioctl.html#id3">18.3. 应用实例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_protocols_http/http.html">19. Http client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_http/http.html#id1">19.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_http/http.html#id2">19.2. 准备和使用步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_http/http.html#id3">19.3. 应用实例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html">20. Httpc client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html#overview">20.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html#usage-steps">20.2. Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_protocols_httpc/httpc.html#applications">20.3. Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_storage_psm/psm.html">21. PSM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_psm/psm.html#id1">21.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_psm/psm.html#id2">21.2. 使用步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_psm/psm.html#id3">21.3. 应用实例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html">22. Romfs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html#overview">22.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html#preparation-and-usage">22.2. Preparation and usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_storage_romfs/romfs.html#operations">22.3. Operations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_system_cli/cli.html">23. cli</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_cli/cli.html#overview">23.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_cli/cli.html#steps-for-usage">23.2. Steps for usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_cli/cli.html#applications">23.3. Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html">24. FDT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html#id1">24.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html#id2">24.2. 使用步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_system_fdt/fdt.html#id3">24.3. 应用实例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_wifi/wifi.html">25. Wi-Fi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_wifi/wifi.html#overview">25.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_wifi/wifi.html#usage-steps">25.2. Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_wifi/wifi.html#functionalities">25.3. Functionalities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/demo_zb/zigbee.html">26. Zigbee</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_zb/zigbee.html#id1">26.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/demo_zb/zigbee.html#id2">26.2. 使用步骤</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html">27. Easyflash4 boot times</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id1">27.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id2">27.2. 算法实现</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id3">27.2.1. 1.首次使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#kv1kv2kv3">27.2.2. 2.添加 KV1、KV2、KV3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#kv2-kv3-kv1-kv4">27.2.3. 3.修改 KV2 KV3，删除 KV1，添加 KV4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#kv5-kv6-gc-garbage-clear">27.2.4. 4.添加 KV5 KV6，触发 GC （Garbage Clear）</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#boot-times">27.3. boot times测试</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id6">27.3.1. 1. 测试流程以及效果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Examples/sdk_app_easyflash_boottimes/easyflash_boottimes.html#id7">27.3.2. 2. 测试分析</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/sdk_app_pwm/pwm.html">28. Pwm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/sdk_app_pwm/pwm.html#id1">28.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/sdk_app_pwm/pwm.html#id2">28.2. 使用步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/sdk_app_pwm/pwm.html#id3">28.3. 功能</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Examples/benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Examples/benchmark_security_aes/benchmark_security_aes_gcm.html#id1">29.1. 总览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/benchmark_security_aes/benchmark_security_aes_gcm.html#ctr-counter">29.2. CTR（CounTeR）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/benchmark_security_aes/benchmark_security_aes_gcm.html#mac-message-authentication-code">29.3. MAC（Message Authentication Code）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/benchmark_security_aes/benchmark_security_aes_gcm.html#gmac-galois-message-authentication-code-mode">29.4. GMAC（Galois message authentication code mode）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/benchmark_security_aes/benchmark_security_aes_gcm.html#gcm-galois-counter-mode">29.5. GCM（ Galois/Counter Mode )</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examples/benchmark_security_aes/benchmark_security_aes_gcm.html#id2">29.6. 具体实现</a></li>
 </ul>
 </li>
 </ul>
@@ -457,30 +572,38 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Components/Middleware/yloop/yloop.html">11. yloop</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id1">11.1. Yloop概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id2">11.2. Yloop上下文</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id3">11.3. Yloop调度</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id4">11.4. Yloop实现原理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#api">11.5. 主要api介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id5">11.6. 示例代码</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id6">11.6.1. 事件注册、通知、回调、取消流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#poll">11.6.2. poll事件的注册取消</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#action">11.6.3. 延迟执行一个action</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id7">11.6.4. 安排一次回调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#something">11.1. Something</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id1">11.2. Yloop概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id2">11.3. Yloop上下文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id3">11.4. Yloop调度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id4">11.5. Yloop实现原理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#api">11.6. 主要api介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id5">11.7. 示例代码</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id6">11.7.1. 事件注册、通知、回调、取消流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#poll">11.7.2. poll事件的注册取消</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#action">11.7.3. 延迟执行一个action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id7">11.7.4. 安排一次回调</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id8">11.7. 注意事项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id8">11.8. 注意事项</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Components/Network/httpc/httpc.html">12. HTTPC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Components/Network/https/https.html">13. HTTPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Components/Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/provision_WiFi/provision_WiFi.html">15. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/mesh/mesh.html">16. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html">17. BLE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#id1">17.1. 概述</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#api">17.2. API参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#id2">17.3. 数据结构参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Network/wifi/wifi.html">15. WiFi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#id1">15.1. 概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#id2">15.2. 应用实例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#reason-codes">15.3. Reason Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#api">15.4. API参考</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Components/BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/BLE/mesh/mesh.html">17. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html">18. BLE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#id1">18.1. 概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#api">18.2. API参考</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#id2">18.3. 数据结构参考</a></li>
 </ul>
 </li>
 </ul>
@@ -491,6 +614,41 @@
 <li class="toctree-l1"><a class="reference internal" href="API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
 </ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README/README.html">1. Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="README/README.html#how-to-add-h-files">1.1. How to add .h files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README/README.html#building-documentation">1.2. Building Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Orphaned Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QA/QA.html">1. QA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bl602doc_tool/index.html">2. Dev Cube 用户手册</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html">2.1. Dev Cube introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#image-composition">2.2. Image Composition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#mcu-program-download">2.3. MCU Program Download</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#configuring-the-program-download-method">2.3.1. Configuring the program download method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#configuring-image-parameters">2.3.2. Configuring image parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#configuring-advanced-image-parameters">2.3.3. Configuring advanced image parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#download-program">2.3.4. Download program</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#iot-program-download">2.4. IOT program download</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#configuration-program-download-method">2.4.1. Configuration program download method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#configuration-download-parameters">2.4.2. Configuration download parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bl602doc_tool/content/Burning_process.html#id1">2.4.3. Download program</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 
 

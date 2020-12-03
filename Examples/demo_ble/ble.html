@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>13. BLE &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>10. BLE &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="14. Mesh" href="../demo_mesh/mesh.html" />
-    <link rel="prev" title="12. Wi-Fi" href="../demo_wifi/wifi.html" /> 
+    <link rel="next" title="11. BLSYNC-BLE" href="../demo_blsync_ble/blsync_ble.html" />
+    <link rel="prev" title="9. AUDIO UDP" href="../demo_audio_udp/audio_udp.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,6 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Quickstart Guide</span></p>
 <ul>
@@ -101,60 +102,73 @@
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">1. Hello World</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">2. AWS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">3. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">4. UART_echo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">5. UART_ioctl</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_http/http.html">6. Http client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_httpc/httpc.html">7. Httpc client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_storage_psm/psm.html">8. PSM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">9. Romfs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">10. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">11. FDT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">12. Wi-Fi</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">13. BLE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview">13.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#usage-steps">13.2. Usage Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#available-commands">13.3. Available commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ble-init">13.3.1. <code class="docutils literal notranslate"><span class="pre">ble_init</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-auth">13.3.2. <code class="docutils literal notranslate"><span class="pre">ble_auth</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-unpair">13.3.3. <code class="docutils literal notranslate"><span class="pre">ble_unpair</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-start-adv">13.3.4. <code class="docutils literal notranslate"><span class="pre">ble_start_adv</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-stop-adv">13.3.5. <code class="docutils literal notranslate"><span class="pre">ble_stop_adv</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-start-scan">13.3.6. <code class="docutils literal notranslate"><span class="pre">ble_start_scan</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-stop-scan">13.3.7. <code class="docutils literal notranslate"><span class="pre">ble_stop_scan</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-conn-update">13.3.8. <code class="docutils literal notranslate"><span class="pre">ble_conn_update</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-security">13.3.9. <code class="docutils literal notranslate"><span class="pre">ble_security</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-get-device-name">13.3.10. <code class="docutils literal notranslate"><span class="pre">ble_get_device_name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-set-device-name">13.3.11. <code class="docutils literal notranslate"><span class="pre">ble_set_device_name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-read-local-address">13.3.12. <code class="docutils literal notranslate"><span class="pre">ble_read_local_address</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-set-adv-channel">13.3.13. <code class="docutils literal notranslate"><span class="pre">ble_set_adv_channel</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-connect">13.3.14. <code class="docutils literal notranslate"><span class="pre">ble_connect</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-disconnect">13.3.15. <code class="docutils literal notranslate"><span class="pre">ble_disconnect</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-select-conn">13.3.16. <code class="docutils literal notranslate"><span class="pre">ble_select_conn</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-auth-cancel">13.3.17. <code class="docutils literal notranslate"><span class="pre">ble_auth_cancel</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-auth-passkey-confirm">13.3.18. <code class="docutils literal notranslate"><span class="pre">ble_auth_passkey_confirm</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-auth-pairing-confirm">13.3.19. <code class="docutils literal notranslate"><span class="pre">ble_auth_pairing_confirm</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-auth-passkey">13.3.20. <code class="docutils literal notranslate"><span class="pre">ble_auth_passkey</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-exchange-mtu">13.3.21. <code class="docutils literal notranslate"><span class="pre">ble_exchange_mtu</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-discover">13.3.22. <code class="docutils literal notranslate"><span class="pre">ble_discover</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-read">13.3.23. <code class="docutils literal notranslate"><span class="pre">ble_read</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-write">13.3.24. <code class="docutils literal notranslate"><span class="pre">ble_write</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-write-without-rsp">13.3.25. <code class="docutils literal notranslate"><span class="pre">ble_write_without_rsp</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-subscribe">13.3.26. <code class="docutils literal notranslate"><span class="pre">ble_subscribe</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-unsubscribe">13.3.27. <code class="docutils literal notranslate"><span class="pre">ble_unsubscribe</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-set-data-len">13.3.28. <code class="docutils literal notranslate"><span class="pre">ble_set_data_len</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-conn-info">13.3.29. <code class="docutils literal notranslate"><span class="pre">ble_conn_info</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-disable">13.3.30. <code class="docutils literal notranslate"><span class="pre">ble_disable</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ble-set-tx-pwr">13.3.31. <code class="docutils literal notranslate"><span class="pre">ble_set_tx_pwr</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">1. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">2. Hello World</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_aws/aws.html">3. AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html">4. 简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html#at">5. 基础AT指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html#wi-fi-at">6. Wi-Fi 功能 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html#tcp-ip-at">7. TCP/IP 相关 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_at/AT.html#ble-at">8. BLE 相关 AT 指令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_audio_udp/audio_udp.html">9. AUDIO UDP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. BLE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">10.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage-steps">10.2. Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#available-commands">10.3. Available commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ble-init">10.3.1. <code class="docutils literal notranslate"><span class="pre">ble_init</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-auth">10.3.2. <code class="docutils literal notranslate"><span class="pre">ble_auth</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-unpair">10.3.3. <code class="docutils literal notranslate"><span class="pre">ble_unpair</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-start-adv">10.3.4. <code class="docutils literal notranslate"><span class="pre">ble_start_adv</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-stop-adv">10.3.5. <code class="docutils literal notranslate"><span class="pre">ble_stop_adv</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-start-scan">10.3.6. <code class="docutils literal notranslate"><span class="pre">ble_start_scan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-stop-scan">10.3.7. <code class="docutils literal notranslate"><span class="pre">ble_stop_scan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-conn-update">10.3.8. <code class="docutils literal notranslate"><span class="pre">ble_conn_update</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-security">10.3.9. <code class="docutils literal notranslate"><span class="pre">ble_security</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-get-device-name">10.3.10. <code class="docutils literal notranslate"><span class="pre">ble_get_device_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-set-device-name">10.3.11. <code class="docutils literal notranslate"><span class="pre">ble_set_device_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-read-local-address">10.3.12. <code class="docutils literal notranslate"><span class="pre">ble_read_local_address</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-set-adv-channel">10.3.13. <code class="docutils literal notranslate"><span class="pre">ble_set_adv_channel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-connect">10.3.14. <code class="docutils literal notranslate"><span class="pre">ble_connect</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-disconnect">10.3.15. <code class="docutils literal notranslate"><span class="pre">ble_disconnect</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-select-conn">10.3.16. <code class="docutils literal notranslate"><span class="pre">ble_select_conn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-auth-cancel">10.3.17. <code class="docutils literal notranslate"><span class="pre">ble_auth_cancel</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-auth-passkey-confirm">10.3.18. <code class="docutils literal notranslate"><span class="pre">ble_auth_passkey_confirm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-auth-pairing-confirm">10.3.19. <code class="docutils literal notranslate"><span class="pre">ble_auth_pairing_confirm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-auth-passkey">10.3.20. <code class="docutils literal notranslate"><span class="pre">ble_auth_passkey</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-exchange-mtu">10.3.21. <code class="docutils literal notranslate"><span class="pre">ble_exchange_mtu</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-discover">10.3.22. <code class="docutils literal notranslate"><span class="pre">ble_discover</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-read">10.3.23. <code class="docutils literal notranslate"><span class="pre">ble_read</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-write">10.3.24. <code class="docutils literal notranslate"><span class="pre">ble_write</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-write-without-rsp">10.3.25. <code class="docutils literal notranslate"><span class="pre">ble_write_without_rsp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-subscribe">10.3.26. <code class="docutils literal notranslate"><span class="pre">ble_subscribe</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-unsubscribe">10.3.27. <code class="docutils literal notranslate"><span class="pre">ble_unsubscribe</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-set-data-len">10.3.28. <code class="docutils literal notranslate"><span class="pre">ble_set_data_len</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-conn-info">10.3.29. <code class="docutils literal notranslate"><span class="pre">ble_conn_info</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-disable">10.3.30. <code class="docutils literal notranslate"><span class="pre">ble_disable</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ble-set-tx-pwr">10.3.31. <code class="docutils literal notranslate"><span class="pre">ble_set_tx_pwr</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_mesh/mesh.html">14. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo_blsync_ble/blsync_ble.html">15. BLSYNC-BLE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sdk_app_easyflash_boottimes/easyflash_boottimes.html">16. Easyflash4 boot times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_blsync_ble/blsync_ble.html">11. BLSYNC-BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_cronalarm/cronalarm.html">12. cronalarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_dac/DAC.html">13. DAC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_hbnram/hbnram.html">14. HBNRAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_mesh/mesh.html">15. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">16. GPIO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">17. UART_echo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">18. UART_ioctl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_http/http.html">19. Http client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_protocols_httpc/httpc.html">20. Httpc client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_storage_psm/psm.html">21. PSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_storage_romfs/romfs.html">22. Romfs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_system_cli/cli.html">23. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_system_fdt/fdt.html">24. FDT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_wifi/wifi.html">25. Wi-Fi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo_zb/zigbee.html">26. Zigbee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_app_easyflash_boottimes/easyflash_boottimes.html">27. Easyflash4 boot times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk_app_pwm/pwm.html">28. Pwm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
@@ -172,14 +186,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/httpc/httpc.html">12. HTTPC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/https/https.html">13. HTTPS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/provision_WiFi/provision_WiFi.html">15. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/mesh/mesh.html">16. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/ble_stack/ble_stack.html">17. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/Network/wifi/wifi.html">15. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/mesh/mesh.html">17. Mesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/ble_stack/ble_stack.html">18. BLE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Orphaned Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../QA/QA.html">1. QA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bl602doc_tool/index.html">2. Dev Cube 用户手册</a></li>
 </ul>
 
             
@@ -226,7 +250,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">13. </span>BLE</li>
+      <li><span class="section-number">10. </span>BLE</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -246,13 +270,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="ble">
-<span id="ble-index"></span><h1><span class="section-number">13. </span>BLE<a class="headerlink" href="#ble" title="Permalink to this headline">¶</a></h1>
+<span id="ble-index"></span><h1><span class="section-number">10. </span>BLE<a class="headerlink" href="#ble" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
-<h2><span class="section-number">13.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>This example explains how to use Bluetooth Low-Energy.</p>
 </div>
 <div class="section" id="usage-steps">
-<h2><span class="section-number">13.2. </span>Usage Steps<a class="headerlink" href="#usage-steps" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.2. </span>Usage Steps<a class="headerlink" href="#usage-steps" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Compile and flash <code class="docutils literal notranslate"><span class="pre">customer_app/bl602_demo_event</span></code> or <code class="docutils literal notranslate"><span class="pre">customer_app/bl702_demo_event</span></code> .</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">stack_ble</span></code> command to inialize the BLE stack. Example logs:</p>
@@ -350,9 +374,9 @@
 </div></blockquote>
 </div>
 <div class="section" id="available-commands">
-<h2><span class="section-number">13.3. </span>Available commands<a class="headerlink" href="#available-commands" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.3. </span>Available commands<a class="headerlink" href="#available-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ble-init">
-<h3><span class="section-number">13.3.1. </span><code class="docutils literal notranslate"><span class="pre">ble_init</span></code><a class="headerlink" href="#ble-init" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.1. </span><code class="docutils literal notranslate"><span class="pre">ble_init</span></code><a class="headerlink" href="#ble-init" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Common BLE initialization. Required before all other BLE CLI commands.</p></li>
@@ -368,7 +392,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-auth">
-<h3><span class="section-number">13.3.2. </span><code class="docutils literal notranslate"><span class="pre">ble_auth</span></code><a class="headerlink" href="#ble-auth" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.2. </span><code class="docutils literal notranslate"><span class="pre">ble_auth</span></code><a class="headerlink" href="#ble-auth" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose：Register SMP interface.</p></li>
@@ -384,7 +408,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-unpair">
-<h3><span class="section-number">13.3.3. </span><code class="docutils literal notranslate"><span class="pre">ble_unpair</span></code><a class="headerlink" href="#ble-unpair" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.3. </span><code class="docutils literal notranslate"><span class="pre">ble_unpair</span></code><a class="headerlink" href="#ble-unpair" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose：Clear pairing keys.</p></li>
@@ -411,7 +435,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-start-adv">
-<h3><span class="section-number">13.3.4. </span><code class="docutils literal notranslate"><span class="pre">ble_start_adv</span></code><a class="headerlink" href="#ble-start-adv" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.4. </span><code class="docutils literal notranslate"><span class="pre">ble_start_adv</span></code><a class="headerlink" href="#ble-start-adv" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose: Enable ADV broadcast.</p></li>
@@ -449,7 +473,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-stop-adv">
-<h3><span class="section-number">13.3.5. </span><code class="docutils literal notranslate"><span class="pre">ble_stop_adv</span></code><a class="headerlink" href="#ble-stop-adv" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.5. </span><code class="docutils literal notranslate"><span class="pre">ble_stop_adv</span></code><a class="headerlink" href="#ble-stop-adv" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: stop ADV broadcast.</p></li>
@@ -465,7 +489,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-start-scan">
-<h3><span class="section-number">13.3.6. </span><code class="docutils literal notranslate"><span class="pre">ble_start_scan</span></code><a class="headerlink" href="#ble-start-scan" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.6. </span><code class="docutils literal notranslate"><span class="pre">ble_start_scan</span></code><a class="headerlink" href="#ble-start-scan" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose: Start scanning for broadcasting devices.</p></li>
@@ -502,7 +526,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-stop-scan">
-<h3><span class="section-number">13.3.7. </span><code class="docutils literal notranslate"><span class="pre">ble_stop_scan</span></code><a class="headerlink" href="#ble-stop-scan" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.7. </span><code class="docutils literal notranslate"><span class="pre">ble_stop_scan</span></code><a class="headerlink" href="#ble-stop-scan" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Stop scanning.</p></li>
@@ -518,7 +542,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-conn-update">
-<h3><span class="section-number">13.3.8. </span><code class="docutils literal notranslate"><span class="pre">ble_conn_update</span></code><a class="headerlink" href="#ble-conn-update" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.8. </span><code class="docutils literal notranslate"><span class="pre">ble_conn_update</span></code><a class="headerlink" href="#ble-conn-update" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: update connection params</p></li>
@@ -537,7 +561,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-security">
-<h3><span class="section-number">13.3.9. </span><code class="docutils literal notranslate"><span class="pre">ble_security</span></code><a class="headerlink" href="#ble-security" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.9. </span><code class="docutils literal notranslate"><span class="pre">ble_security</span></code><a class="headerlink" href="#ble-security" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose: Set SMP encryption level.</p></li>
@@ -564,7 +588,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-get-device-name">
-<h3><span class="section-number">13.3.10. </span><code class="docutils literal notranslate"><span class="pre">ble_get_device_name</span></code><a class="headerlink" href="#ble-get-device-name" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.10. </span><code class="docutils literal notranslate"><span class="pre">ble_get_device_name</span></code><a class="headerlink" href="#ble-get-device-name" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Get local device name</p></li>
@@ -580,7 +604,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-set-device-name">
-<h3><span class="section-number">13.3.11. </span><code class="docutils literal notranslate"><span class="pre">ble_set_device_name</span></code><a class="headerlink" href="#ble-set-device-name" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.11. </span><code class="docutils literal notranslate"><span class="pre">ble_set_device_name</span></code><a class="headerlink" href="#ble-set-device-name" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Set local device name</p></li>
@@ -596,7 +620,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-read-local-address">
-<h3><span class="section-number">13.3.12. </span><code class="docutils literal notranslate"><span class="pre">ble_read_local_address</span></code><a class="headerlink" href="#ble-read-local-address" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.12. </span><code class="docutils literal notranslate"><span class="pre">ble_read_local_address</span></code><a class="headerlink" href="#ble-read-local-address" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Read local device address</p></li>
@@ -612,7 +636,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-set-adv-channel">
-<h3><span class="section-number">13.3.13. </span><code class="docutils literal notranslate"><span class="pre">ble_set_adv_channel</span></code><a class="headerlink" href="#ble-set-adv-channel" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.13. </span><code class="docutils literal notranslate"><span class="pre">ble_set_adv_channel</span></code><a class="headerlink" href="#ble-set-adv-channel" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpores: Set ADV channel</p></li>
@@ -628,7 +652,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-connect">
-<h3><span class="section-number">13.3.14. </span><code class="docutils literal notranslate"><span class="pre">ble_connect</span></code><a class="headerlink" href="#ble-connect" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.14. </span><code class="docutils literal notranslate"><span class="pre">ble_connect</span></code><a class="headerlink" href="#ble-connect" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose: Connect to the device at the specified address</p></li>
@@ -655,7 +679,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-disconnect">
-<h3><span class="section-number">13.3.15. </span><code class="docutils literal notranslate"><span class="pre">ble_disconnect</span></code><a class="headerlink" href="#ble-disconnect" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.15. </span><code class="docutils literal notranslate"><span class="pre">ble_disconnect</span></code><a class="headerlink" href="#ble-disconnect" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose: Disconnect from device from specified address</p></li>
@@ -682,7 +706,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-select-conn">
-<h3><span class="section-number">13.3.16. </span><code class="docutils literal notranslate"><span class="pre">ble_select_conn</span></code><a class="headerlink" href="#ble-select-conn" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.16. </span><code class="docutils literal notranslate"><span class="pre">ble_select_conn</span></code><a class="headerlink" href="#ble-select-conn" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose: Select a connection as the current connection from multiple connections.</p></li>
@@ -708,7 +732,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-auth-cancel">
-<h3><span class="section-number">13.3.17. </span><code class="docutils literal notranslate"><span class="pre">ble_auth_cancel</span></code><a class="headerlink" href="#ble-auth-cancel" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.17. </span><code class="docutils literal notranslate"><span class="pre">ble_auth_cancel</span></code><a class="headerlink" href="#ble-auth-cancel" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: cancel in-progress authentication</p></li>
@@ -724,7 +748,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-auth-passkey-confirm">
-<h3><span class="section-number">13.3.18. </span><code class="docutils literal notranslate"><span class="pre">ble_auth_passkey_confirm</span></code><a class="headerlink" href="#ble-auth-passkey-confirm" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.18. </span><code class="docutils literal notranslate"><span class="pre">ble_auth_passkey_confirm</span></code><a class="headerlink" href="#ble-auth-passkey-confirm" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Confirm receiving passkey from a remote device and proceed with pairing.</p></li>
@@ -740,7 +764,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-auth-pairing-confirm">
-<h3><span class="section-number">13.3.19. </span><code class="docutils literal notranslate"><span class="pre">ble_auth_pairing_confirm</span></code><a class="headerlink" href="#ble-auth-pairing-confirm" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.19. </span><code class="docutils literal notranslate"><span class="pre">ble_auth_pairing_confirm</span></code><a class="headerlink" href="#ble-auth-pairing-confirm" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Confirm receiving a pairing request from a remote device and proceed with pairing.</p></li>
@@ -756,7 +780,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-auth-passkey">
-<h3><span class="section-number">13.3.20. </span><code class="docutils literal notranslate"><span class="pre">ble_auth_passkey</span></code><a class="headerlink" href="#ble-auth-passkey" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.20. </span><code class="docutils literal notranslate"><span class="pre">ble_auth_passkey</span></code><a class="headerlink" href="#ble-auth-passkey" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Input authentication passkey.</p></li>
@@ -772,7 +796,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-exchange-mtu">
-<h3><span class="section-number">13.3.21. </span><code class="docutils literal notranslate"><span class="pre">ble_exchange_mtu</span></code><a class="headerlink" href="#ble-exchange-mtu" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.21. </span><code class="docutils literal notranslate"><span class="pre">ble_exchange_mtu</span></code><a class="headerlink" href="#ble-exchange-mtu" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: exchange MTU size</p></li>
@@ -788,7 +812,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-discover">
-<h3><span class="section-number">13.3.22. </span><code class="docutils literal notranslate"><span class="pre">ble_discover</span></code><a class="headerlink" href="#ble-discover" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.22. </span><code class="docutils literal notranslate"><span class="pre">ble_discover</span></code><a class="headerlink" href="#ble-discover" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose: look up specified service or feature.</p></li>
@@ -818,7 +842,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-read">
-<h3><span class="section-number">13.3.23. </span><code class="docutils literal notranslate"><span class="pre">ble_read</span></code><a class="headerlink" href="#ble-read" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.23. </span><code class="docutils literal notranslate"><span class="pre">ble_read</span></code><a class="headerlink" href="#ble-read" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Read data with specified handle.</p></li>
@@ -835,7 +859,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-write">
-<h3><span class="section-number">13.3.24. </span><code class="docutils literal notranslate"><span class="pre">ble_write</span></code><a class="headerlink" href="#ble-write" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.24. </span><code class="docutils literal notranslate"><span class="pre">ble_write</span></code><a class="headerlink" href="#ble-write" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: write data with specified handle.</p></li>
@@ -854,7 +878,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-write-without-rsp">
-<h3><span class="section-number">13.3.25. </span><code class="docutils literal notranslate"><span class="pre">ble_write_without_rsp</span></code><a class="headerlink" href="#ble-write-without-rsp" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.25. </span><code class="docutils literal notranslate"><span class="pre">ble_write_without_rsp</span></code><a class="headerlink" href="#ble-write-without-rsp" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose: write data without requiring a reply.</p></li>
@@ -881,7 +905,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-subscribe">
-<h3><span class="section-number">13.3.26. </span><code class="docutils literal notranslate"><span class="pre">ble_subscribe</span></code><a class="headerlink" href="#ble-subscribe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.26. </span><code class="docutils literal notranslate"><span class="pre">ble_subscribe</span></code><a class="headerlink" href="#ble-subscribe" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Purpose: Subscribe CCC.</p></li>
@@ -907,7 +931,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-unsubscribe">
-<h3><span class="section-number">13.3.27. </span><code class="docutils literal notranslate"><span class="pre">ble_unsubscribe</span></code><a class="headerlink" href="#ble-unsubscribe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.27. </span><code class="docutils literal notranslate"><span class="pre">ble_unsubscribe</span></code><a class="headerlink" href="#ble-unsubscribe" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Cancel CCC subscription.</p></li>
@@ -923,7 +947,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-set-data-len">
-<h3><span class="section-number">13.3.28. </span><code class="docutils literal notranslate"><span class="pre">ble_set_data_len</span></code><a class="headerlink" href="#ble-set-data-len" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.28. </span><code class="docutils literal notranslate"><span class="pre">ble_set_data_len</span></code><a class="headerlink" href="#ble-set-data-len" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Set PDU data length.</p></li>
@@ -940,7 +964,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-conn-info">
-<h3><span class="section-number">13.3.29. </span><code class="docutils literal notranslate"><span class="pre">ble_conn_info</span></code><a class="headerlink" href="#ble-conn-info" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.29. </span><code class="docutils literal notranslate"><span class="pre">ble_conn_info</span></code><a class="headerlink" href="#ble-conn-info" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: Print out all connection information.</p></li>
@@ -956,7 +980,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-disable">
-<h3><span class="section-number">13.3.30. </span><code class="docutils literal notranslate"><span class="pre">ble_disable</span></code><a class="headerlink" href="#ble-disable" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.30. </span><code class="docutils literal notranslate"><span class="pre">ble_disable</span></code><a class="headerlink" href="#ble-disable" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose: disable BLE</p></li>
@@ -972,7 +996,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="ble-set-tx-pwr">
-<h3><span class="section-number">13.3.31. </span><code class="docutils literal notranslate"><span class="pre">ble_set_tx_pwr</span></code><a class="headerlink" href="#ble-set-tx-pwr" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">10.3.31. </span><code class="docutils literal notranslate"><span class="pre">ble_set_tx_pwr</span></code><a class="headerlink" href="#ble-set-tx-pwr" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul>
 <li><p>Purpose：Set TX power</p></li>
@@ -998,10 +1022,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../demo_mesh/mesh.html" class="btn btn-neutral float-right" title="14. Mesh" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../demo_blsync_ble/blsync_ble.html" class="btn btn-neutral float-right" title="11. BLSYNC-BLE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../demo_wifi/wifi.html" class="btn btn-neutral float-left" title="12. Wi-Fi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../demo_audio_udp/audio_udp.html" class="btn btn-neutral float-left" title="9. AUDIO UDP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

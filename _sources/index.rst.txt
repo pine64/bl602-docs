@@ -3,14 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+Home
+====
+
+
 .. toctree::
    :caption: Developer Environment
    :numbered:
-   
+
    Developer_Environment/Developer_Environment
    Developer_Environment/BLFlashEnv/BLFlashEnv
    Developer_Environment/freedom_studio/freedom_studio
    Developer_Environment/eclipse/eclipse
+   Developer_Environment/openocd/openocd
 
 .. toctree::
    :caption: Quickstart Guide
@@ -19,13 +24,22 @@
    Quickstart_Guide/get_started
    Quickstart_Guide/Linux/Quickstart_Linux_ubuntu
    Quickstart_Guide/Windows/Quickstart_Windows_msys
-   
+
 .. toctree::
    :caption: Examples
    :numbered:
 
+   Examples/README
    Examples/helloworld/helloworld
    Examples/demo_aws/aws
+   Examples/demo_at/AT
+   Examples/demo_audio_udp/audio_udp
+   Examples/demo_ble/ble
+   Examples/demo_blsync_ble/blsync_ble
+   Examples/demo_cronalarm/cronalarm
+   Examples/demo_dac/DAC
+   Examples/demo_hbnram/hbnram
+   Examples/demo_mesh/mesh
    Examples/demo_peripherals_gpio/GPIO
    Examples/demo_peripherals_uart_echo/uart_echo
    Examples/demo_peripherals_uart_ioctl/uart_ioctl
@@ -36,10 +50,10 @@
    Examples/demo_system_cli/cli
    Examples/demo_system_fdt/fdt
    Examples/demo_wifi/wifi
-   Examples/demo_ble/ble
-   Examples/demo_mesh/mesh
-   Examples/demo_blsync_ble/blsync_ble
+   Examples/demo_zb/zigbee
    Examples/sdk_app_easyflash_boottimes/easyflash_boottimes
+   Examples/sdk_app_pwm/pwm
+   Examples/benchmark_security_aes/benchmark_security_aes_gcm
 
 .. toctree::
    :caption: Components
@@ -59,14 +73,27 @@
    Components/Network/httpc/httpc
    Components/Network/https/https
    Components/Network/tls/tls
+   Components/Network/wifi/wifi
    Components/BLE/provision_WiFi/provision_WiFi
    Components/BLE/mesh/mesh
    Components/BLE/ble_stack/ble_stack
-   
+
 .. toctree::
    :caption: API
    :numbered:
-   
+
    API/sys/cronalarms
    API/wifi/wifi_mgmr
-   API/sys/utils_getopt
+
+.. toctree::
+   :caption: Documentation
+   :numbered:
+
+   README/README
+
+.. toctree::
+   :caption: Orphaned Pages
+   :numbered:
+
+   QA/QA
+   bl602doc_tool/index
