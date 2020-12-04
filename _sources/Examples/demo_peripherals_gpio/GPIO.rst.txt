@@ -4,7 +4,7 @@ GPIO
 ==================
 
 Overview
-------
+-----------------------------
 
 This example explains how to configure GPIO.
 
@@ -64,6 +64,7 @@ Code Examples
 It receives inputs from the serial console, and pass them as parameters to ``bl_gpio_enable_input(uint8, uint8, uint8)`` or ``bl_gpio_enable_output(uint8, uint8, uint8)`` to configure the corresponding GPIO pin.
 
 - Implementation of ``gpio-set``
+
 ::
 
     if (3 != argc) {
@@ -87,6 +88,7 @@ It receives inputs from the serial console, and pass them as parameters to ``bl_
 It receives inputs from the CLI and pass them to ``bl_gpio_output_set(uint8, uint8)``.
 
 - Implementation of ``gpio-get``
+
 ::
 
    if (2 != argc) {

@@ -11,7 +11,13 @@ The compiler is available in Linux or Windows. See `Compiling under Linux <../Qu
 Flasher
 -------
 
+<<<<<<< HEAD
 Use BL's proprietary tool ``BLFlashEnv`` to flash the module. For specific usage, refer to `BLFlashEnv <BLFlashEnv/BLFlashEnv.html>`__.
+=======
+For now, it's recommended that you use BouffaloLab's proprietary tool ``BLFlashEnv`` to flash your software to the target module. For specific usage, refer to `BLFlashEnv <BLFlashEnv/BLFlashEnv.html>`__.
+
+A couple of open-source flash tools are also available; see the `BouffaloLab BLOpenFlasher <https://github.com/bouffalolab/BLOpenFlasher>`__ and `stschake's bl60x-flash <https://github.com/stschake/bl60x-flash>`__ projects on GitHub for more information.
+>>>>>>> e403630... Fix up some warnings and indents
 
 Debugger
 --------

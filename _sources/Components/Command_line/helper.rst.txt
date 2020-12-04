@@ -158,10 +158,10 @@ Common commands
       **#** audio\_config 11p025
 
       If no parameter is provided, a default of 16Khz will be used, the supported
-	  sample rates are:
+      sample rates are:
       8k, 16k, 24k, 32k, 48k, 11p025, 22p05, 44p1
       Sample rate with decimal is represented with ``p`` as decimal point.
-	  ex, 11.025khz is represented as 11p025
+      ex, 11.025khz is represented as 11p025
 
    -  recoding
 

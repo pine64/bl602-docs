@@ -86,19 +86,19 @@
               
             
             
-              <p class="caption"><span class="caption-text">Developer Environment</span></p>
+              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/Developer_Environment.html">1. Developer Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/get_started.html">1. Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Windows/Quickstart_Windows_msys.html">3. Windows Starter Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Environment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/Setting_Up.html">1. Developer Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/openocd/openocd.html">5. openocd</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Quickstart Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/get_started.html">1. Quickstart Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Windows/Quickstart_Windows_msys.html">3. Windows Starter Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
@@ -169,8 +169,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Orphaned Pages</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../QA/QA.html">1. QA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../bl602doc_tool/index.html">2. Dev Cube 用户手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bl602doc_tool/index.html">1. Dev Cube 用户手册</a></li>
 </ul>
 
             
@@ -247,56 +246,51 @@
 <ul class="simple">
 <li><p>Prepare a <code class="docutils literal notranslate"><span class="pre">USB</span> <span class="pre">to</span> <span class="pre">TTL</span></code> cable, and configure the <code class="docutils literal notranslate"><span class="pre">uart</span></code> in the SDK directory at <code class="docutils literal notranslate"><span class="pre">bl_iot_sdk/tools/flash_tool/bl602/device_tree/bl_factory_params_evb_40M.dts</span></code>. For this, refer to the following example configuration.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uart</span> <span class="p">{</span>
-    <span class="c1">#address-cells = &lt;1&gt;;</span>
-    <span class="c1">#size-cells = &lt;1&gt;;</span>
-    <span class="n">uart</span><span class="o">@</span><span class="mi">4000</span><span class="n">A000</span> <span class="p">{</span>
-        <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
-        <span class="nb">id</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">0</span><span class="o">&gt;</span><span class="p">;</span>
-        <span class="n">compatible</span> <span class="o">=</span> <span class="s2">&quot;bl602_uart&quot;</span><span class="p">;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/dev/ttyS0&quot;</span><span class="p">;</span>
-        <span class="n">baudrate</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">2000000</span><span class="o">&gt;</span><span class="p">;</span>
-        <span class="n">pin</span> <span class="p">{</span>
-            <span class="n">rx</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">7</span><span class="o">&gt;</span><span class="p">;</span>
-            <span class="n">tx</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">16</span><span class="o">&gt;</span><span class="p">;</span>
-        <span class="p">};</span>
-        <span class="n">feature</span> <span class="p">{</span>
-            <span class="n">tx</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
-            <span class="n">rx</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
-            <span class="n">cts</span> <span class="o">=</span> <span class="s2">&quot;disable&quot;</span><span class="p">;</span>
-            <span class="n">rts</span> <span class="o">=</span> <span class="s2">&quot;disable&quot;</span><span class="p">;</span>
-        <span class="p">};</span>
-    <span class="p">};</span>
-    <span class="n">uart</span><span class="o">@</span><span class="mi">4000</span><span class="n">A100</span> <span class="p">{</span>
-        <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
-        <span class="nb">id</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">;</span>
-        <span class="n">compatible</span> <span class="o">=</span> <span class="s2">&quot;bl602_uart&quot;</span><span class="p">;</span>
-        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/dev/ttyS1&quot;</span><span class="p">;</span>
-        <span class="n">baudrate</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">115200</span><span class="o">&gt;</span><span class="p">;</span>
-        <span class="n">pin</span> <span class="p">{</span>
-            <span class="n">rx</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span>
-            <span class="n">tx</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">4</span><span class="o">&gt;</span><span class="p">;</span>
-        <span class="p">};</span>
-        <span class="n">feature</span> <span class="p">{</span>
-            <span class="n">tx</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
-            <span class="n">rx</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
-            <span class="n">cts</span> <span class="o">=</span> <span class="s2">&quot;disable&quot;</span><span class="p">;</span>
-            <span class="n">rts</span> <span class="o">=</span> <span class="s2">&quot;disable&quot;</span><span class="p">;</span>
-        <span class="p">};</span>
-    <span class="p">};</span>
-<span class="p">};</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  uart {
+      #address-cells = &lt;1&gt;;
+      #size-cells = &lt;1&gt;;
+      uart@4000A000 {
+          status = &quot;okay&quot;;
+          id = &lt;0&gt;;
+          compatible = &quot;bl602_uart&quot;;
+          path = &quot;/dev/ttyS0&quot;;
+          baudrate = &lt;2000000&gt;;
+          pin {
+              rx = &lt;7&gt;;
+              tx = &lt;16&gt;;
+          };
+          feature {
+              tx = &quot;okay&quot;;
+              rx = &quot;okay&quot;;
+              cts = &quot;disable&quot;;
+              rts = &quot;disable&quot;;
+          };
+      };
+      uart@4000A100 {
+          status = &quot;okay&quot;;
+          id = &lt;1&gt;;
+          compatible = &quot;bl602_uart&quot;;
+          path = &quot;/dev/ttyS1&quot;;
+          baudrate = &lt;115200&gt;;
+          pin {
+              rx = &lt;3&gt;;
+              tx = &lt;4&gt;;
+          };
+          feature {
+              tx = &quot;okay&quot;;
+              rx = &quot;okay&quot;;
+              cts = &quot;disable&quot;;
+              rts = &quot;disable&quot;;
+          };
+      };
+  };
+
+- Steps to use：
+  - Connect the board&#39;s ``gpio3`` and ``gpio4`` and ``GND`` to the ``TXD``, ``RXD``, and ``GND`` of the ``USB to TTL`` serial cable, respectively.
+  - Compile ``customer_app/sdk_app_uart_echo`` and flash the image.
+  - Open two serial terminal windows (A and B, respectively), with the Baud rate for A set to 115200, and the Baud rate for B set to2000000. After powering on the board, you can see that window A has received ``1234567890abcdefg``, while window B is stuck at ``send case``. You can continue the program by typing ``1234567890abcdefg`` in window A (note that there is no echo), after which B should continue to ``recv case`` and ``end``.
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Steps to use：</p></li>
-</ul>
-<blockquote>
-<div><ul class="simple">
-<li><p>Connect the board’s <code class="docutils literal notranslate"><span class="pre">gpio3</span></code> and <code class="docutils literal notranslate"><span class="pre">gpio4</span></code> and <code class="docutils literal notranslate"><span class="pre">GND</span></code> to the <code class="docutils literal notranslate"><span class="pre">TXD</span></code>, <code class="docutils literal notranslate"><span class="pre">RXD</span></code>, and <code class="docutils literal notranslate"><span class="pre">GND</span></code> of the <code class="docutils literal notranslate"><span class="pre">USB</span> <span class="pre">to</span> <span class="pre">TTL</span></code> serial cable, respectively.</p></li>
-<li><p>Compile <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_uart_echo</span></code> and flash the image.</p></li>
-<li><p>Open two serial terminal windows (A and B, respectively), with the Baud rate for A set to 115200, and the Baud rate for B set to2000000. After powering on the board, you can see that window A has received <code class="docutils literal notranslate"><span class="pre">1234567890abcdefg</span></code>, while window B is stuck at <code class="docutils literal notranslate"><span class="pre">send</span> <span class="pre">case</span></code>. You can continue the program by typing <code class="docutils literal notranslate"><span class="pre">1234567890abcdefg</span></code> in window A (note that there is no echo), after which B should continue to <code class="docutils literal notranslate"><span class="pre">recv</span> <span class="pre">case</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code>.</p></li>
-</ul>
-</div></blockquote>
 <div class="figure align-default">
 <img alt="" src="../../_images/image114.png" />
 </div>
