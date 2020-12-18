@@ -76,12 +76,12 @@ I suspect the ```reg_fclk_en``` register to be switching the flash clock signal.
 
 | Offset | Size | Name              | Direction  | Description                   | Values                                                    | Notes                                     |
 | ------ | ---- | ----------------- | ---------- | ----------------------------- | --------------------------------------------------------- | ----------------------------------------- |
-| 0x00   | 3    | uart_clk_div      | R/W        |                               |                                                           |                                           |
-| 0x04   | 1    | uart_clk_en       | R/W        |                               |                                                           |                                           |
-| 0x07   | 1    | hbn_uart_clk_sel  | R          |                               |                                                           |                                           |
-| 0x08   | 3    | sf_clk_div        | R/W        |                               |                                                           |                                           |
-| 0x0B   | 1    | sf_clk_en         | R/W        |                               |                                                           |                                           |
-| 0x0C   | 2    | sf_clk_sel        | R/W        |                               |                                                           |                                           |
+| 0x00   | 3    | uart_clk_div      | R/W        | UART clock divider            | (root clock or 160M)/(N+1)                                | Clock source set by hbn_uart_clk_sel     |
+| 0x04   | 1    | uart_clk_en       | R/W        | UART clock enable             |                                                           | Set to 1 on reset                         |
+| 0x07   | 1    | hbn_uart_clk_sel  | R (\*\*)   | UART clock selection from HBN | 0 = root clock, 1 = PLL @ 160 MHz                         |                                           |
+| 0x08   | 3    | sf_clk_div        | R/W        | Flash clock divider           |                                                           |                                           |
+| 0x0B   | 1    | sf_clk_en         | R/W        | Flash clock enable            |                                                           |                                           |
+| 0x0C   | 2    | sf_clk_sel        | R/W        | Flash clock select            | 0 = 120 MHz, 1 = 80 MHz, 2 = HCLK, 3 = 96 MHz             |                                           |
 | 0x0E   | 2    | sf_clk_sel2       | R/W        |                               |                                                           |                                           |
 | 0x10   | 6    | ir_clk_div        | R/W        |                               |                                                           |                                           |
 | 0x17   | 1    | ir_clk_en         | R/W        |                               |                                                           |                                           |
@@ -89,14 +89,17 @@ I suspect the ```reg_fclk_en``` register to be switching the flash clock signal.
 
 *Note: bits 3, 5, 6 and 22 are reserved and should always be set to 0*
 
+\*\*Note: the datasheet states that this register is read-only, but it should be writable to allow selection of the UART clock source.
+
+
 ## Register: Clock configuration 3
 
 | Offset | Size | Name              | Direction  | Description                   | Values                                                    | Notes                                     |
 | ------ | ---- | ----------------- | ---------- | ----------------------------- | --------------------------------------------------------- | ----------------------------------------- |
-| 0x00   | 5    | spi_clk_div       | R/W        |                               |                                                           |                                           |
-| 0x08   | 1    | spi_clk_en        | R/W        |                               |                                                           |                                           |
-| 0x10   | 8    | i2c_clk_div       | R/W        |                               |                                                           |                                           |
-| 0x18   | 1    | i2c_clk_en        | R/W        |                               |                                                           |                                           |
+| 0x00   | 5    | spi_clk_div       | R/W        | SPI clock divider             | (BUS_CLK/(N+1))                                           | Default is BUSCLK/4                       |
+| 0x08   | 1    | spi_clk_en        | R/W        | SPI clock enable              |                                                           |                                           |
+| 0x10   | 8    | i2c_clk_div       | R/W        | I2C master clock out divider  | BCLK/(N+1)                                                |                                           |
+| 0x18   | 1    | i2c_clk_en        | R/W        | I2C master clock out enable   |                                                           |                                           |
 
 *Note: bits 5-7, 9-15 and 25-31 are reserved and should always be set to 0*
 
