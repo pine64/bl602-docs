@@ -29,7 +29,6 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -113,9 +112,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_audio_udp/audio_udp.html">9. AUDIO UDP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_ble/ble.html">10. BLE</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">11. BLSYNC-BLE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">11.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#app">11.2. APP使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">11.3. 微信小程序使用步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">11.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app-use-steps">11.2. APP use steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#steps-to-use-wechat-mini-program">11.3. Steps to use WeChat Mini Program</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_cronalarm/cronalarm.html">12. cronalarm</a></li>
@@ -237,29 +236,29 @@
             
   <div class="section" id="blsync-ble">
 <span id="blsync-ble-index"></span><h1><span class="section-number">11. </span>BLSYNC-BLE<a class="headerlink" href="#blsync-ble" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">11.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本示例主要介绍如何使用ble进行wifi配网。</p>
+<div class="section" id="overview">
+<h2><span class="section-number">11.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example mainly introduces how to use ble for wifi configuration.</p>
 </div>
-<div class="section" id="app">
-<h2><span class="section-number">11.2. </span>APP使用步骤<a class="headerlink" href="#app" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="app-use-steps">
+<h2><span class="section-number">11.2. </span>APP use steps<a class="headerlink" href="#app-use-steps" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_ble_sync</span></code> 工程并下载工程固件；</p></li>
-<li><p>固件上电运行会自动开启ble广播，等待手机APP连接配网，如下所示；</p>
+<li><p>Compile the <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_ble_sync</span></code> project and download the project firmware;</p></li>
+<li><p>When the firmware is powered on, it will automatically start ble broadcasting, and wait for the mobile APP to connect to the network, as shown below;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image110.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>打开手机APP搜索蓝牙设备，搜索到设备名“BL602-BLE-DEV”；</p>
+<li><p>Open the mobile APP to search for Bluetooth devices, and the device name “BL602-BLE-DEV” is found;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image210.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>点击连接设备后，点击APP中的扫描，等待数秒后APP会显示开发板扫描到的wifi设备列表；</p>
+<li><p>After clicking to connect the device, click Scan in the APP, and after a few seconds, the APP will display the list of wifi devices scanned by the development board;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image39.png" />
@@ -269,14 +268,14 @@
 </div>
 </div></blockquote>
 </li>
-<li><p>用户可以通过扫描出来的设备列表对进行需要配网的wifi进行连接；</p>
+<li><p>Users can connect to the wifi that needs network configuration through the scanned device list;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image51.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>当用户确定配网完成时，不需要再使用配网功能，可以使用“blsync_ble_stop”命令将其关闭。</p>
+<li><p>When the user confirms that the network configuration is completed, the network configuration function is no longer needed and can be turned off by using the “blsync_ble_stop” command.</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image61.png" />
@@ -285,74 +284,74 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">11.3. </span>微信小程序使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="steps-to-use-wechat-mini-program">
+<h2><span class="section-number">11.3. </span>Steps to use WeChat Mini Program<a class="headerlink" href="#steps-to-use-wechat-mini-program" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_ble_sync</span></code> 工程并下载工程固件；</p></li>
-<li><p>固件上电运行会自动开启ble广播，等待手机APP连接配网，如下所示；</p>
+<li><p>Compile the <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_ble_sync</span></code> project and download the project firmware;</p></li>
+<li><p>When the firmware is powered on, it will automatically start ble broadcast, and wait for the mobile APP to connect to the network, as shown below;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image110.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>打开微信小程序搜索蓝牙设备，搜索到设备名“BL602-BLE-DEV”；</p>
+<li><p>Open the WeChat applet to search for Bluetooth devices and find the device name “BL602-BLE-DEV”;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image71.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>点击“BL602-BLE-DEV”连接设备，连接上设备BLE后会获取到BLE的服务，点击第一个服务，再选择“写通知“；</p>
+<li><p>Click “BL602-BLE-DEV” to connect the device. After connecting to the BLE of the device, you will get the BLE service, click the first service, and then select “Write Notification”;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image81.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>点击小程序中的”点击配网“，小程序会回显获取到的wifi列表，；</p>
+<li><p>Click “click to configure network” in the applet, the applet will echo the obtained wifi list;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image91.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>用户可以通过扫描出来的设备列表对进行需要配网的wifi进行连接，点击需要连接的wifi名称；</p>
+<li><p>Users can connect to the wifi that needs network configuration through the scanned device list, and click the name of the wifi that needs to be connected;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image101.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>接着在输入框输入wifi密码，点击”发送密码“，即可连接wifi；</p>
+<li><p>Then enter the wifi password in the input box and click “send password” to connect to wifi;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image112.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>点击小程序中的”获取状态“按钮，获取wifi当前的连接状态；</p>
+<li><p>Click the “Get Status” button in the applet to get the current connection status of wifi;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image122.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>当前已经连接wifi，则会显示”已经连接“并弹出板子的ip地址等信息；</p>
+<li><p>Currently connected to wifi, it will display “Connected” and pop up the board’s IP address and other information;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image131.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>点击”断开wifi“按钮，即可断开wifi，再次点击”获取状态“按钮可以获取当前wifi已经断开；</p>
+<li><p>Click the “Disconnect wifi” button to disconnect the wifi, and click the “Get Status” button again to get the current wifi disconnected;</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image141.png" />
 </div>
 </div></blockquote>
 </li>
-<li><p>当用户确定配网完成时，不需要再使用配网功能，可以使用“blsync_ble_stop”命令将其关闭。</p>
+<li><p>When the user confirms that the network configuration is completed, the network configuration function is no longer needed and can be turned off by using the “blsync_ble_stop” command.</p>
 <blockquote>
 <div><div class="figure align-default">
 <img alt="" src="../../_images/image61.png" />
