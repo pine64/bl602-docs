@@ -1,3 +1,5 @@
+.. _devcube-index:
+
 ======================
 Dev Cube introduction
 ======================
