@@ -91,8 +91,3 @@ Home
 
    README/README
 
-.. toctree::
-   :caption: Orphaned Pages
-   :numbered:
-
-   bl602doc_tool/index
