@@ -104,6 +104,7 @@ Available commands
 --------------
  - Purpose：Clear pairing keys.
  - Params: 1st param indicates device address type:
+
   - 0: Device is a public address.
   - 1: Device is a random address.
   - 2: Device is a resolvable or public address.
@@ -120,12 +121,14 @@ Available commands
 ------------------
  - Purpose: Enable ADV broadcast.
  - 1st param indicates broadcast type.
+
   - 0：adv_ind - connectable, scannable.
   - 1：adv_scan_ind not connectable, scannable.
   - 2：adv_nonconn_ind not connectable or scannable.
   - 3：adv_direct_ind connectable by limited devices, not scannable.
 
  - 2nd param indicates broadcast mode.
+
   - 0：General discoverable.
   - 1：non-discoverable.
   - 2：limit discoverable.
@@ -152,10 +155,12 @@ Available commands
 -------------------
  - Purpose: Start scanning for broadcasting devices.
  - 1st param is broadcast type:
+
   - 0: passive scan, only monitoring for broadcasts.
   - 1: active scan, monitoring for broadcasts and sending scan_req packets.
 
  - 2nd param configures broadcast package filtering:
+
   - 0: don't filter duplicates.
   - 1: filter duplicates.
   - 2：only accept broadcasts and scan response packets from allowlisted devices
@@ -196,6 +201,7 @@ Available commands
 ----------------
  - Purpose: Set SMP encryption level.
  - Param: encryption level, of which are 5:
+
   - 0: Only used for BR/EDR, such as SDP service.
   - 1: No encryption is required and no authentication is required.
   - 2: Require encryption without authentication.
@@ -252,6 +258,7 @@ Available commands
 ---------------
  - Purpose: Connect to the device at the specified address
  - Params: 1st param is the address type:
+
   - 0: public device address
   - 1: random device address
   - 2: resolvable or public address
@@ -268,6 +275,7 @@ Available commands
 ------------------
  - Purpose: Disconnect from device from specified address
  - Params: 1st param is the address type:
+
   - 0: public device address
   - 1: random device address
   - 2: resolvable or public address
@@ -283,6 +291,7 @@ Available commands
 ``ble_select_conn``
 -------------------
  - Purpose: Select a connection as the current connection from multiple connections.
+
   - 0: public device address
   - 1: random device address
   - 2: resolvable or public address
@@ -349,6 +358,7 @@ Available commands
 ----------------
  - Purpose: look up specified service or feature.
  - 1st param is the look-up type.
+
   - 0：primary
   - 1：secondary
   - 2：include
@@ -392,6 +402,7 @@ Available commands
 -------------------------
  - Purpose: write data without requiring a reply.
  - 1st param enables the sign write command:
+
   - 0: disable sign write.
   - 1: enable sign write.
 
@@ -411,6 +422,7 @@ Available commands
  - 1st param is the CCC handle.
  - 2nd param is the handle of the subscription value.
  - 3rd param is the subscription type:
+
   - 1: notification
   - 2: indication
 
