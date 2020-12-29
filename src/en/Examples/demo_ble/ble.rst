@@ -108,6 +108,7 @@ Available commands
   - 1: Device is a random address.
   - 2: Device is a resolvable or public address.
   - 3: Device is a resolvable or random address.
+
  - 2nd param indicates the device address in big endian. ``0`` clears all device keys.
  - Example：``ble_unpair 0 0``
 
@@ -200,6 +201,7 @@ Available commands
   - 2: Require encryption without authentication.
   - 3: Both encryption and authentication are required, for example, both parties need to enter a PIN code
   - 4: Both encryption and authentication are required, and the 128bit key is passed
+
  - Example：``ble_security 2``
 
     .. figure:: imgs/image8.png
@@ -254,6 +256,7 @@ Available commands
   - 1: random device address
   - 2: resolvable or public address
   - 3: resolvable or random address
+
  - 2nd param is the device address, in big endian.
  - Example: ``ble_connect 0 18B905DE96E0``
 
@@ -269,6 +272,7 @@ Available commands
   - 1: random device address
   - 2: resolvable or public address
   - 3: resolvable or random address
+
  - 2nd param is the device address, in big endian.
  - Example: ``ble_disconnect 0 18B905DE96E0``
 
@@ -283,6 +287,7 @@ Available commands
   - 1: random device address
   - 2: resolvable or public address
   - 3: resolvable or random address
+
  - 2nd param is the device address, in big endian.
  - Example: ``ble_select_conn 1 5F10546C8D83`` selects it as the current connection, and subsequent operations will act on that connection.
 
@@ -349,6 +354,7 @@ Available commands
   - 2：include
   - 3：Characteristic
   - 4：Descriptor
+
  - 2nd param is UUID of 2 bytes.
  - 3rd param is the start handle of 2 bytes.
  - 4th param is the end handle of 2 bytes.
@@ -388,6 +394,7 @@ Available commands
  - 1st param enables the sign write command:
   - 0: disable sign write.
   - 1: enable sign write.
+
  - 2nd param is the handle of 2 bytes.
  - 3rd param is data length of 2 bytes, with a max value of 512.
  - 4th param is the data to write.
