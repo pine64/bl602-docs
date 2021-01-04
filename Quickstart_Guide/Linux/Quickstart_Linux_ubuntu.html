@@ -302,6 +302,7 @@ After connecting the board to the computer the <code class="docutils literal not
 <p>Invoke the <code class="docutils literal notranslate"><span class="pre">blflash</span></code> binary with the <code class="docutils literal notranslate"><span class="pre">flash</span> <span class="pre">&lt;project_name&gt;.bin</span> <span class="pre">--port</span> <span class="pre">&lt;port&gt;</span></code> arguments.
 If the board is connected via USB and no other devices are connected the port is likely going to be <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code>.
 If in doubt, get a list of USB ports with <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span> <span class="pre">/dev/</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">USB</span></code>.</p>
+<p>If you do not have any such device, ensure your kernel has the <cite>ch341</cite> driver enabled.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./blflash-linux-amd64 flash sdk_app_helloworld.bin --port /dev/ttyUSB0
 </pre></div>
 </div>
