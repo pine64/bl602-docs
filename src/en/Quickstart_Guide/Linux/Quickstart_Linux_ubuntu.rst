@@ -92,6 +92,8 @@ Invoke the ``blflash`` binary with the ``flash <project_name>.bin --port <port>`
 If the board is connected via USB and no other devices are connected the port is likely going to be ``/dev/ttyUSB0``.
 If in doubt, get a list of USB ports with ``ls -la /dev/ | grep USB``.
 
+If you do not have any such device, ensure your kernel has the `ch341` driver enabled.
+
 .. code-block:: bash
 
     ./blflash-linux-amd64 flash sdk_app_helloworld.bin --port /dev/ttyUSB0
