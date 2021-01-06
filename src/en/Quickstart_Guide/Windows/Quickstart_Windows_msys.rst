@@ -42,19 +42,11 @@ Setting up the build environment and getting the code
       :alt:
 
 
-Connecting to Hardware
-----------------------
+Connecting the Hardware
+-----------------------
 
-This picture shows the front of the module. Connect the pins in position 1, 2 and 3 with jumper caps.
-
-.. figure:: imgs/image13.png
-   :alt:
-
-This picture shows the back of the module. Connect the header pin IO8 to LOW.
-
-
-.. figure:: imgs/image14.png
-   :alt:
+See the relevant section in :ref:`connecting_the_hardware`.
+Ensure that the board is set to be in loading mode.
 
 Compiling and Flashing
 ----------------------
