@@ -46,33 +46,33 @@ Notes:
 | 0x00D8 | DBG_SEL_HL         |
 | 0x00DC | DBG_SEL_HH         |
 | 0x00E0 | debug              |
-| 0x0100 | GPIO_CFGCTL0       |
-| 0x0104 | GPIO_CFGCTL1       |
-| 0x0108 | GPIO_CFGCTL2       |
-| 0x010C | GPIO_CFGCTL3       |
-| 0x0110 | GPIO_CFGCTL4       |
-| 0x0114 | GPIO_CFGCTL5       |
-| 0x0118 | GPIO_CFGCTL6       |
-| 0x011C | GPIO_CFGCTL7       |
-| 0x0120 | GPIO_CFGCTL8       |
-| 0x0124 | GPIO_CFGCTL9       |
-| 0x0128 | GPIO_CFGCTL10      |
-| 0x012C | GPIO_CFGCTL11      |
-| 0x0130 | GPIO_CFGCTL12      |
-| 0x0134 | GPIO_CFGCTL13      |
-| 0x0138 | GPIO_CFGCTL14      |
-| 0x0180 | GPIO_CFGCTL30      |
-| 0x0184 | GPIO_CFGCTL31      |
-| 0x0188 | GPIO_CFGCTL32      |
-| 0x018C | GPIO_CFGCTL33      |
-| 0x0190 | GPIO_CFGCTL34      |
-| 0x0194 | GPIO_CFGCTL35      |
-| 0x01A0 | GPIO_INT_MASK1     |
-| 0x01A8 | GPIO_INT_STAT1     |
-| 0x01B0 | GPIO_INT_CLR1      |
-| 0x01C0 | GPIO_INT_MODE_SET1 |
-| 0x01C4 | GPIO_INT_MODE_SET2 |
-| 0x01C8 | GPIO_INT_MODE_SET3 |
+| 0x0100 | GPIO_CFGCTL0       | [GPIO](gpio.md)                         |
+| 0x0104 | GPIO_CFGCTL1       | [GPIO](gpio.md)                         |
+| 0x0108 | GPIO_CFGCTL2       | [GPIO](gpio.md)                         |
+| 0x010C | GPIO_CFGCTL3       | [GPIO](gpio.md)                         |
+| 0x0110 | GPIO_CFGCTL4       | [GPIO](gpio.md)                         |
+| 0x0114 | GPIO_CFGCTL5       | [GPIO](gpio.md)                         |
+| 0x0118 | GPIO_CFGCTL6       | [GPIO](gpio.md)                         |
+| 0x011C | GPIO_CFGCTL7       | [GPIO](gpio.md)                         |
+| 0x0120 | GPIO_CFGCTL8       | [GPIO](gpio.md)                         |
+| 0x0124 | GPIO_CFGCTL9       | [GPIO](gpio.md)                         |
+| 0x0128 | GPIO_CFGCTL10      | [GPIO](gpio.md)                         |
+| 0x012C | GPIO_CFGCTL11      | [GPIO](gpio.md)                         |
+| 0x0130 | GPIO_CFGCTL12      | [GPIO](gpio.md)                         |
+| 0x0134 | GPIO_CFGCTL13      | [GPIO](gpio.md)                         |
+| 0x0138 | GPIO_CFGCTL14      | [GPIO](gpio.md)                         |
+| 0x0180 | GPIO_CFGCTL30      | [GPIO](gpio.md)                         |
+| 0x0184 | GPIO_CFGCTL31      | [GPIO](gpio.md)                         |
+| 0x0188 | GPIO_CFGCTL32      | [GPIO](gpio.md)                         |
+| 0x018C | GPIO_CFGCTL33      | [GPIO](gpio.md)                         |
+| 0x0190 | GPIO_CFGCTL34      | [GPIO](gpio.md)                         |
+| 0x0194 | GPIO_CFGCTL35      | [GPIO](gpio.md)                         |
+| 0x01A0 | GPIO_INT_MASK1     | [GPIO](gpio.md)                         |
+| 0x01A8 | GPIO_INT_STAT1     | [GPIO](gpio.md)                         |
+| 0x01B0 | GPIO_INT_CLR1      | [GPIO](gpio.md)                         |
+| 0x01C0 | GPIO_INT_MODE_SET1 | [GPIO](gpio.md)                         |
+| 0x01C4 | GPIO_INT_MODE_SET2 | [GPIO](gpio.md)                         |
+| 0x01C8 | GPIO_INT_MODE_SET3 | [GPIO](gpio.md)                         |
 | 0x0224 | led_driver         |
 | 0x0308 | gpdac_ctrl         |
 | 0x030C | gpdac_actrl        |
