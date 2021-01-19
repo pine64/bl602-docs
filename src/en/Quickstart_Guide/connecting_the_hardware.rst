@@ -30,6 +30,36 @@ JTAG
 
 See the article by `Lee Lup Yuen <https://lupyuen.github.io/articles/openocd>`_.
 
+
+Pine64 Pinenut-01S
+------------------
+
+The `Pinenut-01S USB Programmer <https://pine64.com/product/pinenut-01s-usb-programmer/>`_ provides a serial connection through a USB-A connector.
+It is not possible to connect the Pinenut-01S serial connection through USB easily without the programmer.
+
+.. figure:: imgs/Pine64-Nut-01S-Programmer-Top.png
+   :alt:
+
+   Pine64 Pinenut-01S Programmer. ``BOOT`` jumper,  the ``RESET`` button, the NUT-01S mounting direction, the Pinenut-01S female mounting headers and the USB-A connection have been highlighted.
+
+The Pinenut-01S must be mounted facing the correct way.
+The arrow on the programmer shows the direction the board should be mounted.
+An arrow has been added to the Pinenut-01S image and both arrows should point the same way when mounting.
+
+.. figure:: imgs/Pine64-Nut-01S-Top.png
+   :alt:
+
+   Pine64 Pinenut-01S. Mounting direction and top of male mounting headers have been highlighted.
+
+When loading programs ``BOOT`` should be set to ``H``.
+When running programs ``BOOT`` should be set to ``L``.
+The ``RESET`` button on the programmer can be used after changing the jumper setting to reset the device without repowering it.
+
+.. figure:: imgs/Pine64-Nut-01S-Programmer-Mounted-Side.png
+   :alt:
+
+   Pine64 Pinenut-01S correctly mounted on the programmer.
+
 Boufallo Lab BL602 Dev Module
 ------------------------------
 
