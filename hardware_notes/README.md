@@ -74,7 +74,7 @@ None of the information in this table has been verified (yet)
 | `0x4000_A400` | `0x4000_A4FF` |  `pwm` (Pulse Width Modulation #1-#6)                                                    | [PWM](registers/pwm.md)             |
 | `0x4000_A500` | `0x4000_A5FF` |  `timer` (Timer #1 and #2)                                                               | [TIMER](registers/timer.md)         |
 | `0x4000_A600` | `0x4000_A6FF` |  `ir` (infrared remote accelerator)                                                      | [IR](registers/ir.md)               |
-| `0x4000_A000` | `0x4000_AFFF` |  *`cks`* (???, conflicts with others)                                                    | [CKS](registers/cks.md)             |
+| `0x4000_A700` | `0x4000_A7FF` |  *`cks`* (checksum engine)                                                               | [CKS](registers/cks.md)             |
 | `0x4000_B000` | `0x4000_B6FF` |  `sf_ctrl` (serial flash control)                                                        | [SF_CTRL](registers/sf_ctrl.md)     |
 | `0x4000_B700` | `0x4000_BFFF` |  `sf_ctrl_buf` (serial flash data buffer)                                                |                                     |
 | `0x4000_C000` | `0x4000_CFFF` |  `dma` (Direct Memory Access engine)                                                     | [DMA](registers/dma.md)             |
