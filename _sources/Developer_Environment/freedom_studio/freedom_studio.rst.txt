@@ -34,6 +34,8 @@ Debug
 .. figure:: imgs/image06.png
    :alt:
 
+   This image was not present in the original sources and has been reconstructed based on context. It might not accurately reflect the original image nor the intent of the original image.
+
 -   You can add and delete breakpoints by double-clicking on the leftmost orange bar of the ``code`` window.
 
 .. figure:: imgs/image08.png

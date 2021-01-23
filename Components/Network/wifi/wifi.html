@@ -100,9 +100,12 @@
 <p class="caption"><span class="caption-text">Developer Environment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/Setting_Up.html">1. Developer Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. Dev Cube introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html#image-composition">3. Image Composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html#mcu-program-download">4. MCU Program Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html#iot-program-download">5. IOT program download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/freedom_studio/freedom_studio.html">6. Freedom Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -161,10 +164,6 @@
 <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../README/README.html">1. Documentation</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Orphaned Pages</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../bl602doc_tool/index.html">1. Dev Cube 用户手册</a></li>
 </ul>
 
             
@@ -249,9 +248,7 @@
 <div class="section" id="id2">
 <h2><span class="section-number">7.2. </span>应用实例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>BL_IoT的实例 <code class="docutils literal notranslate"><span class="pre">bl602_demo_wifi</span></code> 目录下包含了一个应用程序，该demo介绍了如何使用BL_IoT模组连接到AP等一系列wifi操作。该实例实现的主要思路如下：</p>
-<div class="figure align-default">
-<img alt="" src="Components/Network/wifi/imgs/image1.png" />
-</div>
+<p><strong>The original documentation had an image called</strong> <code class="docutils literal notranslate"><span class="pre">imgs/image1.png</span></code> <strong>here, but the file is not publically available. This text is here to prevent a missing image warning.</strong></p>
 <ul class="simple">
 <li><p>在主函数 <code class="docutils literal notranslate"><span class="pre">bfl_main()</span></code> 中创建一个 <code class="docutils literal notranslate"><span class="pre">aos_loop_proc()</span></code> 线程，在此线程中调用 <code class="docutils literal notranslate"><span class="pre">aos_register_event_filter()</span></code> 接口注册一个 <code class="docutils literal notranslate"><span class="pre">EV_WIFI</span></code> 事件的监听函数 <code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event()</span></code> ；</p></li>
 <li><p>首先用户在终端中输入 <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> 命令后，在 <code class="docutils literal notranslate"><span class="pre">cmd_stack_wifi()</span></code> 函数中创建一个 <code class="docutils literal notranslate"><span class="pre">wifi_main()</span></code> 的线程，接着调用 <code class="docutils literal notranslate"><span class="pre">aos_post_event()</span></code> 接口发布 <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code> 事件后， <code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event()</span></code> 会被调用，并进入case <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code> 分支从而调用 <code class="docutils literal notranslate"><span class="pre">wifi_mgmr_start_background()</span></code> 开启WiFi Manager，同时发布 <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_MGMR_DONE</span></code> 事件，进入case <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_MGMR_DONE</span></code> 分支调用 <code class="docutils literal notranslate"><span class="pre">_connect_wifi()</span></code> 函数，此函数先判断easyflash中是否设置了可连接的ssid，如果设置了则会自动进行wifi连接，没有设置则需手动输命令设置；</p></li>

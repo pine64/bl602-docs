@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>2. BLFlashEnv &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>2. Dev Cube introduction &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -39,7 +39,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Freedom Studio" href="../freedom_studio/freedom_studio.html" />
+    <link rel="next" title="6. Freedom Studio" href="../freedom_studio/freedom_studio.html" />
     <link rel="prev" title="1. Developer Environment" href="../Setting_Up.html" /> 
 </head>
 
@@ -100,26 +100,23 @@
 <p class="caption"><span class="caption-text">Developer Environment</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../Setting_Up.html">1. Developer Environment</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. BLFlashEnv</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#dev-cube-introduction">2.1. Dev Cube introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#image-composition">2.2. Image Composition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mcu-program-download">2.3. MCU Program Download</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#configuring-the-program-download-method">2.3.1. Configuring the program download method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuring-image-parameters">2.3.2. Configuring image parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuring-advanced-image-parameters">2.3.3. Configuring advanced image parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#download-program">2.3.4. Download program</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Dev Cube introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#image-composition">3. Image Composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#mcu-program-download">4. MCU Program Download</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-the-program-download-method">4.1. Configuring the program download method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-image-parameters">4.2. Configuring image parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-advanced-image-parameters">4.3. Configuring advanced image parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-program">4.4. Download program</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#iot-program-download">2.4. IOT program download</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#configuration-program-download-method">2.4.1. Configuration program download method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuration-download-parameters">2.4.2. Configuration download parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">2.4.3. Download program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#iot-program-download">5. IOT program download</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-program-download-method">5.1. Configuration program download method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-download-parameters">5.2. Configuration download parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">5.3. Download program</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../eclipse/eclipse.html">4. Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../freedom_studio/freedom_studio.html">6. Freedom Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -173,10 +170,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Orphaned Pages</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../bl602doc_tool/index.html">1. Dev Cube 用户手册</a></li>
-</ul>
 
             
           
@@ -224,7 +217,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">2. </span>BLFlashEnv</li>
+      <li><span class="section-number">2. </span>Dev Cube introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -243,10 +236,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="blflashenv">
-<h1><span class="section-number">2. </span>BLFlashEnv<a class="headerlink" href="#blflashenv" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="dev-cube-introduction">
-<span id="devcube-index"></span><h2><span class="section-number">2.1. </span>Dev Cube introduction<a class="headerlink" href="#dev-cube-introduction" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="dev-cube-introduction">
+<span id="devcube-index"></span><h1><span class="section-number">2. </span>Dev Cube introduction<a class="headerlink" href="#dev-cube-introduction" title="Permalink to this headline">¶</a></h1>
 <p>Dev Cube is a chip integration development tool provided by Broadstream/BOLU (?), including IOT program download, MCU program download and RF performance test. This document mainly introduces the configuration of IOT and MCU program download, and RF performance test, please refer to RF performance test manual.</p>
 <p>Dev Cube provides users with the ability to download programs, and supports parameters such as clock, flash, etc. Users can decide whether to encrypt the program, add signatures, replace the program start information file, user resource files, partition tables and other functional configurations according to their own needs.</p>
 <p>The concrete functions are as follows：</p>
@@ -264,7 +255,7 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
 </div>
 </div>
 <div class="section" id="image-composition">
-<h2><span class="section-number">2.2. </span>Image Composition<a class="headerlink" href="#image-composition" title="Permalink to this headline">¶</a></h2>
+<h1><span class="section-number">3. </span>Image Composition<a class="headerlink" href="#image-composition" title="Permalink to this headline">¶</a></h1>
 <p>Whether it is an IOT program download or an MCU program download, their image composition is the same, as shown in the following figure.</p>
 <div class="figure align-center" id="id3">
 <img alt="../../_images/tool2.png" src="../../_images/tool2.png" />
@@ -274,10 +265,10 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
 <p>For example, to download a single-core file, select the corresponding parameters according to your needs, and burn the configuration information of PLL and Flash into the address corresponding to <code class="docutils literal notranslate"><span class="pre">Bootinfo</span> <span class="pre">Addr</span></code>, and burn the compiled bin file of the application into the address corresponding to <code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">Addr</span></code>.</p>
 </div>
 <div class="section" id="mcu-program-download">
-<h2><span class="section-number">2.3. </span>MCU Program Download<a class="headerlink" href="#mcu-program-download" title="Permalink to this headline">¶</a></h2>
+<h1><span class="section-number">4. </span>MCU Program Download<a class="headerlink" href="#mcu-program-download" title="Permalink to this headline">¶</a></h1>
 <p>Under the <code class="docutils literal notranslate"><span class="pre">View</span></code> menu, select the MCU option to open the MCU program download interface, which is mainly divided into the configuration of program download method, configuration of image parameters and configuration of advanced image parameters.</p>
 <div class="section" id="configuring-the-program-download-method">
-<h3><span class="section-number">2.3.1. </span>Configuring the program download method<a class="headerlink" href="#configuring-the-program-download-method" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">4.1. </span>Configuring the program download method<a class="headerlink" href="#configuring-the-program-download-method" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Configuration parameters include:</p>
 <blockquote>
@@ -297,7 +288,7 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
 </div>
 </div>
 <div class="section" id="configuring-image-parameters">
-<h3><span class="section-number">2.3.2. </span>Configuring image parameters<a class="headerlink" href="#configuring-image-parameters" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">4.2. </span>Configuring image parameters<a class="headerlink" href="#configuring-image-parameters" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Configuration parameters include.</p>
 <blockquote>
@@ -317,7 +308,7 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
 </div>
 </div>
 <div class="section" id="configuring-advanced-image-parameters">
-<h3><span class="section-number">2.3.3. </span>Configuring advanced image parameters<a class="headerlink" href="#configuring-advanced-image-parameters" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">4.3. </span>Configuring advanced image parameters<a class="headerlink" href="#configuring-advanced-image-parameters" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>When <code class="docutils literal notranslate"><span class="pre">click</span> <span class="pre">here</span> <span class="pre">to</span> <span class="pre">show</span> <span class="pre">advanced</span> <span class="pre">options</span></code>, advanced image configuration is expanded, with configurable parameters including:</p>
 <blockquote>
@@ -339,7 +330,7 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
 </div>
 </div>
 <div class="section" id="download-program">
-<h3><span class="section-number">2.3.4. </span>Download program<a class="headerlink" href="#download-program" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">4.4. </span>Download program<a class="headerlink" href="#download-program" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Keep the board’s BOOT pin high, and make the chip reset so that it is in the UART boot download state. Click on <code class="docutils literal notranslate"><span class="pre">Creat&amp;Program</span></code>, it will automatically generate the application image and startup parameter configuration file, the following log message appears, the program download is successful</p></li>
 </ul>
@@ -361,10 +352,10 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
 </div>
 </div>
 <div class="section" id="iot-program-download">
-<h2><span class="section-number">2.4. </span>IOT program download<a class="headerlink" href="#iot-program-download" title="Permalink to this headline">¶</a></h2>
+<h1><span class="section-number">5. </span>IOT program download<a class="headerlink" href="#iot-program-download" title="Permalink to this headline">¶</a></h1>
 <p>In the <code class="docutils literal notranslate"><span class="pre">View</span></code> menu, select the IOT option to enter the IOT program download interface, which is mainly divided into the configuration of program download method and download parameters.</p>
 <div class="section" id="configuration-program-download-method">
-<h3><span class="section-number">2.4.1. </span>Configuration program download method<a class="headerlink" href="#configuration-program-download-method" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">5.1. </span>Configuration program download method<a class="headerlink" href="#configuration-program-download-method" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Configuration parameters include:</p>
 <blockquote>
@@ -385,7 +376,7 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
 </div>
 </div>
 <div class="section" id="configuration-download-parameters">
-<h3><span class="section-number">2.4.2. </span>Configuration download parameters<a class="headerlink" href="#configuration-download-parameters" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">5.2. </span>Configuration download parameters<a class="headerlink" href="#configuration-download-parameters" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Configuration parameters include:</p>
 <blockquote>
@@ -407,7 +398,7 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
 </div>
 </div>
 <div class="section" id="id1">
-<h3><span class="section-number">2.4.3. </span>Download program<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">5.3. </span>Download program<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Keep the board’s BOOT pin high, and make the chip reset so that it is in the UART boot download state. Click <code class="docutils literal notranslate"><span class="pre">Creat&amp;Download</span></code>, the application image and startup parameter configuration file will be generated automatically, the following log message appears, the program download is successful</p></li>
 </ul>
@@ -428,7 +419,6 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
 </div>
 </div>
 </div>
-</div>
 
 
            </div>
@@ -436,7 +426,7 @@ Double click on <code class="docutils literal notranslate"><span class="pre">BLD
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../freedom_studio/freedom_studio.html" class="btn btn-neutral float-right" title="3. Freedom Studio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../freedom_studio/freedom_studio.html" class="btn btn-neutral float-right" title="6. Freedom Studio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="../Setting_Up.html" class="btn btn-neutral float-left" title="1. Developer Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

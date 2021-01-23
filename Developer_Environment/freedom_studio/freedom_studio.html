@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>3. Freedom Studio &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>6. Freedom Studio &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4. Eclipse" href="../eclipse/eclipse.html" />
-    <link rel="prev" title="2. BLFlashEnv" href="../BLFlashEnv/BLFlashEnv.html" /> 
+    <link rel="next" title="7. Eclipse" href="../eclipse/eclipse.html" />
+    <link rel="prev" title="2. Dev Cube introduction" href="../BLFlashEnv/BLFlashEnv.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -100,13 +100,16 @@
 <p class="caption"><span class="caption-text">Developer Environment</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../Setting_Up.html">1. Developer Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Freedom Studio</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#importing-a-project">3.1. Importing a project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#debug">3.2. Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BLFlashEnv/BLFlashEnv.html">2. Dev Cube introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BLFlashEnv/BLFlashEnv.html#image-composition">3. Image Composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BLFlashEnv/BLFlashEnv.html#mcu-program-download">4. MCU Program Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BLFlashEnv/BLFlashEnv.html#iot-program-download">5. IOT program download</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Freedom Studio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#importing-a-project">6.1. Importing a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debug">6.2. Debug</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../eclipse/eclipse.html">4. Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -160,10 +163,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Orphaned Pages</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../bl602doc_tool/index.html">1. Dev Cube 用户手册</a></li>
-</ul>
 
             
           
@@ -211,7 +210,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">3. </span>Freedom Studio</li>
+      <li><span class="section-number">6. </span>Freedom Studio</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -231,10 +230,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="freedom-studio">
-<h1><span class="section-number">3. </span>Freedom Studio<a class="headerlink" href="#freedom-studio" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>Freedom Studio<a class="headerlink" href="#freedom-studio" title="Permalink to this headline">¶</a></h1>
 <p>This document describes the use of Freedom Studio.</p>
 <div class="section" id="importing-a-project">
-<h2><span class="section-number">3.1. </span>Importing a project<a class="headerlink" href="#importing-a-project" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Importing a project<a class="headerlink" href="#importing-a-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>First of all, start <code class="docutils literal notranslate"><span class="pre">Freedom</span> <span class="pre">Studio</span></code>, open <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">import</span></code> on the toolbar and select <code class="docutils literal notranslate"><span class="pre">Existing</span> <span class="pre">Projects</span> <span class="pre">into</span> <span class="pre">Workspace</span></code> option under <code class="docutils literal notranslate"><span class="pre">General</span></code> menu to import projects.</p></li>
 </ul>
@@ -246,7 +245,7 @@
 </div>
 </div>
 <div class="section" id="debug">
-<h2><span class="section-number">3.2. </span>Debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>First let the board run, use the shortcut key <code class="docutils literal notranslate"><span class="pre">F11</span></code> to start Debug, Freedom Studio will compile the project first (make sure the .launch file name is bl_iot_sdk_debug_freedom_studio.launch when you use the shortcut key, you can use the toolbar Run &gt; Debug As &gt; Make View)</p></li>
 <li><p>Use the shortcut key <code class="docutils literal notranslate"><span class="pre">F8</span></code> to resume, you can see the program stops at <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">bfl_main()</span></code> main function, now you can click the three buttons in the following figure. Their meanings are</p>
@@ -262,8 +261,9 @@
 <div class="figure align-default">
 <img alt="" src="../../_images/image051.png" />
 </div>
-<div class="figure align-default">
-<img alt="" src="Developer_Environment/freedom_studio/imgs/image06.png" />
+<div class="figure align-default" id="id1">
+<img alt="" src="../../_images/image061.png" />
+<p class="caption"><span class="caption-text">This image was not present in the original sources and has been reconstructed based on context. It might not accurately reflect the original image nor the intent of the original image.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>You can add and delete breakpoints by double-clicking on the leftmost orange bar of the <code class="docutils literal notranslate"><span class="pre">code</span></code> window.</p></li>
@@ -286,8 +286,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../eclipse/eclipse.html" class="btn btn-neutral float-right" title="4. Eclipse" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../BLFlashEnv/BLFlashEnv.html" class="btn btn-neutral float-left" title="2. BLFlashEnv" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../eclipse/eclipse.html" class="btn btn-neutral float-right" title="7. Eclipse" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../BLFlashEnv/BLFlashEnv.html" class="btn btn-neutral float-left" title="2. Dev Cube introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

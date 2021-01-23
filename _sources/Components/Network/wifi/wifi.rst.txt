@@ -20,8 +20,7 @@ WiFi
 
 BL_IoT的实例 ``bl602_demo_wifi`` 目录下包含了一个应用程序，该demo介绍了如何使用BL_IoT模组连接到AP等一系列wifi操作。该实例实现的主要思路如下：
 
-.. figure:: imgs/image1.png
-    :alt:
+**The original documentation had an image called** ``imgs/image1.png`` **here, but the file is not publically available. This text is here to prevent a missing image warning.**
 
 - 在主函数 ``bfl_main()`` 中创建一个 ``aos_loop_proc()`` 线程，在此线程中调用 ``aos_register_event_filter()`` 接口注册一个 ``EV_WIFI`` 事件的监听函数 ``event_cb_wifi_event()`` ；
 - 首先用户在终端中输入 ``stack_wifi`` 命令后，在 ``cmd_stack_wifi()`` 函数中创建一个 ``wifi_main()`` 的线程，接着调用 ``aos_post_event()`` 接口发布 ``CODE_WIFI_ON_INIT_DONE`` 事件后， ``event_cb_wifi_event()`` 会被调用，并进入case ``CODE_WIFI_ON_INIT_DONE`` 分支从而调用 ``wifi_mgmr_start_background()`` 开启WiFi Manager，同时发布 ``CODE_WIFI_ON_MGMR_DONE`` 事件，进入case ``CODE_WIFI_ON_MGMR_DONE`` 分支调用 ``_connect_wifi()`` 函数，此函数先判断easyflash中是否设置了可连接的ssid，如果设置了则会自动进行wifi连接，没有设置则需手动输命令设置；

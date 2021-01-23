@@ -23,8 +23,7 @@ Preparation and usage
 .. figure:: imgs/image2.png
    :alt: 
 
-.. figure:: imgs/image3.png
-   :alt: 
+**The original documentation had an image called** ``imgs/image3.png`` **here, but the file is not publically available. This text is here to prevent a missing image warning.**
 
 - Use the ``romfs`` command to perform read and write operations on Romfs. You can see that the data read is consistent with the downloaded file data.
 
