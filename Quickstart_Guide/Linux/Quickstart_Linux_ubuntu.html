@@ -105,6 +105,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Windows/Quickstart_Windows_msys.html">3. Windows Starter Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Windows/Quickstart_Windows_wsl.html">4. Windows (WSL) Starter Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../connecting_the_hardware.html">5. Connecting the Hardware</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Developer Environment</span></p>
 <ul>
@@ -291,13 +293,8 @@ ls -la *.bin
 </div>
 <div class="section" id="connecting-the-hardware">
 <span id="connecting-hardware"></span><h2><span class="section-number">2.3. </span>Connecting the Hardware<a class="headerlink" href="#connecting-the-hardware" title="Permalink to this headline">¶</a></h2>
-<p>Set the jumper on <code class="docutils literal notranslate"><span class="pre">IO8</span></code> to cover <code class="docutils literal notranslate"><span class="pre">IO8</span></code> and <code class="docutils literal notranslate"><span class="pre">H</span></code> (the jumper should be closest to the edge of the board).</p>
-<div class="figure align-default" id="id2">
-<img alt="" src="../../_images/Pine64-BL602-EVB-ver-11.png" />
-<p class="caption"><span class="caption-text">Pine64 BL602 EVB ver 1.1 board. <code class="docutils literal notranslate"><span class="pre">IO8</span></code> jumper, <code class="docutils literal notranslate"><span class="pre">LED2</span></code>, the <code class="docutils literal notranslate"><span class="pre">RESET</span></code> button and the USB-C connection have been highlighted.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-<p>Connect the board to the computer.
-After connecting the board to the computer the <code class="docutils literal notranslate"><span class="pre">RESET</span></code> button can be used after changing the jumper setting to without repowering the device.</p>
+<p>See the relevant section in <a class="reference internal" href="../connecting_the_hardware.html#connecting-the-hardware"><span class="std std-ref">Connecting the Hardware</span></a>.
+Ensure that the board is set to be in loading mode.</p>
 </div>
 <div class="section" id="flashing">
 <span id="id1"></span><h2><span class="section-number">2.4. </span>Flashing<a class="headerlink" href="#flashing" title="Permalink to this headline">¶</a></h2>
@@ -344,9 +341,9 @@ Important settings are:</p>
 <li><p>Boot2 Bin: <strong>./bl602/builtin_imgs/blsp_boot2.bin</strong></p></li>
 <li><p>Firmware Bin: <strong>sdk_app_helloworld.bin</strong></p>
 <blockquote>
-<div><div class="figure align-default" id="id3">
+<div><div class="figure align-default" id="id2">
 <img alt="" src="../../_images/BLDevCube-settings.png" />
-<p class="caption"><span class="caption-text">Settings for flashing the image <code class="docutils literal notranslate"><span class="pre">bl602_demo_event.bin</span></code>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Settings for flashing the image <code class="docutils literal notranslate"><span class="pre">bl602_demo_event.bin</span></code>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div></blockquote>
 </li>
@@ -354,9 +351,9 @@ Important settings are:</p>
 <p>Click <code class="docutils literal notranslate"><span class="pre">Download</span></code> (may be called <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">&amp;</span> <span class="pre">Download</span></code> in newer versions) to flash the image.
 You should see the following if flashing is successful:</p>
 <blockquote>
-<div><div class="figure align-default" id="id4">
+<div><div class="figure align-default" id="id3">
 <img alt="" src="../../_images/BLDevCube-successful-flash.png" />
-<p class="caption"><span class="caption-text">Program after successfully flashing an image.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Program after successfully flashing an image.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div></blockquote>
 <p>More information can be found at <a class="reference internal" href="../../bl602doc_tool/content/Burning_process.html#devcube-index"><span class="std std-ref">Dev Cube introduction</span></a>.</p>
