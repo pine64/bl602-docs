@@ -1,12 +1,6 @@
 Linux Starter Guide
 ===================
 
-..
-    TODO:
-    * Change to impersonal language?
-    * Read through.
-
-
 This document explains how to set up a Linux environment, build the ``sdk_app_helloworld`` application, flash it to the BL602 and verify the output through a serial port reader.
 
 Installing prerequisites and cloning repository
@@ -67,15 +61,8 @@ Change into the output of the example you want to flash and ensure that the ``.b
 Connecting the Hardware
 -----------------------
 
-Set the jumper on ``IO8`` to cover ``IO8`` and ``H`` (the jumper should be closest to the edge of the board).
-
-.. figure:: imgs/Pine64-BL602-EVB-ver-11.png
-   :alt:
-
-   Pine64 BL602 EVB ver 1.1 board. ``IO8`` jumper, ``LED2``, the ``RESET`` button and the USB-C connection have been highlighted.
-
-Connect the board to the computer.
-After connecting the board to the computer the ``RESET`` button can be used after changing the jumper setting to without repowering the device.
+See the relevant section in :ref:`connecting_the_hardware`.
+Ensure that the board is set to be in loading mode.
 
 .. _flashing:
 

@@ -6,6 +6,9 @@
 Home
 ====
 
+The `BL602 <https://www.bouffalolab.com/bl602>`_ is a general purpose microcontroller based on the "SiFive E24 Core" RISC-V processor with provisions for 2.4 GHz Wi-Fi and Bluetooth Low Energy 5.0.
+It is intended to be used in `IoT <https://en.wikipedia.org/wiki/Internet_of_things>`_ and other ultra-low-power applications.
+The microcontroller supports flashing and communication over `UART <https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter>`_, and flashing, communication, and debugging over `JTAG <https://en.wikipedia.org/wiki/JTAG>`_.
 
 .. toctree::
    :caption: Quick Start Guide
@@ -14,6 +17,8 @@ Home
    Quickstart_Guide/get_started
    Quickstart_Guide/Linux/Quickstart_Linux_ubuntu
    Quickstart_Guide/Windows/Quickstart_Windows_msys
+   Quickstart_Guide/Windows/Quickstart_Windows_wsl
+   Quickstart_Guide/connecting_the_hardware
 
 .. toctree::
    :caption: Developer Environment
