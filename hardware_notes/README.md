@@ -81,7 +81,7 @@ None of the information in this table has been verified (yet)
 | `0x4000_D000` | `0x4000_DFFF` |  `sdu` (SDIO slave controller)                                                           |                                     |
 | `0x4000_E000` | `0x4000_EFFF` |  `pds` (Power Down Sleep/sleep control)                                                  | [PDS](registers/pds.md)             |
 | `0x4000_F000` | `0x4000_F7FF` |  `hbn` (Hibernate/deep sleep control)                                                    | [HBN](registers/hbn.md)             |
-| `0x4000_F800` | `0x4000_FFFF` |  `aon` (analog domain control?)                                                          | [AON](registers/aon.md)             |
+| `0x4000_F800` | `0x4000_FFFF` |  `aon` (Always-ON peripheral control)                                                    | [AON](registers/aon.md)             |
 | `0x4001_0000` | `0x4001_0FFF` |  Deep sleep retention RAM                                                                |                                     |
 | `0x4202_0000` | `0x4203_BFFF` |  Wireless RAM (datasheet disagrees on base)                                              |                                     |
 | `0x44b0_0000` | `0x44b0_????` |  `mm` (MAC management), `txl`, `rxl` and `ps` (undocumented WiFi/BLE, see `mm_init`)     |                                     |
