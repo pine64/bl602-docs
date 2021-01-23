@@ -28,7 +28,6 @@ The microcontroller supports flashing and communication over `UART <https://en.w
    Developer_Environment/BLFlashEnv/BLFlashEnv
    Developer_Environment/freedom_studio/freedom_studio
    Developer_Environment/eclipse/eclipse
-   Developer_Environment/openocd/openocd
 
 .. toctree::
    :caption: Examples
@@ -64,23 +63,13 @@ The microcontroller supports flashing and communication over `UART <https://en.w
    :caption: Components
    :numbered:
 
-   Components/arch
    Components/Command_line/helper
    Components/Command_line/aos_cli
-   Components/Hal_drv/gpio
-   Components/Middleware/bloop/bloop
-   Components/Middleware/blsync/blsync
    Components/Middleware/dts/devicetree
    Components/Middleware/log/blog
-   Components/Middleware/security/security
    Components/Middleware/vfs/vfs
    Components/Middleware/yloop/yloop
-   Components/Network/httpc/httpc
-   Components/Network/https/https
-   Components/Network/tls/tls
    Components/Network/wifi/wifi
-   Components/BLE/provision_WiFi/provision_WiFi
-   Components/BLE/mesh/mesh
    Components/BLE/ble_stack/ble_stack
 
 .. toctree::

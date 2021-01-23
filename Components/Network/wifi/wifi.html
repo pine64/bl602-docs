@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>15. WiFi &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>7. WiFi &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="16. Provision_WiFi" href="../../BLE/provision_WiFi/provision_WiFi.html" />
-    <link rel="prev" title="14. TLS" href="../tls/tls.html" /> 
+    <link rel="next" title="8. BLE" href="../../BLE/ble_stack/ble_stack.html" />
+    <link rel="prev" title="6. yloop" href="../../Middleware/yloop/yloop.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,7 +103,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -139,30 +138,20 @@
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../arch.html">1. arch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Command_line/helper.html">2. helper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Command_line/aos_cli.html">3. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Hal_drv/gpio.html">4. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/bloop/bloop.html">5. BLOOP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/blsync/blsync.html">6. BLSYNC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/dts/devicetree.html">7. device tree</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/log/blog.html">8. blog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/security/security.html">9. Security</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/vfs/vfs.html">10. AOS VFS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/yloop/yloop.html">11. yloop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../httpc/httpc.html">12. HTTPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../https/https.html">13. HTTPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">15. WiFi</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">15.1. 概述</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">15.2. 应用实例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reason-codes">15.3. Reason Codes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#api">15.4. API参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Command_line/helper.html">1. helper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Command_line/aos_cli.html">2. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Middleware/dts/devicetree.html">3. device tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Middleware/log/blog.html">4. blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Middleware/vfs/vfs.html">5. AOS VFS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Middleware/yloop/yloop.html">6. yloop</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. WiFi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">7.1. 概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">7.2. 应用实例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reason-codes">7.3. Reason Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api">7.4. API参考</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../BLE/mesh/mesh.html">17. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../BLE/ble_stack/ble_stack.html">18. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
 <ul>
@@ -224,7 +213,7 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">15. </span>WiFi</li>
+      <li><span class="section-number">7. </span>WiFi</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -244,9 +233,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="wifi">
-<span id="wifi-index"></span><h1><span class="section-number">15. </span>WiFi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h1>
+<span id="wifi-index"></span><h1><span class="section-number">7. </span>WiFi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2><span class="section-number">15.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>本文档介绍BL_IoT SDK的WiFi联网功能。主要包括</p>
 <ul class="simple">
 <li><p>基站模式（即 STA 模式或 Wi-Fi 客户端模式），此时 BL_IoT 连接到接入点 (AP)。</p></li>
@@ -258,7 +247,7 @@
 </ul>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">15.2. </span>应用实例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>应用实例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>BL_IoT的实例 <code class="docutils literal notranslate"><span class="pre">bl602_demo_wifi</span></code> 目录下包含了一个应用程序，该demo介绍了如何使用BL_IoT模组连接到AP等一系列wifi操作。该实例实现的主要思路如下：</p>
 <div class="figure align-default">
 <img alt="" src="Components/Network/wifi/imgs/image1.png" />
@@ -270,7 +259,7 @@
 </ul>
 </div>
 <div class="section" id="reason-codes">
-<h2><span class="section-number">15.3. </span>Reason Codes<a class="headerlink" href="#reason-codes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.3. </span>Reason Codes<a class="headerlink" href="#reason-codes" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">WLAN_FW_SUCCESSFUL</span></code></p>
 <p>WiFi连接成功</p>
 <p><code class="docutils literal notranslate"><span class="pre">WLAN_FW_TX_AUTH_FRAME_ALLOCATE_FAIILURE</span></code></p>
@@ -307,7 +296,7 @@
 <p>信标丢失</p>
 </div>
 <div class="section" id="api">
-<h2><span class="section-number">15.4. </span>API参考<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.4. </span>API参考<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>头文件</p></li>
 </ul>
@@ -550,8 +539,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../../BLE/provision_WiFi/provision_WiFi.html" class="btn btn-neutral float-right" title="16. Provision_WiFi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../tls/tls.html" class="btn btn-neutral float-left" title="14. TLS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../BLE/ble_stack/ble_stack.html" class="btn btn-neutral float-right" title="8. BLE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../Middleware/yloop/yloop.html" class="btn btn-neutral float-left" title="6. yloop" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

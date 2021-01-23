@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>2. helper &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>1. helper &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. cli" href="aos_cli.html" />
-    <link rel="prev" title="1. arch" href="../arch.html" /> 
+    <link rel="next" title="2. cli" href="aos_cli.html" />
+    <link rel="prev" title="29. AES-GCM" href="../../Examples/benchmark_security_aes/benchmark_security_aes_gcm.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,7 +103,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -139,28 +138,18 @@
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../arch.html">1. arch</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. helper</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cli-list">2.1. cli list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#common-commands">2.2. Common commands</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. helper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cli-list">1.1. cli list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-commands">1.2. Common commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="aos_cli.html">3. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Hal_drv/gpio.html">4. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Middleware/bloop/bloop.html">5. BLOOP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Middleware/blsync/blsync.html">6. BLSYNC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Middleware/dts/devicetree.html">7. device tree</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Middleware/log/blog.html">8. blog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Middleware/security/security.html">9. Security</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Middleware/vfs/vfs.html">10. AOS VFS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Middleware/yloop/yloop.html">11. yloop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Network/httpc/httpc.html">12. HTTPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Network/https/https.html">13. HTTPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Network/wifi/wifi.html">15. WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../BLE/mesh/mesh.html">17. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../BLE/ble_stack/ble_stack.html">18. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aos_cli.html">2. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Middleware/dts/devicetree.html">3. device tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Middleware/log/blog.html">4. blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Middleware/vfs/vfs.html">5. AOS VFS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Middleware/yloop/yloop.html">6. yloop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Network/wifi/wifi.html">7. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
 <ul>
@@ -222,7 +211,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">2. </span>helper</li>
+      <li><span class="section-number">1. </span>helper</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -242,10 +231,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="helper">
-<h1><span class="section-number">2. </span>helper<a class="headerlink" href="#helper" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>helper<a class="headerlink" href="#helper" title="Permalink to this headline">¶</a></h1>
 <p>Here are lists of currently available commands, including system commands and user commands. Some of the command might not be well supported at moment, run <code class="docutils literal notranslate"><span class="pre">help</span></code> to see what commands are supported at moment, for extra commands please either refer to the source code or add by yourself.</p>
 <div class="section" id="cli-list">
-<h2><span class="section-number">2.1. </span>cli list<a class="headerlink" href="#cli-list" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>cli list<a class="headerlink" href="#cli-list" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><strong>System commands</strong></p></li>
 </ul>
@@ -427,7 +416,7 @@
 </table>
 </div>
 <div class="section" id="common-commands">
-<h2><span class="section-number">2.2. </span>Common commands<a class="headerlink" href="#common-commands" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Common commands<a class="headerlink" href="#common-commands" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><strong>View all commands</strong></p>
 <p>Press <code class="docutils literal notranslate"><span class="pre">TAB</span></code> or type <code class="docutils literal notranslate"><span class="pre">help</span></code> to view:</p>
@@ -548,8 +537,8 @@ ex, 11.025khz is represented as 11p025</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="aos_cli.html" class="btn btn-neutral float-right" title="3. cli" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../arch.html" class="btn btn-neutral float-left" title="1. arch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aos_cli.html" class="btn btn-neutral float-right" title="2. cli" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../Examples/benchmark_security_aes/benchmark_security_aes_gcm.html" class="btn btn-neutral float-left" title="29. AES-GCM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

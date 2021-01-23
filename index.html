@@ -102,7 +102,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -138,24 +137,14 @@
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Components/arch.html">1. arch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Command_line/helper.html">2. helper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Command_line/aos_cli.html">3. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Hal_drv/gpio.html">4. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/bloop/bloop.html">5. BLOOP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/blsync/blsync.html">6. BLSYNC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/dts/devicetree.html">7. device tree</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/log/blog.html">8. blog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/security/security.html">9. Security</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/vfs/vfs.html">10. AOS VFS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/yloop/yloop.html">11. yloop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Network/httpc/httpc.html">12. HTTPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Network/https/https.html">13. HTTPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Network/wifi/wifi.html">15. WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/mesh/mesh.html">17. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html">18. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Command_line/helper.html">1. helper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Command_line/aos_cli.html">2. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/dts/devicetree.html">3. device tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/log/blog.html">4. blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/vfs/vfs.html">5. AOS VFS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/yloop/yloop.html">6. yloop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Network/wifi/wifi.html">7. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
 <ul>
@@ -323,7 +312,6 @@ The microcontroller supports flashing and communication over <a class="reference
 <li class="toctree-l2"><a class="reference internal" href="Developer_Environment/eclipse/eclipse.html#debug">4.2. Debug</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -561,82 +549,72 @@ The microcontroller supports flashing and communication over <a class="reference
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Components/arch.html">1. arch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Command_line/helper.html">2. helper</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/Command_line/helper.html#cli-list">2.1. cli list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Command_line/helper.html#common-commands">2.2. Common commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Command_line/helper.html">1. helper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/Command_line/helper.html#cli-list">1.1. cli list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Command_line/helper.html#common-commands">1.2. Common commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Command_line/aos_cli.html">3. cli</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/Command_line/aos_cli.html#overview">3.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Command_line/aos_cli.html#example">3.2. Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Command_line/aos_cli.html">2. cli</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/Command_line/aos_cli.html#overview">2.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Command_line/aos_cli.html#example">2.2. Example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Hal_drv/gpio.html">4. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/bloop/bloop.html">5. BLOOP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/blsync/blsync.html">6. BLSYNC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/dts/devicetree.html">7. device tree</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#id1">7.1. 一、 介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#dts-dtb">7.2. 二、 dts 和 dtb 相互转换</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#id2">7.3. 三、 device tree 语法格式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#id3">7.4. 四、 device tree 模块配置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#id4">7.4.1. 串口配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/dts/devicetree.html">3. device tree</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#id1">3.1. 一、 介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#dts-dtb">3.2. 二、 dts 和 dtb 相互转换</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#id2">3.3. 三、 device tree 语法格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#id3">3.4. 四、 device tree 模块配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/dts/devicetree.html#id4">3.4.1. 串口配置</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/log/blog.html">8. blog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#id1">8.1. 概述</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#id2">8.2. 功能介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#log">8.3. log等级说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#id3">8.4. 使用方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#id4">8.5. 总结</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/log/blog.html">4. blog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#id1">4.1. 概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#id2">4.2. 功能介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#log">4.3. log等级说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#id3">4.4. 使用方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/log/blog.html#id4">4.5. 总结</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/security/security.html">9. Security</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/vfs/vfs.html">10. AOS VFS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id1">10.1. 概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#vfs">10.2. VFS提供的标准接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id2">10.3. VFS的数据结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#aos-open">10.4. 以aos_open为例介绍其文件打开方式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id3">10.5. 将驱动文件或者文件系统加载到VFS当中</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id4">10.6. 示例代码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id5">10.7. 总结</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/vfs/vfs.html">5. AOS VFS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id1">5.1. 概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#vfs">5.2. VFS提供的标准接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id2">5.3. VFS的数据结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#aos-open">5.4. 以aos_open为例介绍其文件打开方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id3">5.5. 将驱动文件或者文件系统加载到VFS当中</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id4">5.6. 示例代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/vfs/vfs.html#id5">5.7. 总结</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/yloop/yloop.html">11. yloop</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#something">11.1. Something</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id1">11.2. Yloop概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id2">11.3. Yloop上下文</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id3">11.4. Yloop调度</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id4">11.5. Yloop实现原理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#api">11.6. 主要api介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id5">11.7. 示例代码</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id6">11.7.1. 事件注册、通知、回调、取消流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#poll">11.7.2. poll事件的注册取消</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#action">11.7.3. 延迟执行一个action</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id7">11.7.4. 安排一次回调</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Middleware/yloop/yloop.html">6. yloop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#something">6.1. Something</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id1">6.2. Yloop概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id2">6.3. Yloop上下文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id3">6.4. Yloop调度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id4">6.5. Yloop实现原理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#api">6.6. 主要api介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id5">6.7. 示例代码</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id6">6.7.1. 事件注册、通知、回调、取消流程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#poll">6.7.2. poll事件的注册取消</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#action">6.7.3. 延迟执行一个action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id7">6.7.4. 安排一次回调</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id8">11.8. 注意事项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Middleware/yloop/yloop.html#id8">6.8. 注意事项</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Network/httpc/httpc.html">12. HTTPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Network/https/https.html">13. HTTPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/Network/wifi/wifi.html">15. WiFi</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#id1">15.1. 概述</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#id2">15.2. 应用实例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#reason-codes">15.3. Reason Codes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#api">15.4. API参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/Network/wifi/wifi.html">7. WiFi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#id1">7.1. 概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#id2">7.2. 应用实例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#reason-codes">7.3. Reason Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/Network/wifi/wifi.html#api">7.4. API参考</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/mesh/mesh.html">17. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html">18. BLE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#overview">18.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#api-reference">18.2. API reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#data-structure-reference">18.3. Data structure reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html">8. BLE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#overview">8.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#api-reference">8.2. API reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Components/BLE/ble_stack/ble_stack.html#data-structure-reference">8.3. Data structure reference</a></li>
 </ul>
 </li>
 </ul>

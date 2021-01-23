@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>18. BLE &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>8. BLE &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="1. cronalarms" href="../../../API/sys/cronalarms.html" />
-    <link rel="prev" title="17. Mesh" href="../mesh/mesh.html" /> 
+    <link rel="prev" title="7. WiFi" href="../../Network/wifi/wifi.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,7 +103,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -139,27 +138,17 @@
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../arch.html">1. arch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Command_line/helper.html">2. helper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Command_line/aos_cli.html">3. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Hal_drv/gpio.html">4. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/bloop/bloop.html">5. BLOOP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/blsync/blsync.html">6. BLSYNC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/dts/devicetree.html">7. device tree</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/log/blog.html">8. blog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/security/security.html">9. Security</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/vfs/vfs.html">10. AOS VFS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Middleware/yloop/yloop.html">11. yloop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Network/httpc/httpc.html">12. HTTPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Network/https/https.html">13. HTTPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Network/wifi/wifi.html">15. WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mesh/mesh.html">17. Mesh</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">18. BLE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview">18.1. Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#api-reference">18.2. API reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#data-structure-reference">18.3. Data structure reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Command_line/helper.html">1. helper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Command_line/aos_cli.html">2. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Middleware/dts/devicetree.html">3. device tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Middleware/log/blog.html">4. blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Middleware/vfs/vfs.html">5. AOS VFS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Middleware/yloop/yloop.html">6. yloop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Network/wifi/wifi.html">7. WiFi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. BLE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">8.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-reference">8.2. API reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-structure-reference">8.3. Data structure reference</a></li>
 </ul>
 </li>
 </ul>
@@ -223,7 +212,7 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">18. </span>BLE</li>
+      <li><span class="section-number">8. </span>BLE</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -243,9 +232,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="ble">
-<span id="ble-index"></span><h1><span class="section-number">18. </span>BLE<a class="headerlink" href="#ble" title="Permalink to this headline">¶</a></h1>
+<span id="ble-index"></span><h1><span class="section-number">8. </span>BLE<a class="headerlink" href="#ble" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
-<h2><span class="section-number">18.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Features supported by BLE:</p>
 <ul class="simple">
 <li><dl class="simple">
@@ -325,7 +314,7 @@
 </ul>
 </div>
 <div class="section" id="api-reference">
-<h2><span class="section-number">18.2. </span>API reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>API reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
 <p>API introduction.</p>
 <p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">ble_controller_init(uint8_t</span> <span class="pre">task_priority)</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
@@ -632,7 +621,7 @@
 </div>
 </div>
 <div class="section" id="data-structure-reference">
-<h2><span class="section-number">18.3. </span>Data structure reference<a class="headerlink" href="#data-structure-reference" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>Data structure reference<a class="headerlink" href="#data-structure-reference" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">bt_le_adv_param</span></code>data structure:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/** LE Advertising Parameters. */</span>
 <span class="k">struct</span> <span class="nc">bt_le_adv_param</span> <span class="p">{</span>
@@ -885,7 +874,7 @@ timeout: connection timeout period.</p>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../../../API/sys/cronalarms.html" class="btn btn-neutral float-right" title="1. cronalarms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../mesh/mesh.html" class="btn btn-neutral float-left" title="17. Mesh" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../Network/wifi/wifi.html" class="btn btn-neutral float-left" title="7. WiFi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

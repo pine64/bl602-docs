@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>10. AOS VFS &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>5. AOS VFS &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="11. yloop" href="../yloop/yloop.html" />
-    <link rel="prev" title="9. Security" href="../security/security.html" /> 
+    <link rel="next" title="6. yloop" href="../yloop/yloop.html" />
+    <link rel="prev" title="4. blog" href="../log/blog.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,7 +103,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. BLFlashEnv</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/freedom_studio/freedom_studio.html">3. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/eclipse/eclipse.html">4. Eclipse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/openocd/openocd.html">5. openocd</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul>
@@ -139,33 +138,23 @@
 </ul>
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../arch.html">1. arch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Command_line/helper.html">2. helper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Command_line/aos_cli.html">3. cli</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Hal_drv/gpio.html">4. GPIO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bloop/bloop.html">5. BLOOP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../blsync/blsync.html">6. BLSYNC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dts/devicetree.html">7. device tree</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../log/blog.html">8. blog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../security/security.html">9. Security</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. AOS VFS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">10.1. 概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vfs">10.2. VFS提供的标准接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">10.3. VFS的数据结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#aos-open">10.4. 以aos_open为例介绍其文件打开方式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">10.5. 将驱动文件或者文件系统加载到VFS当中</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">10.6. 示例代码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">10.7. 总结</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Command_line/helper.html">1. helper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Command_line/aos_cli.html">2. cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dts/devicetree.html">3. device tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../log/blog.html">4. blog</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. AOS VFS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">5.1. 概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vfs">5.2. VFS提供的标准接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">5.3. VFS的数据结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aos-open">5.4. 以aos_open为例介绍其文件打开方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">5.5. 将驱动文件或者文件系统加载到VFS当中</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">5.6. 示例代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">5.7. 总结</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../yloop/yloop.html">11. yloop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Network/httpc/httpc.html">12. HTTPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Network/https/https.html">13. HTTPS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Network/tls/tls.html">14. TLS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Network/wifi/wifi.html">15. WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../BLE/provision_WiFi/provision_WiFi.html">16. Provision_WiFi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../BLE/mesh/mesh.html">17. Mesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../BLE/ble_stack/ble_stack.html">18. BLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../yloop/yloop.html">6. yloop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Network/wifi/wifi.html">7. WiFi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
 <p class="caption"><span class="caption-text">API</span></p>
 <ul>
@@ -227,7 +216,7 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">10. </span>AOS VFS</li>
+      <li><span class="section-number">5. </span>AOS VFS</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -247,7 +236,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="aos-vfs">
-<h1><span class="section-number">10. </span>AOS VFS<a class="headerlink" href="#aos-vfs" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>AOS VFS<a class="headerlink" href="#aos-vfs" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="#id1">概要</a></p></li>
 <li><p><a class="reference internal" href="#vfs">VFS提供的标准接口</a></p></li>
@@ -258,11 +247,11 @@
 <li><p><a class="reference internal" href="#id5">总结</a></p></li>
 </ul>
 <div class="section" id="id1">
-<h2><span class="section-number">10.1. </span>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>VFS存在的意义，屏蔽掉底层文件系统的差异，为应用层提供标准的系统调用接口。</p>
 </div>
 <div class="section" id="vfs">
-<h2><span class="section-number">10.2. </span>VFS提供的标准接口<a class="headerlink" href="#vfs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>VFS提供的标准接口<a class="headerlink" href="#vfs" title="Permalink to this headline">¶</a></h2>
 <p>基本通用的UNIX接口都已经实现了。之所以具有前缀<code class="docutils literal notranslate"><span class="pre">aos_</span></code>。是因为这些都是对外的接口，在AliOS
 Things的代码命名规则中规定：所有的对外接口都需要加上前缀<code class="docutils literal notranslate"><span class="pre">aos_</span></code></p>
 <p>aos_open</p>
@@ -283,7 +272,7 @@ Things的代码命名规则中规定：所有的对外接口都需要加上前�
 <p>aos_mkdir</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">10.3. </span>VFS的数据结构<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>VFS的数据结构<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">inode_t</span></code>数据结构</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/* this structure represents inode for driver and fs*/</span>
 <span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
@@ -352,7 +341,7 @@ Things的代码命名规则中规定：所有的对外接口都需要加上前�
 <p>上述的<code class="docutils literal notranslate"><span class="pre">file_t</span></code>数据结构用于描述一个被打开的文件，因为系统当中同一个系统当中，同一个文件可能被多个程序打开，但是打开的每一个文件都会唯一的执行特定的索引节点，即最终的物理文件只有一份。</p>
 </div>
 <div class="section" id="aos-open">
-<h2><span class="section-number">10.4. </span>以aos_open为例介绍其文件打开方式<a class="headerlink" href="#aos-open" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>以aos_open为例介绍其文件打开方式<a class="headerlink" href="#aos-open" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">aos_open</span></code>是对外的接口，外部函数可以直接使用该接口实现对于文件的打开操作，而不用去关心底层文件系统的实现细节。其代码如下所示：</p>
 <p>其输入参数为：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">path</span><span class="p">;</span> <span class="n">即文件路径名</span>
@@ -494,7 +483,7 @@ file_t 类型。用于后续获取文件句柄</p></li>
 <p>所有的系统调用函数（类似于aos_open）都位于vfs.c文件中。</p>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">10.5. </span>将驱动文件或者文件系统加载到VFS当中<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>将驱动文件或者文件系统加载到VFS当中<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>在vfs_register.c文件中定义的函数：</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">aos_register_driver</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="n">file_ops_t</span> <span class="o">*</span><span class="n">ops</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
 <span class="kt">int</span> <span class="n">aos_register_fs</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="n">fs_ops_t</span> <span class="o">*</span><span class="n">ops</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
@@ -541,7 +530,7 @@ file_t 类型。用于后续获取文件句柄</p></li>
 </div>
 </div>
 <div class="section" id="id4">
-<h2><span class="section-number">10.6. </span>示例代码<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span>示例代码<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>vfs的操作类linux中操作，
 这里举例<code class="docutils literal notranslate"><span class="pre">aos_open</span></code>、<code class="docutils literal notranslate"><span class="pre">aos_close</span></code>、<code class="docutils literal notranslate"><span class="pre">aos_read</span></code>、<code class="docutils literal notranslate"><span class="pre">aos_write</span></code></p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">bl_test_uart0</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
@@ -580,7 +569,7 @@ file_t 类型。用于后续获取文件句柄</p></li>
 </div>
 </div>
 <div class="section" id="id5">
-<h2><span class="section-number">10.7. </span>总结<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.7. </span>总结<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>VFS的一把重要的互斥锁 对VFS的相关操作都需要获取该互斥锁才能够进行。
 <code class="docutils literal notranslate"><span class="pre">kmutex_t</span> <span class="pre">g_vfs_mutex;</span></code></p></li>
@@ -604,8 +593,8 @@ file_t 类型。用于后续获取文件句柄</p></li>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../yloop/yloop.html" class="btn btn-neutral float-right" title="11. yloop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../security/security.html" class="btn btn-neutral float-left" title="9. Security" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../yloop/yloop.html" class="btn btn-neutral float-right" title="6. yloop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../log/blog.html" class="btn btn-neutral float-left" title="4. blog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
