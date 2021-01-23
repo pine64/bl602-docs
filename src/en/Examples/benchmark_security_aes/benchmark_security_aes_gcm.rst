@@ -16,8 +16,7 @@ CTR（CounTeR）
 
  在CTR模式下，我们对一个逐次累加的计数器进行加密，用加密后的比特序列与明文分组进行异或得到密文。过程如下图：
 
-    .. figure:: imgs/image1.png
-       :alt: 
+**The original documentation had an image called** ``imgs/image1.png`` **here, but the file is not publically available. This text is here to prevent a missing image warning.**
 
 其中， IV为初始化向量，Ek表示ECB文本加密，PT表示输入的明文，CT表示输出的密文。
 
@@ -33,8 +32,7 @@ MAC（Message Authentication Code）
 
 想要校验消息的完整性，必须引入另一个概念：消息验证码。消息验证码是一种与秘钥相关的单项散列函数，过程如下图所示：
 
-    .. figure:: imgs/image2.png
-       :alt: 
+**The original documentation had an image called** ``imgs/image2.png`` **here, but the file is not publically available. This text is here to prevent a missing image warning.**
 
 密文的收发双发需要提前共享一个秘钥。密文发送者将密文的MAC值随密文一起发送，密文接收者通过共享秘钥计算收到密文的MAC值，
 这样就可以对收到的密文做完整性校验。当篡改者篡改密文后，没有共享秘钥，就无法计算出篡改后的密文的MAC值。
@@ -45,8 +43,7 @@ GMAC（Galois message authentication code mode）
 对应到上图中的消息认证码，GMAC就是利用伽罗华域(Galois Field，GF，有限域)乘法运算来计算消息的MAC值。
 假设秘钥长度为128bits, 当密文大于128bits时，需要将密文按128bits进行分组。应用流程如下图：
 
-    .. figure:: imgs/image3.png
-       :alt: 
+**The original documentation had an image called** ``imgs/image3.png`` **here, but the file is not publically available. This text is here to prevent a missing image warning.**
 
 其中，msg为需要验证的消息，Mh表示在有限域上做乘法运算，MAC即为生成的验证码。
 
@@ -57,13 +54,12 @@ GCM（ Galois/Counter Mode )
 
 GCM中的G就是指GMAC，C就是指CTR。于是将CTR算法加上GMAC验证就是AES-GCM模式了。过程如下图所示：
 
-    .. figure:: imgs/image4.png
-       :alt: 
+**The original documentation had an image called** ``imgs/image4.png`` **here, but the file is not publically available. This text is here to prevent a missing image warning.**
 
 具体实现
 -----------
 
 具体代码实现大体如下图所示：
 
-    .. figure:: imgs/image5.png
-       :alt: 
+**The original documentation had an image called** ``imgs/image5.png`` **here, but the file is not publically available. This text is here to prevent a missing image warning.**
+

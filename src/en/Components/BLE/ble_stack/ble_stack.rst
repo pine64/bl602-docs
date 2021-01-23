@@ -1,4 +1,4 @@
-.. _ble-index:
+.. _ble-stack-index:
 
 BLE
 ===
