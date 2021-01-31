@@ -52,7 +52,7 @@ None of the information in this table has been verified (yet)
 | `0x0280_0000` | `0x02FF_FFFF` |  Hart 0 CLIC                                                                             |                                     |
 | `0x2100_0000` | `0x2101_FFFF` |  Mask ROM (holds boot and RomDriver code)                                                |                                     |
 | `0x2200_8000` | `0x2201_3FFF` |  ITCM (Instruction Tightly Coupled Memory)                                               |                                     |
-| `0x2201_4000` | `0x2201_BFFF` |  DTCM (Data Tightly Coupled Memory)                                                      |                                     |
+| `0x2201_4000` | `0x2201_FFFF` |  DTCM (Data Tightly Coupled Memory)                                                      |                                     |
 | `0x2202_0000` | `0x2202_FFFF` |  Main RAM                                                                                |                                     |
 | `0x2300_0000` | `0x23FF_FFFF` |  XIP (eXecute In Place) flash mapping                                                    |                                     |
 | `0x4000_0000` | `0x4000_0FFF` |  `glb` (global control registers)                                                        | [GLB](registers/glb)                |
