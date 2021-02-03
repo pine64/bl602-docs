@@ -25,8 +25,9 @@ does the pipeline length (3-stage) and number of breakpoints/watchpoints (4).
 The BL602 appears to diverge from the reference E24 implementation in its
 memory map, however: its peripherals are mapped starting at `0x4000_0000`,
 whereas SiFive's [E24 Manual][7] has a memory map placing peripherals at
-`0x2000_0000`. Likewise, the BL602 maps its memories at `0x2000_0000` but the
-E24 reference design maps them at `0x6000_0000`. Finally, the BL602's TCMs are
+`0x2000_0000` (although these two regions alias one another on the BL602; see
+below).  Likewise, the BL602 maps its memories at `0x2000_0000` but the E24
+reference design maps them at `0x6000_0000`. Finally, the BL602's TCMs are
 differently-mapped, differently-named (TCM vs TIM), and differently-sized
 (48KiB vs 32KiB) from the reference E24 ones. SiFive does claim that the memory
 map and TIM sizes are customizable, though, so none of these differences are
@@ -40,11 +41,20 @@ the core being SiFive IP.
 Memory Map
 ----------
 The [datasheet][1] contains a memory map, as does [soc602_reg.svd][2] and
-[bl602.h][3]. As mentioned above, [clic.h][4] also contains part of the map. These sources have been synthesized into this unified table.
+[bl602.h][3]. As mentioned above, [clic.h][4] also contains part of the map.
+These sources have been synthesized into this unified table. (Accuracy is not
+guaranteed; please contribute a correction if you notice an error.)
 
-```
-None of the information in this table has been verified (yet)
-```
+**The address ranges `0x2xxx_xxxx`, `0x3xxx_xxxx`, `0x4xxx_xxxx`, and
+`0x5xxx_xxxx` all appear to alias one another.** `0x6xxx_xxxx` and
+`0x7xxx_xxxx` alias the same region for writes but cannot be written to (at
+least not via JTAG), whereas all addresses `0x8000_0000` and above produce a
+bus error for both writes and reads, indicating that the internal physical
+memory bus is only 31 bits wide. The datasheet says that, for the TCMs and main
+RAM, the `0x2xxx_xxxx` mappings are "used as program memory" and the
+`0x4xxx_xxxx` mappings are "used as data memory", but it is unclear why this is
+or if the hardware makes any distinction between accesses via the various
+mappings.
 
 | Base address  | Top address   |  Name                                                                                    | Register description                |
 |---------------|---------------|------------------------------------------------------------------------------------------|-------------------------------------|
@@ -83,33 +93,34 @@ None of the information in this table has been verified (yet)
 | `0x4000_F000` | `0x4000_F7FF` |  `hbn` (Hibernate/deep sleep control)                                                    | [HBN](registers/hbn.md)             |
 | `0x4000_F800` | `0x4000_FFFF` |  `aon` (Always-ON peripheral control)                                                    | [AON](registers/aon.md)             |
 | `0x4001_0000` | `0x4001_0FFF` |  Deep sleep retention RAM                                                                |                                     |
-| `0x4202_0000` | `0x4203_BFFF` |  Wireless RAM (datasheet disagrees on base)                                              |                                     |
+| `0x4203_0000` | `0x4204_BFFF` |  Wireless RAM                                                                            |                                     |
 | `0x44b0_0000` | `0x44b0_????` |  `mm` (MAC management), `txl`, `rxl` and `ps` (undocumented WiFi/BLE, see `mm_init`)     |                                     |
 | `0x44c0_0000` | `0x44c?_????` |  `wifi phy` (identified from `phy_init`) (has many wifi related modules including `acg`) | [PHY](registers/phy.md)             |
 | `0x54c0_a000` | `0x54c0_????` |  `agc` ucode (identified from `phy_init`)                                                |                                     |
 
-
 (Peripherals in *`italics`* are present in the SVD but not the datasheet.)
 
-The datasheet claims that the system has 276KiB of RAM, and indeed that is the
-number we get by adding up 64KiB of main RAM, 112KiB of wireless RAM, 48KiB of
-instruction TCM, 48KiB of data TCM, and 4KiB of deep sleep retention RAM.
-
-As noted in the table, the wireless RAM address is ambiguous. bl602.h says it's
-`0x4202_0000`, but the datasheet says it's `0x4203_0000`. I can only assume one
-of them is a typo, and my guess is that it's the one that isn't code.
-
-Interestingly, bl602.h defines three extra "remap" mappings, labeled REMAP0,
-REMAP1, and REMAP2, in addition to the ranges in the table above for each of
-flash XIP, wireless RAM, and the TCMs. I have not found any register that looks
-like a remapping control, so I'm not sure what this is about. The remap base
-addresses are as follows:
+bl602.h defines three extra mappings, labeled REMAP0, REMAP1, and REMAP2, in
+addition to the ranges in the datasheet for each of flash XIP, main+wireless
+RAM, and the TCMs. This appears to reflect the above-stated fact that
+`0x2xxx_xxxx`, `0x3xxx_xxxx`, and `0x4xxx_xxxx` alias one another, but
+unfortunately the names give no hint to if or how the mappings differ. The
+remap base addresses are as follows:
 
 | Memory | "Normal" base | REMAP0 base   | REMAP1 base   | REMAP2 base   |
 |--------|---------------|---------------|---------------|---------------|
 | XIP    | `0x2300_0000` | `0x3300_0000` | `0x4300_0000` | `0x5300_0000` |
 | WRAM   | `0x4202_0000` | `0x2202_0000` | `0x3202_0000` | `0x5202_0000` |
 | TCM    | `0x2200_8000` | `0x3200_8000` | `0x4200_8000` | `0x5200_8000` |
+
+Note that the "WRAM" mapping in bl602.h, which starts at `0x4202_0000` and goes
+to `0x4204_C000`, is badly named. It encompasses all of main RAM and all of
+wireless RAM (but not the TCMs), instead of just wireless RAM like its name
+implies.
+
+The datasheet claims that the system has 276KiB of RAM, and indeed that is the
+number we get by adding up 64KiB of main RAM, 112KiB of wireless RAM, 48KiB of
+instruction TCM, 48KiB of data TCM, and 4KiB of deep sleep retention RAM.
 
 On-chip ROM
 -----------
