@@ -3,27 +3,27 @@
 UART_ioctl
 ==================
 
-总览
+Overview
 ----------------
 
-本示例主要介绍如何设置UART1的多种模式。
+This example shows the modes available when using UART1.
 
-相关配置
+Setup
 ----------------
 
-  - 配置参考 ``uart_echo`` 中的配置。
-  - 使用步骤
-    - 将板子的 ``gpio3`` 和 ``gpio4`` 和 ``GND`` 分别与 ``USB转TTL`` 串口线的 ``TXD`` 、 ``RXD`` 、 ``GND`` 分别连接起来；
-    - 编译 ``customer_app/sdk_app_uart_ctl`` 工程并下载工程；
-    - 打开一个串口终端窗口A（波特率为115200，用于接收和发送uart消息），打开另一个串口终端窗口B（波特率为2000000，用于打印log）。例如使用应用实现中case1中的配置，在窗口A中输入 ``123456789abcdef`` ，在窗口A中可以看到接收到的数据，同时窗口B中打印出接收数据的个数。
+  - See ``uart_echo``.
+  - Usage
+    - Connect ``gpio3``, ``gpio4``, and ``GND`` to ``TXD``, ``RXD``, and ``GND`` on a USB to TTL adapter respectively.
+    - Download and compile ``customer_app/sdk_app_uart_ctl``.
+    - Open one serial terminal at 115200 baud for sending and receiving UART messages, and another at 2000000 for logging. For instance, with case1, you can enter ``123456789abcdef`` in the first window, see the reply, and also print out the amount of data received to the second window.
 
 .. figure:: imgs/image1.png
    :alt:
 
-应用实例
+Examples
 ----------------
 
-aos_ioctl选项为 ``IOCTL_UART_IOC_WAITRD_MODE`` 及 ``IOCTL_UART_IOC_WAITRDFULL_MODE`` ：
+aos_ioctl ``IOCTL_UART_IOC_WAITRD_MODE`` and ``IOCTL_UART_IOC_WAITRDFULL_MODE``:
 
 ::
 
@@ -40,21 +40,21 @@ aos_ioctl选项为 ``IOCTL_UART_IOC_WAITRD_MODE`` 及 ``IOCTL_UART_IOC_WAITRDFUL
         }
     }
 
-- case1： ``waitr_arg.timeout = 0`` case1中调用 ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRD_MODE, (unsigned long)(&waitr_arg))`` 表示当串口中的数据都读完或者读取到sizeof(buf_recv)长度的数据时立即返回。调用 ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRDFULL_MODE, (unsigned long)(&waitr_arg))`` 用法与 ``IOCTL_UART_IOC_WAITRD_MODE`` 一致。
+- case1: ``waitr_arg.timeout = 0`` and ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRD_MODE, (unsigned long)(&waitr_arg))`` make it so that when all available data or sizeof(buf_recv) is read the length is returned immediately. ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRDFULL_MODE, (unsigned long)(&waitr_arg))`` has the same usage as ``IOCTL_UART_IOC_WAITRD_MODE``.
 
-- case2： ``waitr_arg.timeout = AOS_WAIT_FOREVER`` case2中调用 ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRD_MODE, (unsigned long)(&waitr_arg))`` 表示当串口中的数据都读完或者读取到sizeof(buf_recv)长度的数据时立即返回，串口中无数据则一直等待。调用 ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRDFULL_MODE, (unsigned long)(&waitr_arg))`` 表示一直等待直到读取到sizeof(buf_recv)长度的数据时立即返回。
+- case2: ``waitr_arg.timeout = AOS_WAIT_FOREVER`` and ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRD_MODE, (unsigned long)(&waitr_arg))`` make it so that it will wait for all available data or sizeof(buf_recv) to be read, and when there is no data available it will return immediately. ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRDFULL_MODE, (unsigned long)(&waitr_arg))`` means to wait for sizeof(buf_recv) to be read and then return.
 
-- case3： ``waitr_arg.timeout = 5000`` case3中调用 ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRD_MODE, (unsigned long)(&waitr_arg))`` 表示当串口中的数据都读完或者读取到sizeof(buf_recv)长度的数据或者到达超时时间（超时时间从调用此接口算起，不是数据发送结束后算起）时立即返回。调用 ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRDFULL_MODE, (unsigned long)(&waitr_arg))`` 表示读取到sizeof(buf_recv)长度的数据或者到达超时时间（超时时间从调用此接口算起，不是数据发送结束后算起）时立即返回。
+- case3: ``waitr_arg.timeout = 5000`` and ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRD_MODE, (unsigned long)(&waitr_arg))`` make it so that it will wait up to 5 seconds for all available data or sizeof(buf_recv) to be read, and when there is no data available it will return immediately. ``aos_ioctl(fd, IOCTL_UART_IOC_WAITRDFULL_MODE, (unsigned long)(&waitr_arg))`` means to wait up to 5 seconds for sizeof(buf_recv) to be read and then return.
 
-aos_ioctl选项为 ``UART_IOC_BAUD_MODE`` ：
+aos_ioctl ``UART_IOC_BAUD_MODE``:
 
 ::
 
     aos_ioctl(fd, IOCTL_UART_IOC_BAUD_MODE, 9600);
 
-配置如上， ``9600`` 表示波特率。
+In the above, ``9600`` is the baud rate.
 
-aos_ioctl选项为 ``IOCTL_UART_IOC_READ_BLOCK`` 及 ``IOCTL_UART_IOC_READ_NOBLOCK`` ：
+aos_ioctl ``IOCTL_UART_IOC_READ_BLOCK`` and ``IOCTL_UART_IOC_READ_NOBLOCK``:
 
 ::
 
@@ -79,4 +79,4 @@ aos_ioctl选项为 ``IOCTL_UART_IOC_READ_BLOCK`` 及 ``IOCTL_UART_IOC_READ_NOBLO
         }
     }
 
-``aos_ioctl(fd, IOCTL_UART_IOC_READ_BLOCK, 0)`` 表示读取到sizeof(buf_recv)长度的数据立即返回，否则一致等待。 ``aos_ioctl(fd, IOCTL_UART_IOC_READ_NOBLOCK, 0)`` 表示当串口中的数据都读完或者读取到sizeof(buf_recv)长度的数据时立即返回。
+``aos_ioctl(fd, IOCTL_UART_IOC_READ_BLOCK, 0)`` makes it so once sizeof(buf_recv) is read it will return, but otherwise it will wait. ``aos_ioctl(fd, IOCTL_UART_IOC_READ_NOBLOCK, 0)`` makes it so it will return once all available data or sizeof(buf_recv) is read.
