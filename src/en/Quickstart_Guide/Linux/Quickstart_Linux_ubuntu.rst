@@ -75,6 +75,8 @@ Download the latest `blflash <https://github.com/spacemeowx2/blflash/releases>`_
 
     chmod +x blflash*
 
+Alternatively it is available from the Arch User Repository: `blflash <https://aur.archlinux.org/packages/blflash/>`__ for the latest release and `blflash-git <https://aur.archlinux.org/packages/blflash-git/>`_ for the latest commit.
+
 Invoke the ``blflash`` binary with the ``flash <project_name>.bin --port <port>`` arguments.
 If the board is connected via USB and no other devices are connected the port is likely going to be ``/dev/ttyUSB0``.
 If in doubt, get a list of USB ports with ``ls -la /dev/ | grep USB``.
@@ -178,4 +180,3 @@ If you have issues with terminal output, try another serial port emulator:
 
 
 Further information on the ``sdk_app_helloworld`` example can be found at :ref:`helloworld-index`.
-
