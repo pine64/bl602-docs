@@ -127,9 +127,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_gpio/GPIO.html">16. GPIO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">17. UART_echo</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">18. UART_ioctl</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">18.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">18.2. 相关配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">18.3. 应用实例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">18.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup">18.2. Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">18.3. Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_protocols_http/http.html">19. Http client</a></li>
@@ -232,28 +232,28 @@
             
   <div class="section" id="uart-ioctl">
 <span id="uart-ioctl-index"></span><h1><span class="section-number">18. </span>UART_ioctl<a class="headerlink" href="#uart-ioctl" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">18.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本示例主要介绍如何设置UART1的多种模式。</p>
+<div class="section" id="overview">
+<h2><span class="section-number">18.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example shows the modes available when using UART1.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">18.2. </span>相关配置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setup">
+<h2><span class="section-number">18.2. </span>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p>配置参考 <code class="docutils literal notranslate"><span class="pre">uart_echo</span></code> 中的配置。</p></li>
-<li><p>使用步骤
-- 将板子的 <code class="docutils literal notranslate"><span class="pre">gpio3</span></code> 和 <code class="docutils literal notranslate"><span class="pre">gpio4</span></code> 和 <code class="docutils literal notranslate"><span class="pre">GND</span></code> 分别与 <code class="docutils literal notranslate"><span class="pre">USB转TTL</span></code> 串口线的 <code class="docutils literal notranslate"><span class="pre">TXD</span></code> 、 <code class="docutils literal notranslate"><span class="pre">RXD</span></code> 、 <code class="docutils literal notranslate"><span class="pre">GND</span></code> 分别连接起来；
-- 编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_uart_ctl</span></code> 工程并下载工程；
-- 打开一个串口终端窗口A（波特率为115200，用于接收和发送uart消息），打开另一个串口终端窗口B（波特率为2000000，用于打印log）。例如使用应用实现中case1中的配置，在窗口A中输入 <code class="docutils literal notranslate"><span class="pre">123456789abcdef</span></code> ，在窗口A中可以看到接收到的数据，同时窗口B中打印出接收数据的个数。</p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">uart_echo</span></code>.</p></li>
+<li><p>Usage
+- Connect <code class="docutils literal notranslate"><span class="pre">gpio3</span></code>, <code class="docutils literal notranslate"><span class="pre">gpio4</span></code>, and <code class="docutils literal notranslate"><span class="pre">GND</span></code> to <code class="docutils literal notranslate"><span class="pre">TXD</span></code>, <code class="docutils literal notranslate"><span class="pre">RXD</span></code>, and <code class="docutils literal notranslate"><span class="pre">GND</span></code> on a USB to TTL adapter respectively.
+- Download and compile <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_uart_ctl</span></code>.
+- Open one serial terminal at 115200 baud for sending and receiving UART messages, and another at 2000000 for logging. For instance, with case1, you can enter <code class="docutils literal notranslate"><span class="pre">123456789abcdef</span></code> in the first window, see the reply, and also print out the amount of data received to the second window.</p></li>
 </ul>
 </div></blockquote>
 <div class="figure align-default">
 <img alt="" src="../../_images/image115.png" />
 </div>
 </div>
-<div class="section" id="id3">
-<h2><span class="section-number">18.3. </span>应用实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>aos_ioctl选项为 <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_WAITRD_MODE</span></code> 及 <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_WAITRDFULL_MODE</span></code> ：</p>
+<div class="section" id="examples">
+<h2><span class="section-number">18.3. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>aos_ioctl <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_WAITRD_MODE</span></code> and <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_WAITRDFULL_MODE</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="o">//</span><span class="n">log_info</span><span class="p">(</span><span class="s2">&quot;ready to read.</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">);</span>
     <span class="n">waitr_arg</span><span class="o">.</span><span class="n">buf</span> <span class="o">=</span> <span class="n">buf_recv</span><span class="p">;</span>
@@ -269,16 +269,16 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>case1： <code class="docutils literal notranslate"><span class="pre">waitr_arg.timeout</span> <span class="pre">=</span> <span class="pre">0</span></code> case1中调用 <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRD_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> 表示当串口中的数据都读完或者读取到sizeof(buf_recv)长度的数据时立即返回。调用 <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRDFULL_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> 用法与 <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_WAITRD_MODE</span></code> 一致。</p></li>
-<li><p>case2： <code class="docutils literal notranslate"><span class="pre">waitr_arg.timeout</span> <span class="pre">=</span> <span class="pre">AOS_WAIT_FOREVER</span></code> case2中调用 <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRD_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> 表示当串口中的数据都读完或者读取到sizeof(buf_recv)长度的数据时立即返回，串口中无数据则一直等待。调用 <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRDFULL_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> 表示一直等待直到读取到sizeof(buf_recv)长度的数据时立即返回。</p></li>
-<li><p>case3： <code class="docutils literal notranslate"><span class="pre">waitr_arg.timeout</span> <span class="pre">=</span> <span class="pre">5000</span></code> case3中调用 <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRD_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> 表示当串口中的数据都读完或者读取到sizeof(buf_recv)长度的数据或者到达超时时间（超时时间从调用此接口算起，不是数据发送结束后算起）时立即返回。调用 <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRDFULL_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> 表示读取到sizeof(buf_recv)长度的数据或者到达超时时间（超时时间从调用此接口算起，不是数据发送结束后算起）时立即返回。</p></li>
+<li><p>case1: <code class="docutils literal notranslate"><span class="pre">waitr_arg.timeout</span> <span class="pre">=</span> <span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRD_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> make it so that when all available data or sizeof(buf_recv) is read the length is returned immediately. <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRDFULL_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> has the same usage as <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_WAITRD_MODE</span></code>.</p></li>
+<li><p>case2: <code class="docutils literal notranslate"><span class="pre">waitr_arg.timeout</span> <span class="pre">=</span> <span class="pre">AOS_WAIT_FOREVER</span></code> and <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRD_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> make it so that it will wait for all available data or sizeof(buf_recv) to be read, and when there is no data available it will return immediately. <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRDFULL_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> means to wait for sizeof(buf_recv) to be read and then return.</p></li>
+<li><p>case3: <code class="docutils literal notranslate"><span class="pre">waitr_arg.timeout</span> <span class="pre">=</span> <span class="pre">5000</span></code> and <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRD_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> make it so that it will wait up to 5 seconds for all available data or sizeof(buf_recv) to be read, and when there is no data available it will return immediately. <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_WAITRDFULL_MODE,</span> <span class="pre">(unsigned</span> <span class="pre">long)(&amp;waitr_arg))</span></code> means to wait up to 5 seconds for sizeof(buf_recv) to be read and then return.</p></li>
 </ul>
-<p>aos_ioctl选项为 <code class="docutils literal notranslate"><span class="pre">UART_IOC_BAUD_MODE</span></code> ：</p>
+<p>aos_ioctl <code class="docutils literal notranslate"><span class="pre">UART_IOC_BAUD_MODE</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aos_ioctl</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">IOCTL_UART_IOC_BAUD_MODE</span><span class="p">,</span> <span class="mi">9600</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>配置如上， <code class="docutils literal notranslate"><span class="pre">9600</span></code> 表示波特率。</p>
-<p>aos_ioctl选项为 <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_READ_BLOCK</span></code> 及 <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_READ_NOBLOCK</span></code> ：</p>
+<p>In the above, <code class="docutils literal notranslate"><span class="pre">9600</span></code> is the baud rate.</p>
+<p>aos_ioctl <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_READ_BLOCK</span></code> and <code class="docutils literal notranslate"><span class="pre">IOCTL_UART_IOC_READ_NOBLOCK</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">length</span> <span class="o">=</span> <span class="n">aos_read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buf_recv</span><span class="p">,</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">buf_recv</span><span class="p">));</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
@@ -301,7 +301,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_READ_BLOCK,</span> <span class="pre">0)</span></code> 表示读取到sizeof(buf_recv)长度的数据立即返回，否则一致等待。 <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_READ_NOBLOCK,</span> <span class="pre">0)</span></code> 表示当串口中的数据都读完或者读取到sizeof(buf_recv)长度的数据时立即返回。</p>
+<p><code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_READ_BLOCK,</span> <span class="pre">0)</span></code> makes it so once sizeof(buf_recv) is read it will return, but otherwise it will wait. <code class="docutils literal notranslate"><span class="pre">aos_ioctl(fd,</span> <span class="pre">IOCTL_UART_IOC_READ_NOBLOCK,</span> <span class="pre">0)</span></code> makes it so it will return once all available data or sizeof(buf_recv) is read.</p>
 </div>
 </div>
 
