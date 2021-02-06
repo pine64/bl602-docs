@@ -6,19 +6,19 @@ This document explains how to set up a Linux environment, build the ``sdk_app_he
 Installing prerequisites and cloning repository
 -----------------------------------------------
 
-The project requires a C/C++ compiler, ``make``, ``git`` and a serial port reader (``gtkterm`` is used).
+The project requires a C/C++ compiler, ``make``, ``git`` and a serial port reader (``screen`` is used).
 
 One liner for Debian:
 
 .. code-block:: bash
 
-    sudo apt install build-essential git gtkterm
+    sudo apt install build-essential git screen
 
 One liner for Arch:
 
 .. code-block:: bash
 
-    sudo pacman -S base-devel git gtkterm
+    sudo pacman -S base-devel git screen
 
 Next, clone the SDK repository:
 
@@ -151,11 +151,11 @@ Testing the output
 
 Change the jumper on ``IO8`` to cover ``L`` and press the reset button.
 
-Open ``gtkterm`` with a baud rate of ``2000000`` (two million) and the same port used in :ref:`flashing`.
+Open ``screen`` with a baud rate of ``2000000`` (two million) and the same port used in :ref:`flashing`.
 
 .. code-block:: bash
 
-    gtkterm --port /dev/ttyUSB0 --speed 2000000
+    screen /dev/ttyUSB0 2000000
 
 The terminal should be blank.
 If you're being spammed with unknown symbols change jumper pin ``IO8`` to ``L`` and press ``RESET``.
@@ -168,6 +168,14 @@ After pressing ``RESET`` the following should be in the terminal:
     [helloworld]   end
 
 The above should appear on the terminal every time ``RESET`` is pressed.
+
+To exit ``screen`` press ``Control-a k y``.
+
+If you have issues with terminal output, try another serial port emulator:
+
+1. `gtkterm <https://github.com/Jeija/gtkterm>`_ : ``gtkterm --port /dev/ttyUSB0 --speed 2000000``
+2. `minicom <https://linux.die.net/man/1/minicom>`_ : ``minicom -D /dev/ttyUSB0 -b 2000000``
+
 
 Further information on the ``sdk_app_helloworld`` example can be found at :ref:`helloworld-index`.
 
