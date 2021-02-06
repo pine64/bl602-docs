@@ -241,13 +241,13 @@
 <p>This document explains how to set up a Linux environment, build the <code class="docutils literal notranslate"><span class="pre">sdk_app_helloworld</span></code> application, flash it to the BL602 and verify the output through a serial port reader.</p>
 <div class="section" id="installing-prerequisites-and-cloning-repository">
 <h2><span class="section-number">2.1. </span>Installing prerequisites and cloning repository<a class="headerlink" href="#installing-prerequisites-and-cloning-repository" title="Permalink to this headline">¶</a></h2>
-<p>The project requires a C/C++ compiler, <code class="docutils literal notranslate"><span class="pre">make</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span></code> and a serial port reader (<code class="docutils literal notranslate"><span class="pre">gtkterm</span></code> is used).</p>
+<p>The project requires a C/C++ compiler, <code class="docutils literal notranslate"><span class="pre">make</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span></code> and a serial port reader (<code class="docutils literal notranslate"><span class="pre">screen</span></code> is used).</p>
 <p>One liner for Debian:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install build-essential git gtkterm
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install build-essential git screen
 </pre></div>
 </div>
 <p>One liner for Arch:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo pacman -S base-devel git gtkterm
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo pacman -S base-devel git screen
 </pre></div>
 </div>
 <p>Next, clone the SDK repository:</p>
@@ -350,8 +350,8 @@ You should see the following if flashing is successful:</p>
 <div class="section" id="testing-the-output">
 <h2><span class="section-number">2.5. </span>Testing the output<a class="headerlink" href="#testing-the-output" title="Permalink to this headline">¶</a></h2>
 <p>Change the jumper on <code class="docutils literal notranslate"><span class="pre">IO8</span></code> to cover <code class="docutils literal notranslate"><span class="pre">L</span></code> and press the reset button.</p>
-<p>Open <code class="docutils literal notranslate"><span class="pre">gtkterm</span></code> with a baud rate of <code class="docutils literal notranslate"><span class="pre">2000000</span></code> (two million) and the same port used in <a class="reference internal" href="#flashing"><span class="std std-ref">Flashing</span></a>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gtkterm --port /dev/ttyUSB0 --speed <span class="m">2000000</span>
+<p>Open <code class="docutils literal notranslate"><span class="pre">screen</span></code> with a baud rate of <code class="docutils literal notranslate"><span class="pre">2000000</span></code> (two million) and the same port used in <a class="reference internal" href="#flashing"><span class="std std-ref">Flashing</span></a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen /dev/ttyUSB0 <span class="m">2000000</span>
 </pre></div>
 </div>
 <p>The terminal should be blank.
@@ -363,6 +363,12 @@ After pressing <code class="docutils literal notranslate"><span class="pre">RESE
 </pre></div>
 </div>
 <p>The above should appear on the terminal every time <code class="docutils literal notranslate"><span class="pre">RESET</span></code> is pressed.</p>
+<p>To exit <code class="docutils literal notranslate"><span class="pre">screen</span></code> press <code class="docutils literal notranslate"><span class="pre">Control-a</span> <span class="pre">k</span> <span class="pre">y</span></code>.</p>
+<p>If you have issues with terminal output, try another serial port emulator:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.com/Jeija/gtkterm">gtkterm</a> : <code class="docutils literal notranslate"><span class="pre">gtkterm</span> <span class="pre">--port</span> <span class="pre">/dev/ttyUSB0</span> <span class="pre">--speed</span> <span class="pre">2000000</span></code></p></li>
+<li><p><a class="reference external" href="https://linux.die.net/man/1/minicom">minicom</a> : <code class="docutils literal notranslate"><span class="pre">minicom</span> <span class="pre">-D</span> <span class="pre">/dev/ttyUSB0</span> <span class="pre">-b</span> <span class="pre">2000000</span></code></p></li>
+</ol>
 <p>Further information on the <code class="docutils literal notranslate"><span class="pre">sdk_app_helloworld</span></code> example can be found at <a class="reference internal" href="../../Examples/helloworld/helloworld.html#helloworld-index"><span class="std std-ref">Hello World</span></a>.</p>
 </div>
 </div>
