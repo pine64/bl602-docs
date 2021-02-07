@@ -95,7 +95,7 @@ mappings.
 | `0x4001_0000` | `0x4001_0FFF` |  Deep sleep retention RAM                                                                |                                     |
 | `0x4203_0000` | `0x4204_BFFF` |  Wireless RAM                                                                            |                                     |
 | `0x44b0_0000` | `0x44b0_????` |  `mm` (MAC management), `txl`, `rxl` and `ps` (undocumented WiFi/BLE, see `mm_init`)     |                                     |
-| `0x44c0_0000` | `0x44c?_????` |  `wifi phy` (identified from `phy_init`) (has many wifi related modules including `acg`) | [PHY](registers/phy.md)             |
+| `0x44c0_0000` | `0x44c?_????` |  `wifi phy` (identified from `phy_init`) (has many wifi related modules including `agc`) | [PHY](registers/phy.md)             |
 | `0x54c0_a000` | `0x54c0_????` |  `agc` ucode (identified from `phy_init`)                                                |                                     |
 
 (Peripherals in *`italics`* are present in the SVD but not the datasheet.)
