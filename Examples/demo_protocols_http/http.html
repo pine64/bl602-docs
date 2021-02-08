@@ -128,9 +128,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_echo/uart_echo.html">17. UART_echo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_peripherals_uart_ioctl/uart_ioctl.html">18. UART_ioctl</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">19. Http client</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">19.1. 总览</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">19.2. 准备和使用步骤</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">19.3. 应用实例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">19.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparation-and-usage-steps">19.2. Preparation and Usage Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#applications">19.3. Applications</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo_protocols_httpc/httpc.html">20. Httpc client</a></li>
@@ -232,18 +232,18 @@
             
   <div class="section" id="http-client">
 <span id="http-index"></span><h1><span class="section-number">19. </span>Http client<a class="headerlink" href="#http-client" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">19.1. </span>总览<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>本示例主要介绍如何创建一个socket并连接到指定的Http服务器获取数据的过程。</p>
+<div class="section" id="overview">
+<h2><span class="section-number">19.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example explains the process of how to create a socket and connect to access the specified Http server to obtain data.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">19.2. </span>准备和使用步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="preparation-and-usage-steps">
+<h2><span class="section-number">19.2. </span>Preparation and Usage Steps<a class="headerlink" href="#preparation-and-usage-steps" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>使用之前需要准备可用的URL以及网络。</p></li>
-<li><p>使用步骤：</p>
+<li><p>Prepare a usable URL and network.</p></li>
+<li><p>Steps to use:</p>
 <ul>
-<li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_http_client_socket</span></code> 工程并下载工程；</p></li>
-<li><p>在终端输入开启wifi的命令： <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> ，输入连接wifi的命令： <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">&lt;name&gt;</span> <span class="pre">&lt;key&gt;</span></code> ，并确认wifi连接成功（如输入：wifi_sta_connect bl_test_005 12345678）；</p>
+<li><p>Compile and flash <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_http_client_socket</span></code>.</p></li>
+<li><p>Enter the command <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> to turn on wifi in the terminal, then enter the command <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">&lt;name&gt;</span> <span class="pre">&lt;key&gt;</span></code> to connect to wifi. Confirm that the wifi connection is successful (e.g. use the command <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span> <span class="pre">bl_test_005</span> <span class="pre">12345678</span></code>).</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image116.png" />
 </div>
@@ -251,7 +251,7 @@
 <img alt="" src="../../_images/image214.png" />
 </div>
 </li>
-<li><p>使用 <code class="docutils literal notranslate"><span class="pre">http</span></code> 命令通过socket的方式进行下载。</p>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">http</span></code> command to download through socket.</p>
 <div class="figure align-default">
 <img alt="" src="../../_images/image313.png" />
 </div>
@@ -260,10 +260,10 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h2><span class="section-number">19.3. </span>应用实例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="applications">
+<h2><span class="section-number">19.3. </span>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>通过 <code class="docutils literal notranslate"><span class="pre">hostname</span></code> 获取 <code class="docutils literal notranslate"><span class="pre">hostinfo</span></code></p></li>
+<li><p>Obtain <code class="docutils literal notranslate"><span class="pre">hostinfo</span></code> by <code class="docutils literal notranslate"><span class="pre">hostname</span></code>.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>struct hostent *hostinfo = gethostbyname(hostname);
 if (!hostinfo) {
@@ -273,7 +273,7 @@ if (!hostinfo) {
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>创建一个 <code class="docutils literal notranslate"><span class="pre">socket</span></code> 连接并发送http请求。</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">socket</span></code> connection and send the http request.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">((</span><span class="n">sockfd</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Error in socket</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">);</span>
@@ -304,7 +304,7 @@ if (!hostinfo) {
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>获取http响应的数据，完成时打印获取数据花费的时间和传输的速度。</p></li>
+<li><p>Recieve http response data. Print the time of cost to recieve data and the speed of transfer when complete.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">ret</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">sockfd</span><span class="p">,</span> <span class="n">recv_buffer</span><span class="p">,</span> <span class="n">BUFFER_SIZE</span><span class="p">);</span>
@@ -334,13 +334,13 @@ if (!hostinfo) {
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>关闭 <code class="docutils literal notranslate"><span class="pre">socket</span></code> 。</p></li>
+<li><p>Close <code class="docutils literal notranslate"><span class="pre">socket</span></code>.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">close</span><span class="p">(</span><span class="n">sockfd</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>在 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_http_client_socket/sdk_app_http_client_socket/demo.c</span></code> 中 <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">_cli_init()</span></code> 的函数里调用 <code class="docutils literal notranslate"><span class="pre">http_client_cli_init()</span></code> 初始化http命令</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_http_client_socket/sdk_app_http_client_socket/demo.c</span></code>, the function <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">_cli_init()</span></code> would call <code class="docutils literal notranslate"><span class="pre">http_client_cli_init()</span></code> to initialize http.</p></li>
 </ul>
 </div>
 </div>
