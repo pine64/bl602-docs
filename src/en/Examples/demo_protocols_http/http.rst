@@ -4,7 +4,7 @@ Http client
 ==================
 
 Overview
-------
+----------
 
 This example explains the process of how to create a socket and connect to access the specified Http server to obtain data.
 
