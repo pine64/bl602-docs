@@ -95,7 +95,7 @@ mappings.
 | `0x4001_0000` | `0x4001_0FFF` |  Deep sleep retention RAM                                                                |                                     |
 | `0x4203_0000` | `0x4204_BFFF` |  Wireless RAM                                                                            |                                     |
 | `0x44b0_0000` | `0x44b0_????` |  `mm` (MAC management), `txl`, `rxl` and `ps` (undocumented WiFi/BLE, see `mm_init`)     |                                     |
-| `0x44c0_0000` | `0x44c?_????` |  `wifi phy` (identified from `phy_init`) (has many wifi related modules including `acg`) | [PHY](registers/phy.md)             |
+| `0x44c0_0000` | `0x44c?_????` |  `wifi phy` (identified from `phy_init`) (has many wifi related modules including `agc`) | [PHY](registers/phy.md)             |
 | `0x54c0_a000` | `0x54c0_????` |  `agc` ucode (identified from `phy_init`)                                                |                                     |
 
 (Peripherals in *`italics`* are present in the SVD but not the datasheet.)
@@ -157,7 +157,7 @@ Here are the known areas of the ROM's memory map:
 | `0x2101_0800` | `0x2101_0FFF` |  RomDriver function table                  |
 | `0x2101_1000` | `0x2101_FFFF` |  RomDriver functions (+ other stuff?)      |
 
-[1]: ../mirrored/BL602_BL604_DS_Datasheet.pdf
+[1]: ../mirrored/BL602_BL604_DS_1.6_en.pdf
 [2]: https://github.com/pine64/bl_iot_sdk/tree/master/components/bl602/bl602_std/bl602_std/Device/Bouffalo/BL602/Peripherals/soc602_reg.svd
 [3]: https://github.com/pine64/bl_iot_sdk/tree/master/components/bl602/bl602_std/bl602_std/Device/Bouffalo/BL602/Peripherals/bl602.svd
 [4]: https://github.com/pine64/bl_iot_sdk/tree/master/components/bl602/bl602_std/bl602_std/RISCV/Core/Include/clic.h
