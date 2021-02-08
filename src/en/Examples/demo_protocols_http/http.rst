@@ -9,7 +9,7 @@ Overview
 This example explains the process of how to create a socket and connect to access the specified Http server to obtain data.
 
 Preparation and Usage Steps
-----------------
+------------------------------
 
 - Prepare a usable URL and network.
 
@@ -32,7 +32,7 @@ Preparation and Usage Steps
 
 
 Applications
----------
+--------------
 
 - Obtain ``hostinfo`` by ``hostname``.
 
