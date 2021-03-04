@@ -129,4 +129,3 @@ device tree
            tx = "okay";
        };
        path = "/dev/ttyS0";
-

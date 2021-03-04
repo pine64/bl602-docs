@@ -1,67 +1,85 @@
-.. _ble-index:
+.. _ble-stack-index:
 
 BLE
-==================
+===
 
-概述
-------
-- BLE支持的特性：
-    - 蓝牙HOST特性
-        - GAP支持的角色：Peripheral与Central，Observer与Broadcaster
-        - GATT支持的角色：Server与Client
-        - 支持配对包括蓝牙4.2中的安全连接特性
-        - 支持永久存储蓝牙特定的设置和数据
-    - 蓝牙mesh特性
-        - 支持Relay, Friend Node, Low-Power Node (LPN) and GATT Proxy角色
-        - 支持两种Provisioning bearers(PB-ADV & PB-GATT)
-- BLE协议栈的架构：
-                        .. figure:: imgs/image1.png
+Overview
+--------
 
-    + 总共有3个主要层，共同构成了一个完整的蓝牙低能耗协议栈 
-        - Host：这一层位于应用程序之下,由多个(非实时)网络和传输协议组成，使应用程序能够以标准和互操作的方式与对等设备通信。
-        - Controller：控制器实现了链路层(LE LL)，这是一种低层次的实时协议，它与无线电硬件一起提供了空中通信的标准互操作。LL处理包的接收和传输，保证数据的传递，并处理所有LL控制程序。
-        - Radio Hardware：实现所需的模拟和数字基带功能块，允许链路层固件在频谱的2.4GHz波段发送和接收。
+Features supported by BLE:
 
-- 主控Host：
-                        .. figure:: imgs/image2.png
+- Bluetooth HOST features
+    - Roles supported by GAP: Peripheral and Central, Observer and Broadcaster
+    - Roles supported by GATT: Server and Client
+    - Support pairing including the secure connection feature in Bluetooth 4.2
+    - Support permanent storage of Bluetooth specific settings and data
+- Bluetooth mesh features
+    - Supports Relay, Friend Node, Low-Power Node (LPN) and GATT Proxy roles
+    - Support two Provisioning bearers (PB-ADV & PB-GATT)
 
-    * 蓝牙Host层实现了所有高级协议和配置文件，最重要的是它为应用程序提供了高级API 
-        - HCI:Host与controller接口
-        - L2CAP:逻辑链路控制和适应协议
-        - GATT:通用属性配置层（Generic Attribute Profile）
-        - GAP:通用访问配置层（Generic Access Profile）
-        - SMP:安全管理器配置层（Security Manager Specification）
+BLE protocol stack architecture:
 
-- 应用Application
-    * 应用层是用户开发实际蓝牙应用的地方，包含必要的协议栈参数设置，以及各种功能函数的调用。我们分别从蓝牙从机和蓝牙主机两种设备来分析。
-        * 蓝牙从机 
-            - 相关硬件和基础服务初始化
-            - 设置广播参数：广播数据，广播间隔，扫描回应等参数或者数据
-            - 设置Profile：添加从机服务、特征值，还有设置回调函数用于接收主机数据等
-            - 设置配对参数（可选）
-            - 启动广播，开始运行
-            - 等待相关事件，及事件处理，例如收到主机发来的数据，被链接等等
-        * 蓝牙主机 
-            - 相关硬件和基础服务初始化
-            - 设置扫描参数
-            - 设置连接参数
-            - 设置配对参数（可选）
-            - 启动协议栈，开始运行
-            - 等待相关事件，及事件处理，例如扫描事件，从机的Notify事件等等。
+.. figure:: imgs/image1.png
 
-API参考
-----------
 
-- API介绍
+There are a total of 3 main layers, which together form a complete Bluetooth low energy protocol stack:
+
+- Host
+
+  This layer is located under the application and consists of multiple (non-real-time) networks and transport protocols, enabling the application to communicate with peer devices in a standard and interoperable manner.
+
+- Controller
+
+  The controller implements the link layer (LE LL), which is a low-level real-time protocol that provides standard interoperability for air communication together with radio hardware. LL handles the reception and transmission of packets, guarantees data transmission, and handles all LL control procedures.
+
+- Radio Hardware
+
+  Realize the required analog and digital baseband functional blocks, allowing the link layer firmware to transmit and receive in the 2.4GHz band of the spectrum.
+
+Master Host:
+
+.. figure:: imgs/image2.png
+
+The Bluetooth Host layer implements all high-level protocols and configuration files, the most important thing is that it provides high-level APIs for applications:
+
+- HCI (Host and Controller Interface)
+- L2CAP (Logical Link Control and Adaptation Protocol)
+- GATT (Generic Attribute Profile)
+- GAP (Generic Access Profile)
+- SMP (Security Manager Specification)
+
+Application:
+
+The application layer is where users develop actual Bluetooth applications, including the necessary protocol stack parameter settings and the calling of various functions. We analyze the two devices from Bluetooth slave and Bluetooth master.
+
+- Bluetooth slave
+    - Initialization of related hardware and basic services
+    - Set broadcast parameters: broadcast data, broadcast interval, scan response and other parameters or data
+    - Profile settings: add slave services, characteristic values, and set callback functions for receiving host data, etc.
+    - Set pairing parameters (optional)
+    - Start the broadcast and start running
+    - Waiting for related events, and event processing, such as receiving data from the host, being linked, etc.
+- Bluetooth host
+    - Initialization of related hardware and basic services
+    - Set scan parameters
+    - Set connection parameters
+    - Set pairing parameters (optional)
+    - Start the protocol stack and start running
+    - Wait for related events and event processing, such as scan events, Notify events from slaves, etc.
+
+API reference
+-------------
+
+API introduction.
 
 ``void ble_controller_init(uint8_t task_priority)``
 
 ::
 
     /**
-    * function      controller层初始化
-    * @param[in]    task_priority：  任务优先级
-    * @return       空
+    * function      controller layer initialization
+    * @param[in]    task_priority: task priority
+    * @return       empty
     */
 
 ``int hci_driver_init(void)``
@@ -69,9 +87,9 @@ API参考
 ::
 
     /**
-    * function      HCI接口驱动初始化
-    * @param[in]    空
-    * @return       0:成功，!=0:失败
+    * function      HCI interface driver initialization
+    * @param[in]    empty
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_enable(bt_ready_cb_t cb)``
@@ -79,9 +97,9 @@ API参考
 ::
 
     /**
-    * function      Ble使能
-    * @param[in]    cb：如果成功调用回调函数
-    * @return       0:成功，!=0:失败
+    * function      Ble enable
+    * @param[in]    cb: Call the callback function if successful
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_le_adv_start(const struct bt_le_adv_param *param,const struct bt_data *ad, size_t ad_len,``
@@ -90,14 +108,14 @@ API参考
 ::
 
     /**
-    * function      开启BLE广播
+    * function      enable BLE broadcast
     *
-    * @param[in]    param:  指向广播配置参数指针
-    * @param[in]    ad:     指向广播包中数据指针
-    * @param[in]    ad_len: 广播包中数据的长度
-    * @param[in]    sd:     指向扫描响应包数据指针  
-    * @param[in]    sd_len: 扫描响应包数据的长度  
-    * @return       0:成功，!=0:失败
+    * @param[in]    param: pointer to broadcast configuration parameter
+    * @param[in]    ad: Pointer to the data in the broadcast packet
+    * @param[in]    ad_len: the length of the data in the broadcast packet
+    * @param[in]    sd: Pointer to scan response packet data
+    * @param[in]    sd_len: scan response packet data length
+    * @return       0: success, !=0: failure
     */
 
 
@@ -107,12 +125,12 @@ API参考
 ::
 
     /**
-    * function      更新BLE广播数据
-    * @param[in]    ad:     指向广播包中数据指针
-    * @param[in]    ad_len: 广播包中数据的长度
-    * @param[in]    sd:     指向扫描响应包数据指针  
-    * @param[in]    sd_len: 扫描响应包数据的长度  
-    * @return       0:成功，!=0:失败
+    * function      update BLE broadcast data
+    * @param[in]    ad: Pointer to the data in the broadcast packet
+    * @param[in]    ad_len: the length of the data in the broadcast packet
+    * @param[in]    sd: Pointer to scan response packet data
+    * @param[in]    sd_len: scan response packet data length
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_le_adv_stop(void)``
@@ -121,9 +139,9 @@ API参考
 ::
 
     /**
-    * function      停止BLE广播 
-    * @param[in]    空
-    * @return       0:成功，!=0:失败
+    * function      stop BLE broadcast
+    * @param[in]    empty
+    * @return       0: success, !=0: failure
     */
 
 
@@ -132,10 +150,10 @@ API参考
 ::
 
     /**
-    * function      开启BLE扫描
-    * @param[in]    param:  指向扫描参数的指针
-    * @param[in]    cb:     扫描回调函数
-    * @return       0:成功，!=0:失败
+    * function      to enable BLE scanning
+    * @param[in]    param: pointer to scan parameter
+    * @param[in]    cb: scan callback function
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_le_scan_stop(void)``
@@ -143,9 +161,9 @@ API参考
 ::
 
     /**
-    * function      停止BLE扫描
-    * @param[in]    空
-    * @return       0:成功，!=0:失败
+    * function      stop BLE scanning
+    * @param[in]    empty
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_le_whitelist_add(const bt_addr_le_t *addr)``
@@ -153,9 +171,9 @@ API参考
 ::
 
     /**
-    * function      通过地址添加设备到白名单列表中
-    * @param[in]    addr:指向需要添加设备地址的指针
-    * @return       0:成功，!=0:失败
+    * function      Add the device to the whitelist by address
+    * @param[in]    addr: pointer to the address of the device to be added
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_le_whitelist_rem(const bt_addr_le_t *addr)``
@@ -164,9 +182,9 @@ API参考
 
 
     /**
-    * function      从白名单列表中移除设备
-    * @param[in]    addr:指向需要移除设备地址的指针
-    * @return       0:成功，!=0:失败
+    * function      remove the device from the whitelist
+    * @param[in]    addr: pointer to the address of the device to be removed
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_le_whitelist_clear(void)``
@@ -175,9 +193,9 @@ API参考
 ::
 
     /**
-    * function      清除白名单列表
-    * @param[in]    空
-    * @return       0:成功，!=0:失败
+    * function      Clear the whitelist list
+    * @param[in]    empty
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_le_set_chan_map(u8_t chan_map[5])``
@@ -185,9 +203,9 @@ API参考
 ::
 
     /**
-    * function      设置(LE)通道映射
-    * @param[in]    chan_map：通道数组
-    * @return       0:成功，!=0:失败
+    * function      set (LE) channel mapping
+    * @param[in]    chan_map: channel array
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_unpair(u8_t id, const bt_addr_le_t *addr)``
@@ -195,10 +213,10 @@ API参考
 ::
 
     /**
-    * function      清除配对信息
-    * @param[in]    id：    本地标识(大多只是默认的BT ID)
-    * @param[in]    addr：  远端设备地址，NULL或者BT_ADDR_LE_ANY清除所有远端设备
-    * @return       0:成功，!=0:失败
+    * function      clear pairing information
+    * @param[in]    id: Local ID (mostly just the default BT ID)
+    * @param[in]    addr: remote device address, NULL or BT_ADDR_LE_ANY to clear all remote devices
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_conn_get_info(const struct bt_conn *conn, struct bt_conn_info *info)``
@@ -206,10 +224,10 @@ API参考
 ::
 
     /**
-    * function      获取当前连接设备的信息
-    * @param[in]    conn：  指向当前连接的指针
-    * @param[in]    info：  指向当前连接设备信息的指针
-    * @return       0:成功，!=0:失败
+    * function      Get the information of the currently connected device
+    * @param[in]    conn: pointer to the current connection
+    * @param[in]    info: Pointer to the current connected device information
+    * @return       0: success, !=0: failure
     */
 
 
@@ -218,9 +236,9 @@ API参考
 ::
 
     /**
-    * function      获取已连接设备的信息
-    * @param[in]    info：  指向当前连接设备信息的指针
-    * @return       已连接设备的个数
+    * function      Get the information of the connected device
+    * @param[in]    info: Pointer to the current connected device information
+    * @return       the number of connected devices
     */
 
 ``int bt_conn_le_param_update(struct bt_conn *conn,const struct bt_le_conn_param *param)``
@@ -228,10 +246,10 @@ API参考
 ::
 
     /**
-    * function      更新连接参数
-    * @param[in]    conn：  指向当前连接的指针
-    * @param[in]    param： 指向连接参数的指针
-    * @return       0:成功，!=0:失败
+    * function      update connection parameters
+    * @param[in]    conn: pointer to the current connection
+    * @param[in]    param: pointer to connection parameter
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_conn_disconnect(struct bt_conn *conn, u8_t reason)``
@@ -239,10 +257,10 @@ API参考
 ::
 
     /**
-    * function      断开当前连接
-    * @param[in]    conn：  指向当前连接的指针
-    * @param[in]    reason：断开当前连接的原因
-    * @return       0:成功，!=0:失败
+    * function      disconnect the current connection
+    * @param[in]    conn: pointer to the current connection
+    * @param[in]    reason: the reason for disconnecting the current connection
+    * @return       0: success, !=0: failure
     */
 
 ``struct bt_conn *bt_conn_create_le(const bt_addr_le_t *peer,const struct bt_le_conn_param *param)``
@@ -250,10 +268,10 @@ API参考
 ::
 
     /**
-    * function      创建连接
-    * @param[in]    peer：  需要连接设备地址的指针
-    * @param[in]    param： 指向连接参数指针
-    * @return       成功：有效的连接对象，否则失败
+    * function      to create a connection
+    * @param[in]    peer: The pointer of the device address that needs to be connected
+    * @param[in]    param: pointer to connection parameter
+    * @return       Success: a valid connection object, otherwise it fails
     */
 
 
@@ -262,9 +280,9 @@ API参考
 ::
 
     /**
-    * function      自动创建连接白名单列表中的设备
-    * @param[in]    param： 指向连接参数指针
-    * @return       0:成功，!=0:失败
+    * function      to automatically create devices in the whitelist
+    * @param[in]    param: pointer to connection parameter
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_conn_create_auto_stop(void)``
@@ -272,9 +290,9 @@ API参考
 ::
 
     /**
-    * function      停止自动创建连接白名单列表中的设备
-    * @param[in]    空
-    * @return       0:成功，!=0:失败
+    * function      Stop automatically creating devices in the whitelist of connections
+    * @param[in]    empty
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_le_set_auto_conn(const bt_addr_le_t *addr,const struct bt_le_conn_param *param)``
@@ -282,10 +300,10 @@ API参考
 ::
 
     /**
-    * function      自动创建连接远端设备
-    * @param[in]    addr：  远端设备地址指针
-    * @param[in]    param： 指向连接参数指针
-    * @return       0:成功，!=0:失败
+    * function      automatically creates and connects remote equipment
+    * @param[in]    addr: remote device address pointer
+    * @param[in]    param: pointer to connection parameter
+    * @return       0: success, !=0: failure
     */
 
 ``struct bt_conn *bt_conn_create_slave_le(const bt_addr_le_t *peer,const struct bt_le_adv_param *param)``
@@ -293,10 +311,10 @@ API参考
 ::
 
     /**
-    * function      发起定向的广播包给远端设备
-    * @param[in]    peer：  远端设备地址指针
-    * @param[in]    param： 指向广播参数的指针
-    * @return       成功：有效的连接对象，否则失败
+    * function      initiates a directed broadcast packet to the remote device
+    * @param[in]    peer: pointer of remote device address
+    * @param[in]    param: pointer to broadcast parameters
+    * @return       Success: a valid connection object, otherwise it fails
     */
 
 ``int bt_conn_set_security(struct bt_conn *conn, bt_security_t sec)``
@@ -304,10 +322,10 @@ API参考
 ::
 
     /**
-    * function      设置连接安全等级
-    * @param[in]    conn：  指向连接对象的指针
-    * @param[in]    sec：   安全等级
-    * @return       0:成功，!=0:失败
+    * function      to set the connection security level
+    * @param[in]    conn: pointer to the connection object
+    * @param[in]    sec: security level
+    * @return       0: success, !=0: failure
     */
 
 ``bt_security_t bt_conn_get_security(struct bt_conn *conn)``
@@ -315,9 +333,9 @@ API参考
 ::
 
     /**
-    * function      获取当前连接的安全等级
-    * @param[in]    conn：  指向连接对象的指针
-    * @return       安全级别
+    * function      Get the security level of the current connection
+    * @param[in]    conn: pointer to the connection object
+    * @return       security level
     */
 
 
@@ -326,9 +344,9 @@ API参考
 ::
 
     /**
-    * function      获取当前连接的加密key的大小
-    * @param[in]    conn：  指向连接对象的指针
-    * @return       加密key的大小
+    * function      Get the size of the encryption key of the current connection
+    * @param[in]    conn: pointer to the connection object
+    * @return       the size of the encryption key
     */
 
 
@@ -337,9 +355,9 @@ API参考
 ::
 
     /**
-    * function      注册连接回调函数
-    * @param[in]    cb：  连接回调函数
-    * @return       空
+    * function      Register connection callback function
+    * @param[in]    cb: connection callback function
+    * @return       empty
     */
 
 ``void bt_set_bondable(bool enable)``
@@ -347,9 +365,9 @@ API参考
 ::
 
     /**
-    * function      设置/清除SMP配对请求/响应数据认证需求中的绑定标志
-    * @param[in]    enable：  1，使能，0：不使能
-    * @return       空
+    * function      Set/clear the binding flag in the SMP pairing request/response data authentication request
+    * @param[in]    enable: 1, enable, 0: disable
+    * @return       empty
     */
 
 ``int bt_conn_auth_cb_register(const struct bt_conn_auth_cb *cb)``
@@ -357,9 +375,9 @@ API参考
 ::
 
     /**
-    * function      注册认证回调函数
-    * @param[in]    cb： 回调函数指针
-    * @return       0:成功，!=0:失败
+    * function      registration authentication callback function
+    * @param[in]    cb: callback function pointer
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_conn_auth_passkey_entry(struct bt_conn *conn, unsigned int passkey)``
@@ -367,10 +385,10 @@ API参考
 ::
 
     /**
-    * function      用密钥回复对方
-    * @param[in]    conn：    连接对象指针
-    * @param[in]    passkey： 输入的密钥
-    * @return       0:成功，!=0:失败
+    * function      reply with key
+    * @param[in]    conn: connection object pointer
+    * @param[in]    passkey: the key entered
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_conn_auth_cancel(struct bt_conn *conn)``
@@ -378,9 +396,9 @@ API参考
 ::
 
     /**
-    * function      取消认证过程
-    * @param[in]    conn：    连接对象指针
-    * @return       0:成功，!=0:失败
+    * function      cancel the authentication process
+    * @param[in]    conn: connection object pointer
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_conn_auth_passkey_confirm(struct bt_conn *conn)``
@@ -388,9 +406,9 @@ API参考
 ::
 
     /**
-    * function      如果密码匹配，回复对方
-    * @param[in]    conn：    连接对象的指针
-    * @return       0:成功，!=0:失败
+    * function      If the password matches, reply to the other party
+    * @param[in]    conn: pointer to the connection object
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_conn_auth_pincode_entry(struct bt_conn *conn, const char *pin)``
@@ -398,10 +416,10 @@ API参考
 ::
 
     /**
-    * function      用PIN码进行回复对方
-    * @param[in]    conn：  连接对象的指针
-    * @param[in]    pin：   PIN码的指针
-    * @return       0:成功，!=0:失败
+    * function      reply with PIN code
+    * @param[in]    conn: pointer to the connection object
+    * @param[in]    pin: pointer of PIN code
+    * @return 0:    success, !=0: failure
     */
 
 ``int bt_le_read_rssi(u16_t handle,int8_t *rssi)``
@@ -409,10 +427,10 @@ API参考
 ::
 
     /**
-    * function      读取对方RSSI值
-    * @param[in]    handle：连接的句柄值
-    * @param[in]    rssi：  rssi的指针
-    * @return       0:成功，!=0:失败
+    * function      read the RSSI value of the other party
+    * @param[in]    handle: the handle value of the connection
+    * @param[in]    rssi: pointer to rssi
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_get_local_address(bt_addr_le_t *adv_addr)``
@@ -420,9 +438,9 @@ API参考
 ::
 
     /**
-    * function      读取本机的地址
-    * @param[in]    adv_addr：  指向地址的指针
-    * @return       0:成功，!=0:失败
+    * function      read the address of the machine
+    * @param[in]    adv_addr: pointer to address
+    * @return       0: success, !=0: failure
     */
 
 ``int bt_set_tx_pwr(int8_t power)``
@@ -430,25 +448,25 @@ API参考
 ::
 
     /**
-    * function      设置本机发射功率
-    * @param[in]    power：  功率值
-    * @return       0:成功，!=0:失败
+    * function      to set the local transmit power
+    * @param[in]    power: power value
+    * @return       0: success, !=0: failure
     */
 
-数据结构参考
----------------
+Data structure reference
+------------------------
 
-``bt_le_adv_param``\ 数据结构：
+``bt_le_adv_param``\ data structure:
 
 .. code:: c
 
     /** LE Advertising Parameters. */
     struct bt_le_adv_param {
         /** Local identity */
-        u8_t  id;
+        u8_t id;
 
         /** Bit-field of advertising options */
-        u8_t  options;
+        u8_t options;
 
         /** Minimum Advertising Interval (N * 0.625) */
         u16_t interval_min;
@@ -457,11 +475,11 @@ API参考
         u16_t interval_max;
 
         #if defined(CONFIG_BT_STACK_PTS)
-        u8_t  addr_type;
+        u8_t addr_type;
         #endif
     };
 
-此数据结构用来配置广播参数，包括本地识别id、广播选项位域、广播间隙等，其中广播选项位域有如下枚举类型参数可选:
+This data structure is used to configure broadcast parameters, including local identification id, broadcast option bit field, broadcast gap, etc. The broadcast option bit field has the following enumerated type parameters to choose from:
 
 .. code:: c
 
@@ -519,7 +537,7 @@ API参考
         BT_LE_ADV_OPT_FILTER_CONN = BIT(7),
     };
 
-如果需要发送一个广播包，配置可以如下：
+If you need to send a broadcast packet, the configuration can be as follows:
 
 .. code:: c
 
@@ -528,7 +546,7 @@ API参考
     param.interval_min = 0x00a0;
     param.interval_max = 0x00f0;
 
-``bt_data``\ 数据结构：
+``bt_data``\ Data structure：
 
 .. code:: c
 
@@ -538,7 +556,7 @@ API参考
         const u8_t *data;
     };
 
-此数据结构用来填充广播包中的数据，具体的数据包类型可以参考如下：
+This data structure is used to fill the data in the broadcast packet, the specific data packet type can refer to the following:
 
 .. code:: c
 
@@ -563,7 +581,7 @@ API参考
     LE Supported Features
     Channel Map Update Indication
 
-用该数据结构配置一个广播包数据，如下所示：
+Use this data structure to configure a broadcast packet data, as shown below:
 
 .. code:: c
 
@@ -572,7 +590,7 @@ API参考
         BT_DATA(BT_DATA_NAME_COMPLETE, "BL602-BLE-DEV", 13),
     };
 
-``bt_le_scan_param``\ 数据结构：
+``bt_le_scan_param``\ data structure：
 
 .. code:: c
 
@@ -591,13 +609,13 @@ API参考
         u16_t window;
     };
 
-此数据结构用来填充扫描参数，
-type：为扫描类型有2种类型BT_LE_SCAN_TYPE_ACTIVE（0x01）、BT_LE_SCAN_TYPE_PASSIVE(0x00)。
-filter_dup：0x00,除定向广告外，接受所有广播和扫描响应，0x01,只接收白名单列表中设备的广播和扫描响应。
-interval：扫描间隙。
-window：扫描窗口。
+This data structure is used to fill scan parameters,
+type: There are 2 types for scanning type: BT_LE_SCAN_TYPE_ACTIVE (0x01) and BT_LE_SCAN_TYPE_PASSIVE (0x00).
+filter_dup: 0x00, except for targeted advertisements, accept all broadcast and scan responses, 0x01, only receive broadcast and scan responses from devices in the whitelist.
+interval: scan interval.
+window: Scan window.
 
-如果开启扫描请求，可以配置如下：
+If the scan request is enabled, it can be configured as follows:
 
 .. code:: c
 
@@ -607,7 +625,7 @@ window：扫描窗口。
     window=BT_GAP_SCAN_SLOW_WINDOW_1
 
 
-``bt_le_conn_param``\ 数据结构：
+``bt_le_conn_param``\ data structure：
 
 .. code:: c
 
@@ -623,11 +641,11 @@ window：扫描窗口。
         #endif
     };
 
-此数据结构用来填充连接参数，interval_min：连接间隙最少值（0x0018），interval_max：连接间隙最大值(0x0028)，
-latency：指定为连接事件数的连接允许的最大从延迟。
-timeout：连接超时时间。
+This data structure is used to fill the connection parameters, interval_min: minimum value of the connection gap (0x0018), interval_max: maximum value of the connection gap (0x0028),
+latency: The maximum slave latency allowed for the connection specified as the number of connection events.
+timeout: connection timeout period.
 
-配置该数据结构，如下：
+Configure the data structure as follows:
 
 .. code:: c
 
@@ -636,7 +654,7 @@ timeout：连接超时时间。
     latency=0
     timeout=400
 
-``bt_conn``\ 数据结构：
+``bt_conn``\ data structure：
 
 .. code:: c
 
@@ -704,6 +722,4 @@ timeout：连接超时时间。
     #endif
     };
 
-此数据结构为当前连接数据结构，其中包括BLE蓝牙连接相关的参数，连接成功后该数据结构可以被用户调用。
-
-
+This data structure is the current connection data structure, which includes BLE Bluetooth connection related parameters. After the connection is successful, the data structure can be called by the user.

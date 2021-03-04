@@ -6,26 +6,26 @@ BLE
 概述
 ------
 - BLE支持的特性：
-    + 蓝牙HOST特性
-        + GAP支持的角色：Peripheral与Central，Observer与Broadcaster
+    - 蓝牙HOST特性
+        - GAP支持的角色：Peripheral与Central，Observer与Broadcaster
         - GATT支持的角色：Server与Client
         - 支持配对包括蓝牙4.2中的安全连接特性
         - 支持永久存储蓝牙特定的设置和数据
-    + 蓝牙mesh特性
-        + 支持Relay, Friend Node, Low-Power Node (LPN) and GATT Proxy角色
+    - 蓝牙mesh特性
+        - 支持Relay, Friend Node, Low-Power Node (LPN) and GATT Proxy角色
         - 支持两种Provisioning bearers(PB-ADV & PB-GATT)
 - BLE协议栈的架构：
                         .. figure:: imgs/image1.png
 
-    + 总共有3个主要层，共同构成了一个完整的蓝牙低能耗协议栈 
-        + Host：这一层位于应用程序之下,由多个(非实时)网络和传输协议组成，使应用程序能够以标准和互操作的方式与对等设备通信。
+    - 总共有3个主要层，共同构成了一个完整的蓝牙低能耗协议栈 
+        - Host：这一层位于应用程序之下,由多个(非实时)网络和传输协议组成，使应用程序能够以标准和互操作的方式与对等设备通信。
         - Controller：控制器实现了链路层(LE LL)，这是一种低层次的实时协议，它与无线电硬件一起提供了空中通信的标准互操作。LL处理包的接收和传输，保证数据的传递，并处理所有LL控制程序。
-        * Radio Hardware：实现所需的模拟和数字基带功能块，允许链路层固件在频谱的2.4GHz波段发送和接收。
+        - Radio Hardware：实现所需的模拟和数字基带功能块，允许链路层固件在频谱的2.4GHz波段发送和接收。
 
 - 主控Host：
                         .. figure:: imgs/image2.png
 
-    * 蓝牙Host层实现了所有高级协议和配置文件，最重要的是它为应用程序提供了高级API 
+    - 蓝牙Host层实现了所有高级协议和配置文件，最重要的是它为应用程序提供了高级API 
         - HCI:Host与controller接口
         - L2CAP:逻辑链路控制和适应协议
         - GATT:通用属性配置层（Generic Attribute Profile）
@@ -33,15 +33,15 @@ BLE
         - SMP:安全管理器配置层（Security Manager Specification）
 
 - 应用Application
-    * 应用层是用户开发实际蓝牙应用的地方，包含必要的协议栈参数设置，以及各种功能函数的调用。我们分别从蓝牙从机和蓝牙主机两种设备来分析。
-        * 蓝牙从机 
+    - 应用层是用户开发实际蓝牙应用的地方，包含必要的协议栈参数设置，以及各种功能函数的调用。我们分别从蓝牙从机和蓝牙主机两种设备来分析。
+        - 蓝牙从机 
             - 相关硬件和基础服务初始化
             - 设置广播参数：广播数据，广播间隔，扫描回应等参数或者数据
             - 设置Profile：添加从机服务、特征值，还有设置回调函数用于接收主机数据等
             - 设置配对参数（可选）
             - 启动广播，开始运行
             - 等待相关事件，及事件处理，例如收到主机发来的数据，被链接等等
-        * 蓝牙主机 
+        - 蓝牙主机 
             - 相关硬件和基础服务初始化
             - 设置扫描参数
             - 设置连接参数
@@ -518,6 +518,7 @@ API参考
         /** Use whitelist to filter devices that can connect. */
         BT_LE_ADV_OPT_FILTER_CONN = BIT(7),
     };
+
 如果需要发送一个广播包，配置可以如下：
 
 .. code:: c
@@ -630,7 +631,7 @@ timeout：连接超时时间。
 
 .. code:: c
 
-    interval_min=BT_GAP_INIT_CONN_INT_MIN（0x0018）
+    interval_min=BT_GAP_INIT_CONN_INT_MIN(0x0018)
     interval_max=BT_GAP_INIT_CONN_INT_MAX(0x0028)
     latency=0
     timeout=400
@@ -702,6 +703,7 @@ timeout：连接超时时间。
         } rv;
     #endif
     };
+
 此数据结构为当前连接数据结构，其中包括BLE蓝牙连接相关的参数，连接成功后该数据结构可以被用户调用。
 
 

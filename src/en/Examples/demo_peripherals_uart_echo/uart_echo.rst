@@ -54,10 +54,10 @@ Usage Steps
         };
     };
 
-- Steps to use：
- - Connect the board's ``gpio3`` and ``gpio4`` and ``GND`` to the ``TXD``, ``RXD``, and ``GND`` of the ``USB to TTL`` serial cable, respectively.
- - Compile ``customer_app/sdk_app_uart_echo`` and flash the image.
- - Open two serial terminal windows (A and B, respectively), with the Baud rate for A set to 115200, and the Baud rate for B set to2000000. After powering on the board, you can see that window A has received ``1234567890abcdefg``, while window B is stuck at ``send case``. You can continue the program by typing ``1234567890abcdefg`` in window A (note that there is no echo), after which B should continue to ``recv case`` and ``end``. 
+  - Steps to use：
+    - Connect the board's ``gpio3`` and ``gpio4`` and ``GND`` to the ``TXD``, ``RXD``, and ``GND`` of the ``USB to TTL`` serial cable, respectively.
+    - Compile ``customer_app/sdk_app_uart_echo`` and flash the image.
+    - Open two serial terminal windows (A and B, respectively), with the Baud rate for A set to 115200, and the Baud rate for B set to2000000. After powering on the board, you can see that window A has received ``1234567890abcdefg``, while window B is stuck at ``send case``. You can continue the program by typing ``1234567890abcdefg`` in window A (note that there is no echo), after which B should continue to ``recv case`` and ``end``. 
 
 .. figure:: imgs/image1.png
    :alt: 

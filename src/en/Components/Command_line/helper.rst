@@ -117,7 +117,7 @@ cli list
 +-------------------------+-----------------------------------------------------+
 
 Common commands
---------
+---------------
 
 -  **View all commands**
 
@@ -158,10 +158,10 @@ Common commands
       **#** audio\_config 11p025
 
       If no parameter is provided, a default of 16Khz will be used, the supported
-	  sample rates are:
-      8k、16k、24k、32k、48k、11p025、22p05、44p1
+      sample rates are:
+      8k, 16k, 24k, 32k, 48k, 11p025, 22p05, 44p1
       Sample rate with decimal is represented with ``p`` as decimal point.
-	  ex, 11.025khz is represented as 11p025
+      ex, 11.025khz is represented as 11p025
 
    -  recoding
 
@@ -188,7 +188,7 @@ Common commands
 
       **#** mjpegsd\_config 50
 
-      currently support 6 quality settings: 5、10、25、50、75、100
+      currently support 6 quality settings: 5, 10, 25, 50, 75, 100
 
    -  Start to save images
 
@@ -199,7 +199,7 @@ Common commands
    -  **NOTE**
 
       -  the command above will save 50 images files under SD root as:
-         0.jpeg、1.jpeg...49.jpeg
+         0.jpeg, 1.jpeg, ..., 49.jpeg
 
 -  **Save AVI to SD card**
 
@@ -209,7 +209,7 @@ Common commands
 
       **#** avisd\_config 50 bl\_avi\_q50.avi
 
-      currently support 6 quality settings: 5、10、25、50、75、100
+      currently support 6 quality settings: 5, 10, 25, 50, 75, 100
 
    -  Start saving avi
 
@@ -225,7 +225,7 @@ Common commands
 
       -  a reboot is needed if quality has to be modified after ``avisd\_start``
 
-      -  psram、camera are needed for this module.
+      -  psram, camera are needed for this module.
 
 -  **Share WIFI through QR code**
 
@@ -246,6 +246,4 @@ Common commands
 
       -  Support open WIFI
 
-      -  psram、camera are needed for this module.
-
-
+      -  psram, camera are needed for this module.

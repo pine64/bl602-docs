@@ -21,8 +21,8 @@ cronalarm
 ---------
 
 - 命令解析
-- .. image:: imgs/01.png
-   :alt:
+
+**The original documentation had an image called** ``imgs/01.png`` **here, but the file is not publically available. This text is here to prevent a missing image warning.**
 
 ::
 

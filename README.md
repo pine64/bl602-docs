@@ -18,11 +18,12 @@ in your browser of choice.
 Hardware
 --------
 - [Official Documents](https://github.com/bouffalolab/bl_docs): Includes detailed core and peripheral documentation
-- [BL602/604 Datasheet](mirrored/Bouffalo%20Lab%20BL602_BL604_DS_en_Combo_1.2.pdf)
-  (34 pages): Includes pinout, memory map, and general peripheral descriptions
-  but no detailed functional specification or register listings.
-- [BL602/604 Reference Manual](mirrored/Bouffalo%20Lab%20BL602_Reference_Manual_en_1.1.pdf)
-  (209 pages): Includes register map, clock tree and other information about implementing BL602/BL604
+- [BL602/604 Datasheet](mirrored/BL602_BL604_DS_1.6_en.pdf) (34 pages): Includes
+  pinout, memory map, and general peripheral descriptions but no detailed
+  functional specification or register listings.
+- [BL602/604 Reference Manual](mirrored/BL602_BL604_RM_1.2_en.pdf) (209 pages):
+  Includes register map, clock tree and other information about implementing
+  BL602/BL604.
 - [soc602_reg.svd][2]: Contains a seemingly-complete register listing, with
   names but no descriptions, for the BL602.
 - [Hardware Notes](hardware_notes): Additional information

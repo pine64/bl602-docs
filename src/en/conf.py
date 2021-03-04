@@ -19,7 +19,7 @@
 
 project = "BL602 IoT SDK (Pine64 fork)"
 copyright = "2020, Bouffalo Lab, volunteers"
-author = "Bouffalo Lab, volunteers"
+author = "Bouffalo Lab, Volunteers"
 version = "release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64"
 
 # -- General configuration ---------------------------------------------------

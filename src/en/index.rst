@@ -3,29 +3,47 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. toctree::
-   :caption: Developer Environment
-   :numbered:
-   
-   Developer_Environment/Developer_Environment
-   Developer_Environment/BLFlashEnv/BLFlashEnv
-   Developer_Environment/freedom_studio/freedom_studio
-   Developer_Environment/eclipse/eclipse
+Home
+====
+
+The `BL602 <https://www.bouffalolab.com/bl602>`_ is a general purpose microcontroller based on the "SiFive E24 Core" RISC-V processor with provisions for 2.4 GHz Wi-Fi and Bluetooth Low Energy 5.0.
+It is intended to be used in `IoT <https://en.wikipedia.org/wiki/Internet_of_things>`_ and other ultra-low-power applications.
+The microcontroller supports flashing and communication over `UART <https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter>`_, and flashing, communication, and debugging over `JTAG <https://en.wikipedia.org/wiki/JTAG>`_.
 
 .. toctree::
-   :caption: Quickstart Guide
+   :caption: Quick Start Guide
    :numbered:
 
    Quickstart_Guide/get_started
    Quickstart_Guide/Linux/Quickstart_Linux_ubuntu
    Quickstart_Guide/Windows/Quickstart_Windows_msys
-   
+   Quickstart_Guide/Windows/Quickstart_Windows_wsl
+   Quickstart_Guide/connecting_the_hardware
+
+.. toctree::
+   :caption: Developer Environment
+   :numbered:
+
+   Developer_Environment/Setting_Up
+   Developer_Environment/BLFlashEnv/BLFlashEnv
+   Developer_Environment/freedom_studio/freedom_studio
+   Developer_Environment/eclipse/eclipse
+
 .. toctree::
    :caption: Examples
    :numbered:
 
+   Examples/README
    Examples/helloworld/helloworld
    Examples/demo_aws/aws
+   Examples/demo_at/AT
+   Examples/demo_audio_udp/audio_udp
+   Examples/demo_ble/ble
+   Examples/demo_blsync_ble/blsync_ble
+   Examples/demo_cronalarm/cronalarm
+   Examples/demo_dac/DAC
+   Examples/demo_hbnram/hbnram
+   Examples/demo_mesh/mesh
    Examples/demo_peripherals_gpio/GPIO
    Examples/demo_peripherals_uart_echo/uart_echo
    Examples/demo_peripherals_uart_ioctl/uart_ioctl
@@ -36,37 +54,34 @@
    Examples/demo_system_cli/cli
    Examples/demo_system_fdt/fdt
    Examples/demo_wifi/wifi
-   Examples/demo_ble/ble
-   Examples/demo_mesh/mesh
-   Examples/demo_blsync_ble/blsync_ble
+   Examples/demo_zb/zigbee
    Examples/sdk_app_easyflash_boottimes/easyflash_boottimes
+   Examples/sdk_app_pwm/pwm
+   Examples/benchmark_security_aes/benchmark_security_aes_gcm
 
 .. toctree::
    :caption: Components
    :numbered:
 
-   Components/arch
    Components/Command_line/helper
    Components/Command_line/aos_cli
-   Components/Hal_drv/gpio
-   Components/Middleware/bloop/bloop
-   Components/Middleware/blsync/blsync
    Components/Middleware/dts/devicetree
    Components/Middleware/log/blog
-   Components/Middleware/security/security
    Components/Middleware/vfs/vfs
    Components/Middleware/yloop/yloop
-   Components/Network/httpc/httpc
-   Components/Network/https/https
-   Components/Network/tls/tls
-   Components/BLE/provision_WiFi/provision_WiFi
-   Components/BLE/mesh/mesh
+   Components/Network/wifi/wifi
    Components/BLE/ble_stack/ble_stack
-   
+
 .. toctree::
    :caption: API
    :numbered:
-   
+
    API/sys/cronalarms
    API/wifi/wifi_mgmr
-   API/sys/utils_getopt
+
+.. toctree::
+   :caption: Documentation
+   :numbered:
+
+   README/README
+

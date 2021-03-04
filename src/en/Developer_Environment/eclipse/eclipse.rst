@@ -4,15 +4,15 @@ Eclipse
 This document describes the use of Eclipse.
 
 import project
---------
+--------------
 
 - First of all, start ``eclipse``, open ``File > import`` on the toolbar and select the ``Existing Projects into Workspace`` option under the ``General`` menu to import the projects.
 
 .. figure:: imgs/image01.png
-   :alt: 
+   :alt:
 
 .. figure:: imgs/image02.png
-   :alt: 
+   :alt:
 
 Debug
 -----
@@ -21,6 +21,8 @@ Debug
 
 .. figure:: imgs/image03.png
    :alt:
+
+   This image was not present in the original sources and has been reconstructed based on context. It might not accurately reflect the original image nor the intent of the original image.
 
 .. figure:: imgs/image04.png
    :alt:
@@ -38,6 +40,8 @@ Debug
 
 .. figure:: imgs/image06.png
    :alt:
+
+   This image was not present in the original sources and has been reconstructed based on context. It might not accurately reflect the original image nor the intent of the original image.
 
 - You can add and remove breakpoints by double-clicking on the leftmost orange bar of the ``code`` window.
 

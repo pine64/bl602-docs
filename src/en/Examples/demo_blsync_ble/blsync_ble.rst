@@ -1,95 +1,95 @@
 .. _blsync-ble-index:
 
 BLSYNC-BLE
-==================
+==========
 
-总览
-------
+Overview
+--------
 
-本示例主要介绍如何使用ble进行wifi配网。
+This example mainly introduces how to use ble for wifi configuration.
 
-APP使用步骤
+APP use steps
 -------------
 
-- 编译 ``customer_app/sdk_app_ble_sync`` 工程并下载工程固件；
-- 固件上电运行会自动开启ble广播，等待手机APP连接配网，如下所示；
+- Compile the ``customer_app/sdk_app_ble_sync`` project and download the project firmware;
+- When the firmware is powered on, it will automatically start ble broadcasting, and wait for the mobile APP to connect to the network, as shown below;
 
-    .. figure:: imgs/image1.png
-       :alt: 
+   .. figure:: imgs/image1.png
+      :alt:
 
-- 打开手机APP搜索蓝牙设备，搜索到设备名“BL602-BLE-DEV”；
+- Open the mobile APP to search for Bluetooth devices, and the device name "BL602-BLE-DEV" is found;
 
-    .. figure:: imgs/image2.png
-       :alt: 
+   .. figure:: imgs/image2.png
+      :alt:
 
-- 点击连接设备后，点击APP中的扫描，等待数秒后APP会显示开发板扫描到的wifi设备列表；
+- After clicking to connect the device, click Scan in the APP, and after a few seconds, the APP will display the list of wifi devices scanned by the development board;
 
-    .. figure:: imgs/image3.png
-       :alt: 
+   .. figure:: imgs/image3.png
+      :alt:
 
-    .. figure:: imgs/image4.png
-       :alt: 
+   .. figure:: imgs/image4.png
+      :alt:
 
-- 用户可以通过扫描出来的设备列表对进行需要配网的wifi进行连接；
+- Users can connect to the wifi that needs network configuration through the scanned device list;
 
-    .. figure:: imgs/image5.png
-       :alt: 
+   .. figure:: imgs/image5.png
+      :alt:
 
-- 当用户确定配网完成时，不需要再使用配网功能，可以使用“blsync_ble_stop”命令将其关闭。
+- When the user confirms that the network configuration is completed, the network configuration function is no longer needed and can be turned off by using the "blsync_ble_stop" command.
 
-    .. figure:: imgs/image6.png
-       :alt: 
+   .. figure:: imgs/image6.png
+      :alt:
 
-微信小程序使用步骤
----------------------
+Steps to use WeChat Mini Program
+--------------------------------
 
-- 编译 ``customer_app/sdk_app_ble_sync`` 工程并下载工程固件；
-- 固件上电运行会自动开启ble广播，等待手机APP连接配网，如下所示；
+- Compile the ``customer_app/sdk_app_ble_sync`` project and download the project firmware;
+- When the firmware is powered on, it will automatically start ble broadcast, and wait for the mobile APP to connect to the network, as shown below;
 
-    .. figure:: imgs/image1.png
-       :alt: 
+   .. figure:: imgs/image1.png
+      :alt:
 
-- 打开微信小程序搜索蓝牙设备，搜索到设备名“BL602-BLE-DEV”；
+- Open the WeChat applet to search for Bluetooth devices and find the device name "BL602-BLE-DEV";
 
-    .. figure:: imgs/image7.png
-       :alt: 
+   .. figure:: imgs/image7.png
+      :alt:
 
-- 点击“BL602-BLE-DEV”连接设备，连接上设备BLE后会获取到BLE的服务，点击第一个服务，再选择“写通知“；
+- Click "BL602-BLE-DEV" to connect the device. After connecting to the BLE of the device, you will get the BLE service, click the first service, and then select "Write Notification";
 
-    .. figure:: imgs/image8.png
-       :alt: 
+   .. figure:: imgs/image8.png
+      :alt:
 
-- 点击小程序中的”点击配网“，小程序会回显获取到的wifi列表，；
+- Click "click to configure network" in the applet, the applet will echo the obtained wifi list;
 
-    .. figure:: imgs/image9.png
-       :alt: 
+   .. figure:: imgs/image9.png
+      :alt:
 
-- 用户可以通过扫描出来的设备列表对进行需要配网的wifi进行连接，点击需要连接的wifi名称；
+- Users can connect to the wifi that needs network configuration through the scanned device list, and click the name of the wifi that needs to be connected;
 
-    .. figure:: imgs/image10.png
-       :alt: 
+   .. figure:: imgs/image10.png
+      :alt:
 
-- 接着在输入框输入wifi密码，点击”发送密码“，即可连接wifi；
+- Then enter the wifi password in the input box and click "send password" to connect to wifi;
 
-    .. figure:: imgs/image11.png
-       :alt: 
+   .. figure:: imgs/image11.png
+      :alt:
 
-- 点击小程序中的”获取状态“按钮，获取wifi当前的连接状态；
+- Click the "Get Status" button in the applet to get the current connection status of wifi;
 
-    .. figure:: imgs/image12.png
-       :alt: 
+   .. figure:: imgs/image12.png
+      :alt:
 
-- 当前已经连接wifi，则会显示”已经连接“并弹出板子的ip地址等信息；
+- Currently connected to wifi, it will display "Connected" and pop up the board's IP address and other information;
 
-    .. figure:: imgs/image13.png
-       :alt: 
+   .. figure:: imgs/image13.png
+      :alt:
 
-- 点击”断开wifi“按钮，即可断开wifi，再次点击”获取状态“按钮可以获取当前wifi已经断开；
+- Click the "Disconnect wifi" button to disconnect the wifi, and click the "Get Status" button again to get the current wifi disconnected;
 
-    .. figure:: imgs/image14.png
-       :alt: 
+   .. figure:: imgs/image14.png
+      :alt:
 
-- 当用户确定配网完成时，不需要再使用配网功能，可以使用“blsync_ble_stop”命令将其关闭。
+- When the user confirms that the network configuration is completed, the network configuration function is no longer needed and can be turned off by using the "blsync_ble_stop" command.
 
-    .. figure:: imgs/image6.png
-       :alt: 
+   .. figure:: imgs/image6.png
+      :alt:

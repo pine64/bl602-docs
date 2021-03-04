@@ -4,7 +4,7 @@ Httpc client
 ==================
 
 Overview
-------
+--------
 
 This example explains the process of how to access the Http server to obtain data through tcp.
 
@@ -14,27 +14,27 @@ Usage Steps
 - Prepare a usable URL and network.
 
 - Steps to use:
-    
+
   - Enter the command ``stack_wifi`` to turn on wifi in the terminal, then enter the command ``wifi_sta_connect <name> <key>`` to connect to wifi. Confirm that the wifi connection is successful (e.g.: use the command ``wifi_sta_connect bl_test_005 12345678``).
 
     .. figure:: imgs/image1.png
-       :alt: 
+       :alt:
 
     .. figure:: imgs/image2.png
-       :alt: 
+       :alt:
 
   - Use the ``httpc`` command to download.
-    
+
     .. figure:: imgs/image3.png
-       :alt: 
+       :alt:
 
 Applications
----------
+------------
 
 - Main process
 
-::    
-    
+::
+
     settings.use_proxy = 0;
     settings.result_fn = cb_httpc_result;
     settings.headers_done_fn = cb_httpc_headers_done_fn;
