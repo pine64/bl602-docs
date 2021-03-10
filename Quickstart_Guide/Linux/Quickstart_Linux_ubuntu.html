@@ -241,13 +241,13 @@
 <p>This document explains how to set up a Linux environment, build the <code class="docutils literal notranslate"><span class="pre">sdk_app_helloworld</span></code> application, flash it to the BL602 and verify the output through a serial port reader.</p>
 <div class="section" id="installing-prerequisites-and-cloning-repository">
 <h2><span class="section-number">2.1. </span>Installing prerequisites and cloning repository<a class="headerlink" href="#installing-prerequisites-and-cloning-repository" title="Permalink to this headline">¶</a></h2>
-<p>The project requires a C/C++ compiler, <code class="docutils literal notranslate"><span class="pre">make</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span></code> and a serial port reader (<code class="docutils literal notranslate"><span class="pre">screen</span></code> is used).</p>
+<p>The project requires a C/C++ compiler, Python 3 interpreter, Python package manager (<code class="docutils literal notranslate"><span class="pre">pip</span></code>), <code class="docutils literal notranslate"><span class="pre">make</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span></code> and a serial port reader (<code class="docutils literal notranslate"><span class="pre">screen</span></code> is used).</p>
 <p>One liner for Debian:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install build-essential git screen
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install build-essential python3 python3-pip git screen
 </pre></div>
 </div>
 <p>One liner for Arch:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo pacman -S base-devel git screen
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo pacman -S base-devel python python-pip git screen
 </pre></div>
 </div>
 <p>Next, clone the SDK repository:</p>

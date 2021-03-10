@@ -6,19 +6,19 @@ This document explains how to set up a Linux environment, build the ``sdk_app_he
 Installing prerequisites and cloning repository
 -----------------------------------------------
 
-The project requires a C/C++ compiler, ``make``, ``git`` and a serial port reader (``screen`` is used).
+The project requires a C/C++ compiler, Python 3 interpreter, Python package manager (``pip``), ``make``, ``git`` and a serial port reader (``screen`` is used).
 
 One liner for Debian:
 
 .. code-block:: bash
 
-    sudo apt install build-essential git screen
+    sudo apt install build-essential python3 python3-pip git screen
 
 One liner for Arch:
 
 .. code-block:: bash
 
-    sudo pacman -S base-devel git screen
+    sudo pacman -S base-devel python python-pip git screen
 
 Next, clone the SDK repository:
 
