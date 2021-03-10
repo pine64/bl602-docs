@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>6. yloop &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
+  <title>6. Yloop &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
   
 
   
@@ -146,21 +146,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../dts/devicetree.html">3. device tree</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../log/blog.html">4. blog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vfs/vfs.html">5. AOS VFS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">6. yloop</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#something">6.1. Something</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">6.2. Yloop概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">6.3. Yloop上下文</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">6.4. Yloop调度</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">6.5. Yloop实现原理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#api">6.6. 主要api介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">6.7. 示例代码</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id6">6.7.1. 事件注册、通知、回调、取消流程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#poll">6.7.2. poll事件的注册取消</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#action">6.7.3. 延迟执行一个action</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">6.7.4. 安排一次回调</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Yloop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#yloop-overview">6.1. Yloop Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#yloop-context">6.2. Yloop Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#yloop-scheduling">6.3. Yloop Scheduling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#yloop-implementation-principle">6.4. Yloop Implementation Principle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main-api-introduction">6.5. Main API Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-code">6.6. Sample Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#event-registration-notification-callback-and-cancellation-process">6.6.1. Event registration, notification, callback and cancellation process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#poll-event-registration-cancellation">6.6.2. Poll event registration cancellation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delay-execution-of-an-action">6.6.3. Delay execution of an action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schedule-a-callback">6.6.4. Schedule a callback</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id8">6.8. 注意事项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">6.7. Notes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Network/wifi/wifi.html">7. WiFi</a></li>
@@ -222,7 +221,7 @@
     
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">6. </span>yloop</li>
+      <li><span class="section-number">6. </span>Yloop</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -242,51 +241,50 @@
            <div itemprop="articleBody">
             
   <div class="section" id="yloop">
-<h1><span class="section-number">6. </span>yloop<a class="headerlink" href="#yloop" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="something">
-<h2><span class="section-number">6.1. </span>Something<a class="headerlink" href="#something" title="Permalink to this headline">¶</a></h2>
+<h1><span class="section-number">6. </span>Yloop<a class="headerlink" href="#yloop" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p><a class="reference internal" href="#id1">Yloop概要</a></p></li>
-<li><p><a class="reference internal" href="#id2">Yloop上下文</a></p></li>
-<li><p><a class="reference internal" href="#id3">Yloop调度</a></p></li>
-<li><p><a class="reference internal" href="#id4">Yloop实现原理</a></p></li>
-<li><p><a class="reference internal" href="#api">主要api介绍</a></p></li>
-<li><p><a class="reference internal" href="#id5">示例代码</a></p></li>
-<li><p><a class="reference internal" href="#id8">注意事项</a></p></li>
+<li><p><a class="reference internal" href="#yloop-overview">Yloop Overview</a></p></li>
+<li><p><a class="reference internal" href="#yloop-context">Yloop Context</a></p></li>
+<li><p><a class="reference internal" href="#yloop-scheduling">Yloop Scheduling</a></p></li>
+<li><p><a class="reference internal" href="#yloop-implementation-principle">Yloop Implementation Principle</a></p></li>
+<li><p><a class="reference internal" href="#main-api-introduction">Main API Introduction</a></p></li>
+<li><p><a class="reference internal" href="#sample-code">Sample Code</a></p></li>
+<li><p><a class="reference internal" href="#notes">Notes</a></p></li>
 </ul>
+<div class="section" id="yloop-overview">
+<h2><span class="section-number">6.1. </span>Yloop Overview<a class="headerlink" href="#yloop-overview" title="Permalink to this headline">¶</a></h2>
+<p>Yloop is AliOS Things Asynchronous event framework.
+Yloop draws on common events loops of libuv and embedded industry, comprehensively considering the complexity, performance, footprint and implements an event scheduling mechanism suitable for MCU.
+We have ported related plugins. Its main advantage is that all processing is performed in the main task, without the need for additional creation tasks, thereby saving memory usage.
+At the same time, since all processing is performed in the main task, complex mutual exclusion operations are not required.</p>
 </div>
-<div class="section" id="id1">
-<h2><span class="section-number">6.2. </span>Yloop概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Yloop 是AliOS
-Things的异步事件框架。Yloop借鉴了，libuv及嵌入式业界常见的event
-loop，综合考虑使用复杂性，性能，及footprint，实现了一个适合于MCU的事件调度机制。我们移植了相关的插件。其主要优势是所有的处理都是在主任务中执行的，不需要额外的创建任务，从而节省内存使用。同时，由于所有处理都是在主任务进行，不需要复杂的互斥操作。</p>
+<div class="section" id="yloop-context">
+<h2><span class="section-number">6.2. </span>Yloop Context<a class="headerlink" href="#yloop-context" title="Permalink to this headline">¶</a></h2>
+<p>Each Yloop instance (aos_loop_t) is bound to a specific task context.
+The context of the program entry of AliOS Things (application_start) is linked to the system’s master Yloop instance, which is also called main task.
+Other tasks can also create their own Yloop instances.</p>
 </div>
-<div class="section" id="id2">
-<h2><span class="section-number">6.3. </span>Yloop上下文<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>每个Yloop实例（aos_loop_t）与特定的任务上下文绑定，AliOS
-Things的程序入口application_start
-所在的上下文与系统的主Yloop实例绑定，该上下文也称为主任务。主任务以外的任务也可以创建自己的Yloop实例。</p>
-</div>
-<div class="section" id="id3">
-<h2><span class="section-number">6.4. </span>Yloop调度<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>Yloop实现了对IO，timer，callback，event的统一调度管理：</p>
+<div class="section" id="yloop-scheduling">
+<h2><span class="section-number">6.3. </span>Yloop Scheduling<a class="headerlink" href="#yloop-scheduling" title="Permalink to this headline">¶</a></h2>
+<p>Yloop realizes the unified scheduling management of IO, timer, callback, and event:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">IO</span></code>：最常见的是Socket，也可以是AliOS Things的vfs管理的设备</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timer</span></code>：即常见的定时器</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>：特定的执行函数</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">event</span></code>：包括系统事件，用户自定义事件
-当调用aos_loop_run后，当前任务将会等待上述的各类事件发生。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IO</span></code>: The most common is Socket, but devices managed by VFS of AliOS Things are also included.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer</span></code>: A common timer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: Specific execution function</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">event</span></code>: Including system events and user defined events</p></li>
 </ul>
+<p>When aos_loop_run is called, current task will stop and wait for the execution of above events.</p>
 </div>
-<div class="section" id="id4">
-<h2><span class="section-number">6.5. </span>Yloop实现原理<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>Yloop利用协议栈的select接口实现了对IO及timer的调度。AliOS
-Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此接口把VFS的设备文件，和eventfd关联起来，实现了对整个系统的事件的统一调度。</p>
+<div class="section" id="yloop-implementation-principle">
+<h2><span class="section-number">6.4. </span>Yloop Implementation Principle<a class="headerlink" href="#yloop-implementation-principle" title="Permalink to this headline">¶</a></h2>
+<p>Yloop uses the select interface of the protocol stack to implement the scheduling of IO and timer.
+AliOS Things’s own protocol stack exposes a special eventfd interface.
+Yloop uses this interface to associate VFS device files with eventfd to realize the unified scheduling of events for the entire system.</p>
 </div>
-<div class="section" id="api">
-<h2><span class="section-number">6.6. </span>主要api介绍<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="main-api-introduction">
+<h2><span class="section-number">6.5. </span>Main API Introduction<a class="headerlink" href="#main-api-introduction" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>注册事件监听函数</p></li>
+<li><p>Register an event listener function</p></li>
 </ul>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Register system event filter callback.</span>
@@ -312,7 +310,7 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>发布一个 event</p></li>
+<li><p>Publish an event</p></li>
 </ul>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Post local event.</span>
@@ -327,7 +325,7 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>注册和取消一个 poll event</p></li>
+<li><p>Register and cancel a poll event</p></li>
 </ul>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Register a poll event in main loop.</span>
@@ -351,7 +349,7 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>发布和取消一个延迟执行的 action</p></li>
+<li><p>Post and cancel a delayed action</p></li>
 </ul>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**static void adc_cb_read(int fd, void *param)</span>
 <span class="cm">{</span>
@@ -378,7 +376,7 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>安排一次回调</p></li>
+<li><p>Schedule a callback</p></li>
 </ul>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * Schedule a callback in next event loop.</span>
@@ -394,19 +392,20 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
 </pre></div>
 </div>
 </div>
-<div class="section" id="id5">
-<h2><span class="section-number">6.7. </span>示例代码<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>这里会介绍<a class="reference external" href="#事件注册、通知、回调、取消流程">事件注册、通知、回调、取消流程</a>、<a class="reference external" href="#poll事件的注册取消">poll事件的注册取消</a>、<a class="reference external" href="#延迟执行一个action">延迟执行一个actio</a>)以及<a class="reference external" href="#安排一次回调">安排一次回调</a>的使用方法</p>
-<div class="section" id="id6">
-<h3><span class="section-number">6.7.1. </span>事件注册、通知、回调、取消流程<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="sample-code">
+<h2><span class="section-number">6.6. </span>Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline">¶</a></h2>
+<p>Here we will introduce how to use <a class="reference external" href="#eventregistration,notification,callbackandcancellationprocess">Event registration, notification, callback and cancellation process</a>,<a class="reference external" href="#Polleventregistrationcancellation">Poll event registration cancellation</a>,<a class="reference external" href="#Delayexecutionofanaction">Delay execution of an action</a> and <a class="reference external" href="#Scheduleacallback">Schedule a callback</a></p>
+<div class="section" id="event-registration-notification-callback-and-cancellation-process">
+<h3><span class="section-number">6.6.1. </span>Event registration, notification, callback and cancellation process<a class="headerlink" href="#event-registration-notification-callback-and-cancellation-process" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_register_event_filter</span><span class="p">(</span><span class="n">EV_WIFI</span><span class="p">,</span> <span class="n">event_cb_wifi_event</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>用户首先调用<code class="docutils literal notranslate"><span class="pre">aos_register_event_filter</span></code>注册事件监听函数，例如首先显注册一个<code class="docutils literal notranslate"><span class="pre">EV_WIFI</span></code>事件的监听函数<code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event</span></code></p>
+<p>The user first calls the <code class="docutils literal notranslate"><span class="pre">aos_register_event_filter</span></code>to register an event on monitoring function.
+For example, first explicitly register a <code class="docutils literal notranslate"><span class="pre">EV_WIFI</span></code>in the event listener function<code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event</span></code></p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_post_event</span><span class="p">(</span><span class="n">EV_WIFI</span><span class="p">,</span> <span class="n">CODE_WIFI_ON_INIT_DONE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>当有任务调用<code class="docutils literal notranslate"><span class="pre">aos_post_event</span></code>接口，发布<code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code>事件之后</p>
+<p>When the event <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code> occurs, the callback function is called to run.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">event_cb_wifi_event</span><span class="p">(</span><span class="n">input_event_t</span> <span class="o">*</span><span class="n">event</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">private_data</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">switch</span> <span class="p">(</span>
@@ -433,14 +432,14 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event</span></code>会被调用，并进入case<code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code>分支</p>
+<p><code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event</span></code>will be called and the case<code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code> is executed</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_unregister_event_filter</span><span class="p">(</span><span class="n">EV_WIFI</span><span class="p">,</span> <span class="n">event_cb_wifi_event</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>如果用户不需要事件的监听，用户可以主动调用<code class="docutils literal notranslate"><span class="pre">aos_unregister_event_filter</span></code>取消监听</p>
+<p>If the user does not need to monitor the event, the user can actively call <code class="docutils literal notranslate"><span class="pre">aos_unregister_event_filter</span></code>to cancel the monitoring</p>
 </div>
-<div class="section" id="poll">
-<h3><span class="section-number">6.7.2. </span>poll事件的注册取消<a class="headerlink" href="#poll" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="poll-event-registration-cancellation">
+<h3><span class="section-number">6.6.2. </span>Poll event registration cancellation<a class="headerlink" href="#poll-event-registration-cancellation" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*uart*/</span>
 <span class="n">fd_console</span> <span class="o">=</span> <span class="n">aos_open</span><span class="p">(</span><span class="s">&quot;/dev/ttyS0&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">fd_console</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
@@ -451,49 +450,49 @@ Things自带的协议栈又暴露一个特殊的eventfd接口，Yloop利用此�
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这里以 <code class="docutils literal notranslate"><span class="pre">uart0</span></code> 为例，用户首先注册一个<code class="docutils literal notranslate"><span class="pre">aos_poll_read_fd</span></code>poll事件</p>
+<p>Take <code class="docutils literal notranslate"><span class="pre">uart0</span></code> as an example. The user first register a <code class="docutils literal notranslate"><span class="pre">aos_poll_read_fd</span></code>poll event</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_cancel_poll_read_fd</span><span class="p">(</span><span class="n">fd_console</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="mh">0x12345678</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>如果用户不需要事件的poll，用户可以调用<code class="docutils literal notranslate"><span class="pre">aos_cancel_poll_read_fd</span></code> 取消poll</p>
+<p>If the user does not need to poll the event, then user can call <code class="docutils literal notranslate"><span class="pre">aos_cancel_poll_read_fd</span></code> to cancel poll</p>
 </div>
-<div class="section" id="action">
-<h3><span class="section-number">6.7.3. </span>延迟执行一个action<a class="headerlink" href="#action" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="delay-execution-of-an-action">
+<h3><span class="section-number">6.6.3. </span>Delay execution of an action<a class="headerlink" href="#delay-execution-of-an-action" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_post_delayed_action</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">app_delayed_action_print</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>用户可以调用<code class="docutils literal notranslate"><span class="pre">aos_post_delayed_action</span></code>做一个延迟<code class="docutils literal notranslate"><span class="pre">1s</span></code>执行的事件</p>
+<p>The user can call <code class="docutils literal notranslate"><span class="pre">aos_post_delayed_action</span></code>to delay <code class="docutils literal notranslate"><span class="pre">1s</span></code>the execution event</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">app_delayed_action_print</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;test.</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>那过<code class="docutils literal notranslate"><span class="pre">1s</span></code>之后会主动调用<code class="docutils literal notranslate"><span class="pre">app_delayed_action_print</span></code>函数</p>
+<p>After <code class="docutils literal notranslate"><span class="pre">1s</span></code>, it will actively call <code class="docutils literal notranslate"><span class="pre">app_delayed_action_print</span></code>function</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_cancel_delayed_action</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">app_delayed_action_print</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>当用户想直接取消一个延迟动作可以调用<code class="docutils literal notranslate"><span class="pre">aos_cancel_delayed_action</span></code>，其第一个<code class="docutils literal notranslate"><span class="pre">ms</span></code>参数,
-当<code class="docutils literal notranslate"><span class="pre">ms</span> <span class="pre">==</span> <span class="pre">-1</span></code>时，表示无需关心时间是否一致</p>
+<p>To cancel a delayed action directly, you can call <code class="docutils literal notranslate"><span class="pre">aos_cancel_delayed_action</span></code>. The first parameter is <code class="docutils literal notranslate"><span class="pre">ms</span></code>.
+When <code class="docutils literal notranslate"><span class="pre">ms</span> <span class="pre">==</span> <span class="pre">-1</span></code>, it means that there is no need to care whether the time is consistent.</p>
 </div>
-<div class="section" id="id7">
-<h3><span class="section-number">6.7.4. </span>安排一次回调<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="schedule-a-callback">
+<h3><span class="section-number">6.6.4. </span>Schedule a callback<a class="headerlink" href="#schedule-a-callback" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_schedule_call</span><span class="p">(</span><span class="n">app_action_print</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>用户主动调用<code class="docutils literal notranslate"><span class="pre">aos_schedule_call</span></code>函数</p>
+<p>The user actively calls <code class="docutils literal notranslate"><span class="pre">aos_schedule_call</span></code>function</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="nf">app_action_print</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;test</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>那么会在下一次循环中主动调用<code class="docutils literal notranslate"><span class="pre">app_action_print</span></code>函数</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">app_action_print</span></code>function will be actively called in the next loop</p>
 </div>
 </div>
-<div class="section" id="id8">
-<h2><span class="section-number">6.8. </span>注意事项<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
-<p>Yloop的API(include/aos/yloop.h)除了下述API，都必须在Yloop实例所绑定的任务的上下文执行：</p>
+<div class="section" id="notes">
+<h2><span class="section-number">6.7. </span>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>The Yloop API (include/aos/yloop.h) must be executed in the context of the task bound to the Yloop instance except for the following APIs:</p>
 <ul class="simple">
 <li><p>aos_schedule_call</p></li>
 <li><p>aos_loop_schedule_call</p></li>
