@@ -1,5 +1,7 @@
 doctrees
 docs/
 
+.vscode
+
 *.bak
 *.swp
