@@ -18,6 +18,7 @@ The microcontroller supports flashing and communication over `UART <https://en.w
    Quickstart_Guide/Linux/Quickstart_Linux_ubuntu
    Quickstart_Guide/Windows/Quickstart_Windows_msys
    Quickstart_Guide/Windows/Quickstart_Windows_wsl
+   Quickstart_Guide/Mac/Quickstart_macOS
    Quickstart_Guide/connecting_the_hardware
 
 .. toctree::
