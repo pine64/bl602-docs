@@ -74,14 +74,14 @@ Download the latest `blflash <https://github.com/spacemeowx2/blflash/releases>`_
 
 Invoke the ``blflash`` binary with the ``flash <project_name>.bin --port <port>`` arguments.
 
-You may get an error that says that ``blflash`` can't be run because macOS can't verify it's free of malware, or that the identity of the developer can't be confirmed. To fix this, control-click on the downloaded ``blflash-macos-amd64`` executable in the Finder and ``Open`` from the context menu. You should now see the same warning again, but with an ``Open`` button. After clicking ``Open`` once, the warning should be cleared and ``blflash`` commands in Terminal should run from this point on.
+You may get an error that says that ``blflash-macos-amd64`` can't be run because macOS can't verify it's free of malware, or that the identity of the developer can't be confirmed. To fix this, control-click on the downloaded ``blflash-macos-amd64`` executable in the Finder and ``Open`` from the context menu. You should now see the same warning again, but with an ``Open`` button. After clicking ``Open`` once, the warning should be cleared and ``blflash`` commands in Terminal should run from this point on.
 
 On macOS, the port should usually be ``/dev/tty.usbserial-1420``.
 If in doubt, get a list of USB ports with ``ls -la /dev/ | grep usbserial``.
 
 .. code-block:: bash
 
-    ./blflash-linux-amd64 flash sdk_app_helloworld.bin --port /dev/tty.usbserial-1420
+    ./blflash-macos-amd64 flash sdk_app_helloworld.bin --port /dev/tty.usbserial-1420
 
 If flashing is not successful ensure that:
 
