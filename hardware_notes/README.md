@@ -169,4 +169,19 @@ Here are the known areas of the ROM's memory map:
 
 RF IP
 ---
-The BL602's RF stack is mostly based on CEVA RivieraWaves reference platform. The PHY is custom by Bouffalolab, but implements the standard RivieraWaves PHY. Luckily almost all the source code is publicy available in different SDKs. The RivieraWaves code has been published [here](https://github.com/cuihf1990/Alios_SDK/tree/edd416e7d2961db42c2100ac2d6237ee527d1aee/platform/mcu/moc108/mx108/mx378/ip) and the custom Bouffalolab PHY [here](https://github.com/jixinintelligence/bl602-604/tree/37f2d7b36b4c2ba6f073029d351551c33f9610f3/components/bl602/bl602_wifi/plf/refip/src/driver/phy/bl602_phy_rf). Some auxiliary code is also in either one of these repos. Together they cover most source in the demo binary.
+The BL602's RF stack is mostly based on CEVA RivieraWaves reference platform. The PHY is custom by Bouffalolab, but implements the standard RivieraWaves PHY. Luckily almost all the source code is publicy available in different SDKs. The RivieraWaves code has been published [here](https://github.com/cuihf1990/Alios_SDK/tree/edd416e7d2961db42c2100ac2d6237ee527d1aee/platform/mcu/moc108/mx108/mx378/ip) and the custom Bouffalolab PHY [here](https://github.com/jixinintelligence/bl602-604/tree/37f2d7b36b4c2ba6f073029d351551c33f9610f3/components/bl602/bl602_wifi/plf/refip/src/driver/phy/bl602_phy_rf). Some auxiliary code is als
+o in either one of these repos. Together they cover most source in the demo binary.
+
+RF PLL
+===
+The RF front-end of the BL602 uses a fractional-n PLL frequency synthesizer to synthesize a precise carrier and modulate it with the I/Q signal to produce the signal that will be transmitted.
+
+Note that most of the content in this diagram is extrapolated from reverse analysis of RF driver code and typical analog designs, and does not necessarily match the actual design.
+
+![LO Structure](./svg/RFLO.svg)
+
+The output frequency `F` of the PLL is calculated by `frac = lo_sdmin / 2^22`, `crystal = fVCO / frac` and `F = fVCO * 3/4`.
+
+On the other hand, to generate a target frequency of `F`, the `lo_sdmin` has to be `fVCO = 4/3 F`, `frac = fVCO / crystal` and `lo_sdmin = frac * 2^22`.
+
+To improve the locking speed of the phase-locked loop, for each frequency point, the BL602 pre-calibrates a set of VCO inputs. It is conjectured that there is a voltage value and a current value that are calibrated in this process, where the voltage input is determined by the counter shown in the figure. For a given VCO input the resulting open-loop output is counted over a given period to fall around the theoretical value of the corresponding target frequency and the corresponding VCO input is recorded. The current value, on the other hand, is achieved by changing the input `lo_vco_idac_cw` of a digital-to-analog converter and detecting `acal_vco_ud` after correctly configuring the division frequency and voltage value of the SDM divider. The signal is presumed to be the control signal `up/down` from the phase detector output and is inferred to provide a more accurate frequency regulation capability compared to voltage.
