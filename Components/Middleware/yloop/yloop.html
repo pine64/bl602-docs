@@ -1,75 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>6. Yloop &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Components/Middleware/yloop/yloop.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
-    
+    <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="7. WiFi" href="../../Network/wifi/wifi.html" />
     <link rel="prev" title="5. AOS VFS" href="../vfs/vfs.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,19 +40,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/get_started.html">1. Quick Start Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
@@ -97,7 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/Windows/Quickstart_Windows_wsl.html">4. Windows (WSL) Starter Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/connecting_the_hardware.html">5. Connecting the Hardware</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Environment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Environment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/Setting_Up.html">1. Developer Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. Dev Cube introduction</a></li>
@@ -107,7 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/freedom_studio/freedom_studio.html">6. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/README.html">1. Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/helloworld/helloworld.html">2. Hello World</a></li>
@@ -139,7 +91,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/sdk_app_pwm/pwm.html">28. Pwm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../Command_line/helper.html">1. helper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Command_line/aos_cli.html">2. cli</a></li>
@@ -165,83 +117,42 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Network/wifi/wifi.html">7. WiFi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../README/README.html">1. Documentation</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">BL602 IoT SDK (Pine64 fork)</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li><span class="section-number">6. </span>Yloop</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../../_sources/Components/Middleware/yloop/yloop.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="yloop">
-<h1><span class="section-number">6. </span>Yloop<a class="headerlink" href="#yloop" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="yloop">
+<h1><span class="section-number">6. </span>Yloop<a class="headerlink" href="#yloop" title="Permalink to this headline"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="#yloop-overview">Yloop Overview</a></p></li>
 <li><p><a class="reference internal" href="#yloop-context">Yloop Context</a></p></li>
@@ -251,21 +162,21 @@
 <li><p><a class="reference internal" href="#sample-code">Sample Code</a></p></li>
 <li><p><a class="reference internal" href="#notes">Notes</a></p></li>
 </ul>
-<div class="section" id="yloop-overview">
-<h2><span class="section-number">6.1. </span>Yloop Overview<a class="headerlink" href="#yloop-overview" title="Permalink to this headline">¶</a></h2>
+<section id="yloop-overview">
+<h2><span class="section-number">6.1. </span>Yloop Overview<a class="headerlink" href="#yloop-overview" title="Permalink to this headline"></a></h2>
 <p>Yloop is AliOS Things Asynchronous event framework.
 Yloop draws on common events loops of libuv and embedded industry, comprehensively considering the complexity, performance, footprint and implements an event scheduling mechanism suitable for MCU.
 We have ported related plugins. Its main advantage is that all processing is performed in the main task, without the need for additional creation tasks, thereby saving memory usage.
 At the same time, since all processing is performed in the main task, complex mutual exclusion operations are not required.</p>
-</div>
-<div class="section" id="yloop-context">
-<h2><span class="section-number">6.2. </span>Yloop Context<a class="headerlink" href="#yloop-context" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="yloop-context">
+<h2><span class="section-number">6.2. </span>Yloop Context<a class="headerlink" href="#yloop-context" title="Permalink to this headline"></a></h2>
 <p>Each Yloop instance (aos_loop_t) is bound to a specific task context.
 The context of the program entry of AliOS Things (application_start) is linked to the system’s master Yloop instance, which is also called main task.
 Other tasks can also create their own Yloop instances.</p>
-</div>
-<div class="section" id="yloop-scheduling">
-<h2><span class="section-number">6.3. </span>Yloop Scheduling<a class="headerlink" href="#yloop-scheduling" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="yloop-scheduling">
+<h2><span class="section-number">6.3. </span>Yloop Scheduling<a class="headerlink" href="#yloop-scheduling" title="Permalink to this headline"></a></h2>
 <p>Yloop realizes the unified scheduling management of IO, timer, callback, and event:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">IO</span></code>: The most common is Socket, but devices managed by VFS of AliOS Things are also included.</p></li>
@@ -274,15 +185,15 @@ Other tasks can also create their own Yloop instances.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">event</span></code>: Including system events and user defined events</p></li>
 </ul>
 <p>When aos_loop_run is called, current task will stop and wait for the execution of above events.</p>
-</div>
-<div class="section" id="yloop-implementation-principle">
-<h2><span class="section-number">6.4. </span>Yloop Implementation Principle<a class="headerlink" href="#yloop-implementation-principle" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="yloop-implementation-principle">
+<h2><span class="section-number">6.4. </span>Yloop Implementation Principle<a class="headerlink" href="#yloop-implementation-principle" title="Permalink to this headline"></a></h2>
 <p>Yloop uses the select interface of the protocol stack to implement the scheduling of IO and timer.
 AliOS Things’s own protocol stack exposes a special eventfd interface.
 Yloop uses this interface to associate VFS device files with eventfd to realize the unified scheduling of events for the entire system.</p>
-</div>
-<div class="section" id="main-api-introduction">
-<h2><span class="section-number">6.5. </span>Main API Introduction<a class="headerlink" href="#main-api-introduction" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="main-api-introduction">
+<h2><span class="section-number">6.5. </span>Main API Introduction<a class="headerlink" href="#main-api-introduction" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Register an event listener function</p></li>
 </ul>
@@ -294,8 +205,8 @@ Yloop uses this interface to associate VFS device files with eventfd to realize 
 <span class="cm"> * @param[in]  priv  private data past to cb.</span>
 <span class="cm"> *</span>
 <span class="cm"> * @return  the operation status, 0 is OK, others is error.</span>
-<span class="cm"> */</span>
-<span class="kt">int</span> <span class="nf">aos_register_event_filter</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">type</span><span class="p">,</span> <span class="n">aos_event_cb</span> <span class="n">cb</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">priv</span><span class="p">);</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">aos_register_event_filter</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="n">aos_event_cb</span><span class="w"> </span><span class="n">cb</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">priv</span><span class="p">);</span><span class="w"></span>
 
 <span class="cm">/**</span>
 <span class="cm"> * Unregister native event callback.</span>
@@ -305,8 +216,8 @@ Yloop uses this interface to associate VFS device files with eventfd to realize 
 <span class="cm"> * @param[in]  priv  private data past to cb.</span>
 <span class="cm"> *</span>
 <span class="cm"> * @return  the operation status, 0 is OK, others is error.</span>
-<span class="cm"> */</span>
-<span class="kt">int</span> <span class="nf">aos_unregister_event_filter</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">type</span><span class="p">,</span> <span class="n">aos_event_cb</span> <span class="n">cb</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">priv</span><span class="p">);</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">aos_unregister_event_filter</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="n">aos_event_cb</span><span class="w"> </span><span class="n">cb</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">priv</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -320,8 +231,8 @@ Yloop uses this interface to associate VFS device files with eventfd to realize 
 <span class="cm"> * @param[in]  value  event value.</span>
 <span class="cm"> *</span>
 <span class="cm"> * @return  the operation status, 0 is OK,others is error.</span>
-<span class="cm"> */</span>
-<span class="kt">int</span> <span class="nf">aos_post_event</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">type</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">code</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span>  <span class="n">value</span><span class="p">);</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">aos_post_event</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w">  </span><span class="n">value</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -335,8 +246,8 @@ Yloop uses this interface to associate VFS device files with eventfd to realize 
 <span class="cm"> * @param[in]  param   private data past to action.</span>
 <span class="cm"> *</span>
 <span class="cm"> * @return  the operation status, 0 is OK,others is error.</span>
-<span class="cm"> */</span>
-<span class="kt">int</span> <span class="nf">aos_poll_read_fd</span><span class="p">(</span><span class="kt">int</span> <span class="n">fd</span><span class="p">,</span> <span class="n">aos_poll_call_t</span> <span class="n">action</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">param</span><span class="p">);</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">aos_poll_read_fd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">aos_poll_call_t</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">param</span><span class="p">);</span><span class="w"></span>
 
 <span class="cm">/**</span>
 <span class="cm"> * Cancel a poll event to be executed in main loop.</span>
@@ -344,8 +255,8 @@ Yloop uses this interface to associate VFS device files with eventfd to realize 
 <span class="cm"> * @param[in]  fd      poll fd.</span>
 <span class="cm"> * @param[in]  action  action to be executed.</span>
 <span class="cm"> * @param[in]  param   private data past to action.</span>
-<span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">aos_cancel_poll_read_fd</span><span class="p">(</span><span class="kt">int</span> <span class="n">fd</span><span class="p">,</span> <span class="n">aos_poll_call_t</span> <span class="n">action</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">param</span><span class="p">);</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">aos_cancel_poll_read_fd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">aos_poll_call_t</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">param</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -362,8 +273,8 @@ Yloop uses this interface to associate VFS device files with eventfd to realize 
 <span class="cm"> * @param[in]  arg     private data past to action.</span>
 <span class="cm"> *</span>
 <span class="cm"> * @return  the operation status, 0 is OK,others is error.</span>
-<span class="cm"> */</span>
-<span class="kt">int</span> <span class="nf">aos_post_delayed_action</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">,</span> <span class="n">aos_call_t</span> <span class="n">action</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">);</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">aos_post_delayed_action</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ms</span><span class="p">,</span><span class="w"> </span><span class="n">aos_call_t</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">);</span><span class="w"></span>
 
 <span class="cm">/**</span>
 <span class="cm"> * Cancel a delayed action to be executed in main loop.</span>
@@ -371,8 +282,8 @@ Yloop uses this interface to associate VFS device files with eventfd to realize 
 <span class="cm"> * @param[in]  ms      milliseconds to wait, -1 means don&#39;t care.</span>
 <span class="cm"> * @param[in]  action  action to be executed.</span>
 <span class="cm"> * @param[in]  arg     private data past to action.</span>
-<span class="cm"> */</span>
-<span class="kt">void</span> <span class="nf">aos_cancel_delayed_action</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">,</span> <span class="n">aos_call_t</span> <span class="n">action</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">);</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">aos_cancel_delayed_action</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ms</span><span class="p">,</span><span class="w"> </span><span class="n">aos_call_t</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -387,111 +298,111 @@ Yloop uses this interface to associate VFS device files with eventfd to realize 
 <span class="cm"> * @param[in]  arg     private data past to action.</span>
 <span class="cm"> *</span>
 <span class="cm"> * @return  the operation status, &lt;0 is error,others is OK.</span>
-<span class="cm"> */</span>
-<span class="kt">int</span> <span class="nf">aos_schedule_call</span><span class="p">(</span><span class="n">aos_call_t</span> <span class="n">action</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">);</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">aos_schedule_call</span><span class="p">(</span><span class="n">aos_call_t</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sample-code">
-<h2><span class="section-number">6.6. </span>Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sample-code">
+<h2><span class="section-number">6.6. </span>Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline"></a></h2>
 <p>Here we will introduce how to use <a class="reference external" href="#eventregistration,notification,callbackandcancellationprocess">Event registration, notification, callback and cancellation process</a>,<a class="reference external" href="#Polleventregistrationcancellation">Poll event registration cancellation</a>,<a class="reference external" href="#Delayexecutionofanaction">Delay execution of an action</a> and <a class="reference external" href="#Scheduleacallback">Schedule a callback</a></p>
-<div class="section" id="event-registration-notification-callback-and-cancellation-process">
-<h3><span class="section-number">6.6.1. </span>Event registration, notification, callback and cancellation process<a class="headerlink" href="#event-registration-notification-callback-and-cancellation-process" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_register_event_filter</span><span class="p">(</span><span class="n">EV_WIFI</span><span class="p">,</span> <span class="n">event_cb_wifi_event</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+<section id="event-registration-notification-callback-and-cancellation-process">
+<h3><span class="section-number">6.6.1. </span>Event registration, notification, callback and cancellation process<a class="headerlink" href="#event-registration-notification-callback-and-cancellation-process" title="Permalink to this headline"></a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_register_event_filter</span><span class="p">(</span><span class="n">EV_WIFI</span><span class="p">,</span><span class="w"> </span><span class="n">event_cb_wifi_event</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The user first calls the <code class="docutils literal notranslate"><span class="pre">aos_register_event_filter</span></code>to register an event on monitoring function.
 For example, first explicitly register a <code class="docutils literal notranslate"><span class="pre">EV_WIFI</span></code>in the event listener function<code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event</span></code></p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_post_event</span><span class="p">(</span><span class="n">EV_WIFI</span><span class="p">,</span> <span class="n">CODE_WIFI_ON_INIT_DONE</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_post_event</span><span class="p">(</span><span class="n">EV_WIFI</span><span class="p">,</span><span class="w"> </span><span class="n">CODE_WIFI_ON_INIT_DONE</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>When the event <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code> occurs, the callback function is called to run.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">event_cb_wifi_event</span><span class="p">(</span><span class="n">input_event_t</span> <span class="o">*</span><span class="n">event</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">private_data</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">switch</span> <span class="p">(</span>
-        <span class="k">case</span> <span class="nl">CODE_WIFI_ON_INIT_DONE</span><span class="p">:</span>
-        <span class="p">{</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;[APP] [EVT] CODE_WIFI_ON_INIT_DONE %lld</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">aos_now_ms</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="k">break</span><span class="p">;</span>
-        <span class="k">case</span> <span class="nl">CODE_WIFI_ON_PRE_GOT_IP</span><span class="p">:</span>
-        <span class="p">{</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;[APP] [EVT] connected %lld</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">aos_now_ms</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="k">break</span><span class="p">;</span>
-        <span class="k">case</span> <span class="nl">CODE_WIFI_ON_GOT_IP</span><span class="p">:</span>
-        <span class="p">{</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;[APP] [EVT] GOT IP %lld</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">aos_now_ms</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="k">break</span><span class="p">;</span>
-        <span class="k">default</span><span class="o">:</span>
-        <span class="p">{</span>
-            <span class="cm">/*nothing*/</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">event_cb_wifi_event</span><span class="p">(</span><span class="n">input_event_t</span><span class="w"> </span><span class="o">*</span><span class="n">event</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">private_data</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">CODE_WIFI_ON_INIT_DONE</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[APP] [EVT] CODE_WIFI_ON_INIT_DONE %lld</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">aos_now_ms</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">CODE_WIFI_ON_PRE_GOT_IP</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[APP] [EVT] connected %lld</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">aos_now_ms</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">CODE_WIFI_ON_GOT_IP</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[APP] [EVT] GOT IP %lld</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">aos_now_ms</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="cm">/*nothing*/</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event</span></code>will be called and the case<code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code> is executed</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_unregister_event_filter</span><span class="p">(</span><span class="n">EV_WIFI</span><span class="p">,</span> <span class="n">event_cb_wifi_event</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_unregister_event_filter</span><span class="p">(</span><span class="n">EV_WIFI</span><span class="p">,</span><span class="w"> </span><span class="n">event_cb_wifi_event</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>If the user does not need to monitor the event, the user can actively call <code class="docutils literal notranslate"><span class="pre">aos_unregister_event_filter</span></code>to cancel the monitoring</p>
-</div>
-<div class="section" id="poll-event-registration-cancellation">
-<h3><span class="section-number">6.6.2. </span>Poll event registration cancellation<a class="headerlink" href="#poll-event-registration-cancellation" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*uart*/</span>
-<span class="n">fd_console</span> <span class="o">=</span> <span class="n">aos_open</span><span class="p">(</span><span class="s">&quot;/dev/ttyS0&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">fd_console</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Init CLI with event Driven</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="n">aos_cli_init</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">aos_poll_read_fd</span><span class="p">(</span><span class="n">fd_console</span><span class="p">,</span> <span class="n">aos_cli_event_cb_read_get</span><span class="p">(),</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="mh">0x12345678</span><span class="p">);</span>
-    <span class="n">_cli_init</span><span class="p">();</span>
-<span class="p">}</span>
+</section>
+<section id="poll-event-registration-cancellation">
+<h3><span class="section-number">6.6.2. </span>Poll event registration cancellation<a class="headerlink" href="#poll-event-registration-cancellation" title="Permalink to this headline"></a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*uart*/</span><span class="w"></span>
+<span class="n">fd_console</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aos_open</span><span class="p">(</span><span class="s">&quot;/dev/ttyS0&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fd_console</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Init CLI with event Driven</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">aos_cli_init</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">aos_poll_read_fd</span><span class="p">(</span><span class="n">fd_console</span><span class="p">,</span><span class="w"> </span><span class="n">aos_cli_event_cb_read_get</span><span class="p">(),</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="mh">0x12345678</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">_cli_init</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Take <code class="docutils literal notranslate"><span class="pre">uart0</span></code> as an example. The user first register a <code class="docutils literal notranslate"><span class="pre">aos_poll_read_fd</span></code>poll event</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_cancel_poll_read_fd</span><span class="p">(</span><span class="n">fd_console</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="mh">0x12345678</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_cancel_poll_read_fd</span><span class="p">(</span><span class="n">fd_console</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="mh">0x12345678</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>If the user does not need to poll the event, then user can call <code class="docutils literal notranslate"><span class="pre">aos_cancel_poll_read_fd</span></code> to cancel poll</p>
-</div>
-<div class="section" id="delay-execution-of-an-action">
-<h3><span class="section-number">6.6.3. </span>Delay execution of an action<a class="headerlink" href="#delay-execution-of-an-action" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_post_delayed_action</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">app_delayed_action_print</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</section>
+<section id="delay-execution-of-an-action">
+<h3><span class="section-number">6.6.3. </span>Delay execution of an action<a class="headerlink" href="#delay-execution-of-an-action" title="Permalink to this headline"></a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_post_delayed_action</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">app_delayed_action_print</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The user can call <code class="docutils literal notranslate"><span class="pre">aos_post_delayed_action</span></code>to delay <code class="docutils literal notranslate"><span class="pre">1s</span></code>the execution event</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="n">app_delayed_action_print</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;test.</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">app_delayed_action_print</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;test.</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>After <code class="docutils literal notranslate"><span class="pre">1s</span></code>, it will actively call <code class="docutils literal notranslate"><span class="pre">app_delayed_action_print</span></code>function</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_cancel_delayed_action</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">app_delayed_action_print</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_cancel_delayed_action</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">app_delayed_action_print</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>To cancel a delayed action directly, you can call <code class="docutils literal notranslate"><span class="pre">aos_cancel_delayed_action</span></code>. The first parameter is <code class="docutils literal notranslate"><span class="pre">ms</span></code>.
 When <code class="docutils literal notranslate"><span class="pre">ms</span> <span class="pre">==</span> <span class="pre">-1</span></code>, it means that there is no need to care whether the time is consistent.</p>
-</div>
-<div class="section" id="schedule-a-callback">
-<h3><span class="section-number">6.6.4. </span>Schedule a callback<a class="headerlink" href="#schedule-a-callback" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_schedule_call</span><span class="p">(</span><span class="n">app_action_print</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</section>
+<section id="schedule-a-callback">
+<h3><span class="section-number">6.6.4. </span>Schedule a callback<a class="headerlink" href="#schedule-a-callback" title="Permalink to this headline"></a></h3>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">aos_schedule_call</span><span class="p">(</span><span class="n">app_action_print</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The user actively calls <code class="docutils literal notranslate"><span class="pre">aos_schedule_call</span></code>function</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="nf">app_action_print</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;test</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">app_action_print</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;test</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">app_action_print</span></code>function will be actively called in the next loop</p>
-</div>
-</div>
-<div class="section" id="notes">
-<h2><span class="section-number">6.7. </span>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="notes">
+<h2><span class="section-number">6.7. </span>Notes<a class="headerlink" href="#notes" title="Permalink to this headline"></a></h2>
 <p>The Yloop API (include/aos/yloop.h) must be executed in the context of the task bound to the Yloop instance except for the following APIs:</p>
 <ul class="simple">
 <li><p>aos_schedule_call</p></li>
@@ -500,55 +411,38 @@ When <code class="docutils literal notranslate"><span class="pre">ms</span> <spa
 <li><p>aos_cancel_work</p></li>
 <li><p>aos_post_event</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../../Network/wifi/wifi.html" class="btn btn-neutral float-right" title="7. WiFi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../vfs/vfs.html" class="btn btn-neutral float-left" title="5. AOS VFS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../Network/wifi/wifi.html" class="btn btn-neutral float-right" title="7. WiFi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Bouffalo Lab, volunteers.
-
-    </p>
+    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

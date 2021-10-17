@@ -1,75 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>5. Connecting the Hardware &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Quickstart_Guide/connecting_the_hardware.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Developer Environment" href="../Developer_Environment/Setting_Up.html" />
     <link rel="prev" title="4. Windows (WSL) Starter Guide" href="Windows/Quickstart_Windows_wsl.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,19 +40,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="get_started.html">1. Quick Start Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
@@ -106,7 +58,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Environment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Environment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Developer_Environment/Setting_Up.html">1. Developer Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. Dev Cube introduction</a></li>
@@ -116,7 +68,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Developer_Environment/freedom_studio/freedom_studio.html">6. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Developer_Environment/eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Examples/README.html">1. Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Examples/helloworld/helloworld.html">2. Hello World</a></li>
@@ -148,7 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Examples/sdk_app_pwm/pwm.html">28. Pwm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Examples/benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Components/Command_line/helper.html">1. helper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Components/Command_line/aos_cli.html">2. cli</a></li>
@@ -159,188 +111,138 @@
 <li class="toctree-l1"><a class="reference internal" href="../Components/Network/wifi/wifi.html">7. WiFi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Components/BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../README/README.html">1. Documentation</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">BL602 IoT SDK (Pine64 fork)</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li><span class="section-number">5. </span>Connecting the Hardware</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/Quickstart_Guide/connecting_the_hardware.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="connecting-the-hardware">
-<span id="id1"></span><h1><span class="section-number">5. </span>Connecting the Hardware<a class="headerlink" href="#connecting-the-hardware" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="connecting-the-hardware">
+<span id="id1"></span><h1><span class="section-number">5. </span>Connecting the Hardware<a class="headerlink" href="#connecting-the-hardware" title="Permalink to this headline"></a></h1>
 <p>This document explains how to connect the various BL602 boards.</p>
-<div class="section" id="pine64-bl602-evb-ver-1-1">
-<h2><span class="section-number">5.1. </span>Pine64 BL602 EVB ver 1.1<a class="headerlink" href="#pine64-bl602-evb-ver-1-1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="serial">
-<h3><span class="section-number">5.1.1. </span>Serial<a class="headerlink" href="#serial" title="Permalink to this headline">¶</a></h3>
+<section id="pine64-bl602-evb-ver-1-1">
+<h2><span class="section-number">5.1. </span>Pine64 BL602 EVB ver 1.1<a class="headerlink" href="#pine64-bl602-evb-ver-1-1" title="Permalink to this headline"></a></h2>
+<section id="serial">
+<h3><span class="section-number">5.1.1. </span>Serial<a class="headerlink" href="#serial" title="Permalink to this headline"></a></h3>
 <p>The USB-C connector provides power and a serial adapter.
 Connect the board to the computer using the USB-C port.
 <code class="docutils literal notranslate"><span class="pre">LED2</span></code> should light up red when connected.</p>
 <p>When loading programs the jumper on <code class="docutils literal notranslate"><span class="pre">IO8</span></code> should be set to cover <code class="docutils literal notranslate"><span class="pre">IO8</span></code> and <code class="docutils literal notranslate"><span class="pre">H</span></code>.
 When running programs the jumper on <code class="docutils literal notranslate"><span class="pre">IO8</span></code> should be set to cover <code class="docutils literal notranslate"><span class="pre">IO8</span></code> and <code class="docutils literal notranslate"><span class="pre">L</span></code>.
 The <code class="docutils literal notranslate"><span class="pre">RESET</span></code> button can be used after changing the jumper setting to reset the device without repowering it.</p>
-<div class="figure align-default" id="id2">
+<figure class="align-default" id="id2">
 <img alt="" src="../_images/Pine64-BL602-EVB-ver-11.png" />
-<p class="caption"><span class="caption-text">Pine64 BL602 EVB ver 1.1 board. <code class="docutils literal notranslate"><span class="pre">IO8</span></code> jumper, <code class="docutils literal notranslate"><span class="pre">LED2</span></code>, the <code class="docutils literal notranslate"><span class="pre">RESET</span></code> button and the USB-C connection have been highlighted.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="jtag">
-<h3><span class="section-number">5.1.2. </span>JTAG<a class="headerlink" href="#jtag" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">Pine64 BL602 EVB ver 1.1 board. <code class="docutils literal notranslate"><span class="pre">IO8</span></code> jumper, <code class="docutils literal notranslate"><span class="pre">LED2</span></code>, the <code class="docutils literal notranslate"><span class="pre">RESET</span></code> button and the USB-C connection have been highlighted.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="jtag">
+<h3><span class="section-number">5.1.2. </span>JTAG<a class="headerlink" href="#jtag" title="Permalink to this headline"></a></h3>
 <p>See the article by <a class="reference external" href="https://lupyuen.github.io/articles/openocd">Lee Lup Yuen</a>.</p>
-</div>
-</div>
-<div class="section" id="pine64-pinenut-01s">
-<h2><span class="section-number">5.2. </span>Pine64 Pinenut-01S<a class="headerlink" href="#pine64-pinenut-01s" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="pine64-pinenut-01s">
+<h2><span class="section-number">5.2. </span>Pine64 Pinenut-01S<a class="headerlink" href="#pine64-pinenut-01s" title="Permalink to this headline"></a></h2>
 <p>The <a class="reference external" href="https://pine64.com/product/pinenut-01s-usb-programmer/">Pinenut-01S USB Programmer</a> provides a serial connection through a USB-A connector.
 It is not possible to connect the Pinenut-01S serial connection through USB easily without the programmer.</p>
-<div class="figure align-default" id="id3">
+<figure class="align-default" id="id3">
 <img alt="" src="../_images/Pine64-Nut-01S-Programmer-Top.png" />
-<p class="caption"><span class="caption-text">Pine64 Pinenut-01S Programmer. <code class="docutils literal notranslate"><span class="pre">BOOT</span></code> jumper,  the <code class="docutils literal notranslate"><span class="pre">RESET</span></code> button, the NUT-01S mounting direction, the Pinenut-01S female mounting headers and the USB-A connection have been highlighted.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Pine64 Pinenut-01S Programmer. <code class="docutils literal notranslate"><span class="pre">BOOT</span></code> jumper,  the <code class="docutils literal notranslate"><span class="pre">RESET</span></code> button, the NUT-01S mounting direction, the Pinenut-01S female mounting headers and the USB-A connection have been highlighted.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>The Pinenut-01S must be mounted facing the correct way.
 The arrow on the programmer shows the direction the board should be mounted.
 An arrow has been added to the Pinenut-01S image and both arrows should point the same way when mounting.</p>
-<div class="figure align-default" id="id4">
+<figure class="align-default" id="id4">
 <img alt="" src="../_images/Pine64-Nut-01S-Top.png" />
-<p class="caption"><span class="caption-text">Pine64 Pinenut-01S. Mounting direction and top of male mounting headers have been highlighted.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Pine64 Pinenut-01S. Mounting direction and top of male mounting headers have been highlighted.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>When loading programs <code class="docutils literal notranslate"><span class="pre">BOOT</span></code> should be set to <code class="docutils literal notranslate"><span class="pre">H</span></code>.
 When running programs <code class="docutils literal notranslate"><span class="pre">BOOT</span></code> should be set to <code class="docutils literal notranslate"><span class="pre">L</span></code>.
 The <code class="docutils literal notranslate"><span class="pre">RESET</span></code> button on the programmer can be used after changing the jumper setting to reset the device without repowering it.</p>
-<div class="figure align-default" id="id5">
+<figure class="align-default" id="id5">
 <img alt="" src="../_images/Pine64-Nut-01S-Programmer-Mounted-Side.png" />
-<p class="caption"><span class="caption-text">Pine64 Pinenut-01S correctly mounted on the programmer.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="boufallo-lab-bl602-dev-module">
-<h2><span class="section-number">5.3. </span>Boufallo Lab BL602 Dev Module<a class="headerlink" href="#boufallo-lab-bl602-dev-module" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-text">Pine64 Pinenut-01S correctly mounted on the programmer.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="boufallo-lab-bl602-dev-module">
+<h2><span class="section-number">5.3. </span>Boufallo Lab BL602 Dev Module<a class="headerlink" href="#boufallo-lab-bl602-dev-module" title="Permalink to this headline"></a></h2>
 <p><strong>Notice:</strong> This section was included in the original documentation and in all likelyhood the board is not available anywhere.
 The text and images here are preserved for completeness sake.</p>
 <p>This picture shows the front of the module. Connect the pins in position 1, 2 and 3 with jumper caps.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../_images/Boufallo-Lab-Dev-Board-Front.png" />
-</div>
+</figure>
 <p>This picture shows the back of the module. Connect the header pin IO8 to LOW.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../_images/Boufallo-Lab-Dev-Board-Rear.png" />
-</div>
-</div>
-</div>
+</figure>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../Developer_Environment/Setting_Up.html" class="btn btn-neutral float-right" title="1. Developer Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Windows/Quickstart_Windows_wsl.html" class="btn btn-neutral float-left" title="4. Windows (WSL) Starter Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Developer_Environment/Setting_Up.html" class="btn btn-neutral float-right" title="1. Developer Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Bouffalo Lab, volunteers.
-
-    </p>
+    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,75 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>2. Linux Starter Guide &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3. Windows Starter Guide" href="../Windows/Quickstart_Windows_msys.html" />
     <link rel="prev" title="1. Quick Start Guide" href="../get_started.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,19 +40,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">1. Quick Start Guide</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Linux Starter Guide</a><ul>
@@ -108,7 +60,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Windows/Quickstart_Windows_wsl.html">4. Windows (WSL) Starter Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../connecting_the_hardware.html">5. Connecting the Hardware</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Environment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Environment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/Setting_Up.html">1. Developer Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. Dev Cube introduction</a></li>
@@ -118,7 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/freedom_studio/freedom_studio.html">6. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/README.html">1. Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/helloworld/helloworld.html">2. Hello World</a></li>
@@ -150,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/sdk_app_pwm/pwm.html">28. Pwm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Command_line/helper.html">1. helper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Command_line/aos_cli.html">2. cli</a></li>
@@ -161,86 +113,45 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/wifi/wifi.html">7. WiFi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">BL602 IoT SDK (Pine64 fork)</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li><span class="section-number">2. </span>Linux Starter Guide</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="linux-starter-guide">
-<h1><span class="section-number">2. </span>Linux Starter Guide<a class="headerlink" href="#linux-starter-guide" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="linux-starter-guide">
+<h1><span class="section-number">2. </span>Linux Starter Guide<a class="headerlink" href="#linux-starter-guide" title="Permalink to this headline"></a></h1>
 <p>This document explains how to set up a Linux environment, build the <code class="docutils literal notranslate"><span class="pre">sdk_app_helloworld</span></code> application, flash it to the BL602 and verify the output through a serial port reader.</p>
-<div class="section" id="installing-prerequisites-and-cloning-repository">
-<h2><span class="section-number">2.1. </span>Installing prerequisites and cloning repository<a class="headerlink" href="#installing-prerequisites-and-cloning-repository" title="Permalink to this headline">¶</a></h2>
+<section id="installing-prerequisites-and-cloning-repository">
+<h2><span class="section-number">2.1. </span>Installing prerequisites and cloning repository<a class="headerlink" href="#installing-prerequisites-and-cloning-repository" title="Permalink to this headline"></a></h2>
 <p>The project requires a C/C++ compiler, Python 3 interpreter, Python package manager (<code class="docutils literal notranslate"><span class="pre">pip</span></code>), <code class="docutils literal notranslate"><span class="pre">make</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span></code> and a serial port reader (<code class="docutils literal notranslate"><span class="pre">screen</span></code> is used).</p>
 <p>One liner for Debian:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install build-essential python3 python3-pip git screen
@@ -254,9 +165,9 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone --recursive https://github.com/pine64/bl_iot_sdk
 </pre></div>
 </div>
-</div>
-<div class="section" id="compiling">
-<h2><span class="section-number">2.2. </span>Compiling<a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="compiling">
+<h2><span class="section-number">2.2. </span>Compiling<a class="headerlink" href="#compiling" title="Permalink to this headline"></a></h2>
 <p>First, set <code class="docutils literal notranslate"><span class="pre">BL60X_SDK_PATH</span></code> to the location of the <code class="docutils literal notranslate"><span class="pre">pine64/bl_iot_sdk</span></code> repository.
 Next, set <code class="docutils literal notranslate"><span class="pre">CONFIG_CHIP_NAME</span></code> to the make of the chip in this case <code class="docutils literal notranslate"><span class="pre">BL602</span></code>.
 If the repository is already cloned, <code class="docutils literal notranslate"><span class="pre">pwd</span></code> can be used to correctly set the environment variable:</p>
@@ -278,14 +189,14 @@ Change into the output of the example you want to flash and ensure that the <cod
 ls -la *.bin
 </pre></div>
 </div>
-</div>
-<div class="section" id="connecting-the-hardware">
-<span id="connecting-hardware"></span><h2><span class="section-number">2.3. </span>Connecting the Hardware<a class="headerlink" href="#connecting-the-hardware" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="connecting-the-hardware">
+<span id="connecting-hardware"></span><h2><span class="section-number">2.3. </span>Connecting the Hardware<a class="headerlink" href="#connecting-the-hardware" title="Permalink to this headline"></a></h2>
 <p>See the relevant section in <a class="reference internal" href="../connecting_the_hardware.html#connecting-the-hardware"><span class="std std-ref">Connecting the Hardware</span></a>.
 Ensure that the board is set to be in loading mode.</p>
-</div>
-<div class="section" id="flashing">
-<span id="id1"></span><h2><span class="section-number">2.4. </span>Flashing<a class="headerlink" href="#flashing" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="flashing">
+<span id="id1"></span><h2><span class="section-number">2.4. </span>Flashing<a class="headerlink" href="#flashing" title="Permalink to this headline"></a></h2>
 <p>Download the latest <a class="reference external" href="https://github.com/spacemeowx2/blflash/releases">blflash</a> version and <code class="docutils literal notranslate"><span class="pre">chmod</span></code> it to be executable:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x blflash*
 </pre></div>
@@ -306,13 +217,13 @@ If in doubt, get a list of USB ports with <code class="docutils literal notransl
 <li><p>The correct port is used.</p></li>
 <li><p>If attempting to flash something that is not the <code class="docutils literal notranslate"><span class="pre">sdk_app_helloworld</span></code> example, try flashing that first to ensure that the toolchain is working.</p></li>
 </ol>
-<div class="section" id="alternative-flashing-tools-and-information">
-<h3><span class="section-number">2.4.1. </span>Alternative Flashing Tools and Information<a class="headerlink" href="#alternative-flashing-tools-and-information" title="Permalink to this headline">¶</a></h3>
+<section id="alternative-flashing-tools-and-information">
+<h3><span class="section-number">2.4.1. </span>Alternative Flashing Tools and Information<a class="headerlink" href="#alternative-flashing-tools-and-information" title="Permalink to this headline"></a></h3>
 <p><a class="reference external" href="https://github.com/mkroman/awesome-bouffalo#rom-tools">mkroman</a> keeps a feature matrix of alternative flashing tools.</p>
 <p><a class="reference external" href="https://lupyuen.github.io/articles/pinecone#other-flashing-tools">lupyuen</a> has an overview of alternative tools as well as an overview of the different components of the ROM.</p>
-</div>
-<div class="section" id="bouffalolabdevcube">
-<h3><span class="section-number">2.4.2. </span>BouffaloLabDevCube<a class="headerlink" href="#bouffalolabdevcube" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="bouffalolabdevcube">
+<h3><span class="section-number">2.4.2. </span>BouffaloLabDevCube<a class="headerlink" href="#bouffalolabdevcube" title="Permalink to this headline"></a></h3>
 <p>Boufallo Lab has their own proprietary flashing program.
 It can be found by at <a class="reference external" href="https://dev.bouffalolab.com/download">their official site</a>.
 If a login page is reached, click the button labeled “Dev Zone”.
@@ -330,26 +241,30 @@ Important settings are:</p>
 <li><p>Boot2 Bin: <strong>./bl602/builtin_imgs/blsp_boot2.bin</strong></p></li>
 <li><p>Firmware Bin: <strong>sdk_app_helloworld.bin</strong></p>
 <blockquote>
-<div><div class="figure align-default" id="id2">
+<div><figure class="align-default" id="id2">
 <img alt="" src="../../_images/BLDevCube-settings.png" />
-<p class="caption"><span class="caption-text">Settings for flashing the image <code class="docutils literal notranslate"><span class="pre">bl602_demo_event.bin</span></code>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Settings for flashing the image <code class="docutils literal notranslate"><span class="pre">bl602_demo_event.bin</span></code>.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </div></blockquote>
 </li>
 </ul>
 <p>Click <code class="docutils literal notranslate"><span class="pre">Download</span></code> (may be called <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">&amp;</span> <span class="pre">Download</span></code> in newer versions) to flash the image.
 You should see the following if flashing is successful:</p>
 <blockquote>
-<div><div class="figure align-default" id="id3">
+<div><figure class="align-default" id="id3">
 <img alt="" src="../../_images/BLDevCube-successful-flash.png" />
-<p class="caption"><span class="caption-text">Program after successfully flashing an image.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Program after successfully flashing an image.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </div></blockquote>
 <p>More information can be found at <a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html#devcube-index"><span class="std std-ref">Dev Cube introduction</span></a>.</p>
-</div>
-</div>
-<div class="section" id="testing-the-output">
-<h2><span class="section-number">2.5. </span>Testing the output<a class="headerlink" href="#testing-the-output" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="testing-the-output">
+<h2><span class="section-number">2.5. </span>Testing the output<a class="headerlink" href="#testing-the-output" title="Permalink to this headline"></a></h2>
 <p>Change the jumper on <code class="docutils literal notranslate"><span class="pre">IO8</span></code> to cover <code class="docutils literal notranslate"><span class="pre">L</span></code> and press the reset button.</p>
 <p>Open <code class="docutils literal notranslate"><span class="pre">screen</span></code> with a baud rate of <code class="docutils literal notranslate"><span class="pre">2000000</span></code> (two million) and the same port used in <a class="reference internal" href="#flashing"><span class="std std-ref">Flashing</span></a>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen /dev/ttyUSB0 <span class="m">2000000</span>
@@ -371,55 +286,38 @@ After pressing <code class="docutils literal notranslate"><span class="pre">RESE
 <li><p><a class="reference external" href="https://linux.die.net/man/1/minicom">minicom</a> : <code class="docutils literal notranslate"><span class="pre">minicom</span> <span class="pre">-D</span> <span class="pre">/dev/ttyUSB0</span> <span class="pre">-b</span> <span class="pre">2000000</span></code></p></li>
 </ol>
 <p>Further information on the <code class="docutils literal notranslate"><span class="pre">sdk_app_helloworld</span></code> example can be found at <a class="reference internal" href="../../Examples/helloworld/helloworld.html#helloworld-index"><span class="std std-ref">Hello World</span></a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../Windows/Quickstart_Windows_msys.html" class="btn btn-neutral float-right" title="3. Windows Starter Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../get_started.html" class="btn btn-neutral float-left" title="1. Quick Start Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Windows/Quickstart_Windows_msys.html" class="btn btn-neutral float-right" title="3. Windows Starter Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Bouffalo Lab, volunteers.
-
-    </p>
+    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

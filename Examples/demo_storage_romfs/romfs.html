@@ -1,75 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>22. Romfs &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Examples/demo_storage_romfs/romfs.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="23. cli" href="../demo_system_cli/cli.html" />
     <link rel="prev" title="21. PSM" href="../demo_storage_psm/psm.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,19 +40,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/get_started.html">1. Quick Start Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
@@ -97,7 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/Windows/Quickstart_Windows_wsl.html">4. Windows (WSL) Starter Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/connecting_the_hardware.html">5. Connecting the Hardware</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Environment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Environment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/Setting_Up.html">1. Developer Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. Dev Cube introduction</a></li>
@@ -107,7 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/freedom_studio/freedom_studio.html">6. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">1. Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../helloworld/helloworld.html">2. Hello World</a></li>
@@ -144,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../sdk_app_pwm/pwm.html">28. Pwm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Command_line/helper.html">1. helper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Command_line/aos_cli.html">2. cli</a></li>
@@ -155,95 +107,54 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/wifi/wifi.html">7. WiFi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">BL602 IoT SDK (Pine64 fork)</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li><span class="section-number">22. </span>Romfs</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/Examples/demo_storage_romfs/romfs.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="romfs">
-<span id="romfs-index"></span><h1><span class="section-number">22. </span>Romfs<a class="headerlink" href="#romfs" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2><span class="section-number">22.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="romfs">
+<span id="romfs-index"></span><h1><span class="section-number">22. </span>Romfs<a class="headerlink" href="#romfs" title="Permalink to this headline"></a></h1>
+<section id="overview">
+<h2><span class="section-number">22.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
 <p>This example explains how to use Romfs partition.</p>
-</div>
-<div class="section" id="preparation-and-usage">
-<h2><span class="section-number">22.2. </span>Preparation and usage<a class="headerlink" href="#preparation-and-usage" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="preparation-and-usage">
+<h2><span class="section-number">22.2. </span>Preparation and usage<a class="headerlink" href="#preparation-and-usage" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Create a file named <code class="docutils literal notranslate"><span class="pre">aa.bin</span></code> inside new directory <code class="docutils literal notranslate"><span class="pre">test/child</span></code></p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image119.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Usage steps：</p>
 <ul>
@@ -251,22 +162,22 @@
 </ul>
 </li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image217.png" />
-</div>
+</figure>
 <p><strong>The original documentation had an image called</strong> <code class="docutils literal notranslate"><span class="pre">imgs/image3.png</span></code> <strong>here, but the file is not publically available. This text is here to prevent a missing image warning.</strong></p>
 <ul class="simple">
 <li><p>Use the <code class="docutils literal notranslate"><span class="pre">romfs</span></code> command to perform read and write operations on Romfs. You can see that the data read is consistent with the downloaded file data.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image44.png" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="" src="../../_images/image53.png" />
-</div>
-</div>
-<div class="section" id="operations">
-<h2><span class="section-number">22.3. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
+</figure>
+</section>
+<section id="operations">
+<h2><span class="section-number">22.3. </span>Operations<a class="headerlink" href="#operations" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Opening a file:</p></li>
 </ul>
@@ -304,55 +215,38 @@
 <span class="n">log_info</span><span class="p">(</span><span class="s2">&quot;filebuf.bufsize = </span><span class="si">%lu</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">filebuf</span><span class="o">.</span><span class="n">bufsize</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../demo_system_cli/cli.html" class="btn btn-neutral float-right" title="23. cli" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../demo_storage_psm/psm.html" class="btn btn-neutral float-left" title="21. PSM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../demo_system_cli/cli.html" class="btn btn-neutral float-right" title="23. cli" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Bouffalo Lab, volunteers.
-
-    </p>
+    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

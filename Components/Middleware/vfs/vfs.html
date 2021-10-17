@@ -1,75 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>5. AOS VFS &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Components/Middleware/vfs/vfs.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
-    
+    <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="6. Yloop" href="../yloop/yloop.html" />
     <link rel="prev" title="4. blog" href="../log/blog.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,19 +40,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/get_started.html">1. Quick Start Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
@@ -97,7 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/Windows/Quickstart_Windows_wsl.html">4. Windows (WSL) Starter Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/connecting_the_hardware.html">5. Connecting the Hardware</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Environment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Environment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/Setting_Up.html">1. Developer Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. Dev Cube introduction</a></li>
@@ -107,7 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/freedom_studio/freedom_studio.html">6. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/README.html">1. Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/helloworld/helloworld.html">2. Hello World</a></li>
@@ -139,7 +91,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/sdk_app_pwm/pwm.html">28. Pwm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../Command_line/helper.html">1. helper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Command_line/aos_cli.html">2. cli</a></li>
@@ -159,83 +111,42 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Network/wifi/wifi.html">7. WiFi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../README/README.html">1. Documentation</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">BL602 IoT SDK (Pine64 fork)</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li><span class="section-number">5. </span>AOS VFS</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../../_sources/Components/Middleware/vfs/vfs.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="aos-vfs">
-<h1><span class="section-number">5. </span>AOS VFS<a class="headerlink" href="#aos-vfs" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="aos-vfs">
+<h1><span class="section-number">5. </span>AOS VFS<a class="headerlink" href="#aos-vfs" title="Permalink to this headline"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="#id1">概要</a></p></li>
 <li><p><a class="reference internal" href="#vfs">VFS提供的标准接口</a></p></li>
@@ -245,12 +156,12 @@
 <li><p><a class="reference internal" href="#id4">示例代码</a></p></li>
 <li><p><a class="reference internal" href="#id5">总结</a></p></li>
 </ul>
-<div class="section" id="id1">
-<h2><span class="section-number">5.1. </span>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h2><span class="section-number">5.1. </span>概要<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
 <p>VFS存在的意义，屏蔽掉底层文件系统的差异，为应用层提供标准的系统调用接口。</p>
-</div>
-<div class="section" id="vfs">
-<h2><span class="section-number">5.2. </span>VFS提供的标准接口<a class="headerlink" href="#vfs" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="vfs">
+<h2><span class="section-number">5.2. </span>VFS提供的标准接口<a class="headerlink" href="#vfs" title="Permalink to this headline"></a></h2>
 <p>基本通用的UNIX接口都已经实现了。之所以具有前缀<code class="docutils literal notranslate"><span class="pre">aos_</span></code>。是因为这些都是对外的接口，在AliOS
 Things的代码命名规则中规定：所有的对外接口都需要加上前缀<code class="docutils literal notranslate"><span class="pre">aos_</span></code></p>
 <p>aos_open</p>
@@ -269,147 +180,147 @@ Things的代码命名规则中规定：所有的对外接口都需要加上前�
 <p>aos_closedir</p>
 <p>aos_readdir</p>
 <p>aos_mkdir</p>
-</div>
-<div class="section" id="id2">
-<h2><span class="section-number">5.3. </span>VFS的数据结构<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2><span class="section-number">5.3. </span>VFS的数据结构<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">inode_t</span></code>数据结构</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/* this structure represents inode for driver and fs*/</span>
-<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="k">union</span> <span class="nc">inode_ops_t</span> <span class="n">ops</span><span class="p">;</span>     <span class="cm">/* inode operations */</span>
-    <span class="kt">void</span>             <span class="o">*</span><span class="n">i_arg</span><span class="p">;</span>   <span class="cm">/* per inode private data */</span>
-    <span class="kt">char</span>             <span class="o">*</span><span class="n">i_name</span><span class="p">;</span>  <span class="cm">/* name of inode */</span>
-    <span class="kt">int</span>               <span class="n">i_flags</span><span class="p">;</span> <span class="cm">/* flags for inode */</span>
-    <span class="kt">uint8_t</span>           <span class="n">type</span><span class="p">;</span>    <span class="cm">/* type for inode */</span>
-    <span class="kt">uint8_t</span>           <span class="n">refs</span><span class="p">;</span>    <span class="cm">/* refs for inode */</span>
-<span class="p">}</span> <span class="n">inode_t</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/* this structure represents inode for driver and fs*/</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">union</span> <span class="nc">inode_ops_t</span><span class="w"> </span><span class="n">ops</span><span class="p">;</span><span class="w">     </span><span class="cm">/* inode operations */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w">             </span><span class="o">*</span><span class="n">i_arg</span><span class="p">;</span><span class="w">   </span><span class="cm">/* per inode private data */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w">             </span><span class="o">*</span><span class="n">i_name</span><span class="p">;</span><span class="w">  </span><span class="cm">/* name of inode */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">               </span><span class="n">i_flags</span><span class="p">;</span><span class="w"> </span><span class="cm">/* flags for inode */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w">           </span><span class="n">type</span><span class="p">;</span><span class="w">    </span><span class="cm">/* type for inode */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w">           </span><span class="n">refs</span><span class="p">;</span><span class="w">    </span><span class="cm">/* refs for inode */</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">inode_t</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>因为VFS虚拟文件系统将文件和目录都当做文件来看待，上述的数据结构是索引节点类型，其具有节点具有的操作方法、节点的数据存放指针、节点的名称（即节点路径名/dev/null）、 节点类型、节点被引用的次数。</p>
 <p>在<code class="docutils literal notranslate"><span class="pre">inode_</span></code>t结构体当中，ops是针对索引节点的操作方法，具体如下：</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">union</span> <span class="nc">inode_ops_t</span> <span class="p">{</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">union</span> <span class="nc">inode_ops_t</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-    <span class="k">const</span> <span class="n">file_ops_t</span> <span class="o">*</span><span class="n">i_ops</span><span class="p">;</span>  <span class="cm">/* char driver operations */</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">file_ops_t</span><span class="w"> </span><span class="o">*</span><span class="n">i_ops</span><span class="p">;</span><span class="w">  </span><span class="cm">/* char driver operations */</span><span class="w"></span>
 
-    <span class="k">const</span> <span class="n">fs_ops_t</span>   <span class="o">*</span><span class="n">i_fops</span><span class="p">;</span> <span class="cm">/* FS operations */</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">fs_ops_t</span><span class="w">   </span><span class="o">*</span><span class="n">i_fops</span><span class="p">;</span><span class="w"> </span><span class="cm">/* FS operations */</span><span class="w"></span>
 
-<span class="p">};</span>
-<span class="k">typedef</span> <span class="k">const</span> <span class="k">struct</span> <span class="nc">file_ops</span> <span class="n">file_ops_t</span><span class="p">;</span> <span class="cm">/* 针对文件的操作方法 */</span>
-<span class="k">typedef</span> <span class="k">const</span> <span class="k">struct</span> <span class="nc">fs_ops</span>   <span class="n">fs_ops_t</span><span class="p">;</span>   <span class="cm">/* 针对目录的操作方法 */</span>
-<span class="k">struct</span> <span class="nc">file_ops</span> <span class="p">{</span>
-    <span class="kt">int</span>     <span class="p">(</span><span class="o">*</span><span class="n">open</span><span class="p">)</span>  <span class="p">(</span><span class="n">inode_t</span> <span class="o">*</span><span class="n">node</span><span class="p">,</span> <span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">);</span>
-    <span class="kt">int</span>     <span class="p">(</span><span class="o">*</span><span class="n">close</span><span class="p">)</span> <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">);</span>
-    <span class="kt">ssize_t</span> <span class="p">(</span><span class="o">*</span><span class="n">read</span><span class="p">)</span>  <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">nbytes</span><span class="p">);</span>
-    <span class="kt">ssize_t</span> <span class="p">(</span><span class="o">*</span><span class="n">write</span><span class="p">)</span> <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">nbytes</span><span class="p">);</span>
-    <span class="kt">int</span>     <span class="p">(</span><span class="o">*</span><span class="n">ioctl</span><span class="p">)</span> <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="kt">int</span> <span class="n">cmd</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">arg</span><span class="p">);</span>
+<span class="p">};</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span> <span class="nc">file_ops</span><span class="w"> </span><span class="n">file_ops_t</span><span class="p">;</span><span class="w"> </span><span class="cm">/* 针对文件的操作方法 */</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">struct</span> <span class="nc">fs_ops</span><span class="w">   </span><span class="n">fs_ops_t</span><span class="p">;</span><span class="w">   </span><span class="cm">/* 针对目录的操作方法 */</span><span class="w"></span>
+<span class="k">struct</span> <span class="nc">file_ops</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">     </span><span class="p">(</span><span class="o">*</span><span class="n">open</span><span class="p">)</span><span class="w">  </span><span class="p">(</span><span class="n">inode_t</span><span class="w"> </span><span class="o">*</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">     </span><span class="p">(</span><span class="o">*</span><span class="n">close</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">ssize_t</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">read</span><span class="p">)</span><span class="w">  </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">nbytes</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">ssize_t</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">write</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">nbytes</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">     </span><span class="p">(</span><span class="o">*</span><span class="n">ioctl</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">arg</span><span class="p">);</span><span class="w"></span>
 <span class="cp">#ifdef AOS_CONFIG_VFS_POLL_SUPPORT</span>
-    <span class="kt">int</span>     <span class="p">(</span><span class="o">*</span><span class="n">poll</span><span class="p">)</span>  <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">flag</span><span class="p">,</span> <span class="n">poll_notify_t</span> <span class="n">notify</span><span class="p">,</span> <span class="k">struct</span> <span class="nc">pollfd</span> <span class="o">*</span><span class="n">fd</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w">     </span><span class="p">(</span><span class="o">*</span><span class="n">poll</span><span class="p">)</span><span class="w">  </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">flag</span><span class="p">,</span><span class="w"> </span><span class="n">poll_notify_t</span><span class="w"> </span><span class="n">notify</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span> <span class="nc">pollfd</span><span class="w"> </span><span class="o">*</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">);</span><span class="w"></span>
 <span class="cp">#endif</span>
-<span class="p">};</span>
-<span class="k">struct</span> <span class="nc">fs_ops</span> <span class="p">{</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">open</span><span class="p">)</span>     <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">close</span><span class="p">)</span>    <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">);</span>
-    <span class="kt">ssize_t</span>         <span class="p">(</span><span class="o">*</span><span class="n">read</span><span class="p">)</span>     <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span><span class="p">);</span>
-    <span class="kt">ssize_t</span>         <span class="p">(</span><span class="o">*</span><span class="n">write</span><span class="p">)</span>    <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">len</span><span class="p">);</span>
-    <span class="kt">off_t</span>           <span class="p">(</span><span class="o">*</span><span class="n">lseek</span><span class="p">)</span>    <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="kt">off_t</span> <span class="n">off</span><span class="p">,</span> <span class="kt">int</span> <span class="n">whence</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">sync</span><span class="p">)</span>     <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">stat</span><span class="p">)</span>     <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="k">struct</span> <span class="nc">stat</span> <span class="o">*</span><span class="n">st</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">unlink</span><span class="p">)</span>   <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">rename</span><span class="p">)</span>   <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">oldpath</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">newpath</span><span class="p">);</span>
-    <span class="n">aos_dir_t</span>      <span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="n">opendir</span><span class="p">)</span>  <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">);</span>
-    <span class="n">aos_dirent_t</span>   <span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="n">readdir</span><span class="p">)</span>  <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="n">aos_dir_t</span> <span class="o">*</span><span class="n">dir</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">closedir</span><span class="p">)</span> <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="n">aos_dir_t</span> <span class="o">*</span><span class="n">dir</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">mkdir</span><span class="p">)</span>    <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">rmdir</span><span class="p">)</span>    <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">);</span>
-    <span class="kt">void</span>            <span class="p">(</span><span class="o">*</span><span class="n">rewinddir</span><span class="p">)(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="n">aos_dir_t</span> <span class="o">*</span><span class="n">dir</span><span class="p">);</span>
-    <span class="kt">long</span>            <span class="p">(</span><span class="o">*</span><span class="n">telldir</span><span class="p">)</span>  <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="n">aos_dir_t</span> <span class="o">*</span><span class="n">dir</span><span class="p">);</span>
-    <span class="kt">void</span>            <span class="p">(</span><span class="o">*</span><span class="n">seekdir</span><span class="p">)</span>  <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="n">aos_dir_t</span> <span class="o">*</span><span class="n">dir</span><span class="p">,</span> <span class="kt">long</span> <span class="n">loc</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">ioctl</span><span class="p">)</span>    <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="kt">int</span> <span class="n">cmd</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">arg</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">statfs</span><span class="p">)</span>   <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="k">struct</span> <span class="nc">statfs</span> <span class="o">*</span><span class="n">suf</span><span class="p">);</span>
-    <span class="kt">int</span>             <span class="p">(</span><span class="o">*</span><span class="n">access</span><span class="p">)</span>   <span class="p">(</span><span class="n">file_t</span> <span class="o">*</span><span class="n">fp</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="kt">int</span> <span class="n">amode</span><span class="p">);</span>
-<span class="p">};</span>
+<span class="p">};</span><span class="w"></span>
+<span class="k">struct</span> <span class="nc">fs_ops</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">open</span><span class="p">)</span><span class="w">     </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flags</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">close</span><span class="p">)</span><span class="w">    </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">ssize_t</span><span class="w">         </span><span class="p">(</span><span class="o">*</span><span class="n">read</span><span class="p">)</span><span class="w">     </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">len</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">ssize_t</span><span class="w">         </span><span class="p">(</span><span class="o">*</span><span class="n">write</span><span class="p">)</span><span class="w">    </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">len</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">off_t</span><span class="w">           </span><span class="p">(</span><span class="o">*</span><span class="n">lseek</span><span class="p">)</span><span class="w">    </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="kt">off_t</span><span class="w"> </span><span class="n">off</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">whence</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">sync</span><span class="p">)</span><span class="w">     </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">stat</span><span class="p">)</span><span class="w">     </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span> <span class="nc">stat</span><span class="w"> </span><span class="o">*</span><span class="n">st</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">unlink</span><span class="p">)</span><span class="w">   </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">rename</span><span class="p">)</span><span class="w">   </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">oldpath</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">newpath</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">aos_dir_t</span><span class="w">      </span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="n">opendir</span><span class="p">)</span><span class="w">  </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">aos_dirent_t</span><span class="w">   </span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="n">readdir</span><span class="p">)</span><span class="w">  </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="n">aos_dir_t</span><span class="w"> </span><span class="o">*</span><span class="n">dir</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">closedir</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="n">aos_dir_t</span><span class="w"> </span><span class="o">*</span><span class="n">dir</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">mkdir</span><span class="p">)</span><span class="w">    </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">rmdir</span><span class="p">)</span><span class="w">    </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w">            </span><span class="p">(</span><span class="o">*</span><span class="n">rewinddir</span><span class="p">)(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="n">aos_dir_t</span><span class="w"> </span><span class="o">*</span><span class="n">dir</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">long</span><span class="w">            </span><span class="p">(</span><span class="o">*</span><span class="n">telldir</span><span class="p">)</span><span class="w">  </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="n">aos_dir_t</span><span class="w"> </span><span class="o">*</span><span class="n">dir</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w">            </span><span class="p">(</span><span class="o">*</span><span class="n">seekdir</span><span class="p">)</span><span class="w">  </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="n">aos_dir_t</span><span class="w"> </span><span class="o">*</span><span class="n">dir</span><span class="p">,</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">loc</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">ioctl</span><span class="p">)</span><span class="w">    </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">arg</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">statfs</span><span class="p">)</span><span class="w">   </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span> <span class="nc">statfs</span><span class="w"> </span><span class="o">*</span><span class="n">suf</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w">             </span><span class="p">(</span><span class="o">*</span><span class="n">access</span><span class="p">)</span><span class="w">   </span><span class="p">(</span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">fp</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">amode</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">file_t</span></code>数据结构</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="n">inode_t</span>    <span class="o">*</span><span class="n">node</span><span class="p">;</span>   <span class="cm">/* node for file */</span>
-    <span class="kt">void</span>       <span class="o">*</span><span class="n">f_arg</span><span class="p">;</span>  <span class="cm">/* f_arg for file */</span>
-    <span class="kt">size_t</span>     <span class="n">offset</span><span class="p">;</span> <span class="cm">/* offset for file */</span>
-<span class="p">}</span> <span class="n">file_t</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">inode_t</span><span class="w">    </span><span class="o">*</span><span class="n">node</span><span class="p">;</span><span class="w">   </span><span class="cm">/* node for file */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w">       </span><span class="o">*</span><span class="n">f_arg</span><span class="p">;</span><span class="w">  </span><span class="cm">/* f_arg for file */</span><span class="w"></span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w">     </span><span class="n">offset</span><span class="p">;</span><span class="w"> </span><span class="cm">/* offset for file */</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">file_t</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>上述的<code class="docutils literal notranslate"><span class="pre">file_t</span></code>数据结构用于描述一个被打开的文件，因为系统当中同一个系统当中，同一个文件可能被多个程序打开，但是打开的每一个文件都会唯一的执行特定的索引节点，即最终的物理文件只有一份。</p>
-</div>
-<div class="section" id="aos-open">
-<h2><span class="section-number">5.4. </span>以aos_open为例介绍其文件打开方式<a class="headerlink" href="#aos-open" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="aos-open">
+<h2><span class="section-number">5.4. </span>以aos_open为例介绍其文件打开方式<a class="headerlink" href="#aos-open" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">aos_open</span></code>是对外的接口，外部函数可以直接使用该接口实现对于文件的打开操作，而不用去关心底层文件系统的实现细节。其代码如下所示：</p>
 <p>其输入参数为：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">path</span><span class="p">;</span> <span class="n">即文件路径名</span>
 <span class="nb">int</span> <span class="n">flags</span><span class="p">;</span> <span class="n">即操作标志</span> <span class="n">比如只读</span> <span class="n">只写</span> <span class="n">读写等</span>
 </pre></div>
 </div>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">aos_open</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">file_t</span>  <span class="o">*</span><span class="n">file</span><span class="p">;</span>
-    <span class="n">inode_t</span> <span class="o">*</span><span class="n">node</span><span class="p">;</span>
-    <span class="kt">size_t</span> <span class="n">len</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">VFS_SUCCESS</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">aos_open</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">flags</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">file_t</span><span class="w">  </span><span class="o">*</span><span class="n">file</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">inode_t</span><span class="w"> </span><span class="o">*</span><span class="n">node</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VFS_SUCCESS</span><span class="p">;</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">path</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="o">-</span><span class="n">EINVAL</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="n">EINVAL</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="n">len</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">len</span> <span class="o">&gt;</span> <span class="n">PATH_MAX</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* 文件路径名不允许超过256个字节 */</span>
-        <span class="k">return</span> <span class="o">-</span><span class="n">ENAMETOOLONG</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="cm">/* 获取互斥锁，该互斥锁在vfs_init函数中创建 */</span>
-    <span class="k">if</span> <span class="p">((</span><span class="n">ret</span> <span class="o">=</span> <span class="n">krhino_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">,</span> <span class="n">RHINO_WAIT_FOREVER</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="cm">/* 根据路径名传参，打开索引节点，具体函数实现会在下文介绍 */</span>
-    <span class="n">node</span> <span class="o">=</span> <span class="n">inode_open</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+<span class="w">    </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">path</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">len</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">PATH_MAX</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* 文件路径名不允许超过256个字节 */</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="n">ENAMETOOLONG</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 获取互斥锁，该互斥锁在vfs_init函数中创建 */</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">krhino_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">,</span><span class="w"> </span><span class="n">RHINO_WAIT_FOREVER</span><span class="p">))</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 根据路径名传参，打开索引节点，具体函数实现会在下文介绍 */</span><span class="w"></span>
+<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inode_open</span><span class="p">(</span><span class="n">path</span><span class="p">);</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">node</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">krhino_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">krhino_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">);</span><span class="w"></span>
 
 <span class="cp">#ifdef IO_NEED_TRAP</span>
-        <span class="k">return</span> <span class="n">trap_open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">flags</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">trap_open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p">);</span><span class="w"></span>
 <span class="cp">#else</span>
-        <span class="k">return</span> <span class="o">-</span><span class="n">ENOENT</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="n">ENOENT</span><span class="p">;</span><span class="w"></span>
 <span class="cp">#endif</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="n">node</span><span class="o">-&gt;</span><span class="n">i_flags</span> <span class="o">=</span> <span class="n">flags</span><span class="p">;</span>
-    <span class="cm">/*因为用户操作的文件都是在内存中新建立的文件（文件对象会反过来指向索引节点</span>
+<span class="w">    </span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flags</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/*因为用户操作的文件都是在内存中新建立的文件（文件对象会反过来指向索引节点</span>
 <span class="cm">        即一个文件可能被多个程序打开）。所以需要根据索引接点对象新建立一个文件对象</span>
-<span class="cm">    */</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="n">new_file</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
-    <span class="cm">/* 释放互斥锁 */</span>
-    <span class="n">krhino_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">);</span>
+<span class="cm">    */</span><span class="w"></span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_file</span><span class="p">(</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 释放互斥锁 */</span><span class="w"></span>
+<span class="w">    </span><span class="n">krhino_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">);</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">file</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="o">-</span><span class="n">ENFILE</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="cm">/* 根据节点类型判断该路径名指向是一个文件还是一个目录，因为文件对象和目录对象虽然都是节点</span>
-<span class="cm">    但是其操作方法有些差别，见前文中的目录和文件操作方法 */</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">INODE_IS_FS</span><span class="p">(</span><span class="n">node</span><span class="p">))</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">((</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_fops</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_fops</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">)(</span><span class="n">file</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">flags</span><span class="p">);</span>
-        <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="n">ENFILE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 根据节点类型判断该路径名指向是一个文件还是一个目录，因为文件对象和目录对象虽然都是节点</span>
+<span class="cm">    但是其操作方法有些差别，见前文中的目录和文件操作方法 */</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">INODE_IS_FS</span><span class="p">(</span><span class="n">node</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_fops</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_fops</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">)(</span><span class="n">file</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">flags</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">((</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_ops</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_ops</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">)(</span><span class="n">node</span><span class="p">,</span> <span class="n">file</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_ops</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_ops</span><span class="o">-&gt;</span><span class="n">open</span><span class="p">)(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">!=</span> <span class="n">VFS_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">del_file</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
-        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="cm">/* 获得文件句柄 */</span>
-    <span class="k">return</span> <span class="n">get_fd</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">VFS_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">del_file</span><span class="p">(</span><span class="n">file</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 获得文件句柄 */</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">get_fd</span><span class="p">(</span><span class="n">file</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -417,34 +328,34 @@ Things的代码命名规则中规定：所有的对外接口都需要加上前�
 其输入参数为： <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span> <span class="pre">path;</span> <span class="pre">文件路径名</span></code> 输出参数为：
 <code class="docutils literal notranslate"><span class="pre">inode_t;</span> <span class="pre">对应的节点</span></code></p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">inode_t</span> <span class="n">g_vfs_dev_nodes</span><span class="p">[</span><span class="n">AOS_CONFIG_VFS_DEV_NODES</span><span class="p">];</span>
-<span class="n">inode_t</span> <span class="o">*</span><span class="nf">inode_open</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">e</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">inode_t</span> <span class="o">*</span><span class="n">node</span><span class="p">;</span>
-    <span class="cm">/*AOS_CONFIG_VFS_DEV_NODES该宏定义为25.</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">inode_t</span><span class="w"> </span><span class="n">g_vfs_dev_nodes</span><span class="p">[</span><span class="n">AOS_CONFIG_VFS_DEV_NODES</span><span class="p">];</span><span class="w"></span>
+<span class="n">inode_t</span><span class="w"> </span><span class="o">*</span><span class="nf">inode_open</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">inode_t</span><span class="w"> </span><span class="o">*</span><span class="n">node</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/*AOS_CONFIG_VFS_DEV_NODES该宏定义为25.</span>
 <span class="cm">        即在保存节点的数组g_vfs_dev_nodes中仅仅会保存25个节点</span>
-<span class="cm">    */</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">e</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">e</span> <span class="o">&lt;</span> <span class="n">AOS_CONFIG_VFS_DEV_NODES</span><span class="p">;</span> <span class="n">e</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">g_vfs_dev_nodes</span><span class="p">[</span><span class="n">e</span><span class="p">];</span>
+<span class="cm">    */</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">AOS_CONFIG_VFS_DEV_NODES</span><span class="p">;</span><span class="w"> </span><span class="n">e</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">g_vfs_dev_nodes</span><span class="p">[</span><span class="n">e</span><span class="p">];</span><span class="w"></span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">continue</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="cm">/* 判断该节点是一个目录还是一个文件 */</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">INODE_IS_TYPE</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">VFS_TYPE_FS_DEV</span><span class="p">))</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">((</span><span class="n">strncmp</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
-                <span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">))</span> <span class="o">==</span> <span class="sc">&#39;/&#39;</span><span class="p">))</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="n">node</span><span class="p">;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">node</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="cm">/* 判断该节点是一个目录还是一个文件 */</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">INODE_IS_TYPE</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">VFS_TYPE_FS_DEV</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">strncmp</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"></span>
+<span class="w">                </span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;/&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">node</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">node</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -453,39 +364,39 @@ Things的代码命名规则中规定：所有的对外接口都需要加上前�
 其输入参数是： inode_t *node; 上个函数中得到的节点 输出参数是：
 file_t 类型。用于后续获取文件句柄</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">file_t</span> <span class="n">files</span><span class="p">[</span><span class="n">MAX_FILE_NUM</span><span class="p">];</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">file_t</span><span class="w"> </span><span class="n">files</span><span class="p">[</span><span class="n">MAX_FILE_NUM</span><span class="p">];</span><span class="w"></span>
 <span class="cp">#define MAX_FILE_NUM (AOS_CONFIG_VFS_DEV_NODES * 2)</span>
-<span class="n">file_t</span> <span class="o">*</span><span class="nf">new_file</span><span class="p">(</span><span class="n">inode_t</span> <span class="o">*</span><span class="n">node</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">file_t</span> <span class="o">*</span><span class="n">f</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">idx</span><span class="p">;</span>
-    <span class="cm">/* 在file数组当中新建立一个数据项。且保证该数组未满。即打开的文件数量是有限的 */</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">MAX_FILE_NUM</span><span class="p">;</span> <span class="n">idx</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">f</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">files</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span>
+<span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="nf">new_file</span><span class="p">(</span><span class="n">inode_t</span><span class="w"> </span><span class="o">*</span><span class="n">node</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">file_t</span><span class="w"> </span><span class="o">*</span><span class="n">f</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* 在file数组当中新建立一个数据项。且保证该数组未满。即打开的文件数量是有限的 */</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MAX_FILE_NUM</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">files</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span><span class="w"></span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="o">-&gt;</span><span class="n">node</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">goto</span> <span class="n">got_file</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="o">-&gt;</span><span class="n">node</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">goto</span><span class="w"> </span><span class="n">got_file</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
 
-<span class="nl">got_file</span><span class="p">:</span>
-    <span class="n">f</span><span class="o">-&gt;</span><span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
-    <span class="n">f</span><span class="o">-&gt;</span><span class="n">f_arg</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="n">f</span><span class="o">-&gt;</span><span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">inode_ref</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">f</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="nl">got_file</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">f</span><span class="o">-&gt;</span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">f</span><span class="o">-&gt;</span><span class="n">f_arg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">f</span><span class="o">-&gt;</span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">inode_ref</span><span class="p">(</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>所有的系统调用函数（类似于aos_open）都位于vfs.c文件中。</p>
-</div>
-<div class="section" id="id3">
-<h2><span class="section-number">5.5. </span>将驱动文件或者文件系统加载到VFS当中<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2><span class="section-number">5.5. </span>将驱动文件或者文件系统加载到VFS当中<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
 <p>在vfs_register.c文件中定义的函数：</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">aos_register_driver</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="n">file_ops_t</span> <span class="o">*</span><span class="n">ops</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
-<span class="kt">int</span> <span class="n">aos_register_fs</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="n">fs_ops_t</span> <span class="o">*</span><span class="n">ops</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">aos_register_driver</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">file_ops_t</span><span class="w"> </span><span class="o">*</span><span class="n">ops</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">)</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">aos_register_fs</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">fs_ops_t</span><span class="w"> </span><span class="o">*</span><span class="n">ops</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>上述两个函数分别是将驱动文件或者是文件系统类型装载到VFS当中的函数。外部程序（例如sensor驱动程序）可以调用这两个接口将驱动文件加载的VFS当中去。</p>
@@ -493,145 +404,128 @@ file_t 类型。用于后续获取文件句柄</p></li>
 <p>其输入参数为： 驱动文件路径名 const char * path （/dev/null）</p>
 <p>驱动操作方法 file_ops_t *ops
 （不需要实现全部的方法，实现必要的方法，其余置NULL即可）</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">aos_register_driver</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">path</span><span class="p">,</span> <span class="n">file_ops_t</span> <span class="o">*</span><span class="n">ops</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">inode_t</span> <span class="o">*</span><span class="n">node</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">err</span><span class="p">,</span> <span class="n">ret</span><span class="p">;</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">aos_register_driver</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">file_ops_t</span><span class="w"> </span><span class="o">*</span><span class="n">ops</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">inode_t</span><span class="w"> </span><span class="o">*</span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">err</span><span class="p">,</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
 
-    <span class="n">err</span> <span class="o">=</span> <span class="n">krhino_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">,</span> <span class="n">RHINO_WAIT_FOREVER</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">err</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">krhino_mutex_lock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">,</span><span class="w"> </span><span class="n">RHINO_WAIT_FOREVER</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">err</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="c1">//在g_vfs_dev_nodes数组中寻找一个空的数组项，返回其指针给node，并将path的路径名赋给node--&gt;name</span>
-    <span class="n">ret</span> <span class="o">=</span> <span class="n">inode_reserve</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">node</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">==</span> <span class="n">VFS_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
-        <span class="cm">/* now populate it with char specific information */</span>
-        <span class="n">INODE_SET_CHAR</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inode_reserve</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">VFS_SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="cm">/* now populate it with char specific information */</span><span class="w"></span>
+<span class="w">        </span><span class="n">INODE_SET_CHAR</span><span class="p">(</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
 
-        <span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_ops</span> <span class="o">=</span> <span class="n">ops</span><span class="p">;</span>
-        <span class="n">node</span><span class="o">-&gt;</span><span class="n">i_arg</span>     <span class="o">=</span> <span class="n">arg</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">        </span><span class="n">node</span><span class="o">-&gt;</span><span class="n">ops</span><span class="p">.</span><span class="n">i_ops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ops</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_arg</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">arg</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="cm">/* step out critical area for type is allocated */</span>
-    <span class="n">err</span> <span class="o">=</span> <span class="n">krhino_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">err</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">krhino_mm_free</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">);</span>
-        <span class="p">}</span>
+<span class="w">    </span><span class="cm">/* step out critical area for type is allocated */</span><span class="w"></span>
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">krhino_mutex_unlock</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_vfs_mutex</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">krhino_mm_free</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">i_name</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-        <span class="n">memset</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">inode_t</span><span class="p">));</span>
-        <span class="k">return</span> <span class="n">err</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">        </span><span class="n">memset</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">inode_t</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">err</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h2><span class="section-number">5.6. </span>示例代码<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id4">
+<h2><span class="section-number">5.6. </span>示例代码<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h2>
 <p>vfs的操作类linux中操作，
 这里举例<code class="docutils literal notranslate"><span class="pre">aos_open</span></code>、<code class="docutils literal notranslate"><span class="pre">aos_close</span></code>、<code class="docutils literal notranslate"><span class="pre">aos_read</span></code>、<code class="docutils literal notranslate"><span class="pre">aos_write</span></code></p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">bl_test_uart0</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">fd</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">length</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">buf_recv</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">bl_test_uart0</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buf_recv</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span><span class="w"></span>
 
-    <span class="cm">/* 首先打开相关文件，对应到UART0 */</span>
-    <span class="n">fd</span> <span class="o">=</span> <span class="n">aos_open</span><span class="p">(</span><span class="s">&quot;/dev/ttyS0&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">fd</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">log_error</span><span class="p">(</span><span class="s">&quot;open err.</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="k">return</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="cm">/* 首先打开相关文件，对应到UART0 */</span><span class="w"></span>
+<span class="w">    </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aos_open</span><span class="p">(</span><span class="s">&quot;/dev/ttyS0&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">log_error</span><span class="p">(</span><span class="s">&quot;open err.</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="cm">/* 读取UART0中的数据 */</span>
-        <span class="n">length</span> <span class="o">=</span> <span class="n">aos_read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buf_recv</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buf_recv</span><span class="p">));</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="cm">/* 读取UART0中的数据 */</span><span class="w"></span>
+<span class="w">        </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aos_read</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf_recv</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buf_recv</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-            <span class="n">log_info</span><span class="p">(</span><span class="s">&quot;recv len = %d</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">length</span><span class="p">);</span>
+<span class="w">            </span><span class="n">log_info</span><span class="p">(</span><span class="s">&quot;recv len = %d</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">);</span><span class="w"></span>
 
-            <span class="cm">/* 直到收到&#39;exit&#39;才会主动结束循环，并close相关文件 */</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">memcmp</span><span class="p">(</span><span class="n">buf_recv</span><span class="p">,</span> <span class="s">&quot;exit&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">aos_close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
-                <span class="k">break</span><span class="p">;</span>
-            <span class="p">}</span>
+<span class="w">            </span><span class="cm">/* 直到收到&#39;exit&#39;才会主动结束循环，并close相关文件 */</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">memcmp</span><span class="p">(</span><span class="n">buf_recv</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;exit&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">aos_close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
 
-            <span class="cm">/* UART0将收到的数据回传过去 */</span>
-            <span class="n">aos_write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">buf_recv</span><span class="p">,</span> <span class="n">length</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="n">vTaskDelay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<span class="w">            </span><span class="cm">/* UART0将收到的数据回传过去 */</span><span class="w"></span>
+<span class="w">            </span><span class="n">aos_write</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf_recv</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">vTaskDelay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id5">
-<h2><span class="section-number">5.7. </span>总结<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id5">
+<h2><span class="section-number">5.7. </span>总结<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>VFS的一把重要的互斥锁 对VFS的相关操作都需要获取该互斥锁才能够进行。
 <code class="docutils literal notranslate"><span class="pre">kmutex_t</span> <span class="pre">g_vfs_mutex;</span></code></p></li>
 <li><p>VFS的两个重要的数组结构 如下所示：第一个数组是保存节点的数组结构。
 第二个数组是保存文件对象的数组结构。和用户直接相关的是第二个数组结构</p></li>
 </ul>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">inode_t</span> <span class="n">g_vfs_dev_nodes</span><span class="p">[</span><span class="n">AOS_CONFIG_VFS_DEV_NODES</span><span class="p">];</span>
-<span class="k">static</span> <span class="n">file_t</span> <span class="n">files</span><span class="p">[</span><span class="n">MAX_FILE_NUM</span><span class="p">];</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">inode_t</span><span class="w"> </span><span class="n">g_vfs_dev_nodes</span><span class="p">[</span><span class="n">AOS_CONFIG_VFS_DEV_NODES</span><span class="p">];</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="n">file_t</span><span class="w"> </span><span class="n">files</span><span class="p">[</span><span class="n">MAX_FILE_NUM</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>使用者只需关心的文件 vfs_register.c文件用于注册 vfs.c
 文件用于各种标准操作。</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../yloop/yloop.html" class="btn btn-neutral float-right" title="6. Yloop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../log/blog.html" class="btn btn-neutral float-left" title="4. blog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../yloop/yloop.html" class="btn btn-neutral float-right" title="6. Yloop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Bouffalo Lab, volunteers.
-
-    </p>
+    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,75 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>7. WiFi &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Components/Network/wifi/wifi.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
-    
+    <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="8. BLE" href="../../BLE/ble_stack/ble_stack.html" />
     <link rel="prev" title="6. Yloop" href="../../Middleware/yloop/yloop.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,19 +40,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/get_started.html">1. Quick Start Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
@@ -97,7 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/Windows/Quickstart_Windows_wsl.html">4. Windows (WSL) Starter Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Quickstart_Guide/connecting_the_hardware.html">5. Connecting the Hardware</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Environment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Environment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/Setting_Up.html">1. Developer Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. Dev Cube introduction</a></li>
@@ -107,7 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/freedom_studio/freedom_studio.html">6. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Developer_Environment/eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/README.html">1. Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/helloworld/helloworld.html">2. Hello World</a></li>
@@ -139,7 +91,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/sdk_app_pwm/pwm.html">28. Pwm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Examples/benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../Command_line/helper.html">1. helper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Command_line/aos_cli.html">2. cli</a></li>
@@ -156,85 +108,44 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../README/README.html">1. Documentation</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">BL602 IoT SDK (Pine64 fork)</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li><span class="section-number">7. </span>WiFi</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../../_sources/Components/Network/wifi/wifi.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="wifi">
-<span id="wifi-index"></span><h1><span class="section-number">7. </span>WiFi<a class="headerlink" href="#wifi" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><span class="section-number">7.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="wifi">
+<span id="wifi-index"></span><h1><span class="section-number">7. </span>WiFi<a class="headerlink" href="#wifi" title="Permalink to this headline"></a></h1>
+<section id="id1">
+<h2><span class="section-number">7.1. </span>概述<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
 <p>本文档介绍BL_IoT SDK的WiFi联网功能。主要包括</p>
 <ul class="simple">
 <li><p>基站模式（即 STA 模式或 Wi-Fi 客户端模式），此时 BL_IoT 连接到接入点 (AP)。</p></li>
@@ -244,9 +155,9 @@
 <li><p>扫描接入点（包括主动扫描及被动扫描）。</p></li>
 <li><p>使用混杂模式监控 IEEE802.11 Wi-Fi 数据包。</p></li>
 </ul>
-</div>
-<div class="section" id="id2">
-<h2><span class="section-number">7.2. </span>应用实例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2><span class="section-number">7.2. </span>应用实例<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
 <p>BL_IoT的实例 <code class="docutils literal notranslate"><span class="pre">bl602_demo_wifi</span></code> 目录下包含了一个应用程序，该demo介绍了如何使用BL_IoT模组连接到AP等一系列wifi操作。该实例实现的主要思路如下：</p>
 <p><strong>The original documentation had an image called</strong> <code class="docutils literal notranslate"><span class="pre">imgs/image1.png</span></code> <strong>here, but the file is not publically available. This text is here to prevent a missing image warning.</strong></p>
 <ul class="simple">
@@ -254,9 +165,9 @@
 <li><p>首先用户在终端中输入 <code class="docutils literal notranslate"><span class="pre">stack_wifi</span></code> 命令后，在 <code class="docutils literal notranslate"><span class="pre">cmd_stack_wifi()</span></code> 函数中创建一个 <code class="docutils literal notranslate"><span class="pre">wifi_main()</span></code> 的线程，接着调用 <code class="docutils literal notranslate"><span class="pre">aos_post_event()</span></code> 接口发布 <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code> 事件后， <code class="docutils literal notranslate"><span class="pre">event_cb_wifi_event()</span></code> 会被调用，并进入case <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_INIT_DONE</span></code> 分支从而调用 <code class="docutils literal notranslate"><span class="pre">wifi_mgmr_start_background()</span></code> 开启WiFi Manager，同时发布 <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_MGMR_DONE</span></code> 事件，进入case <code class="docutils literal notranslate"><span class="pre">CODE_WIFI_ON_MGMR_DONE</span></code> 分支调用 <code class="docutils literal notranslate"><span class="pre">_connect_wifi()</span></code> 函数，此函数先判断easyflash中是否设置了可连接的ssid，如果设置了则会自动进行wifi连接，没有设置则需手动输命令设置；</p></li>
 <li><p>如用户在终端中输入 <code class="docutils literal notranslate"><span class="pre">wifi_sta_connect</span></code> 命令，会调用相应的api实现。如需实现wifi相关的其他功能可通过调用对应api来实现。</p></li>
 </ul>
-</div>
-<div class="section" id="reason-codes">
-<h2><span class="section-number">7.3. </span>Reason Codes<a class="headerlink" href="#reason-codes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="reason-codes">
+<h2><span class="section-number">7.3. </span>Reason Codes<a class="headerlink" href="#reason-codes" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">WLAN_FW_SUCCESSFUL</span></code></p>
 <p>WiFi连接成功</p>
 <p><code class="docutils literal notranslate"><span class="pre">WLAN_FW_TX_AUTH_FRAME_ALLOCATE_FAIILURE</span></code></p>
@@ -291,9 +202,9 @@
 <p>加入sta模式失败</p>
 <p><code class="docutils literal notranslate"><span class="pre">WLAN_FW_BEACON_LOSS</span></code></p>
 <p>信标丢失</p>
-</div>
-<div class="section" id="api">
-<h2><span class="section-number">7.4. </span>API参考<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="api">
+<h2><span class="section-number">7.4. </span>API参考<a class="headerlink" href="#api" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>头文件</p></li>
 </ul>
@@ -527,55 +438,38 @@
 */
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../../BLE/ble_stack/ble_stack.html" class="btn btn-neutral float-right" title="8. BLE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../../Middleware/yloop/yloop.html" class="btn btn-neutral float-left" title="6. Yloop" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../BLE/ble_stack/ble_stack.html" class="btn btn-neutral float-right" title="8. BLE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Bouffalo Lab, volunteers.
-
-    </p>
+    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

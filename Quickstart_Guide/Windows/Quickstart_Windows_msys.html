@@ -1,75 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>3. Windows Starter Guide &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Quickstart_Guide/Windows/Quickstart_Windows_msys.html" />
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="4. Windows (WSL) Starter Guide" href="Quickstart_Windows_wsl.html" />
     <link rel="prev" title="2. Linux Starter Guide" href="../Linux/Quickstart_Linux_ubuntu.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -77,19 +40,8 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Quick Start Guide</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">1. Quick Start Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Linux/Quickstart_Linux_ubuntu.html">2. Linux Starter Guide</a></li>
@@ -103,7 +55,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Quickstart_Windows_wsl.html">4. Windows (WSL) Starter Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../connecting_the_hardware.html">5. Connecting the Hardware</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Developer Environment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Developer Environment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/Setting_Up.html">1. Developer Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/BLFlashEnv/BLFlashEnv.html">2. Dev Cube introduction</a></li>
@@ -113,7 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/freedom_studio/freedom_studio.html">6. Freedom Studio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developer_Environment/eclipse/eclipse.html">7. Eclipse</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/README.html">1. Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/helloworld/helloworld.html">2. Hello World</a></li>
@@ -145,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/sdk_app_pwm/pwm.html">28. Pwm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/benchmark_security_aes/benchmark_security_aes_gcm.html">29. AES-GCM</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Components</span></p>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Command_line/helper.html">1. helper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Command_line/aos_cli.html">2. cli</a></li>
@@ -156,208 +108,150 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Components/Network/wifi/wifi.html">7. WiFi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Components/BLE/ble_stack/ble_stack.html">8. BLE</a></li>
 </ul>
-<p class="caption"><span class="caption-text">API</span></p>
+<p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../API/sys/cronalarms.html">1. cronalarms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../API/wifi/wifi_mgmr.html">2. Wi-Fi Manager</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">BL602 IoT SDK (Pine64 fork)</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li><span class="section-number">3. </span>Windows Starter Guide</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/Quickstart_Guide/Windows/Quickstart_Windows_msys.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="windows-starter-guide">
-<h1><span class="section-number">3. </span>Windows Starter Guide<a class="headerlink" href="#windows-starter-guide" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="windows-starter-guide">
+<h1><span class="section-number">3. </span>Windows Starter Guide<a class="headerlink" href="#windows-starter-guide" title="Permalink to this headline"></a></h1>
 <p>This document explains how to set up a software environment for developing on the BL602 hardware under Windows.</p>
-<div class="section" id="setting-up-the-build-environment-and-getting-the-code">
-<h2><span class="section-number">3.1. </span>Setting up the build environment and getting the code<a class="headerlink" href="#setting-up-the-build-environment-and-getting-the-code" title="Permalink to this headline">¶</a></h2>
+<section id="setting-up-the-build-environment-and-getting-the-code">
+<h2><span class="section-number">3.1. </span>Setting up the build environment and getting the code<a class="headerlink" href="#setting-up-the-build-environment-and-getting-the-code" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Install a serial port tool such as <a class="reference external" href="https://gigenet.dl.sourceforge.net/project/scriptcommunicator/Windows/ScriptCommunicatorSetup_05_10_windows.zip">ScriptCommunicator</a></p></li>
 <li><p><a class="reference external" href="https://sourceforge.net/projects/msys2/files/Base/x86_64/">Obtain the MSYS2 installer</a></p></li>
 <li><p><a class="reference external" href="https://www.msys2.org/">Installation instructions</a></p></li>
 <li><p>Open MSYS2 and install make，by using the command：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">make</span></code></p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image125.png" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="" src="../../_images/image220.png" />
-</div>
+</figure>
 </li>
 <li><p>Open the installation directory of MSYS2 and put the SDK source code under the user name folder in the <code class="docutils literal notranslate"><span class="pre">home''\</span> <span class="pre">directory.</span> <span class="pre">The</span> <span class="pre">following</span> <span class="pre">figure</span> <span class="pre">shows</span> <span class="pre">the</span> <span class="pre">\</span> <span class="pre">``igor</span></code>folder</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image318.png" />
-</div>
+</figure>
 <p><strong>Note</strong>：In the example the name <code class="docutils literal notranslate"><span class="pre">igor</span></code> is used, but yours is probably different, you can find it by seeing what is before the &#64; symbol in the prompt.</p>
 </li>
 <li><p>Install unzip in order to decompress the SDK, by using the command：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">unzip</span></code>，You may also want git and tmux, you can install them by using these commands：<code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">git</span></code>, <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">tmux</span></code></p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image47.png" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="" src="../../_images/image56.png" />
-</div>
+</figure>
 </li>
 <li><p>Decompress the zip file containing the SDK, by running the command: <code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">bl_iot_sdk.zip</span></code></p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image63.png" />
-</div>
+</figure>
 </li>
 </ul>
-</div>
-<div class="section" id="connecting-the-hardware">
-<h2><span class="section-number">3.2. </span>Connecting the Hardware<a class="headerlink" href="#connecting-the-hardware" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="connecting-the-hardware">
+<h2><span class="section-number">3.2. </span>Connecting the Hardware<a class="headerlink" href="#connecting-the-hardware" title="Permalink to this headline"></a></h2>
 <p>See the relevant section in <a class="reference internal" href="../connecting_the_hardware.html#connecting-the-hardware"><span class="std std-ref">Connecting the Hardware</span></a>.
 Ensure that the board is set to be in loading mode.</p>
-</div>
-<div class="section" id="compiling-and-flashing">
-<h2><span class="section-number">3.3. </span>Compiling and Flashing<a class="headerlink" href="#compiling-and-flashing" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="compiling-and-flashing">
+<h2><span class="section-number">3.3. </span>Compiling and Flashing<a class="headerlink" href="#compiling-and-flashing" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Enter the directory of the project you want to compile, such as：<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">customer_app/bl602_demo_event</span></code></p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image72.png" />
-</div>
+</figure>
 </li>
 <li><p>To compile run the command：<code class="docutils literal notranslate"><span class="pre">./genromap</span></code></p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image82.png" />
-</div>
+</figure>
 </li>
 </ul>
-</div>
-<div class="section" id="downloading-binaries">
-<h2><span class="section-number">3.4. </span>Downloading Binaries<a class="headerlink" href="#downloading-binaries" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="downloading-binaries">
+<h2><span class="section-number">3.4. </span>Downloading Binaries<a class="headerlink" href="#downloading-binaries" title="Permalink to this headline"></a></h2>
 <ul>
 <li><p>Open <code class="docutils literal notranslate"><span class="pre">bl_iot_sdk/tools/flash_tool</span></code> and run the <code class="docutils literal notranslate"><span class="pre">simple_flasher.exe</span></code> program</p></li>
 <li><p>For <code class="docutils literal notranslate"><span class="pre">chip</span> <span class="pre">type</span></code>select<code class="docutils literal notranslate"><span class="pre">BL602/604</span></code>：</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image92.png" />
-</div>
+</figure>
 <p>Click <code class="docutils literal notranslate"><span class="pre">download</span></code>. You should see the following if flashing is successful:</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image102.png" />
-</div>
+</figure>
 </li>
 <li><p>If you are using ScriptCommunicator, Open it and click <code class="docutils literal notranslate"><span class="pre">settings</span></code> to configure as shown in the figure below, where <code class="docutils literal notranslate"><span class="pre">DTR</span></code> needs to be checked, and <code class="docutils literal notranslate"><span class="pre">RTS</span></code> is not checked.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="" src="../../_images/image126.png" />
-</div>
+</figure>
 </li>
 </ul>
 <p>(You can also do this using Windows Subsystem for Linux)</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Quickstart_Windows_wsl.html" class="btn btn-neutral float-right" title="4. Windows (WSL) Starter Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../Linux/Quickstart_Linux_ubuntu.html" class="btn btn-neutral float-left" title="2. Linux Starter Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Quickstart_Windows_wsl.html" class="btn btn-neutral float-right" title="4. Windows (WSL) Starter Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, Bouffalo Lab, volunteers.
-
-    </p>
+    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
