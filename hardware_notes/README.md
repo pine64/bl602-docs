@@ -172,8 +172,8 @@ RF IP
 The BL602's RF stack is mostly based on CEVA RivieraWaves reference platform. The PHY is custom by Bouffalolab, but implements the standard RivieraWaves PHY. Luckily almost all the source code is publicy available in different SDKs. The RivieraWaves code has been published [here](https://github.com/cuihf1990/Alios_SDK/tree/edd416e7d2961db42c2100ac2d6237ee527d1aee/platform/mcu/moc108/mx108/mx378/ip) and the custom Bouffalolab PHY [here](https://github.com/jixinintelligence/bl602-604/tree/37f2d7b36b4c2ba6f073029d351551c33f9610f3/components/bl602/bl602_wifi/plf/refip/src/driver/phy/bl602_phy_rf). Some auxiliary code is als
 o in either one of these repos. Together they cover most source in the demo binary.
 
-RF PLL
-===
+### RF PLL
+
 The RF front-end of the BL602 uses a fractional-n PLL frequency synthesizer to synthesize a precise carrier and modulate it with the I/Q signal to produce the signal that will be transmitted.
 
 Note that most of the content in this diagram is extrapolated from reverse analysis of RF driver code and typical analog designs, and does not necessarily match the actual design.
