@@ -48,11 +48,13 @@ guaranteed; please contribute a correction if you notice an error.)
 **The address ranges `0x2xxx_xxxx`, `0x3xxx_xxxx`, `0x4xxx_xxxx`, and
 `0x5xxx_xxxx` all appear to alias one another.** All addresses past
 `0x7fff_ffff` produce a bus error for both writes and reads, indicating that
-the internal physical memory bus is only 31 bits wide. The datasheet says that,
-for the TCMs and main RAM, the `0x2xxx_xxxx` mappings are "used as program
-memory" and the `0x4xxx_xxxx` mappings are "used as data memory", but it is
-unclear why this is or if the hardware makes any distinction between accesses
-via the various mappings.
+the internal physical memory bus is only 31 bits wide. The debug module reports
+the system bus width (`sbcs.sbasize`) to be 31 as well.
+
+The datasheet says that, for the TCMs and main RAM, the `0x2xxx_xxxx` mappings
+are "used as program memory" and the `0x4xxx_xxxx` mappings are "used as data
+memory", but it is unclear why this is or if the hardware makes any distinction
+between accesses via the various mappings.
 
 | Base address  | Top address   |  Name                                                                                    | Register description                |
 |---------------|---------------|------------------------------------------------------------------------------------------|-------------------------------------|
