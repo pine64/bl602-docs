@@ -534,7 +534,7 @@
 <h2><span class="section-number">8.3. </span>Data structure reference<a class="headerlink" href="#data-structure-reference" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">bt_le_adv_param</span></code>data structure:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/** LE Advertising Parameters. */</span><span class="w"></span>
-<span class="k">struct</span> <span class="nc">bt_le_adv_param</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">bt_le_adv_param</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="cm">/** Local identity */</span><span class="w"></span>
 <span class="w">    </span><span class="n">u8_t</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w"></span>
 
@@ -617,7 +617,7 @@
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">bt_data</span></code>Data structure：</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nc">bt_data</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">bt_data</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">u8_t</span><span class="w"> </span><span class="n">type</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">u8_t</span><span class="w"> </span><span class="n">data_len</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">u8_t</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="p">;</span><span class="w"></span>
@@ -648,7 +648,7 @@
 </pre></div>
 </div>
 <p>Use this data structure to configure a broadcast packet data, as shown below:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nc">bt_data</span><span class="w"> </span><span class="n">ad_discov</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">bt_data</span><span class="w"> </span><span class="n">ad_discov</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">BT_DATA_BYTES</span><span class="p">(</span><span class="n">BT_DATA_FLAGS</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">BT_LE_AD_GENERAL</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">BT_LE_AD_NO_BREDR</span><span class="p">)),</span><span class="w"></span>
 <span class="w">    </span><span class="n">BT_DATA</span><span class="p">(</span><span class="n">BT_DATA_NAME_COMPLETE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;BL602-BLE-DEV&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">),</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
@@ -656,7 +656,7 @@
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">bt_le_scan_param</span></code>data structure：</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/** LE scan parameters */</span><span class="w"></span>
-<span class="k">struct</span> <span class="nc">bt_le_scan_param</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">bt_le_scan_param</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="cm">/** Scan type (BT_LE_SCAN_TYPE_ACTIVE or BT_LE_SCAN_TYPE_PASSIVE) */</span><span class="w"></span>
 <span class="w">    </span><span class="n">u8_t</span><span class="w">  </span><span class="n">type</span><span class="p">;</span><span class="w"></span>
 
@@ -685,7 +685,7 @@ window: Scan window.</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">bt_le_conn_param</span></code>data structure：</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/** Connection parameters for LE connections */</span><span class="w"></span>
-<span class="k">struct</span> <span class="nc">bt_le_conn_param</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">bt_le_conn_param</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">u16_t</span><span class="w"> </span><span class="n">interval_min</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">u16_t</span><span class="w"> </span><span class="n">interval_max</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">u16_t</span><span class="w"> </span><span class="n">latency</span><span class="p">;</span><span class="w"></span>
@@ -708,7 +708,7 @@ timeout: connection timeout period.</p>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">bt_conn</span></code>data structure：</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nc">bt_conn</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">bt_conn</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">u16_t</span><span class="w">                   </span><span class="n">handle</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">u8_t</span><span class="w">                    </span><span class="n">type</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">u8_t</span><span class="w">                    </span><span class="n">role</span><span class="p">;</span><span class="w"></span>
@@ -730,7 +730,7 @@ timeout: connection timeout period.</p>
 <span class="w">    </span><span class="n">bt_conn_state_t</span><span class="w">         </span><span class="n">state</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">u16_t</span><span class="w">                   </span><span class="n">rx_len</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span> <span class="nc">net_buf</span><span class="w">          </span><span class="o">*</span><span class="n">rx</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">net_buf</span><span class="w">          </span><span class="o">*</span><span class="n">rx</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="cm">/* Sent but not acknowledged TX packets with a callback */</span><span class="w"></span>
 <span class="w">    </span><span class="n">sys_slist_t</span><span class="w">             </span><span class="n">tx_pending</span><span class="p">;</span><span class="w"></span>
@@ -741,11 +741,11 @@ timeout: connection timeout period.</p>
 
 <span class="w">    </span><span class="cm">/* Completed TX for which we need to call the callback */</span><span class="w"></span>
 <span class="w">    </span><span class="n">sys_slist_t</span><span class="w">             </span><span class="n">tx_complete</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span> <span class="nc">k_work</span><span class="w">           </span><span class="n">tx_complete_work</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">k_work</span><span class="w">           </span><span class="n">tx_complete_work</span><span class="p">;</span><span class="w"></span>
 
 
 <span class="w">    </span><span class="cm">/* Queue for outgoing ACL data */</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span> <span class="nc">k_fifo</span><span class="w">           </span><span class="n">tx_queue</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">k_fifo</span><span class="w">           </span><span class="n">tx_queue</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="cm">/* Active L2CAP channels */</span><span class="w"></span>
 <span class="w">    </span><span class="n">sys_slist_t</span><span class="w">             </span><span class="n">channels</span><span class="p">;</span><span class="w"></span>
@@ -753,18 +753,18 @@ timeout: connection timeout period.</p>
 <span class="w">    </span><span class="n">atomic_t</span><span class="w">                </span><span class="n">ref</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="cm">/* Delayed work for connection update and other deferred tasks */</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span> <span class="nc">k_delayed_work</span><span class="w">   </span><span class="n">update_work</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">k_delayed_work</span><span class="w">   </span><span class="n">update_work</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">union</span> <span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">struct</span> <span class="nc">bt_conn_le</span><span class="w">   </span><span class="n">le</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">union</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">struct</span><span class="w"> </span><span class="nc">bt_conn_le</span><span class="w">   </span><span class="n">le</span><span class="p">;</span><span class="w"></span>
 <span class="cp">#if defined(CONFIG_BT_BREDR)</span>
-<span class="w">        </span><span class="k">struct</span> <span class="nc">bt_conn_br</span><span class="w">   </span><span class="n">br</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">struct</span> <span class="nc">bt_conn_sco</span><span class="w">  </span><span class="n">sco</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">struct</span><span class="w"> </span><span class="nc">bt_conn_br</span><span class="w">   </span><span class="n">br</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">struct</span><span class="w"> </span><span class="nc">bt_conn_sco</span><span class="w">  </span><span class="n">sco</span><span class="p">;</span><span class="w"></span>
 <span class="cp">#endif</span>
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 
 <span class="cp">#if defined(CONFIG_BT_REMOTE_VERSION)</span>
-<span class="w">    </span><span class="k">struct</span> <span class="nc">bt_conn_rv</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">bt_conn_rv</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="n">u8_t</span><span class="w">  </span><span class="n">version</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="n">u16_t</span><span class="w"> </span><span class="n">manufacturer</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="n">u16_t</span><span class="w"> </span><span class="n">subversion</span><span class="p">;</span><span class="w"></span>
