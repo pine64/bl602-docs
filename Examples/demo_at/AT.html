@@ -1,38 +1,78 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>4. AT Commands Introduction &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Examples/demo_at/AT.html" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="9. AUDIO UDP" href="../demo_audio_udp/audio_udp.html" />
     <link rel="prev" title="3. AWS" href="../demo_aws/aws.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -40,7 +80,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/get_started.html">1. Quick Start Guide</a></li>
@@ -156,40 +207,76 @@
 <li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">BL602 IoT SDK (Pine64 fork)</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
       <li><span class="section-number">4. </span>AT Commands Introduction</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../../_sources/Examples/demo_at/AT.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="at-commands-introduction">
-<h1><span class="section-number">4. </span>AT Commands Introduction<a class="headerlink" href="#at-commands-introduction" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">4. </span>AT Commands Introduction<a class="headerlink" href="#at-commands-introduction" title="Permalink to this heading">¶</a></h1>
 <p>This article introduces the Bouffalo Labs AT command set and usage. The command set includes: basic AT commands, Wi-Fi function AT commands, TCP/IP toolbox AT commands, and BLE related AT commands.</p>
 <table class="docutils align-default" id="id7">
-<caption><span class="caption-text">Command Types</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 22%" />
-<col style="width: 61%" />
-</colgroup>
+<caption><span class="caption-text">Command Types</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Format</p></th>
@@ -213,15 +300,11 @@
 </table>
 </section>
 <section id="basic-at-commands">
-<h1><span class="section-number">5. </span>Basic AT Commands<a class="headerlink" href="#basic-at-commands" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">5. </span>Basic AT Commands<a class="headerlink" href="#basic-at-commands" title="Permalink to this heading">¶</a></h1>
 <section id="overview">
-<h2><span class="section-number">5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default" id="id8">
-<caption><span class="caption-text">Command List</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
-</colgroup>
+<caption><span class="caption-text">Command List</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
 <th class="head"><p>Description</p></th>
@@ -250,16 +333,11 @@
 </table>
 </section>
 <section id="description">
-<h2><span class="section-number">5.2. </span>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">5.2. </span>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
 <section id="at-uart">
-<h3><span class="section-number">5.2.1. </span>AT+UART<a class="headerlink" href="#at-uart" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.1. </span>AT+UART<a class="headerlink" href="#at-uart" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 7%" />
-<col style="width: 47%" />
-<col style="width: 46%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="2"><p>Commands</p></td>
 <td rowspan="2"><p>Read Command</p>
@@ -336,13 +414,9 @@
 </div></blockquote>
 </section>
 <section id="at-gmr">
-<h3><span class="section-number">5.2.2. </span>AT+GMR<a class="headerlink" href="#at-gmr" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.2. </span>AT+GMR<a class="headerlink" href="#at-gmr" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Command</p></td>
 <td><p>AT+GMR</p></td>
@@ -362,13 +436,9 @@
 </div></blockquote>
 </section>
 <section id="at-rst">
-<h3><span class="section-number">5.2.3. </span>AT+RST<a class="headerlink" href="#at-rst" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.3. </span>AT+RST<a class="headerlink" href="#at-rst" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 61%" />
-<col style="width: 39%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Command</p></td>
 <td><p>AT+RST</p></td>
@@ -381,13 +451,9 @@
 </div></blockquote>
 </section>
 <section id="at-restore">
-<h3><span class="section-number">5.2.4. </span>AT+RESTORE<a class="headerlink" href="#at-restore" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.4. </span>AT+RESTORE<a class="headerlink" href="#at-restore" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 61%" />
-<col style="width: 39%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Command</p></td>
 <td><p>AT+RESTORE</p></td>
@@ -400,13 +466,9 @@
 </div></blockquote>
 </section>
 <section id="at-s-help">
-<h3><span class="section-number">5.2.5. </span>AT+S.HELP<a class="headerlink" href="#at-s-help" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.5. </span>AT+S.HELP<a class="headerlink" href="#at-s-help" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 61%" />
-<col style="width: 39%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Command</p></td>
 <td><p>AT+S.HELP</p></td>
@@ -419,13 +481,9 @@
 </div></blockquote>
 </section>
 <section id="at-gslp">
-<h3><span class="section-number">5.2.6. </span>AT+GSLP<a class="headerlink" href="#at-gslp" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">5.2.6. </span>AT+GSLP<a class="headerlink" href="#at-gslp" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 89%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Command</p></td>
 <td><p>AT+GSLP=&lt;time&gt;</p></td>
@@ -449,15 +507,11 @@
 </section>
 </section>
 <section id="wi-fi-at-commands">
-<h1><span class="section-number">6. </span>Wi-Fi AT Commands<a class="headerlink" href="#wi-fi-at-commands" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">6. </span>Wi-Fi AT Commands<a class="headerlink" href="#wi-fi-at-commands" title="Permalink to this heading">¶</a></h1>
 <section id="id1">
-<h2><span class="section-number">6.1. </span>Overview<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.1. </span>Overview<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default" id="id9">
-<caption><span class="caption-text">Command List</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 70%" />
-</colgroup>
+<caption><span class="caption-text">Command List</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>Command</p></td>
 <td><p>Description</p></td>
@@ -484,16 +538,11 @@
 </table>
 </section>
 <section id="id2">
-<h2><span class="section-number">6.2. </span>Description<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.2. </span>Description<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <section id="at-cwmode">
-<h3><span class="section-number">6.2.1. </span>AT+CWMODE<a class="headerlink" href="#at-cwmode" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.1. </span>AT+CWMODE<a class="headerlink" href="#at-cwmode" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 30%" />
-<col style="width: 61%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="3"><p>Command</p></td>
 <td rowspan="3"><p>Read Command</p>
@@ -535,13 +584,9 @@
 </div></blockquote>
 </section>
 <section id="at-cwlap">
-<h3><span class="section-number">6.2.2. </span>AT+CWLAP<a class="headerlink" href="#at-cwlap" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.2. </span>AT+CWLAP<a class="headerlink" href="#at-cwlap" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 91%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="3"><p>Command</p></td>
 <td rowspan="3"><p>Execute command</p>
@@ -570,14 +615,9 @@
 </div></blockquote>
 </section>
 <section id="at-cwautoconn">
-<h3><span class="section-number">6.2.3. </span>AT+CWAUTOCONN<a class="headerlink" href="#at-cwautoconn" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.3. </span>AT+CWAUTOCONN<a class="headerlink" href="#at-cwautoconn" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 31%" />
-<col style="width: 60%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="3"><p>Command</p></td>
 <td rowspan="3"><p>Read Comamnd</p>
@@ -615,14 +655,9 @@
 </div></blockquote>
 </section>
 <section id="at-cwjap">
-<h3><span class="section-number">6.2.4. </span>AT+CWJAP<a class="headerlink" href="#at-cwjap" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.4. </span>AT+CWJAP<a class="headerlink" href="#at-cwjap" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 5%" />
-<col style="width: 47%" />
-<col style="width: 48%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="3"><p>Command</p></td>
 <td rowspan="3"><p>Read Command</p>
@@ -655,7 +690,7 @@
 <li><p>&lt;ssid&gt;: SSID of target AP</p></li>
 <li><p>&lt;pwd&gt;: The password of the target AP</p>
 <ul>
-<li><p>If either parameter contains any special characters like ” or , they need to be escaped</p></li>
+<li><p>If either parameter contains any special characters like “ or , they need to be escaped</p></li>
 </ul>
 </li>
 </ul>
@@ -668,13 +703,9 @@
 </div></blockquote>
 </section>
 <section id="at-cwqap">
-<h3><span class="section-number">6.2.5. </span>AT+CWQAP<a class="headerlink" href="#at-cwqap" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.5. </span>AT+CWQAP<a class="headerlink" href="#at-cwqap" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 89%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="2"><p>Command</p></td>
 <td rowspan="2"><p>Set command</p>
@@ -690,14 +721,9 @@
 </div></blockquote>
 </section>
 <section id="at-softap">
-<h3><span class="section-number">6.2.6. </span>AT+SOFTAP<a class="headerlink" href="#at-softap" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">6.2.6. </span>AT+SOFTAP<a class="headerlink" href="#at-softap" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 5%" />
-<col style="width: 47%" />
-<col style="width: 48%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="3"><p>Command</p></td>
 <td rowspan="3"><p>Read Command</p>
@@ -728,7 +754,7 @@
 <li><p>&lt;ssid&gt;: SSID for the created hotspot</p></li>
 <li><p>[pwd]: Password for AP. If omitted, the hotspot is an open AP</p>
 <ul>
-<li><p>If either parameter contains any special characters like ” or , they need to be escaped</p></li>
+<li><p>If either parameter contains any special characters like “ or , they need to be escaped</p></li>
 </ul>
 </li>
 </ul>
@@ -743,15 +769,11 @@
 </section>
 </section>
 <section id="tcp-ip-at-commands">
-<h1><span class="section-number">7. </span>TCP/IP AT Commands<a class="headerlink" href="#tcp-ip-at-commands" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">7. </span>TCP/IP AT Commands<a class="headerlink" href="#tcp-ip-at-commands" title="Permalink to this heading">¶</a></h1>
 <section id="id3">
-<h2><span class="section-number">7.1. </span>Overview<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.1. </span>Overview<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default" id="id10">
-<caption><span class="caption-text">Command List</span><a class="headerlink" href="#id10" title="Permalink to this table"></a></caption>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 73%" />
-</colgroup>
+<caption><span class="caption-text">Command List</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
 <th class="head"><p>Description</p></th>
@@ -777,15 +799,11 @@
 </table>
 </section>
 <section id="id4">
-<h2><span class="section-number">7.2. </span>Description<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">7.2. </span>Description<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <section id="at-cipstart">
-<h3><span class="section-number">7.2.1. </span>AT+CIPSTART<a class="headerlink" href="#at-cipstart" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.2.1. </span>AT+CIPSTART<a class="headerlink" href="#at-cipstart" title="Permalink to this heading">¶</a></h3>
 <table class="docutils align-default" id="id11">
-<caption><span class="caption-text">Establish TCP/UDP connection</span><a class="headerlink" href="#id11" title="Permalink to this table"></a></caption>
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 92%" />
-</colgroup>
+<caption><span class="caption-text">Establish TCP/UDP connection</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>Set Command</p></td>
 <td><p>AT+CIPSTART=&lt;link id&gt;,&lt;type&gt;,&lt;remote IP&gt;,&lt;remote port&gt;</p></td>
@@ -818,13 +836,9 @@
 </table>
 </section>
 <section id="at-cipclose">
-<h3><span class="section-number">7.2.2. </span>AT+CIPCLOSE<a class="headerlink" href="#at-cipclose" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.2.2. </span>AT+CIPCLOSE<a class="headerlink" href="#at-cipclose" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 86%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="2"><p>Command</p></td>
 <td rowspan="2"><p>Set command:</p>
@@ -846,13 +860,9 @@
 </div></blockquote>
 </section>
 <section id="at-cipserver">
-<h3><span class="section-number">7.2.3. </span>AT+CIPSERVER<a class="headerlink" href="#at-cipserver" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.2.3. </span>AT+CIPSERVER<a class="headerlink" href="#at-cipserver" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="2"><p>Command</p></td>
 <td rowspan="2"><p>Set Command:</p>
@@ -895,13 +905,9 @@
 </div></blockquote>
 </section>
 <section id="at-cipsend">
-<h3><span class="section-number">7.2.4. </span>AT+CIPSEND<a class="headerlink" href="#at-cipsend" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.2.4. </span>AT+CIPSEND<a class="headerlink" href="#at-cipsend" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="2"><p>Command</p></td>
 <td rowspan="2"><p>Set Command:</p>
@@ -935,13 +941,9 @@
 </div></blockquote>
 </section>
 <section id="ipd">
-<h3><span class="section-number">7.2.5. </span>+IPD<a class="headerlink" href="#ipd" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">7.2.5. </span>+IPD<a class="headerlink" href="#ipd" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 86%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="3"><p>Description</p></td>
 <td rowspan="3"><p>+IPD is the response when receiving TCP/UDP peer connection data</p>
@@ -968,15 +970,11 @@
 </section>
 </section>
 <section id="ble-at-commands">
-<h1><span class="section-number">8. </span>BLE AT Commands<a class="headerlink" href="#ble-at-commands" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">8. </span>BLE AT Commands<a class="headerlink" href="#ble-at-commands" title="Permalink to this heading">¶</a></h1>
 <section id="id5">
-<h2><span class="section-number">8.1. </span>Overview<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.1. </span>Overview<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
 <table class="docutils align-default" id="id12">
-<caption><span class="caption-text">Command List</span><a class="headerlink" href="#id12" title="Permalink to this table"></a></caption>
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 70%" />
-</colgroup>
+<caption><span class="caption-text">Command List</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>Command</p></td>
 <td><p>Description</p></td>
@@ -994,15 +992,11 @@
 </table>
 </section>
 <section id="id6">
-<h2><span class="section-number">8.2. </span>Description<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.2. </span>Description<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
 <section id="at-bledatalen">
-<h3><span class="section-number">8.2.1. </span>AT+BLEDATALEN<a class="headerlink" href="#at-bledatalen" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">8.2.1. </span>AT+BLEDATALEN<a class="headerlink" href="#at-bledatalen" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="3"><p>Command</p></td>
 <td rowspan="3"><p>Set Command:</p>
@@ -1046,14 +1040,9 @@
 </div></blockquote>
 </section>
 <section id="at-blename">
-<h3><span class="section-number">8.2.2. </span>AT+BLENAME<a class="headerlink" href="#at-blename" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">8.2.2. </span>AT+BLENAME<a class="headerlink" href="#at-blename" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 37%" />
-<col style="width: 51%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="3"><p>Command</p></td>
 <td rowspan="3"><p>Read Command</p>
@@ -1085,14 +1074,9 @@
 </div></blockquote>
 </section>
 <section id="at-bleaddr">
-<h3><span class="section-number">8.2.3. </span>AT+BLEADDR<a class="headerlink" href="#at-bleaddr" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">8.2.3. </span>AT+BLEADDR<a class="headerlink" href="#at-bleaddr" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><table class="docutils align-default">
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 47%" />
-<col style="width: 43%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td rowspan="3"><p>Command</p></td>
 <td rowspan="3"><p>Read Command</p>
@@ -1137,33 +1121,50 @@
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../demo_aws/aws.html" class="btn btn-neutral float-left" title="3. AWS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../demo_audio_udp/audio_udp.html" class="btn btn-neutral float-right" title="9. AUDIO UDP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../demo_aws/aws.html" class="btn btn-neutral float-left" title="3. AWS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
-  </div>
+    <p>
+        &#169; Copyright 2020, Bouffalo Lab, volunteers.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

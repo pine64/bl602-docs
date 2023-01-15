@@ -1,38 +1,78 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>4. Windows (WSL) Starter Guide &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Quickstart_Guide/Windows/Quickstart_Windows_wsl.html" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="5. Connecting the Hardware" href="../connecting_the_hardware.html" />
     <link rel="prev" title="3. Windows Starter Guide" href="Quickstart_Windows_msys.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -40,7 +80,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../get_started.html">1. Quick Start Guide</a></li>
@@ -117,49 +168,90 @@
 <li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">BL602 IoT SDK (Pine64 fork)</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
       <li><span class="section-number">4. </span>Windows (WSL) Starter Guide</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../../_sources/Quickstart_Guide/Windows/Quickstart_Windows_wsl.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="windows-wsl-starter-guide">
-<h1><span class="section-number">4. </span>Windows (WSL) Starter Guide<a class="headerlink" href="#windows-wsl-starter-guide" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">4. </span>Windows (WSL) Starter Guide<a class="headerlink" href="#windows-wsl-starter-guide" title="Permalink to this heading">¶</a></h1>
 <p>This document explains how to set up a software environment for developing on the BL602 hardware under Windows using WSL. The WSL (Windows Subsystem for Linux) lets developers run a GNU/Linux environment directly on Windows.</p>
 <section id="install-wsl">
-<h2><span class="section-number">4.1. </span>Install WSL<a class="headerlink" href="#install-wsl" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">4.1. </span>Install WSL<a class="headerlink" href="#install-wsl" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Installation Instructions</a></p></li>
 </ul>
 <p>On step 6 install your favorite Linux distribution but we recommend Ubuntu on this guide.</p>
 </section>
 <section id="setting-up-the-build-environment-and-getting-the-code">
-<h2><span class="section-number">4.2. </span>Setting up the build environment and getting the code<a class="headerlink" href="#setting-up-the-build-environment-and-getting-the-code" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">4.2. </span>Setting up the build environment and getting the code<a class="headerlink" href="#setting-up-the-build-environment-and-getting-the-code" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Open Ubuntu and install make and unzip by using the command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">make</span> <span class="pre">unzip</span></code></p></li>
 <li><p>Decompress the zip file containing the SDK, by running the command: <code class="docutils literal notranslate"><span class="pre">unzip</span> <span class="pre">bl_iot_sdk.zip</span></code></p></li>
 </ul>
 </section>
 <section id="compiling-an-example-project">
-<h2><span class="section-number">4.3. </span>Compiling an example project<a class="headerlink" href="#compiling-an-example-project" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">4.3. </span>Compiling an example project<a class="headerlink" href="#compiling-an-example-project" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Enter the directory of the project you want to compile, such as <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">customer_app/bl602_demo_event</span></code></p></li>
 <li><p>To compile the project run the command <code class="docutils literal notranslate"><span class="pre">./genromap</span></code></p></li>
@@ -169,33 +261,50 @@
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Quickstart_Windows_msys.html" class="btn btn-neutral float-left" title="3. Windows Starter Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../connecting_the_hardware.html" class="btn btn-neutral float-right" title="5. Connecting the Hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Quickstart_Windows_msys.html" class="btn btn-neutral float-left" title="3. Windows Starter Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
-  </div>
+    <p>
+        &#169; Copyright 2020, Bouffalo Lab, volunteers.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -1,38 +1,78 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>23. cli &mdash; BL602 IoT SDK (Pine64 fork)  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
     <link rel="canonical" href="https://pine64.github.io/bl602-docs/Examples/demo_system_cli/cli.html" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="24. FDT" href="../demo_system_fdt/fdt.html" />
     <link rel="prev" title="22. Romfs" href="../demo_storage_romfs/romfs.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../../index.html" class="icon icon-home"> BL602 IoT SDK (Pine64 fork)
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
                 release_bl_iot_sdk_1.6.11-1-g66bb28da-pine64
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -40,7 +80,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Quick Start Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Quickstart_Guide/get_started.html">1. Quick Start Guide</a></li>
@@ -117,62 +168,103 @@
 <li class="toctree-l1"><a class="reference internal" href="../../README/README.html">1. Documentation</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">BL602 IoT SDK (Pine64 fork)</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
       <li><span class="section-number">23. </span>cli</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../../_sources/Examples/demo_system_cli/cli.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="cli">
-<h1><span class="section-number">23. </span>cli<a class="headerlink" href="#cli" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">23. </span>cli<a class="headerlink" href="#cli" title="Permalink to this heading">¶</a></h1>
 <section id="overview">
-<h2><span class="section-number">23.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">23.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>This example mainly introduces how to add a cli (command-line interface).</p>
 </section>
 <section id="steps-for-usage">
-<h2><span class="section-number">23.2. </span>Steps for usage<a class="headerlink" href="#steps-for-usage" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">23.2. </span>Steps for usage<a class="headerlink" href="#steps-for-usage" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>编译 <code class="docutils literal notranslate"><span class="pre">customer_app/sdk_app_cli</span></code> 工程并下载对应的bin文件。</p></li>
 <li><p>使用 <code class="docutils literal notranslate"><span class="pre">test</span></code> 命令即可在终端看到打印的 <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code>。</p></li>
 </ul>
 </section>
 <section id="applications">
-<h2><span class="section-number">23.3. </span>Applications<a class="headerlink" href="#applications" title="Permalink to this headline"></a></h2>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cmd_cli</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello world</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<h2><span class="section-number">23.3. </span>Applications<a class="headerlink" href="#applications" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cmd_cli</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;hello world</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">cli_command</span><span class="w"> </span><span class="n">cmds_user</span><span class="p">[]</span><span class="w"> </span><span class="n">STATIC_CLI_CMD_ATTRIBUTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cli test&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cmd_cli</span><span class="p">},</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">cli_command</span><span class="w"> </span><span class="n">cmds_user</span><span class="p">[]</span><span class="w"> </span><span class="n">STATIC_CLI_CMD_ATTRIBUTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cli test&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cmd_cli</span><span class="p">},</span>
+<span class="p">};</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">test_cli_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">test_cli_init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
 <span class="w">    </span><span class="c1">// static command(s) do NOT need to call aos_cli_register_command(s) to register.</span>
 <span class="w">    </span><span class="c1">// However, calling aos_cli_register_command(s) here is OK but is of no effect as cmds_user are included in cmds list.</span>
 <span class="w">    </span><span class="c1">// XXX NOTE: Calling this *empty* function is necessary to make cmds_user in this file to be kept in the final link.</span>
 <span class="w">    </span><span class="c1">//return aos_cli_register_commands(cmds_user, sizeof(cmds_user)/sizeof(cmds_user[0]));</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>用户在只需在程序中调用<code class="docutils literal notranslate"><span class="pre">test_cli_init()</span></code>接口之后，就可以在shell中<code class="docutils literal notranslate"><span class="pre">test</span></code>,就可以打印<code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world.</span></code>如下所示：</p>
@@ -189,33 +281,50 @@
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../demo_storage_romfs/romfs.html" class="btn btn-neutral float-left" title="22. Romfs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../demo_system_fdt/fdt.html" class="btn btn-neutral float-right" title="24. FDT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../demo_storage_romfs/romfs.html" class="btn btn-neutral float-left" title="22. Romfs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Bouffalo Lab, volunteers.</p>
-  </div>
+    <p>
+        &#169; Copyright 2020, Bouffalo Lab, volunteers.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
