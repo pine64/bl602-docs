@@ -157,7 +157,7 @@ Here are the known areas of the ROM's memory map:
 | `0x2101_0800` | `0x2101_0FFF` |  RomDriver function table                  |
 | `0x2101_1000` | `0x2101_FFFF` |  RomDriver functions (+ other stuff?)      |
 
-[1]: ../mirrored/BL602_BL604_DS_1.6_en.pdf
+[1]: https://github.com/bouffalolab/bl_docs/tree/main/BL602_DS
 [2]: https://github.com/pine64/bl_iot_sdk/tree/master/components/bl602/bl602_std/bl602_std/Device/Bouffalo/BL602/Peripherals/soc602_reg.svd
 [3]: https://github.com/pine64/bl_iot_sdk/tree/master/components/bl602/bl602_std/bl602_std/Device/Bouffalo/BL602/Peripherals/bl602.svd
 [4]: https://github.com/pine64/bl_iot_sdk/tree/master/components/bl602/bl602_std/bl602_std/RISCV/Core/Include/clic.h
