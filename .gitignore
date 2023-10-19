@@ -1,5 +1,6 @@
 doctrees
 docs/
+_build/
 
 *.bak
 *.swp

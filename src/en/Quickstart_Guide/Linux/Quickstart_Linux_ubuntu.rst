@@ -106,6 +106,8 @@ Alternative Flashing Tools and Information
 
 `lupyuen <https://lupyuen.github.io/articles/pinecone#other-flashing-tools>`_ has an overview of alternative tools as well as an overview of the different components of the ROM.
 
+.. _devcube-flashing-linux:
+
 BouffaloLabDevCube
 ^^^^^^^^^^^^^^^^^^
 
